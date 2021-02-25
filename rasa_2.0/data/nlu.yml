@@ -1,0 +1,2726 @@
+version: "2.0"
+
+nlu:
+- intent: chaohoi
+  examples: |
+    - xin chào
+    - hi
+    - hello
+    - mình có vài câu hỏi
+    - có ai giúp mình không
+    - bạn ơi
+    - anh ơi
+    - chị ơi
+    - có ai ở đây không
+    - cháu ơi
+    - cho em hỏi
+    - admin ơi
+    - ad ơi
+    - em có vài câu hỏi
+
+- intent: bye
+  examples: |
+    - tạm biệt
+    - chào tạm biệt
+    - tạm biệt em nhé
+    - tạm biệt bạn nhé
+
+- intent: thank
+  examples: |
+    - cảm ơn
+    - cảm ơn bạn
+    - cảm ơn em
+    - thanks
+    - thank you
+    - tuyệt cú mèo
+    - siêu hay
+    - oke
+    - dạ em cảm ơn ạ
+    - dạ vâng
+
+- intent: cnttkhacdientu
+  examples: |
+    - ad ơi, cho em hỏi, học công nghệ thông tin khác với học điện tử như thế nào ạ
+    - ad ơi, cho em hỏi, học cntt khác với học điện tử như thế nào ạ
+    - ad ơi, cho em hỏi, học cong nghe thong tin khác với học điện tử như thế nào ạ
+    - ad ơi, cho em hỏi, học công nghệ thông tin khác với học điện tử như thế nào ạ
+    - ad ơi, cho em hỏi, học cn thong tin khác với học điện tử như thế nào ạ
+    - ad ơi, cho em hỏi, học cn tt khác với học điện tử như thế nào ạ
+    - học cntt khác với học điện tử như thế nào ạ
+    - học công nghệ thông tin khác với học điện tử như thế nào ạ
+    - học cntt khác với học điện tử nhiều không?
+    - học công nghệ thông tin khác với học điện tử nhiều không?
+    - học cong nghe thong tin khác với học điện tử nhiều không?
+    - học cn thong tin khác với học điện tử nhiều không?
+    - điểm khác nhau trong hai ngành học cntt và điện tử là gì vậy ạ
+    - điểm khác nhau trong hai ngành học cnttt và điện tử là gì vậy ạ
+    - điểm khác nhau trong hai ngành học công nghệ thông tin và điện tử là gì vậy ạ
+
+- intent: cuocthi
+  examples: |
+    - nghe nói năm nào khoa cũng có tổ chức các cuộc thi phải không
+    - khoa có tổ chức các cuộc thi gì không
+    - các cuộc thi đó trong khoa như thế nào
+    - các cuộc thi đó có thực tế hay không
+    - trong khoa tổ chức các cuộc thi nó có thú vị hay không
+    - khoa có thường tổ chức các cuộc thi hay không
+
+- intent: link_fit
+  examples: |
+    - cho em xin link trang của khoa mình ạ
+    - trang thông tin của khoa mình là trang nào 
+
+- intent: link_fitgiangvien
+  examples: |
+    - cho em xin email của cô Đặng Thị Phúc ạ
+    - cho em xin thông tin liên lạc của cô Đặng Thị Phúc ạ
+
+- intent: sdt_giangvien
+  examples: |
+    - cho em xin số điện thoại của cô Đặng Thị Phúc ạ
+    - cho em xin sdt cô Đặng Thị Phúc 
+
+- intent: link_fbdoankhoacntt
+  examples: |
+    - cho em xin link trang của đoàn khoa mình ạ
+    - trang thông tin của đoàn khoa mình là trang nào 
+    - trang fb đoàn khoa cntt là link nào ạ
+
+- intent: dieukientoeic
+  examples: |
+    - cho em hỏi điều kiện toeic khi ra trường là bao nhiêu
+    - mình học toeic ở ngoài rồi nộp vào trường được không
+    - toeic tốt nghiệp như thế nào
+
+- intent: hocbong
+  examples: |
+    - học bổng theo từng học kì được xét như thế nào ạ
+    - số lượng học bổng ra sao
+    - học bổng nhận được là bao nhiêu
+
+
+- intent: caulacbo
+  examples: |
+    - khoa công nghệ thông tin có những câu lạc bộ học thuật nào ạ
+    - khoa có câu lạc lạc bộ học thuật hay chuyên môn gì đó không
+    - tư vấn về câu lạc bộ của khoa
+    - câu lạc bộ lập ra để làm gì 
+
+
+- intent: daitra
+  examples: |
+    - hệ đại trà có khác gì với hệ chất lượng cao không 
+    - giữa chất lượng cao và đại trà có khác nhau không 
+    - hệ  đại trà có tốt hơn hệ chất lượng cao không  
+    - ưu điểm nhược điểm của hệ đại trà là gì 
+    - nên học hệ chất lượng cao hay đại trà 
+    - hệ đại trà có khó kiếm việc làm hơn chất lượng cao không  
+    - hệ đại trà học phí ra sao  
+    - điểm xét tuyển đại trà có thấp hơn chất lượng cao không  
+    - điểm thi thuyển đại trà có thấp hơn chất lượng cao không 
+    - tổ hợp môn thi thuyển ngành đại trà có khác chất lượng nhau không 
+
+
+- intent: trituenhantao
+  examples: |
+    - em muốn học về lĩnh vực trí tuệ nhân tạo nên bắt đầu từ đâu
+    - bắt đầu với AI(artificial intelligence) thì nên học những gì
+    - học những gì để bắt đầu với trí tuệ nhân tạo
+    - những thức cần học khi học trí tuệ nhân tạo
+    - trí tuệ nhân tạo là gì
+    - bắt đầu từ đâu với trí tuệ nhân tạo
+    - những môn cần học khi theo trí tuệ nhân tạo
+    - lĩnh vực trí tuệ nhân tạo có khó không
+    - trí tuệ nhân tạo lương như thế nào
+    - trí tuệ nhân tạo công việc có nhiều không
+    - trí tuệ nhân tạo có thể làm được những gì
+    - lĩnh vực trí tuệ nhân tạo hiện nay có hot không
+    - lĩnh vực trí tuệ nhân tạo có cần giỏi toán lắm không
+    - lĩnh vực trí tuệ nhân tạo có khó lắm không
+    - lĩnh vực trí tuệ nhân tạo sử dụng ngôn ngữ gì để lập trình
+    - trí tuệ nhân tạo áp dụng vào được những đâu
+
+- intent: thoigiandkhpdot1
+  examples: |
+    - ad ơi, cho em hỏi thời gian đăng ký học phần đợt 1 là khi nào ạ
+    - ad ơi, cho em hỏi thời gian dkhp đợt 1 là khi nào ạ
+    - thời gian đăng ký học phần đợt 1 của học kì này là khi nào
+    - thời gian dkhp đợt 1 của học kì này là khi nào
+    - bao giờ đăng ký học phần đợt 1
+    - bao giờ dkhp đợt 1
+    - hết đợt đăng ký học phần đợt 1 chưa ạ
+    - hết đợt dkhp đợt 1 chưa ạ
+    - bao lâu mới hết đăng ký học phần đợt 1
+    - bao lâu mới hết dkhp đợt 1
+
+
+- intent: thoigiandkhpdot2
+  examples: |
+    - ad ơi, cho em hỏi thời gian đăng ký học phần đợt 2 là khi nào ạ
+    - ad ơi, cho em hỏi thời gian dkhp đợt 2 là khi nào ạ
+    - cho em hỏi thời gian đăng ký học phần đợt 2 là khi nào ạ
+    - cho em hỏi thời gian dkhp đợt 2 là khi nào ạ
+    - thời gian đăng ký học phần đợt 2 của học kì này là khi nào
+    - thời gian dkhp đợt 2 của học kì này là khi nào
+    - bao giờ đăng ký học phần đợt 2
+    - bao giờ dkhp đợt 2
+    - hết đợt đăng ký học phần đợt 2 chưa ạ
+    - hết đợt dkhp đợt 2 chưa ạ
+    - bao lâu mới hết đăng ký học phần đợt 2
+    - bao lâu mới hết dkhp đợt 2
+
+- intent: thoigianhuyhpdot1
+  examples: |
+    - ad ơi, cho em hỏi thời gian hủy học phần đợt 1 là khi nào ạ
+    - ad ơi, cho em hỏi thời gian hủy hp đợt 1 là khi nào ạ
+    - cho em hỏi thời gian hủy học phần đợt 01 là khi nào ạ
+    - cho em hỏi thời gian hủy hp đợt 1 là khi nào ạ
+    - thời gian hủy học phần đợt 1 của học kì này là khi nào
+    - thời gian hủy hp đợt 1 của học kì này là khi nào
+    - bao giờ hủy học phần đợt 1
+    - bao giờ hủy hp đợt 1
+    - hết đợt hủy học phần đợt 1 chưa ạ
+    - hết đợt hủy hp đợt 1 chưa ạ
+    - bao lâu mới hết hủy học phần đợt 1
+    - bao lâu mới hết hủy hp đợt 1
+
+
+- intent: thoigianhuyhpdot2
+  examples: |
+    - ad ơi, cho em hỏi thời gian hủy học phần đợt 2 là khi nào ạ
+    - ad ơi, cho em hỏi thời gian hủy hp đợt 2 là khi nào ạ
+    - cho em hỏi thời gian hủy học phần đợt 2 là khi nào ạ
+    - cho em hỏi thời gian hủy hp đợt 2 là khi nào ạ
+    - thời gian hủy học phần đợt 2 của học kì này là khi nào
+    - thời gian hủy hp đợt 2 của học kì này là khi nào
+    - bao giờ hủy học phần đợt 2
+    - bao giờ hủy hp đợt 2
+    - hết đợt hủy học phần đợt 2 chưa ạ
+    - hết đợt hủy hp đợt 2 chưa ạ
+    - bao lâu mới hết hủy học phần đợt 2
+    - bao lâu mới hết hủy hp đợt 2
+
+  
+- intent: clb_laptrinh
+  examples: |
+    - giới thiệu về câu lạc bộ lập trình đi
+    - câu lạc bộ lập trình hoạt động như thế nào
+    - thành viên của clb lập trình đòi hỏi ra sao
+
+
+- intent: clb_attt
+  examples: |
+    - giới thiệu về câu lạc bộ an toàn thông tin đi
+    - câu lạc bộ an toàn thông tin hoạt động như thế nào
+    - thành viên của clb an toàn thông tin đòi hỏi ra sao
+
+- intent: tuvan_khoacntt
+  examples: |
+    - tư vấn về khoa công nghệ thông tin đi
+    - cho hỏi về khoa công nghệ thông tin có mấy chuyên ngành 
+    - khoa công nghệ thông tin gồm mấy chuyên ngành 
+    - khoa cntt nằm ở đâu
+
+
+- intent: khoacntt_hocgi
+  examples: |
+    - Cho em hỏi khoa công nghệ thông tin là học những gì
+    - học khoa công nghệ thông tin có gì nổi bật
+
+
+- intent: tach_nganh
+  examples: |
+    - em chưa chọn được chuyên ngành tư vấn cho em
+    - em muốn hỏi về các chuyên ngành để phục vụ cho việc chọn chuyên ngành 
+    - sắp tới có chia chuyên ngành , em muốn hỏi về các chuyên nghành của khoa mình
+    - em sắp chia chuyên ngành rồi mà không biết phải chọn ngành gì tư vấn giúp em với
+    - sắp chia chuyên ngành rồi mà hoang mang quá
+    - chia chuyên ngành như thế nào vậy
+    - để vào ngành mình muốn thì có cần điều kiện gì không
+
+
+- intent: insult
+  examples: |
+    - bot ngu
+    - bot ngáo
+    - bot khùng 
+    - bot điên
+    - m có bị điên không
+    - m có bị khùng không
+    - ngáo à bot
+    - bot ngu như bò
+    - bot m là đồ điên
+
+
+- intent: tuvankhac
+  examples: |
+    - còn ngành nào khác không
+    - tư vấn cho mình ngành khác đi
+    - còn ngành nào nữa không
+    - ngoài ngành này ra thì còn ngành nào nữa không
+    - còn ngành nào hay hơn không
+
+
+- intent: dinhhuongsai
+  examples: |
+    - nếu em chọn sai ngành khmt thì có nên tiếp tục hay không
+    - nếu em chọn sai ngành khoa học máy tính thì có nên tiếp tục hay không
+    - nếu em chọn sai ngành ktpm thì có nên tiếp tục hay không
+    - nếu em chọn sai ngành kỹ thuật phần mềm thì có nên tiếp tục hay không
+    - nếu em chọn sai ngành cntt thì có nên tiếp tục hay không
+    - nếu em chọn sai ngành công nghệ thông tin thì có nên tiếp tục hay không
+    - nếu em chọn sai ngành httt thì có nên tiếp tục hay không
+    - nếu em chọn sai ngành hệ thống thông tin thì có nên tiếp tục hay không
+    - nếu em chọn sai ngành khdl thì có nên tiếp tục hay không
+    - nếu em chọn sai ngành khoa học dữ liệu thì có nên tiếp tục hay không
+    - em bị lạc lối không biết thích gì trong ngành khmt
+    - em bị lạc lối không biết thích gì trong ngành khoa học máy tính
+    - em bị lạc lối không biết thích gì trong ngành ktpm
+    - em bị lạc lối không biết thích gì trong ngành kỹ thuật phần mềm
+    - em bị lạc lối không biết thích gì trong ngành cntt
+    - em bị lạc lối không biết thích gì trong ngành công nghệ thông tin
+    - em bị lạc lối không biết thích gì trong ngành httt
+    - em bị lạc lối không biết thích gì trong ngành hệ thống thông tin
+    - em bị lạc lối không biết thích gì trong ngành khdl
+    - em bị lạc lối không biết thích gì trong ngành khoa học dữ liệu
+    - em chọn học khmt mà giờ không theo nổi thì có nên đổi chuyên ngành hay không
+    - em chọn học khoa học máy tính mà giờ không theo nổi thì có nên đổi chuyên ngành hay không
+    - em chọn học ktpm mà giờ không theo nổi thì có nên đổi chuyên ngành hay không
+    - em chọn học kỹ thuật phần mềm mà giờ không theo nổi thì có nên đổi chuyên ngành hay không
+    - em chọn học cntt mà giờ không theo nổi thì có nên đổi chuyên ngành hay không
+    - em chọn học công nghệ thông tin mà giờ không theo nổi thì có nên đổi chuyên ngành hay không
+    - em chọn học httt mà giờ không theo nổi thì có nên đổi chuyên ngành hay không
+    - em chọn học hệ thống thông tin mà giờ không theo nổi thì có nên đổi chuyên ngành hay không
+    - em chọn học khdl mà giờ không theo nổi thì có nên đổi chuyên ngành hay không
+    - em chọn học khoa học dữ liệu mà giờ không theo nổi thì có nên đổi chuyên ngành hay không
+    - cho em hỏi làm thế nào để biết mình định hướng sai ngành khmt ạ
+    - cho em hỏi làm thế nào để biết mình định hướng sai ngành khoa học máy tính ạ
+    - cho em hỏi làm thế nào để biết mình định hướng sai ngành ktpm ạ
+    - cho em hỏi làm thế nào để biết mình định hướng sai ngành kỹ thuật phần mềm ạ
+    - cho em hỏi làm thế nào để biết mình định hướng sai ngành cntt ạ
+    - cho em hỏi làm thế nào để biết mình định hướng sai ngành công nghệ thông tin ạ
+    - cho em hỏi làm thế nào để biết mình định hướng sai ngành httt ạ
+    - cho em hỏi làm thế nào để biết mình định hướng sai ngành hệ thống thông tin ạ
+    - cho em hỏi làm thế nào để biết mình định hướng sai ngành khdl ạ
+    - cho em hỏi làm thế nào để biết mình định hướng sai ngành khoa học dữ liệu ạ
+    - ngành khmt định hướng sai thì gây ra hậu quả như thế nào, và có quá nghiêm trọng không ạ
+    - ngành khoa học máy tính định hướng sai thì gây ra hậu quả như thế nào, và có quá nghiêm trọng không ạ
+    - ngành ktpm định hướng sai thì gây ra hậu quả như thế nào, và có quá nghiêm trọng không ạ
+    - ngành kỹ thuật phần mềm định hướng sai thì gây ra hậu quả như thế nào, và có quá nghiêm trọng không ạ
+    - ngành cntt định hướng sai thì gây ra hậu quả như thế nào, và có quá nghiêm trọng không ạ
+    - ngành công nghệ thông tin định hướng sai thì gây ra hậu quả như thế nào, và có quá nghiêm trọng không ạ
+    - ngành httt định hướng sai thì gây ra hậu quả như thế nào, và có quá nghiêm trọng không ạ
+    - ngành hệ thống thông tin định hướng sai thì gây ra hậu quả như thế nào, và có quá nghiêm trọng không ạ
+    - ngành khdl định hướng sai thì gây ra hậu quả như thế nào, và có quá nghiêm trọng không ạ
+    - ngành khoa học dữ liệu định hướng sai thì gây ra hậu quả như thế nào, và có quá nghiêm trọng không ạ
+    - Định hướng sai thì làm như thế nào để định hướng lại đối với ngành khmt ạ
+    - Định hướng sai thì làm như thế nào để định hướng lại đối với ngành khoa học máy tính ạ
+    - Định hướng sai thì làm như thế nào để định hướng lại đối với ngành ktpm ạ
+    - Định hướng sai thì làm như thế nào để định hướng lại đối với ngành kỹ thuật phần mềm ạ
+    - Định hướng sai thì làm như thế nào để định hướng lại đối với ngành cntt ạ
+    - Định hướng sai thì làm như thế nào để định hướng lại đối với ngành công nghệ thông tin ạ
+    - Định hướng sai thì làm như thế nào để định hướng lại đối với ngành httt ạ
+    - Định hướng sai thì làm như thế nào để định hướng lại đối với ngành hệ thống thông tin ạ
+    - Định hướng sai thì làm như thế nào để định hướng lại đối với ngành khdl ạ
+    - Định hướng sai thì làm như thế nào để định hướng lại đối với ngành khoa học dữ liệu ạ
+    - Cho em hỏi làm thế nào để biết mình định hướng sai ngành khmt ạ
+    - Cho em hỏi làm thế nào để biết mình định hướng sai ngành khoa học máy tính ạ
+    - Cho em hỏi làm thế nào để biết mình định hướng sai ngành ktpm ạ
+    - Cho em hỏi làm thế nào để biết mình định hướng sai ngành kỹ thuật phần mềm ạ
+    - Cho em hỏi làm thế nào để biết mình định hướng sai ngành cntt ạ
+    - Cho em hỏi làm thế nào để biết mình định hướng sai ngành công nghệ thông tin ạ
+    - Cho em hỏi làm thế nào để biết mình định hướng sai ngành httt ạ
+    - Cho em hỏi làm thế nào để biết mình định hướng sai ngành hệ thống thông tin ạ
+    - Cho em hỏi làm thế nào để biết mình định hướng sai ngành khdl ạ
+    - Cho em hỏi làm thế nào để biết mình định hướng sai ngành khoa học dữ liệu ạ
+
+  
+- intent: ungdung
+  examples: |
+    - học khmt có thể lập trình app hay web hay không
+    - học khoa học máy tính có thể lập trình app hay web hay không
+    - học ktpm có thể lập trình app hay web hay không
+    - học kỹ thuật phần mềm có thể lập trình app hay web hay không
+    - học cntt có thể lập trình app hay web hay không
+    - học công nghệ thông tin có thể lập trình app hay web hay không
+    - học httt có thể lập trình app hay web hay không
+    - học hệ thống thông tin có thể lập trình app hay web hay không
+    - học khdl có thể lập trình app hay web hay không
+    - học khoa học dữ liệu có thể lập trình app hay web hay không
+    - học khmt lập trình game được không
+    - học khoa học máy tính lập trình game được không
+    - học ktpm lập trình game được không
+    - học kỹ thuật phần mềm lập trình game được không
+    - học cntt lập trình game được không
+    - học công nghệ thông tin lập trình game được không
+    - học httt lập trình game được không
+    - học hệ thống thông tin lập trình game được không
+    - học khdl lập trình game được không
+    - học khoa học dữ liệu lập trình game được không
+    - lập trình game,app thì học khmt có làm được hay không
+    - lập trình game,app thì học khoa học máy tính có làm được hay không
+    - lập trình game,app thì học ktpm có làm được hay không
+    - lập trình game,app thì học kỹ thuật phần mềm có làm được hay không
+    - lập trình game,app thì học cntt có làm được hay không
+    - lập trình game,app thì học công nghệ thông tin có làm được hay không
+    - lập trình game,app thì học httt có làm được hay không
+    - lập trình game,app thì học hệ thống thông tin có làm được hay không
+    - lập trình game,app thì học khdl có làm được hay không
+    - lập trình game,app thì học khoa học dữ liệu có làm được hay không
+    - học khmt ra làm được những gì
+    - học khoa học máy tính ra làm được những gì
+    - học ktpm ra làm được những gì
+    - học kỹ thuật phần mềm ra làm được những gì
+    - học cntt ra làm được những gì
+    - học công nghệ thông tin ra làm được những gì
+    - học httt ra làm được những gì
+    - học hệ thống thông tin ra làm được những gì
+    - học khdl ra làm được những gì
+    - học khoa học dữ liệu ra làm được những gì
+    - ai có thể cho em biết khmt và ứng dụng của nó được không ạ
+    - ai có thể cho em biết khoa học máy tính và ứng dụng của nó được không ạ
+    - ai có thể cho em biết ktpm và ứng dụng của nó được không ạ
+    - ai có thể cho em biết kỹ thuật phần mềm và ứng dụng của nó được không ạ
+    - ai có thể cho em biết cntt và ứng dụng của nó được không ạ
+    - ai có thể cho em biết công nghệ thông tin và ứng dụng của nó được không ạ
+    - ai có thể cho em biết httt và ứng dụng của nó được không ạ
+    - ai có thể cho em biết hệ thống thông tin và ứng dụng của nó được không ạ
+    - ai có thể cho em biết khdl và ứng dụng của nó được không ạ
+    - ai có thể cho em biết khoa học dữ liệu và ứng dụng của nó được không ạ
+    - ứng dụng lớn nhất của khmt là gì ạ
+    - ứng dụng lớn nhất của khoa học máy tính là gì ạ
+    - ứng dụng lớn nhất của ktpm là gì ạ
+    - ứng dụng lớn nhất của kỹ thuật phần mềm là gì ạ
+    - ứng dụng lớn nhất của cntt là gì ạ
+    - ứng dụng lớn nhất của công nghệ thông tin là gì ạ
+    - ứng dụng lớn nhất của httt là gì ạ
+    - ứng dụng lớn nhất của hệ thống thông tin là gì ạ
+    - ứng dụng lớn nhất của khdl là gì ạ
+    - ứng dụng lớn nhất của khoa học dữ liệu là gì ạ
+
+- intent: linhvuc
+  examples: |
+    - muốn làm về lĩnh vực mạng máy tính (an ninh mạng, quản trị mạng,…), nên bắt đầu như thế nào khi học khmt
+    - muốn làm về lĩnh vực mạng máy tính (an ninh mạng, quản trị mạng,…), nên bắt đầu như thế nào khi học khoa học máy tính
+    - muốn làm về lĩnh vực mạng máy tính (an ninh mạng, quản trị mạng,…), nên bắt đầu như thế nào khi học ktpm
+    - muốn làm về lĩnh vực mạng máy tính (an ninh mạng, quản trị mạng,…), nên bắt đầu như thế nào khi học kỹ thuật phần mềm
+    - muốn làm về lĩnh vực mạng máy tính (an ninh mạng, quản trị mạng,…), nên bắt đầu như thế nào khi học cntt
+    - muốn làm về lĩnh vực mạng máy tính (an ninh mạng, quản trị mạng,…), nên bắt đầu như thế nào khi học công nghệ thông tin
+    - muốn làm về lĩnh vực mạng máy tính (an ninh mạng, quản trị mạng,…), nên bắt đầu như thế nào khi học httt
+    - muốn làm về lĩnh vực mạng máy tính (an ninh mạng, quản trị mạng,…), nên bắt đầu như thế nào khi học hệ thống thông tin
+    - muốn làm về lĩnh vực mạng máy tính (an ninh mạng, quản trị mạng,…), nên bắt đầu như thế nào khi học khdl
+    - muốn làm về lĩnh vực mạng máy tính (an ninh mạng, quản trị mạng,…), nên bắt đầu như thế nào khi học khoa học dữ liệu
+    - học khmt thì có làm được hacker hay không
+    - học khoa học máy tính thì có làm được hacker hay không
+    - học ktpm thì có làm được hacker hay không
+    - học kỹ thuật phần mềm thì có làm được hacker hay không
+    - học cntt thì có làm được hacker hay không
+    - học công nghệ thông tin thì có làm được hacker hay không
+    - học httt thì có làm được hacker hay không
+    - học hệ thống thông tin thì có làm được hacker hay không
+    - học khdl thì có làm được hacker hay không
+    - học khoa học dữ liệu thì có làm được hacker hay không
+    - muốn làm về lĩnh vực trí tuệ nhân tạo khi học khmt có được không
+    - muốn làm về lĩnh vực trí tuệ nhân tạo khi học khoa học máy tính có được không
+    - muốn làm về lĩnh vực trí tuệ nhân tạo khi học ktpm có được không
+    - muốn làm về lĩnh vực trí tuệ nhân tạo khi học kỹ thuật phần mềm có được không
+    - muốn làm về lĩnh vực trí tuệ nhân tạo khi học cntt có được không
+    - muốn làm về lĩnh vực trí tuệ nhân tạo khi học công nghệ thông tin có được không
+    - muốn làm về lĩnh vực trí tuệ nhân tạo khi học httt có được không
+    - muốn làm về lĩnh vực trí tuệ nhân tạo khi học hệ thống thông tin có được không
+    - muốn làm về lĩnh vực trí tuệ nhân tạo khi học khdl có được không
+    - muốn làm về lĩnh vực trí tuệ nhân tạo khi học khoa học dữ liệu có được không
+    - lĩnh vực về khmt có nhiều không
+    - lĩnh vực về khoa học máy tính có nhiều không
+    - lĩnh vực về ktpm có nhiều không
+    - lĩnh vực về kỹ thuật phần mềm có nhiều không
+    - lĩnh vực về cntt có nhiều không
+    - lĩnh vực về công nghệ thông tin có nhiều không
+    - lĩnh vực về httt có nhiều không
+    - lĩnh vực về hệ thống thông tin có nhiều không
+    - lĩnh vực về khdl có nhiều không
+    - lĩnh vực về khoa học dữ liệu có nhiều không
+    - khmt nghiên cứu những lĩnh vự nào
+    - khoa học máy tính nghiên cứu những lĩnh vự nào
+    - ktpm nghiên cứu những lĩnh vự nào
+    - kỹ thuật phần mềm nghiên cứu những lĩnh vự nào
+    - cntt nghiên cứu những lĩnh vự nào
+    - công nghệ thông tin nghiên cứu những lĩnh vự nào
+    - httt nghiên cứu những lĩnh vự nào
+    - hệ thống thông tin nghiên cứu những lĩnh vự nào
+    - khdl nghiên cứu những lĩnh vự nào
+    - khoa học dữ liệu nghiên cứu những lĩnh vự nào
+    - khmt
+    - khoa học máy tính
+    - ktpm
+    - kỹ thuật phần mềm
+    - cntt
+    - công nghệ thông tin
+    - httt
+    - hệ thống thông tin
+    - khdl
+    - khoa học dữ liệu
+
+
+- intent: tilesvratruong
+  examples: |
+    - tỉ lệ sinh viên khmt ra trường có việc làm hay không
+    - tỉ lệ sinh viên khoa học máy tính ra trường có việc làm hay không
+    - tỉ lệ sinh viên ktpm ra trường có việc làm hay không
+    - tỉ lệ sinh viên kỹ thuật phần mềm ra trường có việc làm hay không
+    - tỉ lệ sinh viên cntt ra trường có việc làm hay không
+    - tỉ lệ sinh viên công nghệ thông tin ra trường có việc làm hay không
+    - tỉ lệ sinh viên httt ra trường có việc làm hay không
+    - tỉ lệ sinh viên hệ thống thông tin ra trường có việc làm hay không
+    - tỉ lệ sinh viên khdl ra trường có việc làm hay không
+    - tỉ lệ sinh viên khoa học dữ liệu ra trường có việc làm hay không
+    - sinh viên khmt có tỉ lệ ra trường bao nhiêu
+    - sinh viên khoa học máy tính có tỉ lệ ra trường bao nhiêu
+    - sinh viên ktpm có tỉ lệ ra trường bao nhiêu
+    - sinh viên kỹ thuật phần mềm có tỉ lệ ra trường bao nhiêu
+    - sinh viên cntt có tỉ lệ ra trường bao nhiêu
+    - sinh viên công nghệ thông tin có tỉ lệ ra trường bao nhiêu
+    - sinh viên httt có tỉ lệ ra trường bao nhiêu
+    - sinh viên hệ thống thông tin có tỉ lệ ra trường bao nhiêu
+    - sinh viên khdl có tỉ lệ ra trường bao nhiêu
+    - sinh viên khoa học dữ liệu có tỉ lệ ra trường bao nhiêu
+    - 1 năm tỉ lệ sinh viên ngành khmt ra trường là bao nhiêu
+    - 1 năm tỉ lệ sinh viên ngành khoa học máy tính ra trường là bao nhiêu
+    - 1 năm tỉ lệ sinh viên ngành ktpm ra trường là bao nhiêu
+    - 1 năm tỉ lệ sinh viên ngành kỹ thuật phần mềm ra trường là bao nhiêu
+    - 1 năm tỉ lệ sinh viên ngành cntt ra trường là bao nhiêu
+    - 1 năm tỉ lệ sinh viên ngành công nghệ thông tin ra trường là bao nhiêu
+    - 1 năm tỉ lệ sinh viên ngành httt ra trường là bao nhiêu
+    - 1 năm tỉ lệ sinh viên ngành hệ thống thông tin ra trường là bao nhiêu
+    - 1 năm tỉ lệ sinh viên ngành khdl ra trường là bao nhiêu
+    - 1 năm tỉ lệ sinh viên ngành khoa học dữ liệu ra trường là bao nhiêu
+    - tỉ lệ sinh viên khmt tốt nghiệp có cao không
+    - tỉ lệ sinh viên khoa học máy tính tốt nghiệp có cao không
+    - tỉ lệ sinh viên ktpm tốt nghiệp có cao không
+    - tỉ lệ sinh viên kỹ thuật phần mềm tốt nghiệp có cao không
+    - tỉ lệ sinh viên cntt tốt nghiệp có cao không
+    - tỉ lệ sinh viên công nghệ thông tin tốt nghiệp có cao không
+    - tỉ lệ sinh viên httt tốt nghiệp có cao không
+    - tỉ lệ sinh viên hệ thống thông tin tốt nghiệp có cao không
+    - tỉ lệ sinh viên khdl tốt nghiệp có cao không
+    - tỉ lệ sinh viên khoa học dữ liệu tốt nghiệp có cao không
+    - tỉ lệ sinh viên ra trường thất nghiệp hoặc có việc làm ngành khmt như thế nào
+    - tỉ lệ sinh viên ra trường thất nghiệp hoặc có việc làm ngành khoa học máy tính như thế nào
+    - tỉ lệ sinh viên ra trường thất nghiệp hoặc có việc làm ngành ktpm như thế nào
+    - tỉ lệ sinh viên ra trường thất nghiệp hoặc có việc làm ngành kỹ thuật phần mềm như thế nào
+    - tỉ lệ sinh viên ra trường thất nghiệp hoặc có việc làm ngành cntt như thế nào
+    - tỉ lệ sinh viên ra trường thất nghiệp hoặc có việc làm ngành công nghệ thông tin như thế nào
+    - tỉ lệ sinh viên ra trường thất nghiệp hoặc có việc làm ngành httt như thế nào
+    - tỉ lệ sinh viên ra trường thất nghiệp hoặc có việc làm ngành hệ thống thông tin như thế nào
+    - tỉ lệ sinh viên ra trường thất nghiệp hoặc có việc làm ngành khdl như thế nào
+    - tỉ lệ sinh viên ra trường thất nghiệp hoặc có việc làm ngành khoa học dữ liệu như thế nào
+    - tỉ lệ sinh viên ngành khmt ra trường làm trái ngành
+    - tỉ lệ sinh viên ngành khoa học máy tính ra trường làm trái ngành
+    - tỉ lệ sinh viên ngành ktpm ra trường làm trái ngành
+    - tỉ lệ sinh viên ngành kỹ thuật phần mềm ra trường làm trái ngành
+    - tỉ lệ sinh viên ngành cntt ra trường làm trái ngành
+    - tỉ lệ sinh viên ngành công nghệ thông tin ra trường làm trái ngành
+    - tỉ lệ sinh viên ngành httt ra trường làm trái ngành
+    - tỉ lệ sinh viên ngành hệ thống thông tin ra trường làm trái ngành
+    - tỉ lệ sinh viên ngành khdl ra trường làm trái ngành
+    - tỉ lệ sinh viên ngành khoa học dữ liệu ra trường làm trái ngành
+
+
+- intent: giangvien
+  examples: |
+    - giảng viên của khmt gồm bao nhiêu người
+    - giảng viên của khoa học máy tính gồm bao nhiêu người
+    - giảng viên của ktpm gồm bao nhiêu người
+    - giảng viên của kỹ thuật phần mềm gồm bao nhiêu người
+    - giảng viên của cntt gồm bao nhiêu người
+    - giảng viên của công nghệ thông tin gồm bao nhiêu người
+    - giảng viên của httt gồm bao nhiêu người
+    - giảng viên của hệ thống thông tin gồm bao nhiêu người
+    - giảng viên của khdl gồm bao nhiêu người
+    - giảng viên của khoa học dữ liệu gồm bao nhiêu người
+    - trưởng bộ môn khmt là ai
+    - trưởng bộ môn khoa học máy tính là ai
+    - trưởng bộ môn ktpm là ai
+    - trưởng bộ môn kỹ thuật phần mềm là ai
+    - trưởng bộ môn cntt là ai
+    - trưởng bộ môn công nghệ thông tin là ai
+    - trưởng bộ môn httt là ai
+    - trưởng bộ môn hệ thống thông tin là ai
+    - trưởng bộ môn khdl là ai
+    - trưởng bộ môn khoa học dữ liệu là ai
+    - khmt gồm có những giảng viên nào
+    - khoa học máy tính gồm có những giảng viên nào
+    - ktpm gồm có những giảng viên nào
+    - kỹ thuật phần mềm gồm có những giảng viên nào
+    - cntt gồm có những giảng viên nào
+    - công nghệ thông tin gồm có những giảng viên nào
+    - httt gồm có những giảng viên nào
+    - hệ thống thông tin gồm có những giảng viên nào
+    - khdl gồm có những giảng viên nào
+    - khoa học dữ liệu gồm có những giảng viên nào
+    - học vị cao nhất của giảng viên khmt
+    - học vị cao nhất của giảng viên khoa học máy tính
+    - học vị cao nhất của giảng viên ktpm
+    - học vị cao nhất của giảng viên kỹ thuật phần mềm
+    - học vị cao nhất của giảng viên cntt
+    - học vị cao nhất của giảng viên công nghệ thông tin
+    - học vị cao nhất của giảng viên httt
+    - học vị cao nhất của giảng viên hệ thống thông tin
+    - học vị cao nhất của giảng viên khdl
+    - học vị cao nhất của giảng viên khoa học dữ liệu
+    - một giảng viên khmt thường dạy bao nhiêu môn
+    - một giảng viên khoa học máy tính thường dạy bao nhiêu môn
+    - một giảng viên ktpm thường dạy bao nhiêu môn
+    - một giảng viên kỹ thuật phần mềm thường dạy bao nhiêu môn
+    - một giảng viên cntt thường dạy bao nhiêu môn
+    - một giảng viên công nghệ thông tin thường dạy bao nhiêu môn
+    - một giảng viên httt thường dạy bao nhiêu môn
+    - một giảng viên hệ thống thông tin thường dạy bao nhiêu môn
+    - một giảng viên khdl thường dạy bao nhiêu môn
+    - một giảng viên khoa học dữ liệu thường dạy bao nhiêu môn
+    - giảng viên khmt thường làm nghiệp vụ gì những gì
+    - giảng viên khoa học máy tính thường làm nghiệp vụ gì những gì
+    - giảng viên ktpm thường làm nghiệp vụ gì những gì
+    - giảng viên kỹ thuật phần mềm thường làm nghiệp vụ gì những gì
+    - giảng viên cntt thường làm nghiệp vụ gì những gì
+    - giảng viên công nghệ thông tin thường làm nghiệp vụ gì những gì
+    - giảng viên httt thường làm nghiệp vụ gì những gì
+    - giảng viên hệ thống thông tin thường làm nghiệp vụ gì những gì
+    - giảng viên khdl thường làm nghiệp vụ gì những gì
+    - giảng viên khoa học dữ liệu thường làm nghiệp vụ gì những gì
+
+
+- intent: canhtranh
+  examples: |
+    - ngành khmt có sự cạnh tranh cao không
+    - ngành khoa học máy tính có sự cạnh tranh cao không
+    - ngành ktpm có sự cạnh tranh cao không
+    - ngành kỹ thuật phần mềm có sự cạnh tranh cao không
+    - ngành cntt có sự cạnh tranh cao không
+    - ngành công nghệ thông tin có sự cạnh tranh cao không
+    - ngành httt có sự cạnh tranh cao không
+    - ngành hệ thống thông tin có sự cạnh tranh cao không
+    - ngành khdl có sự cạnh tranh cao không
+    - ngành khoa học dữ liệu có sự cạnh tranh cao không
+    - sự cạnh tranh trong ngành khmt
+    - sự cạnh tranh trong ngành khoa học máy tính
+    - sự cạnh tranh trong ngành ktpm
+    - sự cạnh tranh trong ngành kỹ thuật phần mềm
+    - sự cạnh tranh trong ngành cntt
+    - sự cạnh tranh trong ngành công nghệ thông tin
+    - sự cạnh tranh trong ngành httt
+    - sự cạnh tranh trong ngành hệ thống thông tin
+    - sự cạnh tranh trong ngành khdl
+    - sự cạnh tranh trong ngành khoa học dữ liệu
+    - khmt có cạnh tranh cao không
+    - khoa học máy tính có cạnh tranh cao không
+    - ktpm có cạnh tranh cao không
+    - kỹ thuật phần mềm có cạnh tranh cao không
+    - cntt có cạnh tranh cao không
+    - công nghệ thông tin có cạnh tranh cao không
+    - httt có cạnh tranh cao không
+    - hệ thống thông tin có cạnh tranh cao không
+    - khdl có cạnh tranh cao không
+    - khoa học dữ liệu có cạnh tranh cao không
+    - dân khmt làm thế nào để cạnh tranh được với những ngành khác
+    - dân khoa học máy tính làm thế nào để cạnh tranh được với những ngành khác
+    - dân ktpm làm thế nào để cạnh tranh được với những ngành khác
+    - dân kỹ thuật phần mềm làm thế nào để cạnh tranh được với những ngành khác
+    - dân cntt làm thế nào để cạnh tranh được với những ngành khác
+    - dân công nghệ thông tin làm thế nào để cạnh tranh được với những ngành khác
+    - dân httt làm thế nào để cạnh tranh được với những ngành khác
+    - dân hệ thống thông tin làm thế nào để cạnh tranh được với những ngành khác
+    - dân khdl làm thế nào để cạnh tranh được với những ngành khác
+    - dân khoa học dữ liệu làm thế nào để cạnh tranh được với những ngành khác
+    - cạnh tranh là gì, ngành khmt có cần sự cạnh tranh với những ngành khác
+    - cạnh tranh là gì, ngành khoa học máy tính có cần sự cạnh tranh với những ngành khác
+    - cạnh tranh là gì, ngành ktpm có cần sự cạnh tranh với những ngành khác
+    - cạnh tranh là gì, ngành kỹ thuật phần mềm có cần sự cạnh tranh với những ngành khác
+    - cạnh tranh là gì, ngành cntt có cần sự cạnh tranh với những ngành khác
+    - cạnh tranh là gì, ngành công nghệ thông tin có cần sự cạnh tranh với những ngành khác
+    - cạnh tranh là gì, ngành httt có cần sự cạnh tranh với những ngành khác
+    - cạnh tranh là gì, ngành hệ thống thông tin có cần sự cạnh tranh với những ngành khác
+    - cạnh tranh là gì, ngành khdl có cần sự cạnh tranh với những ngành khác
+    - cạnh tranh là gì, ngành khoa học dữ liệu có cần sự cạnh tranh với những ngành khác
+
+
+- intent: tailieu
+  examples: |
+    - học khmt thì cần tìm tài liệu nào
+    - học khoa học máy tính thì cần tìm tài liệu nào
+    - học ktpm thì cần tìm tài liệu nào
+    - học kỹ thuật phần mềm thì cần tìm tài liệu nào
+    - học cntt thì cần tìm tài liệu nào
+    - học công nghệ thông tin thì cần tìm tài liệu nào
+    - học httt thì cần tìm tài liệu nào
+    - học hệ thống thông tin thì cần tìm tài liệu nào
+    - học khdl thì cần tìm tài liệu nào
+    - học khoa học dữ liệu thì cần tìm tài liệu nào
+    - học khmt thì cần đọc sách gì
+    - học khoa học máy tính thì cần đọc sách gì
+    - học ktpm thì cần đọc sách gì
+    - học kỹ thuật phần mềm thì cần đọc sách gì
+    - học cntt thì cần đọc sách gì
+    - học công nghệ thông tin thì cần đọc sách gì
+    - học httt thì cần đọc sách gì
+    - học hệ thống thông tin thì cần đọc sách gì
+    - học khdl thì cần đọc sách gì
+    - học khoa học dữ liệu thì cần đọc sách gì
+    - học khmt nên kiếm tài liệu ở đâu
+    - học khoa học máy tính nên kiếm tài liệu ở đâu
+    - học ktpm nên kiếm tài liệu ở đâu
+    - học kỹ thuật phần mềm nên kiếm tài liệu ở đâu
+    - học cntt nên kiếm tài liệu ở đâu
+    - học công nghệ thông tin nên kiếm tài liệu ở đâu
+    - học httt nên kiếm tài liệu ở đâu
+    - học hệ thống thông tin nên kiếm tài liệu ở đâu
+    - học khdl nên kiếm tài liệu ở đâu
+    - học khoa học dữ liệu nên kiếm tài liệu ở đâu
+    - muốn học tốt khmt thì nên đọc sách gì
+    - muốn học tốt khoa học máy tính thì nên đọc sách gì
+    - muốn học tốt ktpm thì nên đọc sách gì
+    - muốn học tốt kỹ thuật phần mềm thì nên đọc sách gì
+    - muốn học tốt cntt thì nên đọc sách gì
+    - muốn học tốt công nghệ thông tin thì nên đọc sách gì
+    - muốn học tốt httt thì nên đọc sách gì
+    - muốn học tốt hệ thống thông tin thì nên đọc sách gì
+    - muốn học tốt khdl thì nên đọc sách gì
+    - muốn học tốt khoa học dữ liệu thì nên đọc sách gì
+    - các trang web phục vụ việc tra cứu tài liệu khmt
+    - các trang web phục vụ việc tra cứu tài liệu khoa học máy tính
+    - các trang web phục vụ việc tra cứu tài liệu ktpm
+    - các trang web phục vụ việc tra cứu tài liệu kỹ thuật phần mềm
+    - các trang web phục vụ việc tra cứu tài liệu cntt
+    - các trang web phục vụ việc tra cứu tài liệu công nghệ thông tin
+    - các trang web phục vụ việc tra cứu tài liệu httt
+    - các trang web phục vụ việc tra cứu tài liệu hệ thống thông tin
+    - các trang web phục vụ việc tra cứu tài liệu khdl
+    - các trang web phục vụ việc tra cứu tài liệu khoa học dữ liệu
+    - cho em hỏi tài liệu khmt có hệ thống tìm ở đâu
+    - cho em hỏi tài liệu khoa học máy tính có hệ thống tìm ở đâu
+    - cho em hỏi tài liệu ktpm có hệ thống tìm ở đâu
+    - cho em hỏi tài liệu kỹ thuật phần mềm có hệ thống tìm ở đâu
+    - cho em hỏi tài liệu cntt có hệ thống tìm ở đâu
+    - cho em hỏi tài liệu công nghệ thông tin có hệ thống tìm ở đâu
+    - cho em hỏi tài liệu httt có hệ thống tìm ở đâu
+    - cho em hỏi tài liệu hệ thống thông tin có hệ thống tìm ở đâu
+    - cho em hỏi tài liệu khdl có hệ thống tìm ở đâu
+    - cho em hỏi tài liệu khoa học dữ liệu có hệ thống tìm ở đâu
+    - khmt có cần nhiều tài liệu không
+    - khoa học máy tính có cần nhiều tài liệu không
+    - ktpm có cần nhiều tài liệu không
+    - kỹ thuật phần mềm có cần nhiều tài liệu không
+    - cntt có cần nhiều tài liệu không
+    - công nghệ thông tin có cần nhiều tài liệu không
+    - httt có cần nhiều tài liệu không
+    - hệ thống thông tin có cần nhiều tài liệu không
+    - khdl có cần nhiều tài liệu không
+    - khoa học dữ liệu có cần nhiều tài liệu không
+
+
+- intent: tuvan
+  examples: |
+    - tư vấn về khmt đi
+    - tư vấn về khoa học máy tính đi
+    - tư vấn về ktpm đi
+    - tư vấn về kỹ thuật phần mềm đi
+    - tư vấn về cntt đi
+    - tư vấn về công nghệ thông tin đi
+    - tư vấn về httt đi
+    - tư vấn về hệ thống thông tin đi
+    - tư vấn về khdl đi
+    - tư vấn về khoa học dữ liệu đi
+    - cho hỏi về ngành khmt
+    - cho hỏi về ngành khoa học máy tính
+    - cho hỏi về ngành ktpm
+    - cho hỏi về ngành kỹ thuật phần mềm
+    - cho hỏi về ngành cntt
+    - cho hỏi về ngành công nghệ thông tin
+    - cho hỏi về ngành httt
+    - cho hỏi về ngành hệ thống thông tin
+    - cho hỏi về ngành khdl
+    - cho hỏi về ngành khoa học dữ liệu
+    - khmt là ngành như thế nào
+    - khoa học máy tính là ngành như thế nào
+    - ktpm là ngành như thế nào
+    - kỹ thuật phần mềm là ngành như thế nào
+    - cntt là ngành như thế nào
+    - công nghệ thông tin là ngành như thế nào
+    - httt là ngành như thế nào
+    - hệ thống thông tin là ngành như thế nào
+    - khdl là ngành như thế nào
+    - khoa học dữ liệu là ngành như thế nào
+    - khmt 
+    - khoa học máy tính 
+    - ktpm 
+    - kỹ thuật phần mềm 
+    - cntt 
+    - công nghệ thông tin 
+    - httt 
+    - hệ thống thông tin 
+    - khdl 
+    - khoa học dữ liệu 
+    - ngành khmt là gì
+    - ngành khoa học máy tính là gì
+    - ngành ktpm là gì
+    - ngành kỹ thuật phần mềm là gì
+    - ngành cntt là gì
+    - ngành công nghệ thông tin là gì
+    - ngành httt là gì
+    - ngành hệ thống thông tin là gì
+    - ngành khdl là gì
+    - ngành khoa học dữ liệu là gì
+    - tư vấn cho mình về ngành khmt
+    - tư vấn cho mình về ngành khoa học máy tính
+    - tư vấn cho mình về ngành ktpm
+    - tư vấn cho mình về ngành kỹ thuật phần mềm
+    - tư vấn cho mình về ngành cntt
+    - tư vấn cho mình về ngành công nghệ thông tin
+    - tư vấn cho mình về ngành httt
+    - tư vấn cho mình về ngành hệ thống thông tin
+    - tư vấn cho mình về ngành khdl
+    - tư vấn cho mình về ngành khoa học dữ liệu
+    - tư vấn về ngành khmt 
+    - tư vấn về ngành khoa học máy tính 
+    - tư vấn về ngành ktpm 
+    - tư vấn về ngành kỹ thuật phần mềm 
+    - tư vấn về ngành cntt 
+    - tư vấn về ngành công nghệ thông tin 
+    - tư vấn về ngành httt 
+    - tư vấn về ngành hệ thống thông tin 
+    - tư vấn về ngành khdl 
+    - tư vấn về ngành khoa học dữ liệu 
+    - ngành  khmt là gì
+    - ngành  khoa học máy tính là gì
+    - ngành  ktpm là gì
+    - ngành  kỹ thuật phần mềm là gì
+    - ngành  cntt là gì
+    - ngành  công nghệ thông tin là gì
+    - ngành  httt là gì
+    - ngành  hệ thống thông tin là gì
+    - ngành  khdl là gì
+    - ngành  khoa học dữ liệu là gì
+
+
+- intent: monhoc
+  examples: |
+    - khmt học cái gì
+    - khoa học máy tính học cái gì
+    - ktpm học cái gì
+    - kỹ thuật phần mềm học cái gì
+    - cntt học cái gì
+    - công nghệ thông tin học cái gì
+    - httt học cái gì
+    - hệ thống thông tin học cái gì
+    - khdl học cái gì
+    - khoa học dữ liệu học cái gì
+    - học cái gì trong ngành khmt
+    - học cái gì trong ngành khoa học máy tính
+    - học cái gì trong ngành ktpm
+    - học cái gì trong ngành kỹ thuật phần mềm
+    - học cái gì trong ngành cntt
+    - học cái gì trong ngành công nghệ thông tin
+    - học cái gì trong ngành httt
+    - học cái gì trong ngành hệ thống thông tin
+    - học cái gì trong ngành khdl
+    - học cái gì trong ngành khoa học dữ liệu
+    - khmt dạy cái gì
+    - khoa học máy tính dạy cái gì
+    - ktpm dạy cái gì
+    - kỹ thuật phần mềm dạy cái gì
+    - cntt dạy cái gì
+    - công nghệ thông tin dạy cái gì
+    - httt dạy cái gì
+    - hệ thống thông tin dạy cái gì
+    - khdl dạy cái gì
+    - khoa học dữ liệu dạy cái gì
+    - khmt học như thế nào
+    - khoa học máy tính học như thế nào
+    - ktpm học như thế nào
+    - kỹ thuật phần mềm học như thế nào
+    - cntt học như thế nào
+    - công nghệ thông tin học như thế nào
+    - httt học như thế nào
+    - hệ thống thông tin học như thế nào
+    - khdl học như thế nào
+    - khoa học dữ liệu học như thế nào
+    - học khmt cần chú trọng vào những môn nào
+    - học khoa học máy tính cần chú trọng vào những môn nào
+    - học ktpm cần chú trọng vào những môn nào
+    - học kỹ thuật phần mềm cần chú trọng vào những môn nào
+    - học cntt cần chú trọng vào những môn nào
+    - học công nghệ thông tin cần chú trọng vào những môn nào
+    - học httt cần chú trọng vào những môn nào
+    - học hệ thống thông tin cần chú trọng vào những môn nào
+    - học khdl cần chú trọng vào những môn nào
+    - học khoa học dữ liệu cần chú trọng vào những môn nào
+    - học khmt có nhiều môn khó không
+    - học khoa học máy tính có nhiều môn khó không
+    - học ktpm có nhiều môn khó không
+    - học kỹ thuật phần mềm có nhiều môn khó không
+    - học cntt có nhiều môn khó không
+    - học công nghệ thông tin có nhiều môn khó không
+    - học httt có nhiều môn khó không
+    - học hệ thống thông tin có nhiều môn khó không
+    - học khdl có nhiều môn khó không
+    - học khoa học dữ liệu có nhiều môn khó không
+    - môn học trọng tâm trong khmt là gì
+    - môn học trọng tâm trong khoa học máy tính là gì
+    - môn học trọng tâm trong ktpm là gì
+    - môn học trọng tâm trong kỹ thuật phần mềm là gì
+    - môn học trọng tâm trong cntt là gì
+    - môn học trọng tâm trong công nghệ thông tin là gì
+    - môn học trọng tâm trong httt là gì
+    - môn học trọng tâm trong hệ thống thông tin là gì
+    - môn học trọng tâm trong khdl là gì
+    - môn học trọng tâm trong khoa học dữ liệu là gì
+    - học khmt  có nhiều môn khó không
+    - học khoa học máy tính  có nhiều môn khó không
+    - học ktpm  có nhiều môn khó không
+    - học kỹ thuật phần mềm  có nhiều môn khó không
+    - học cntt  có nhiều môn khó không
+    - học công nghệ thông tin  có nhiều môn khó không
+    - học httt  có nhiều môn khó không
+    - học hệ thống thông tin  có nhiều môn khó không
+    - học khdl  có nhiều môn khó không
+    - học khoa học dữ liệu  có nhiều môn khó không
+
+
+- intent: kienthuccancokhiratruong
+  examples: |
+    - sinh viên khmt khi ra trường thì cần những kiến thức cơ bản nào
+    - sinh viên khoa học máy tính khi ra trường thì cần những kiến thức cơ bản nào
+    - sinh viên ktpm khi ra trường thì cần những kiến thức cơ bản nào
+    - sinh viên kỹ thuật phần mềm khi ra trường thì cần những kiến thức cơ bản nào
+    - sinh viên cntt khi ra trường thì cần những kiến thức cơ bản nào
+    - sinh viên công nghệ thông tin khi ra trường thì cần những kiến thức cơ bản nào
+    - sinh viên httt khi ra trường thì cần những kiến thức cơ bản nào
+    - sinh viên hệ thống thông tin khi ra trường thì cần những kiến thức cơ bản nào
+    - sinh viên khdl khi ra trường thì cần những kiến thức cơ bản nào
+    - sinh viên khoa học dữ liệu khi ra trường thì cần những kiến thức cơ bản nào
+    - sv khmt khi ra trường thì cần những kiến thức cơ bản nào
+    - sv khoa học máy tính khi ra trường thì cần những kiến thức cơ bản nào
+    - sv ktpm khi ra trường thì cần những kiến thức cơ bản nào
+    - sv kỹ thuật phần mềm khi ra trường thì cần những kiến thức cơ bản nào
+    - sv cntt khi ra trường thì cần những kiến thức cơ bản nào
+    - sv công nghệ thông tin khi ra trường thì cần những kiến thức cơ bản nào
+    - sv httt khi ra trường thì cần những kiến thức cơ bản nào
+    - sv hệ thống thông tin khi ra trường thì cần những kiến thức cơ bản nào
+    - sv khdl khi ra trường thì cần những kiến thức cơ bản nào
+    - sv khoa học dữ liệu khi ra trường thì cần những kiến thức cơ bản nào
+    - kiến thức cơ bản khi ra trường đối với ngành khmt
+    - kiến thức cơ bản khi ra trường đối với ngành khoa học máy tính
+    - kiến thức cơ bản khi ra trường đối với ngành ktpm
+    - kiến thức cơ bản khi ra trường đối với ngành kỹ thuật phần mềm
+    - kiến thức cơ bản khi ra trường đối với ngành cntt
+    - kiến thức cơ bản khi ra trường đối với ngành công nghệ thông tin
+    - kiến thức cơ bản khi ra trường đối với ngành httt
+    - kiến thức cơ bản khi ra trường đối với ngành hệ thống thông tin
+    - kiến thức cơ bản khi ra trường đối với ngành khdl
+    - kiến thức cơ bản khi ra trường đối với ngành khoa học dữ liệu
+    - ngành khmt ra trường thì cần những kiến thức cơ bản nào
+    - ngành khoa học máy tính ra trường thì cần những kiến thức cơ bản nào
+    - ngành ktpm ra trường thì cần những kiến thức cơ bản nào
+    - ngành kỹ thuật phần mềm ra trường thì cần những kiến thức cơ bản nào
+    - ngành cntt ra trường thì cần những kiến thức cơ bản nào
+    - ngành công nghệ thông tin ra trường thì cần những kiến thức cơ bản nào
+    - ngành httt ra trường thì cần những kiến thức cơ bản nào
+    - ngành hệ thống thông tin ra trường thì cần những kiến thức cơ bản nào
+    - ngành khdl ra trường thì cần những kiến thức cơ bản nào
+    - ngành khoa học dữ liệu ra trường thì cần những kiến thức cơ bản nào
+
+
+- intent: luong
+  examples: |
+    - Lương của ngành khmt khi ra trường là bao nhiêu
+    - Lương của ngành khoa học máy tính khi ra trường là bao nhiêu
+    - Lương của ngành ktpm khi ra trường là bao nhiêu
+    - Lương của ngành kỹ thuật phần mềm khi ra trường là bao nhiêu
+    - Lương của ngành cntt khi ra trường là bao nhiêu
+    - Lương của ngành công nghệ thông tin khi ra trường là bao nhiêu
+    - Lương của ngành httt khi ra trường là bao nhiêu
+    - Lương của ngành hệ thống thông tin khi ra trường là bao nhiêu
+    - Lương của ngành khdl khi ra trường là bao nhiêu
+    - Lương của ngành khoa học dữ liệu khi ra trường là bao nhiêu
+    - Lương của ngành khmt
+    - Lương của ngành khoa học máy tính
+    - Lương của ngành ktpm
+    - Lương của ngành kỹ thuật phần mềm
+    - Lương của ngành cntt
+    - Lương của ngành công nghệ thông tin
+    - Lương của ngành httt
+    - Lương của ngành hệ thống thông tin
+    - Lương của ngành khdl
+    - Lương của ngành khoa học dữ liệu
+    - học khmt lương là bao nhiêu
+    - học khoa học máy tính lương là bao nhiêu
+    - học ktpm lương là bao nhiêu
+    - học kỹ thuật phần mềm lương là bao nhiêu
+    - học cntt lương là bao nhiêu
+    - học công nghệ thông tin lương là bao nhiêu
+    - học httt lương là bao nhiêu
+    - học hệ thống thông tin lương là bao nhiêu
+    - học khdl lương là bao nhiêu
+    - học khoa học dữ liệu lương là bao nhiêu
+    - học khmt lương là bao nhiêu
+    - học khoa học máy tính lương là bao nhiêu
+    - học ktpm lương là bao nhiêu
+    - học kỹ thuật phần mềm lương là bao nhiêu
+    - học cntt lương là bao nhiêu
+    - học công nghệ thông tin lương là bao nhiêu
+    - học httt lương là bao nhiêu
+    - học hệ thống thông tin lương là bao nhiêu
+    - học khdl lương là bao nhiêu
+    - học khoa học dữ liệu lương là bao nhiêu
+
+- intent: vieclam
+  examples: |
+    - cơ hội việc làm như thế nào của khmt
+    - cơ hội việc làm như thế nào của khoa học máy tính
+    - cơ hội việc làm như thế nào của ktpm
+    - cơ hội việc làm như thế nào của kỹ thuật phần mềm
+    - cơ hội việc làm như thế nào của cntt
+    - cơ hội việc làm như thế nào của công nghệ thông tin
+    - cơ hội việc làm như thế nào của httt
+    - cơ hội việc làm như thế nào của hệ thống thông tin
+    - cơ hội việc làm như thế nào của khdl
+    - cơ hội việc làm như thế nào của khoa học dữ liệu
+    - khmt ra trường việc làm có ổn định không
+    - khoa học máy tính ra trường việc làm có ổn định không
+    - ktpm ra trường việc làm có ổn định không
+    - kỹ thuật phần mềm ra trường việc làm có ổn định không
+    - cntt ra trường việc làm có ổn định không
+    - công nghệ thông tin ra trường việc làm có ổn định không
+    - httt ra trường việc làm có ổn định không
+    - hệ thống thông tin ra trường việc làm có ổn định không
+    - khdl ra trường việc làm có ổn định không
+    - khoa học dữ liệu ra trường việc làm có ổn định không
+    - làm gì khi học khmt
+    - làm gì khi học khoa học máy tính
+    - làm gì khi học ktpm
+    - làm gì khi học kỹ thuật phần mềm
+    - làm gì khi học cntt
+    - làm gì khi học công nghệ thông tin
+    - làm gì khi học httt
+    - làm gì khi học hệ thống thông tin
+    - làm gì khi học khdl
+    - làm gì khi học khoa học dữ liệu
+    - việc làm như thế nào khi học xong khmt
+    - việc làm như thế nào khi học xong khoa học máy tính
+    - việc làm như thế nào khi học xong ktpm
+    - việc làm như thế nào khi học xong kỹ thuật phần mềm
+    - việc làm như thế nào khi học xong cntt
+    - việc làm như thế nào khi học xong công nghệ thông tin
+    - việc làm như thế nào khi học xong httt
+    - việc làm như thế nào khi học xong hệ thống thông tin
+    - việc làm như thế nào khi học xong khdl
+    - việc làm như thế nào khi học xong khoa học dữ liệu
+    - công việc thường có của ngành khmt
+    - công việc thường có của ngành khoa học máy tính
+    - công việc thường có của ngành ktpm
+    - công việc thường có của ngành kỹ thuật phần mềm
+    - công việc thường có của ngành cntt
+    - công việc thường có của ngành công nghệ thông tin
+    - công việc thường có của ngành httt
+    - công việc thường có của ngành hệ thống thông tin
+    - công việc thường có của ngành khdl
+    - công việc thường có của ngành khoa học dữ liệu
+    - học khmt ra trường có dễ kiếm việc làm không
+    - học khoa học máy tính ra trường có dễ kiếm việc làm không
+    - học ktpm ra trường có dễ kiếm việc làm không
+    - học kỹ thuật phần mềm ra trường có dễ kiếm việc làm không
+    - học cntt ra trường có dễ kiếm việc làm không
+    - học công nghệ thông tin ra trường có dễ kiếm việc làm không
+    - học httt ra trường có dễ kiếm việc làm không
+    - học hệ thống thông tin ra trường có dễ kiếm việc làm không
+    - học khdl ra trường có dễ kiếm việc làm không
+    - học khoa học dữ liệu ra trường có dễ kiếm việc làm không
+
+
+- intent: ngonngu
+  examples: |
+    - học khmt thì cần biết ngôn ngữ nào
+    - học khoa học máy tính thì cần biết ngôn ngữ nào
+    - học ktpm thì cần biết ngôn ngữ nào
+    - học kỹ thuật phần mềm thì cần biết ngôn ngữ nào
+    - học cntt thì cần biết ngôn ngữ nào
+    - học công nghệ thông tin thì cần biết ngôn ngữ nào
+    - học httt thì cần biết ngôn ngữ nào
+    - học hệ thống thông tin thì cần biết ngôn ngữ nào
+    - học khdl thì cần biết ngôn ngữ nào
+    - học khoa học dữ liệu thì cần biết ngôn ngữ nào
+    - khmt thì cần biết ngôn ngữ nào
+    - khoa học máy tính thì cần biết ngôn ngữ nào
+    - ktpm thì cần biết ngôn ngữ nào
+    - kỹ thuật phần mềm thì cần biết ngôn ngữ nào
+    - cntt thì cần biết ngôn ngữ nào
+    - công nghệ thông tin thì cần biết ngôn ngữ nào
+    - httt thì cần biết ngôn ngữ nào
+    - hệ thống thông tin thì cần biết ngôn ngữ nào
+    - khdl thì cần biết ngôn ngữ nào
+    - khoa học dữ liệu thì cần biết ngôn ngữ nào
+    - ngôn ngữ nào cần khi học khmt
+    - ngôn ngữ nào cần khi học khoa học máy tính
+    - ngôn ngữ nào cần khi học ktpm
+    - ngôn ngữ nào cần khi học kỹ thuật phần mềm
+    - ngôn ngữ nào cần khi học cntt
+    - ngôn ngữ nào cần khi học công nghệ thông tin
+    - ngôn ngữ nào cần khi học httt
+    - ngôn ngữ nào cần khi học hệ thống thông tin
+    - ngôn ngữ nào cần khi học khdl
+    - ngôn ngữ nào cần khi học khoa học dữ liệu
+    - ngôn ngữ nào hot nhất khi học khmt
+    - ngôn ngữ nào hot nhất khi học khoa học máy tính
+    - ngôn ngữ nào hot nhất khi học ktpm
+    - ngôn ngữ nào hot nhất khi học kỹ thuật phần mềm
+    - ngôn ngữ nào hot nhất khi học cntt
+    - ngôn ngữ nào hot nhất khi học công nghệ thông tin
+    - ngôn ngữ nào hot nhất khi học httt
+    - ngôn ngữ nào hot nhất khi học hệ thống thông tin
+    - ngôn ngữ nào hot nhất khi học khdl
+    - ngôn ngữ nào hot nhất khi học khoa học dữ liệu
+    - ngôn ngữ nào sẽ được dạy khi học khmt
+    - ngôn ngữ nào sẽ được dạy khi học khoa học máy tính
+    - ngôn ngữ nào sẽ được dạy khi học ktpm
+    - ngôn ngữ nào sẽ được dạy khi học kỹ thuật phần mềm
+    - ngôn ngữ nào sẽ được dạy khi học cntt
+    - ngôn ngữ nào sẽ được dạy khi học công nghệ thông tin
+    - ngôn ngữ nào sẽ được dạy khi học httt
+    - ngôn ngữ nào sẽ được dạy khi học hệ thống thông tin
+    - ngôn ngữ nào sẽ được dạy khi học khdl
+    - ngôn ngữ nào sẽ được dạy khi học khoa học dữ liệu
+
+- intent: laptrinh
+  examples: |
+    - học khmt làm thế nào nâng cao trình độ lập trình
+    - học khoa học máy tính làm thế nào nâng cao trình độ lập trình
+    - học ktpm làm thế nào nâng cao trình độ lập trình
+    - học kỹ thuật phần mềm làm thế nào nâng cao trình độ lập trình
+    - học cntt làm thế nào nâng cao trình độ lập trình
+    - học công nghệ thông tin làm thế nào nâng cao trình độ lập trình
+    - học httt làm thế nào nâng cao trình độ lập trình
+    - học hệ thống thông tin làm thế nào nâng cao trình độ lập trình
+    - học khdl làm thế nào nâng cao trình độ lập trình
+    - học khoa học dữ liệu làm thế nào nâng cao trình độ lập trình
+    - học lập trình có khó không khi học khmt
+    - học lập trình có khó không khi học khoa học máy tính
+    - học lập trình có khó không khi học ktpm
+    - học lập trình có khó không khi học kỹ thuật phần mềm
+    - học lập trình có khó không khi học cntt
+    - học lập trình có khó không khi học công nghệ thông tin
+    - học lập trình có khó không khi học httt
+    - học lập trình có khó không khi học hệ thống thông tin
+    - học lập trình có khó không khi học khdl
+    - học lập trình có khó không khi học khoa học dữ liệu
+    - chưa biết gì thì học lập trình cần bao nhiêu thời gian khi học khmt
+    - chưa biết gì thì học lập trình cần bao nhiêu thời gian khi học khoa học máy tính
+    - chưa biết gì thì học lập trình cần bao nhiêu thời gian khi học ktpm
+    - chưa biết gì thì học lập trình cần bao nhiêu thời gian khi học kỹ thuật phần mềm
+    - chưa biết gì thì học lập trình cần bao nhiêu thời gian khi học cntt
+    - chưa biết gì thì học lập trình cần bao nhiêu thời gian khi học công nghệ thông tin
+    - chưa biết gì thì học lập trình cần bao nhiêu thời gian khi học httt
+    - chưa biết gì thì học lập trình cần bao nhiêu thời gian khi học hệ thống thông tin
+    - chưa biết gì thì học lập trình cần bao nhiêu thời gian khi học khdl
+    - chưa biết gì thì học lập trình cần bao nhiêu thời gian khi học khoa học dữ liệu
+    - học khmt thì lập trình có cần giỏi tiếng anh hay toán không
+    - học khoa học máy tính thì lập trình có cần giỏi tiếng anh hay toán không
+    - học ktpm thì lập trình có cần giỏi tiếng anh hay toán không
+    - học kỹ thuật phần mềm thì lập trình có cần giỏi tiếng anh hay toán không
+    - học cntt thì lập trình có cần giỏi tiếng anh hay toán không
+    - học công nghệ thông tin thì lập trình có cần giỏi tiếng anh hay toán không
+    - học httt thì lập trình có cần giỏi tiếng anh hay toán không
+    - học hệ thống thông tin thì lập trình có cần giỏi tiếng anh hay toán không
+    - học khdl thì lập trình có cần giỏi tiếng anh hay toán không
+    - học khoa học dữ liệu thì lập trình có cần giỏi tiếng anh hay toán không
+    - mới học lập trình thì học cái gì đầu tiên khi học khmt
+    - mới học lập trình thì học cái gì đầu tiên khi học khoa học máy tính
+    - mới học lập trình thì học cái gì đầu tiên khi học ktpm
+    - mới học lập trình thì học cái gì đầu tiên khi học kỹ thuật phần mềm
+    - mới học lập trình thì học cái gì đầu tiên khi học cntt
+    - mới học lập trình thì học cái gì đầu tiên khi học công nghệ thông tin
+    - mới học lập trình thì học cái gì đầu tiên khi học httt
+    - mới học lập trình thì học cái gì đầu tiên khi học hệ thống thông tin
+    - mới học lập trình thì học cái gì đầu tiên khi học khdl
+    - mới học lập trình thì học cái gì đầu tiên khi học khoa học dữ liệu
+    - yếu lập trình thì phải cải thiện như thế nào khi học khmt
+    - yếu lập trình thì phải cải thiện như thế nào khi học khoa học máy tính
+    - yếu lập trình thì phải cải thiện như thế nào khi học ktpm
+    - yếu lập trình thì phải cải thiện như thế nào khi học kỹ thuật phần mềm
+    - yếu lập trình thì phải cải thiện như thế nào khi học cntt
+    - yếu lập trình thì phải cải thiện như thế nào khi học công nghệ thông tin
+    - yếu lập trình thì phải cải thiện như thế nào khi học httt
+    - yếu lập trình thì phải cải thiện như thế nào khi học hệ thống thông tin
+    - yếu lập trình thì phải cải thiện như thế nào khi học khdl
+    - yếu lập trình thì phải cải thiện như thế nào khi học khoa học dữ liệu
+    - học lập trình có khó không khi học khmt
+    - học lập trình có khó không khi học khoa học máy tính
+    - học lập trình có khó không khi học ktpm
+    - học lập trình có khó không khi học kỹ thuật phần mềm
+    - học lập trình có khó không khi học cntt
+    - học lập trình có khó không khi học công nghệ thông tin
+    - học lập trình có khó không khi học httt
+    - học lập trình có khó không khi học hệ thống thông tin
+    - học lập trình có khó không khi học khdl
+    - học lập trình có khó không khi học khoa học dữ liệu
+
+- intent: nu
+  examples: |
+    - ngành khmt có nhiều nữ học không
+    - ngành khoa học máy tính có nhiều nữ học không
+    - ngành ktpm có nhiều nữ học không
+    - ngành kỹ thuật phần mềm có nhiều nữ học không
+    - ngành cntt có nhiều nữ học không
+    - ngành công nghệ thông tin có nhiều nữ học không
+    - ngành httt có nhiều nữ học không
+    - ngành hệ thống thông tin có nhiều nữ học không
+    - ngành khdl có nhiều nữ học không
+    - ngành khoa học dữ liệu có nhiều nữ học không
+    - các bạn nữ học khmt có nhiều người theo học hay không
+    - các bạn nữ học khoa học máy tính có nhiều người theo học hay không
+    - các bạn nữ học ktpm có nhiều người theo học hay không
+    - các bạn nữ học kỹ thuật phần mềm có nhiều người theo học hay không
+    - các bạn nữ học cntt có nhiều người theo học hay không
+    - các bạn nữ học công nghệ thông tin có nhiều người theo học hay không
+    - các bạn nữ học httt có nhiều người theo học hay không
+    - các bạn nữ học hệ thống thông tin có nhiều người theo học hay không
+    - các bạn nữ học khdl có nhiều người theo học hay không
+    - các bạn nữ học khoa học dữ liệu có nhiều người theo học hay không
+    - nữ ngành khmt này như thế nào
+    - nữ ngành khoa học máy tính này như thế nào
+    - nữ ngành ktpm này như thế nào
+    - nữ ngành kỹ thuật phần mềm này như thế nào
+    - nữ ngành cntt này như thế nào
+    - nữ ngành công nghệ thông tin này như thế nào
+    - nữ ngành httt này như thế nào
+    - nữ ngành hệ thống thông tin này như thế nào
+    - nữ ngành khdl này như thế nào
+    - nữ ngành khoa học dữ liệu này như thế nào
+    - nữ học khmt nhiều không
+    - nữ học khoa học máy tính nhiều không
+    - nữ học ktpm nhiều không
+    - nữ học kỹ thuật phần mềm nhiều không
+    - nữ học cntt nhiều không
+    - nữ học công nghệ thông tin nhiều không
+    - nữ học httt nhiều không
+    - nữ học hệ thống thông tin nhiều không
+    - nữ học khdl nhiều không
+    - nữ học khoa học dữ liệu nhiều không
+    - nữ ngành khmt có xinh không
+    - nữ ngành khoa học máy tính có xinh không
+    - nữ ngành ktpm có xinh không
+    - nữ ngành kỹ thuật phần mềm có xinh không
+    - nữ ngành cntt có xinh không
+    - nữ ngành công nghệ thông tin có xinh không
+    - nữ ngành httt có xinh không
+    - nữ ngành hệ thống thông tin có xinh không
+    - nữ ngành khdl có xinh không
+    - nữ ngành khoa học dữ liệu có xinh không
+    - nghe đồn ngành khmt này nhiều nữ học lắm
+    - nghe đồn ngành khoa học máy tính này nhiều nữ học lắm
+    - nghe đồn ngành ktpm này nhiều nữ học lắm
+    - nghe đồn ngành kỹ thuật phần mềm này nhiều nữ học lắm
+    - nghe đồn ngành cntt này nhiều nữ học lắm
+    - nghe đồn ngành công nghệ thông tin này nhiều nữ học lắm
+    - nghe đồn ngành httt này nhiều nữ học lắm
+    - nghe đồn ngành hệ thống thông tin này nhiều nữ học lắm
+    - nghe đồn ngành khdl này nhiều nữ học lắm
+    - nghe đồn ngành khoa học dữ liệu này nhiều nữ học lắm
+    - nghe đồn ngành khmt có rất nhiều nữ theo học phải không ạ
+    - nghe đồn ngành khoa học máy tính có rất nhiều nữ theo học phải không ạ
+    - nghe đồn ngành ktpm có rất nhiều nữ theo học phải không ạ
+    - nghe đồn ngành kỹ thuật phần mềm có rất nhiều nữ theo học phải không ạ
+    - nghe đồn ngành cntt có rất nhiều nữ theo học phải không ạ
+    - nghe đồn ngành công nghệ thông tin có rất nhiều nữ theo học phải không ạ
+    - nghe đồn ngành httt có rất nhiều nữ theo học phải không ạ
+    - nghe đồn ngành hệ thống thông tin có rất nhiều nữ theo học phải không ạ
+    - nghe đồn ngành khdl có rất  nhiều nữ theo học phải không ạ
+    - nghe đồn ngành khoa học dữ liệu có rất nhiều nữ theo học phải không ạ
+    - ngành khmt có rất nhiều nữ phải không
+    - ngành khoa học máy tính có rất nhiều nữ phải không
+    - ngành ktpm có rất nhiều nữ phải không
+    - ngành kỹ thuật phần mềm có rất nhiều nữ phải không
+    - ngành cntt có rất nhiều nữ phải không
+    - ngành công nghệ thông tin có rất nhiều nữ phải không
+    - ngành httt có rất nhiều nữ phải không
+    - ngành hệ thống thông tin có rất nhiều nữ phải không
+    - ngành khdl có rất nhiều nữ phải không
+    - ngành khoa học dữ liệu có rất nhiều nữ phải không
+    - nữ ngành khmt này xinh không
+    - nữ ngành khoa học máy tính này xinh không
+    - nữ ngành ktpm này xinh không
+    - nữ ngành kỹ thuật phần mềm này xinh không
+    - nữ ngành cntt này xinh không
+    - nữ ngành công nghệ thông tin này xinh không
+    - nữ ngành httt này xinh không
+    - nữ ngành hệ thống thông tin này xinh không
+    - nữ ngành khdl này xinh không
+    - nữ ngành khoa học dữ liệu này xinh không
+    - nữ ngành khmt xinh không
+    - nữ ngành khoa học máy tính xinh không
+    - nữ ngành ktpm xinh không
+    - nữ ngành kỹ thuật phần mềm xinh không
+    - nữ ngành cntt xinh không
+    - nữ ngành công nghệ thông tin xinh không
+    - nữ ngành httt xinh không
+    - nữ ngành hệ thống thông tin xinh không
+    - nữ ngành khdl xinh không
+    - nữ ngành khoa học dữ liệu xinh không
+    - nữ ngành khmt xinh không
+    - nữ ngành khoa học máy tính xinh không
+    - nữ ngành ktpm xinh không
+    - nữ ngành kỹ thuật phần mềm xinh không
+    - nữ ngành cntt xinh không
+    - nữ ngành công nghệ thông tin  xinh không
+    - nữ ngành httt xinh không
+    - nữ ngành hệ thống thông tin xinh không
+    - nữ ngành khdl xinh không
+    - nữ ngành khoa học dữ liệu xinh không
+
+
+- intent: diemso
+  examples: |
+    - khi học ngành khmt thì điểm số nó sẽ như thế nào
+    - khi học ngành khoa học máy tính thì điểm số nó sẽ như thế nào
+    - khi học ngành ktpm thì điểm số nó sẽ như thế nào
+    - khi học ngành kỹ thuật phần mềm thì điểm số nó sẽ như thế nào
+    - khi học ngành cntt thì điểm số nó sẽ như thế nào
+    - khi học ngành công nghệ thông tin thì điểm số nó sẽ như thế nào
+    - khi học ngành httt thì điểm số nó sẽ như thế nào
+    - khi học ngành hệ thống thông tin thì điểm số nó sẽ như thế nào
+    - khi học ngành khdl thì điểm số nó sẽ như thế nào
+    - khi học ngành khoa học dữ liệu thì điểm số nó sẽ như thế nào
+    - ngành khmt học điểm có cao không
+    - ngành khoa học máy tính học điểm có cao không
+    - ngành ktpm học điểm có cao không
+    - ngành kỹ thuật phần mềm học điểm có cao không
+    - ngành cntt học điểm có cao không
+    - ngành công nghệ thông tin học điểm có cao không
+    - ngành httt học điểm có cao không
+    - ngành hệ thống thông tin học điểm có cao không
+    - ngành khdl học điểm có cao không
+    - ngành khoa học dữ liệu học điểm có cao không
+    - điểm số ngành khmt này như thế nào
+    - điểm số ngành khoa học máy tính này như thế nào
+    - điểm số ngành ktpm này như thế nào
+    - điểm số ngành kỹ thuật phần mềm này như thế nào
+    - điểm số ngành cntt này như thế nào
+    - điểm số ngành công nghệ thông tin này như thế nào
+    - điểm số ngành httt này như thế nào
+    - điểm số ngành hệ thống thông tin này như thế nào
+    - điểm số ngành khdl này như thế nào
+    - điểm số ngành khoa học dữ liệu này như thế nào
+    - điểm số trong ngành khmt có cao không
+    - điểm số trong ngành khoa học máy tính có cao không
+    - điểm số trong ngành ktpm có cao không
+    - điểm số trong ngành kỹ thuật phần mềm có cao không
+    - điểm số trong ngành cntt có cao không
+    - điểm số trong ngành công nghệ thông tin có cao không
+    - điểm số trong ngành httt có cao không
+    - điểm số trong ngành hệ thống thông tin có cao không
+    - điểm số trong ngành khdl có cao không
+    - điểm số trong ngành khoa học dữ liệu có cao không
+    - học ngành khmt điểm số chắc thấp hả
+    - học ngành khoa học máy tính điểm số chắc thấp hả
+    - học ngành ktpm điểm số chắc thấp hả
+    - học ngành kỹ thuật phần mềm điểm số chắc thấp hả
+    - học ngành cntt điểm số chắc thấp hả
+    - học ngành công nghệ thông tin điểm số chắc thấp hả
+    - học ngành httt điểm số chắc thấp hả
+    - học ngành hệ thống thông tin điểm số chắc thấp hả
+    - học ngành khdl điểm số chắc thấp hả
+    - học ngành khoa học dữ liệu điểm số chắc thấp hả
+    - ngành khmt này nghe nói khó chắc điểm thấp lắm phải không
+    - ngành khoa học máy tính này nghe nói khó chắc điểm thấp lắm phải không
+    - ngành ktpm này nghe nói khó chắc điểm thấp lắm phải không
+    - ngành kỹ thuật phần mềm này nghe nói khó chắc điểm thấp lắm phải không
+    - ngành cntt này nghe nói khó chắc điểm thấp lắm phải không
+    - ngành công nghệ thông tin này nghe nói khó chắc điểm thấp lắm phải không
+    - ngành httt này nghe nói khó chắc điểm thấp lắm phải không
+    - ngành hệ thống thông tin này nghe nói khó chắc điểm thấp lắm phải không
+    - ngành khdl này nghe nói khó chắc điểm thấp lắm phải không
+    - ngành khoa học dữ liệu này nghe nói khó chắc điểm thấp lắm phải không
+    - Ngành khmt này nghe nói khó chắc điểm thấp lắm phải không
+    - Ngành khoa học máy tính này nghe nói khó chắc điểm thấp lắm phải không
+    - Ngành ktpm này nghe nói khó chắc điểm thấp lắm phải không
+    - Ngành kỹ thuật phần mềm này nghe nói khó chắc điểm thấp lắm phải không
+    - Ngành cntt này nghe nói khó chắc điểm thấp lắm phải không
+    - Ngành công nghệ thông tin này nghe nói khó chắc điểm thấp lắm phải không
+    - Ngành httt này nghe nói khó chắc điểm thấp lắm phải không
+    - Ngành hệ thống thông tin này nghe nói khó chắc điểm thấp lắm phải không
+    - Ngành khdl này nghe nói khó chắc điểm thấp lắm phải không
+    - Ngành khoa học dữ liệu này nghe nói khó chắc điểm thấp lắm phải không
+
+
+- intent: chatluonggiaovien
+  examples: |
+    - chất lượng giáo viên ngành khmt này có cao không
+    - chất lượng giáo viên ngành khoa học máy tính này có cao không
+    - chất lượng giáo viên ngành ktpm này có cao không
+    - chất lượng giáo viên ngành kỹ thuật phần mềm này có cao không
+    - chất lượng giáo viên ngành cntt này có cao không
+    - chất lượng giáo viên ngành công nghệ thông tin này có cao không
+    - chất lượng giáo viên ngành httt này có cao không
+    - chất lượng giáo viên ngành hệ thống thông tin này có cao không
+    - chất lượng giáo viên ngành khdl này có cao không
+    - chất lượng giáo viên ngành khoa học dữ liệu này có cao không
+    - trình độ giảng viên ngành khmt như thế nào
+    - trình độ giảng viên ngành khoa học máy tính như thế nào
+    - trình độ giảng viên ngành ktpm như thế nào
+    - trình độ giảng viên ngành kỹ thuật phần mềm như thế nào
+    - trình độ giảng viên ngành cntt như thế nào
+    - trình độ giảng viên ngành công nghệ thông tin như thế nào
+    - trình độ giảng viên ngành httt như thế nào
+    - trình độ giảng viên ngành hệ thống thông tin như thế nào
+    - trình độ giảng viên ngành khdl như thế nào
+    - trình độ giảng viên ngành khoa học dữ liệu như thế nào
+    - giảng viên ngành khmt giỏi không
+    - giảng viên ngành khoa học máy tính giỏi không
+    - giảng viên ngành ktpm giỏi không
+    - giảng viên ngành kỹ thuật phần mềm giỏi không
+    - giảng viên ngành cntt giỏi không
+    - giảng viên ngành công nghệ thông tin giỏi không
+    - giảng viên ngành httt giỏi không
+    - giảng viên ngành hệ thống thông tin giỏi không
+    - giảng viên ngành khdl giỏi không
+    - giảng viên ngành khoa học dữ liệu giỏi không
+    - giảng viên ngành khmt có kinh nghiệm thực tế không
+    - giảng viên ngành khoa học máy tính có kinh nghiệm thực tế không
+    - giảng viên ngành ktpm có kinh nghiệm thực tế không
+    - giảng viên ngành kỹ thuật phần mềm có kinh nghiệm thực tế không
+    - giảng viên ngành cntt có kinh nghiệm thực tế không
+    - giảng viên ngành công nghệ thông tin có kinh nghiệm thực tế không
+    - giảng viên ngành httt có kinh nghiệm thực tế không
+    - giảng viên ngành hệ thống thông tin có kinh nghiệm thực tế không
+    - giảng viên ngành khdl có kinh nghiệm thực tế không
+    - giảng viên ngành khoa học dữ liệu có kinh nghiệm thực tế không
+    - nghe nói ngành khmt thầy cô đang làm việc tại các công ty nước ngoài hả
+    - nghe nói ngành khoa học máy tính thầy cô đang làm việc tại các công ty nước ngoài hả
+    - nghe nói ngành ktpm thầy cô đang làm việc tại các công ty nước ngoài hả
+    - nghe nói ngành kỹ thuật phần mềm thầy cô đang làm việc tại các công ty nước ngoài hả
+    - nghe nói ngành cntt thầy cô đang làm việc tại các công ty nước ngoài hả
+    - nghe nói ngành công nghệ thông tin thầy cô đang làm việc tại các công ty nước ngoài hả
+    - nghe nói ngành httt thầy cô đang làm việc tại các công ty nước ngoài hả
+    - nghe nói ngành hệ thống thông tin thầy cô đang làm việc tại các công ty nước ngoài hả
+    - nghe nói ngành khdl thầy cô đang làm việc tại các công ty nước ngoài hả
+    - nghe nói ngành khoa học dữ liệu thầy cô đang làm việc tại các công ty nước ngoài hả
+    - ngành khmt chất lượng giảng viên rất tốt phải không
+    - ngành khoa học máy tính chất lượng giảng viên rất tốt phải không
+    - ngành ktpm chất lượng giảng viên rất tốt phải không
+    - ngành kỹ thuật phần mềm chất lượng giảng viên rất tốt phải không
+    - ngành cntt chất lượng giảng viên rất tốt phải không
+    - ngành công nghệ thông tin chất lượng giảng viên rất tốt phải không
+    - ngành httt chất lượng giảng viên rất tốt phải không
+    - ngành hệ thống thông tin chất lượng giảng viên rất tốt phải không
+    - ngành khdl chất lượng giảng viên rất tốt phải không
+    - ngành khoa học dữ liệu chất lượng giảng viên rất tốt phải không
+
+- intent: baitaplon
+  examples: |
+    - học ngành khmt có làm nhiều bài tập lớn không
+    - học ngành khoa học máy tính có làm nhiều bài tập lớn không
+    - học ngành ktpm có làm nhiều bài tập lớn không
+    - học ngành kỹ thuật phần mềm có làm nhiều bài tập lớn không
+    - học ngành cntt có làm nhiều bài tập lớn không
+    - học ngành công nghệ thông tin có làm nhiều bài tập lớn không
+    - học ngành httt có làm nhiều bài tập lớn không
+    - học ngành hệ thống thông tin có làm nhiều bài tập lớn không
+    - học ngành khdl có làm nhiều bài tập lớn không
+    - học ngành khoa học dữ liệu có làm nhiều bài tập lớn không
+    - bài tập lớn ngành khmt có khó không
+    - bài tập lớn ngành khoa học máy tính có khó không
+    - bài tập lớn ngành ktpm có khó không
+    - bài tập lớn ngành kỹ thuật phần mềm có khó không
+    - bài tập lớn ngành cntt có khó không
+    - bài tập lớn ngành công nghệ thông tin có khó không
+    - bài tập lớn ngành httt có khó không
+    - bài tập lớn ngành hệ thống thông tin có khó không
+    - bài tập lớn ngành khdl có khó không
+    - bài tập lớn ngành khoa học dữ liệu có khó không
+    - bài tập lớn ngành khmt như thế nào
+    - bài tập lớn ngành khoa học máy tính như thế nào
+    - bài tập lớn ngành ktpm như thế nào
+    - bài tập lớn ngành kỹ thuật phần mềm như thế nào
+    - bài tập lớn ngành cntt như thế nào
+    - bài tập lớn ngành công nghệ thông tin như thế nào
+    - bài tập lớn ngành httt như thế nào
+    - bài tập lớn ngành hệ thống thông tin như thế nào
+    - bài tập lớn ngành khdl như thế nào
+    - bài tập lớn ngành khoa học dữ liệu như thế nào
+    - nghe đồn ngành này khmt khó lắm phải không
+    - nghe đồn ngành này khoa học máy tính khó lắm phải không
+    - nghe đồn ngành này ktpm khó lắm phải không
+    - nghe đồn ngành này kỹ thuật phần mềm khó lắm phải không
+    - nghe đồn ngành này cntt khó lắm phải không
+    - nghe đồn ngành này công nghệ thông tin khó lắm phải không
+    - nghe đồn ngành này httt khó lắm phải không
+    - nghe đồn ngành này hệ thống thông tin khó lắm phải không
+    - nghe đồn ngành này khdl khó lắm phải không
+    - nghe đồn ngành này khoa học dữ liệu khó lắm phải không
+    - nhiều anh chị học xong nói bài tập lớn ngành khmt dễ lắm phải không
+    - nhiều anh chị học xong nói bài tập lớn ngành khoa học máy tính dễ lắm phải không
+    - nhiều anh chị học xong nói bài tập lớn ngành ktpm dễ lắm phải không
+    - nhiều anh chị học xong nói bài tập lớn ngành kỹ thuật phần mềm dễ lắm phải không
+    - nhiều anh chị học xong nói bài tập lớn ngành cntt dễ lắm phải không
+    - nhiều anh chị học xong nói bài tập lớn ngành công nghệ thông tin dễ lắm phải không
+    - nhiều anh chị học xong nói bài tập lớn ngành httt dễ lắm phải không
+    - nhiều anh chị học xong nói bài tập lớn ngành hệ thống thông tin dễ lắm phải không
+    - nhiều anh chị học xong nói bài tập lớn ngành khdl dễ lắm phải không
+    - nhiều anh chị học xong nói bài tập lớn ngành khoa học dữ liệu dễ lắm phải không
+    - ngành khmt có rất nhiều bài tập lớn phải không ạ
+    - ngành khoa học máy tính có rất nhiều bài tập lớn phải không ạ
+    - ngành ktpm có rất nhiều bài tập lớn phải không ạ
+    - ngành kỹ thuật phần mềm có rất nhiều bài tập lớn phải không ạ
+    - ngành cntt có rất nhiều bài tập lớn phải không ạ
+    - ngành công nghệ thông tin có rất nhiều bài tập lớn phải không ạ
+    - ngành httt có rất nhiều bài tập lớn phải không ạ
+    - ngành hệ thống thông tin có rất nhiều bài tập lớn phải không ạ
+    - ngành khdl có rất nhiều bài tập lớn phải không ạ
+    - ngành khoa học dữ liệu có rất nhiều bài tập lớn phải không ạ
+
+
+- intent: yeucau_tienganh
+  examples: |
+    - trong ngành khmt yêu cầu về tiếng anh có cao không
+    - trong ngành khoa học máy tính yêu cầu về tiếng anh có cao không
+    - trong ngành ktpm yêu cầu về tiếng anh có cao không
+    - trong ngành kỹ thuật phần mềm yêu cầu về tiếng anh có cao không
+    - trong ngành cntt yêu cầu về tiếng anh có cao không
+    - trong ngành công nghệ thông tin yêu cầu về tiếng anh có cao không
+    - trong ngành httt yêu cầu về tiếng anh có cao không
+    - trong ngành hệ thống thông tin yêu cầu về tiếng anh có cao không
+    - trong ngành khdl yêu cầu về tiếng anh có cao không
+    - trong ngành khoa học dữ liệu yêu cầu về tiếng anh có cao không
+    - đối với sinh viên theo ngành khmt thì trình độ tiếng anh cần đạt đến mức độ như thế nào
+    - đối với sinh viên theo ngành khoa học máy tính thì trình độ tiếng anh cần đạt đến mức độ như thế nào
+    - đối với sinh viên theo ngành ktpm thì trình độ tiếng anh cần đạt đến mức độ như thế nào
+    - đối với sinh viên theo ngành kỹ thuật phần mềm thì trình độ tiếng anh cần đạt đến mức độ như thế nào
+    - đối với sinh viên theo ngành cntt thì trình độ tiếng anh cần đạt đến mức độ như thế nào
+    - đối với sinh viên theo ngành công nghệ thông tin thì trình độ tiếng anh cần đạt đến mức độ như thế nào
+    - đối với sinh viên theo ngành httt thì trình độ tiếng anh cần đạt đến mức độ như thế nào
+    - đối với sinh viên theo ngành hệ thống thông tin thì trình độ tiếng anh cần đạt đến mức độ như thế nào
+    - đối với sinh viên theo ngành khdl thì trình độ tiếng anh cần đạt đến mức độ như thế nào
+    - đối với sinh viên theo ngành khoa học dữ liệu thì trình độ tiếng anh cần đạt đến mức độ như thế nào
+    - học ngành khmt có cần giỏi tiếng anh hay không
+    - học ngành khoa học máy tính có cần giỏi tiếng anh hay không
+    - học ngành ktpm có cần giỏi tiếng anh hay không
+    - học ngành kỹ thuật phần mềm có cần giỏi tiếng anh hay không
+    - học ngành cntt có cần giỏi tiếng anh hay không
+    - học ngành công nghệ thông tin có cần giỏi tiếng anh hay không
+    - học ngành httt có cần giỏi tiếng anh hay không
+    - học ngành hệ thống thông tin có cần giỏi tiếng anh hay không
+    - học ngành khdl có cần giỏi tiếng anh hay không
+    - học ngành khoa học dữ liệu có cần giỏi tiếng anh hay không
+    - tiếng anh đối với ngành khmt là rất cần thiết phải không
+    - tiếng anh đối với ngành khoa học máy tính là rất cần thiết phải không
+    - tiếng anh đối với ngành ktpm là rất cần thiết phải không
+    - tiếng anh đối với ngành kỹ thuật phần mềm là rất cần thiết phải không
+    - tiếng anh đối với ngành cntt là rất cần thiết phải không
+    - tiếng anh đối với ngành công nghệ thông tin là rất cần thiết phải không
+    - tiếng anh đối với ngành httt là rất cần thiết phải không
+    - tiếng anh đối với ngành hệ thống thông tin là rất cần thiết phải không
+    - tiếng anh đối với ngành khdl là rất cần thiết phải không
+    - tiếng anh đối với ngành khoa học dữ liệu là rất cần thiết phải không
+    - ngành khmt tiếng anh quan trọng lắm phải không
+    - ngành khoa học máy tính tiếng anh quan trọng lắm phải không
+    - ngành ktpm tiếng anh quan trọng lắm phải không
+    - ngành kỹ thuật phần mềm tiếng anh quan trọng lắm phải không
+    - ngành cntt tiếng anh quan trọng lắm phải không
+    - ngành công nghệ thông tin tiếng anh quan trọng lắm phải không
+    - ngành httt tiếng anh quan trọng lắm phải không
+    - ngành hệ thống thông tin tiếng anh quan trọng lắm phải không
+    - ngành khdl tiếng anh quan trọng lắm phải không
+    - ngành khoa học dữ liệu tiếng anh quan trọng lắm phải không
+    - tiếng anh căn bản học ngành khmt có ổn không
+    - tiếng anh căn bản học ngành khoa học máy tính có ổn không
+    - tiếng anh căn bản học ngành ktpm có ổn không
+    - tiếng anh căn bản học ngành kỹ thuật phần mềm có ổn không
+    - tiếng anh căn bản học ngành cntt có ổn không
+    - tiếng anh căn bản học ngành công nghệ thông tin có ổn không
+    - tiếng anh căn bản học ngành httt có ổn không
+    - tiếng anh căn bản học ngành hệ thống thông tin có ổn không
+    - tiếng anh căn bản học ngành khdl có ổn không
+    - tiếng anh căn bản học ngành khoa học dữ liệu có ổn không
+    - ngành khmt tiếng anh cản bản có khó không
+    - ngành khoa học máy tính tiếng anh cản bản có khó không
+    - ngành ktpm tiếng anh cản bản có khó không
+    - ngành kỹ thuật phần mềm tiếng anh cản bản có khó không
+    - ngành cntt tiếng anh cản bản có khó không
+    - ngành công nghệ thông tin tiếng anh cản bản có khó không
+    - ngành httt tiếng anh cản bản có khó không
+    - ngành hệ thống thông tin tiếng anh cản bản có khó không
+    - ngành khdl tiếng anh cản bản có khó không
+    - ngành khoa học dữ liệu tiếng anh cản bản có khó không
+
+
+- intent: tinhcach
+  examples: |
+    - tính cách của dân khmt thường như thế nào ?
+    - tính cách của dân khoa học máy tính thường như thế nào ?
+    - tính cách của dân ktpm thường như thế nào ?
+    - tính cách của dân kỹ thuật phần mềm thường như thế nào ?
+    - tính cách của dân cntt thường như thế nào ?
+    - tính cách của dân công nghệ thông tin thường như thế nào ?
+    - tính cách của dân httt thường như thế nào ?
+    - tính cách của dân hệ thống thông tin thường như thế nào ?
+    - tính cách của dân khdl thường như thế nào ?
+    - tính cách của dân khoa học dữ liệu thường như thế nào ?
+    - tính cách như thế nào để học sẽ học tốt khmt ?
+    - tính cách như thế nào để học sẽ học tốt khoa học máy tính ?
+    - tính cách như thế nào để học sẽ học tốt ktpm ?
+    - tính cách như thế nào để học sẽ học tốt kỹ thuật phần mềm ?
+    - tính cách như thế nào để học sẽ học tốt cntt ?
+    - tính cách như thế nào để học sẽ học tốt công nghệ thông tin ?
+    - tính cách như thế nào để học sẽ học tốt httt ?
+    - tính cách như thế nào để học sẽ học tốt hệ thống thông tin ?
+    - tính cách như thế nào để học sẽ học tốt khdl ?
+    - tính cách như thế nào để học sẽ học tốt khoa học dữ liệu ?
+    - tính cách hơi nóng có học được khmt ?
+    - tính cách hơi nóng có học được khoa học máy tính ?
+    - tính cách hơi nóng có học được ktpm ?
+    - tính cách hơi nóng có học được kỹ thuật phần mềm ?
+    - tính cách hơi nóng có học được cntt ?
+    - tính cách hơi nóng có học được công nghệ thông tin ?
+    - tính cách hơi nóng có học được httt ?
+    - tính cách hơi nóng có học được hệ thống thông tin ?
+    - tính cách hơi nóng có học được khdl ?
+    - tính cách hơi nóng có học được khoa học dữ liệu ?
+    - thiếu tính kiên nhẫn có học khmt được không ?
+    - thiếu tính kiên nhẫn có học khoa học máy tính được không ?
+    - thiếu tính kiên nhẫn có học ktpm được không ?
+    - thiếu tính kiên nhẫn có học kỹ thuật phần mềm được không ?
+    - thiếu tính kiên nhẫn có học cntt được không ?
+    - thiếu tính kiên nhẫn có học công nghệ thông tin được không ?
+    - thiếu tính kiên nhẫn có học httt được không ?
+    - thiếu tính kiên nhẫn có học hệ thống thông tin được không ?
+    - thiếu tính kiên nhẫn có học khdl được không ?
+    - thiếu tính kiên nhẫn có học khoa học dữ liệu được không ?
+    - có phải người trầm tính là học giỏi khmt ?
+    - có phải người trầm tính là học giỏi khoa học máy tính ?
+    - có phải người trầm tính là học giỏi ktpm ?
+    - có phải người trầm tính là học giỏi kỹ thuật phần mềm ?
+    - có phải người trầm tính là học giỏi cntt ?
+    - có phải người trầm tính là học giỏi công nghệ thông tin ?
+    - có phải người trầm tính là học giỏi httt ?
+    - có phải người trầm tính là học giỏi hệ thống thông tin ?
+    - có phải người trầm tính là học giỏi khdl ?
+    - có phải người trầm tính là học giỏi khoa học dữ liệu ?
+    - tính cách năng động có học được khmt?
+    - tính cách năng động có học được khoa học máy tính?
+    - tính cách năng động có học được ktpm?
+    - tính cách năng động có học được kỹ thuật phần mềm?
+    - tính cách năng động có học được cntt?
+    - tính cách năng động có học được công nghệ thông tin?
+    - tính cách năng động có học được httt?
+    - tính cách năng động có học được hệ thống thông tin?
+    - tính cách năng động có học được khdl?
+    - tính cách năng động có học được khoa học dữ liệu?
+    - tính cách hơi vụng về có học được khmt
+    - tính cách hơi vụng về có học được khoa học máy tính
+    - tính cách hơi vụng về có học được ktpm
+    - tính cách hơi vụng về có học được kỹ thuật phần mềm
+    - tính cách hơi vụng về có học được cntt
+    - tính cách hơi vụng về có học được công nghệ thông tin
+    - tính cách hơi vụng về có học được httt
+    - tính cách hơi vụng về có học được hệ thống thông tin
+    - tính cách hơi vụng về có học được khdl
+    - tính cách hơi vụng về có học được khoa học dữ liệu
+
+
+- intent: thuctap
+  examples: |
+    - học khmt có thể đi thực tập từ năm mấy ?
+    - học khoa học máy tính có thể đi thực tập từ năm mấy ?
+    - học ktpm có thể đi thực tập từ năm mấy ?
+    - học kỹ thuật phần mềm có thể đi thực tập từ năm mấy ?
+    - học cntt có thể đi thực tập từ năm mấy ?
+    - học công nghệ thông tin có thể đi thực tập từ năm mấy ?
+    - học httt có thể đi thực tập từ năm mấy ?
+    - học hệ thống thông tin có thể đi thực tập từ năm mấy ?
+    - học khdl có thể đi thực tập từ năm mấy ?
+    - học khoa học dữ liệu có thể đi thực tập từ năm mấy ?
+    - học khmt bao lâu có thể đi thực tập ?
+    - học khoa học máy tính bao lâu có thể đi thực tập ?
+    - học ktpm bao lâu có thể đi thực tập ?
+    - học kỹ thuật phần mềm bao lâu có thể đi thực tập ?
+    - học cntt bao lâu có thể đi thực tập ?
+    - học công nghệ thông tin bao lâu có thể đi thực tập ?
+    - học httt bao lâu có thể đi thực tập ?
+    - học hệ thống thông tin bao lâu có thể đi thực tập ?
+    - học khdl bao lâu có thể đi thực tập ?
+    - học khoa học dữ liệu bao lâu có thể đi thực tập ?
+    - học khmt muốn đi thực tập sớm được không ?
+    - học khoa học máy tính muốn đi thực tập sớm được không ?
+    - học ktpm muốn đi thực tập sớm được không ?
+    - học kỹ thuật phần mềm muốn đi thực tập sớm được không ?
+    - học cntt muốn đi thực tập sớm được không ?
+    - học công nghệ thông tin muốn đi thực tập sớm được không ?
+    - học httt muốn đi thực tập sớm được không ?
+    - học hệ thống thông tin muốn đi thực tập sớm được không ?
+    - học khdl muốn đi thực tập sớm được không ?
+    - học khoa học dữ liệu muốn đi thực tập sớm được không ?
+    - ngành khmt đi thực cần những yêu cầu gì ?
+    - ngành khoa học máy tính đi thực cần những yêu cầu gì ?
+    - ngành ktpm đi thực cần những yêu cầu gì ?
+    - ngành kỹ thuật phần mềm đi thực cần những yêu cầu gì ?
+    - ngành cntt đi thực cần những yêu cầu gì ?
+    - ngành công nghệ thông tin đi thực cần những yêu cầu gì ?
+    - ngành httt đi thực cần những yêu cầu gì ?
+    - ngành hệ thống thông tin đi thực cần những yêu cầu gì ?
+    - ngành khdl đi thực cần những yêu cầu gì ?
+    - ngành khoa học dữ liệu đi thực cần những yêu cầu gì ?
+    - đi thực tập khmt ở đâu
+    - đi thực tập khoa học máy tính ở đâu
+    - đi thực tập ktpm ở đâu
+    - đi thực tập kỹ thuật phần mềm ở đâu
+    - đi thực tập cntt ở đâu
+    - đi thực tập công nghệ thông tin ở đâu
+    - đi thực tập httt ở đâu
+    - đi thực tập hệ thống thông tin ở đâu
+    - đi thực tập khdl ở đâu
+    - đi thực tập khoa học dữ liệu ở đâu
+
+- intent: hocphi
+  examples: |
+    - học phí giữa các chuyên ngành khmt có khác nhau không ?
+    - học phí giữa các chuyên ngành khoa học máy tính có khác nhau không ?
+    - học phí giữa các chuyên ngành ktpm có khác nhau không ?
+    - học phí giữa các chuyên ngành kỹ thuật phần mềm có khác nhau không ?
+    - học phí giữa các chuyên ngành cntt có khác nhau không ?
+    - học phí giữa các chuyên ngành công nghệ thông tin có khác nhau không ?
+    - học phí giữa các chuyên ngành httt có khác nhau không ?
+    - học phí giữa các chuyên ngành hệ thống thông tin có khác nhau không ?
+    - học phí giữa các chuyên ngành khdl có khác nhau không ?
+    - học phí giữa các chuyên ngành khoa học dữ liệu có khác nhau không ?
+    - học phí ngành khmt là bao nhiêu ?
+    - học phí ngành khoa học máy tính là bao nhiêu ?
+    - học phí ngành ktpm là bao nhiêu ?
+    - học phí ngành kỹ thuật phần mềm là bao nhiêu ?
+    - học phí ngành cntt là bao nhiêu ?
+    - học phí ngành công nghệ thông tin là bao nhiêu ?
+    - học phí ngành httt là bao nhiêu ?
+    - học phí ngành hệ thống thông tin là bao nhiêu ?
+    - học phí ngành khdl là bao nhiêu ?
+    - học phí ngành khoa học dữ liệu là bao nhiêu ?
+    - học phí ngành khmt có cao không ?
+    - học phí ngành khoa học máy tính có cao không ?
+    - học phí ngành ktpm có cao không ?
+    - học phí ngành kỹ thuật phần mềm có cao không ?
+    - học phí ngành cntt có cao không ?
+    - học phí ngành công nghệ thông tin có cao không ?
+    - học phí ngành httt có cao không ?
+    - học phí ngành hệ thống thông tin có cao không ?
+    - học phí ngành khdl có cao không ?
+    - học phí ngành khoa học dữ liệu có cao không ?
+    - học phí ngành khmt có tăng không ?
+    - học phí ngành khoa học máy tính có tăng không ?
+    - học phí ngành ktpm có tăng không ?
+    - học phí ngành kỹ thuật phần mềm có tăng không ?
+    - học phí ngành cntt có tăng không ?
+    - học phí ngành công nghệ thông tin có tăng không ?
+    - học phí ngành httt có tăng không ?
+    - học phí ngành hệ thống thông tin có tăng không ?
+    - học phí ngành khdl có tăng không ?
+    - học phí ngành khoa học dữ liệu có tăng không ?
+    - có chính sách miễn giảm học phí cho ngành khmt không ?
+    - có chính sách miễn giảm học phí cho ngành khoa học máy tính không ?
+    - có chính sách miễn giảm học phí cho ngành ktpm không ?
+    - có chính sách miễn giảm học phí cho ngành kỹ thuật phần mềm không ?
+    - có chính sách miễn giảm học phí cho ngành cntt không ?
+    - có chính sách miễn giảm học phí cho ngành công nghệ thông tin không ?
+    - có chính sách miễn giảm học phí cho ngành httt không ?
+    - có chính sách miễn giảm học phí cho ngành hệ thống thông tin không ?
+    - có chính sách miễn giảm học phí cho ngành khdl không ?
+    - có chính sách miễn giảm học phí cho ngành khoa học dữ liệu không ?
+
+- intent: chatluongcao
+  examples: |
+    - ngành khmt có hệ chất lượng cao không ?
+    - ngành khoa học máy tính có hệ chất lượng cao không ?
+    - ngành ktpm có hệ chất lượng cao không ?
+    - ngành kỹ thuật phần mềm có hệ chất lượng cao không ?
+    - ngành cntt có hệ chất lượng cao không ?
+    - ngành công nghệ thông tin có hệ chất lượng cao không ?
+    - ngành httt có hệ chất lượng cao không ?
+    - ngành hệ thống thông tin có hệ chất lượng cao không ?
+    - ngành khdl có hệ chất lượng cao không ?
+    - ngành khoa học dữ liệu có hệ chất lượng cao không ?
+    - hệ chất lượng cao ngành khmt có khác gì với hệ đại trà không ?
+    - hệ chất lượng cao ngành khoa học máy tính có khác gì với hệ đại trà không ?
+    - hệ chất lượng cao ngành ktpm có khác gì với hệ đại trà không ?
+    - hệ chất lượng cao ngành kỹ thuật phần mềm có khác gì với hệ đại trà không ?
+    - hệ chất lượng cao ngành cntt có khác gì với hệ đại trà không ?
+    - hệ chất lượng cao ngành công nghệ thông tin có khác gì với hệ đại trà không ?
+    - hệ chất lượng cao ngành httt có khác gì với hệ đại trà không ?
+    - hệ chất lượng cao ngành hệ thống thông tin có khác gì với hệ đại trà không ?
+    - hệ chất lượng cao ngành khdl có khác gì với hệ đại trà không ?
+    - hệ chất lượng cao ngành khoa học dữ liệu có khác gì với hệ đại trà không ?
+    - giữa chất lượng cao và đại trà của ngành khmt có khác nhau không ?
+    - giữa chất lượng cao và đại trà của ngành khoa học máy tính có khác nhau không ?
+    - giữa chất lượng cao và đại trà của ngành ktpm có khác nhau không ?
+    - giữa chất lượng cao và đại trà của ngành kỹ thuật phần mềm có khác nhau không ?
+    - giữa chất lượng cao và đại trà của ngành cntt có khác nhau không ?
+    - giữa chất lượng cao và đại trà của ngành công nghệ thông tin có khác nhau không ?
+    - giữa chất lượng cao và đại trà của ngành httt có khác nhau không ?
+    - giữa chất lượng cao và đại trà của ngành hệ thống thông tin có khác nhau không ?
+    - giữa chất lượng cao và đại trà của ngành khdl có khác nhau không ?
+    - giữa chất lượng cao và đại trà của ngành khoa học dữ liệu có khác nhau không ?
+    - hệ chất lượng cao ngành khmt có tốt hơn hệ đại trà không ?
+    - hệ chất lượng cao ngành khoa học máy tính có tốt hơn hệ đại trà không ?
+    - hệ chất lượng cao ngành ktpm có tốt hơn hệ đại trà không ?
+    - hệ chất lượng cao ngành kỹ thuật phần mềm có tốt hơn hệ đại trà không ?
+    - hệ chất lượng cao ngành cntt có tốt hơn hệ đại trà không ?
+    - hệ chất lượng cao ngành công nghệ thông tin có tốt hơn hệ đại trà không ?
+    - hệ chất lượng cao ngành httt có tốt hơn hệ đại trà không ?
+    - hệ chất lượng cao ngành hệ thống thông tin có tốt hơn hệ đại trà không ?
+    - hệ chất lượng cao ngành khdl có tốt hơn hệ đại trà không ?
+    - hệ chất lượng cao ngành khoa học dữ liệu có tốt hơn hệ đại trà không ?
+    - ưu điểm nhược điểm của hệ chất lượng cao ngành khmt là gì ?
+    - ưu điểm nhược điểm của hệ chất lượng cao ngành khoa học máy tính là gì ?
+    - ưu điểm nhược điểm của hệ chất lượng cao ngành ktpm là gì ?
+    - ưu điểm nhược điểm của hệ chất lượng cao ngành kỹ thuật phần mềm là gì ?
+    - ưu điểm nhược điểm của hệ chất lượng cao ngành cntt là gì ?
+    - ưu điểm nhược điểm của hệ chất lượng cao ngành công nghệ thông tin là gì ?
+    - ưu điểm nhược điểm của hệ chất lượng cao ngành httt là gì ?
+    - ưu điểm nhược điểm của hệ chất lượng cao ngành hệ thống thông tin là gì ?
+    - ưu điểm nhược điểm của hệ chất lượng cao ngành khdl là gì ?
+    - ưu điểm nhược điểm của hệ chất lượng cao ngành khoa học dữ liệu là gì ?
+    - ngành khmt nên học hệ chất lượng cao hay đại trà ?
+    - ngành khoa học máy tính nên học hệ chất lượng cao hay đại trà ?
+    - ngành ktpm nên học hệ chất lượng cao hay đại trà ?
+    - ngành kỹ thuật phần mềm nên học hệ chất lượng cao hay đại trà ?
+    - ngành cntt nên học hệ chất lượng cao hay đại trà ?
+    - ngành công nghệ thông tin nên học hệ chất lượng cao hay đại trà ?
+    - ngành httt nên học hệ chất lượng cao hay đại trà ?
+    - ngành hệ thống thông tin nên học hệ chất lượng cao hay đại trà ?
+    - ngành khdl nên học hệ chất lượng cao hay đại trà ?
+    - ngành khoa học dữ liệu nên học hệ chất lượng cao hay đại trà ?
+    - ngành khmt hệ chất lượng cao có dễ kiếm việc làm hơn không ?
+    - ngành khoa học máy tính hệ chất lượng cao có dễ kiếm việc làm hơn không ?
+    - ngành ktpm hệ chất lượng cao có dễ kiếm việc làm hơn không ?
+    - ngành kỹ thuật phần mềm hệ chất lượng cao có dễ kiếm việc làm hơn không ?
+    - ngành cntt hệ chất lượng cao có dễ kiếm việc làm hơn không ?
+    - ngành công nghệ thông tin hệ chất lượng cao có dễ kiếm việc làm hơn không ?
+    - ngành httt hệ chất lượng cao có dễ kiếm việc làm hơn không ?
+    - ngành hệ thống thông tin hệ chất lượng cao có dễ kiếm việc làm hơn không ?
+    - ngành khdl hệ chất lượng cao có dễ kiếm việc làm hơn không ?
+    - ngành khoa học dữ liệu hệ chất lượng cao có dễ kiếm việc làm hơn không ?
+    - ngành khmt hệ chất lượng cao học phí ra sao ?
+    - ngành khoa học máy tính hệ chất lượng cao học phí ra sao ?
+    - ngành ktpm hệ chất lượng cao học phí ra sao ?
+    - ngành kỹ thuật phần mềm hệ chất lượng cao học phí ra sao ?
+    - ngành cntt hệ chất lượng cao học phí ra sao ?
+    - ngành công nghệ thông tin hệ chất lượng cao học phí ra sao ?
+    - ngành httt hệ chất lượng cao học phí ra sao ?
+    - ngành hệ thống thông tin hệ chất lượng cao học phí ra sao ?
+    - ngành khdl hệ chất lượng cao học phí ra sao ?
+    - ngành khoa học dữ liệu hệ chất lượng cao học phí ra sao ?
+    - điểm xét tuyển khmt hệ chất lượng cao có thấp hơn đại trà không ?
+    - điểm xét tuyển khoa học máy tính hệ chất lượng cao có thấp hơn đại trà không ?
+    - điểm xét tuyển ktpm hệ chất lượng cao có thấp hơn đại trà không ?
+    - điểm xét tuyển kỹ thuật phần mềm hệ chất lượng cao có thấp hơn đại trà không ?
+    - điểm xét tuyển cntt hệ chất lượng cao có thấp hơn đại trà không ?
+    - điểm xét tuyển công nghệ thông tin hệ chất lượng cao có thấp hơn đại trà không ?
+    - điểm xét tuyển httt hệ chất lượng cao có thấp hơn đại trà không ?
+    - điểm xét tuyển hệ thống thông tin hệ chất lượng cao có thấp hơn đại trà không ?
+    - điểm xét tuyển khdl hệ chất lượng cao có thấp hơn đại trà không ?
+    - điểm xét tuyển khoa học dữ liệu hệ chất lượng cao có thấp hơn đại trà không ?
+    - điểm thi thuyển khmt hệ chất lượng cao có thấp hơn đại trà không ?
+    - điểm thi thuyển khoa học máy tính hệ chất lượng cao có thấp hơn đại trà không ?
+    - điểm thi thuyển ktpm hệ chất lượng cao có thấp hơn đại trà không ?
+    - điểm thi thuyển kỹ thuật phần mềm hệ chất lượng cao có thấp hơn đại trà không ?
+    - điểm thi thuyển cntt hệ chất lượng cao có thấp hơn đại trà không ?
+    - điểm thi thuyển công nghệ thông tin hệ chất lượng cao có thấp hơn đại trà không ?
+    - điểm thi thuyển httt hệ chất lượng cao có thấp hơn đại trà không ?
+    - điểm thi thuyển hệ thống thông tin hệ chất lượng cao có thấp hơn đại trà không ?
+    - điểm thi thuyển khdl hệ chất lượng cao có thấp hơn đại trà không ?
+    - điểm thi thuyển khoa học dữ liệu hệ chất lượng cao có thấp hơn đại trà không ?
+    - tổ hợp môn thi thuyển ngành khmt hệ chất lượng cao có khác nhau không ?
+    - tổ hợp môn thi thuyển ngành khoa học máy tính hệ chất lượng cao có khác nhau không ?
+    - tổ hợp môn thi thuyển ngành ktpm hệ chất lượng cao có khác nhau không ?
+    - tổ hợp môn thi thuyển ngành kỹ thuật phần mềm hệ chất lượng cao có khác nhau không ?
+    - tổ hợp môn thi thuyển ngành cntt hệ chất lượng cao có khác nhau không ?
+    - tổ hợp môn thi thuyển ngành công nghệ thông tin hệ chất lượng cao có khác nhau không ?
+    - tổ hợp môn thi thuyển ngành httt hệ chất lượng cao có khác nhau không ?
+    - tổ hợp môn thi thuyển ngành hệ thống thông tin hệ chất lượng cao có khác nhau không ?
+    - tổ hợp môn thi thuyển ngành khdl hệ chất lượng cao có khác nhau không ?
+    - tổ hợp môn thi thuyển ngành khoa học dữ liệu hệ chất lượng cao có khác nhau không ?
+
+
+- intent: lotrinhhoc
+  examples: |
+    - học khmt thì nên bắt đầu từ đâu
+    - học khoa học máy tính thì nên bắt đầu từ đâu
+    - học ktpm thì nên bắt đầu từ đâu
+    - học kỹ thuật phần mềm thì nên bắt đầu từ đâu
+    - học cntt thì nên bắt đầu từ đâu
+    - học công nghệ thông tin thì nên bắt đầu từ đâu
+    - học httt thì nên bắt đầu từ đâu
+    - học hệ thống thông tin thì nên bắt đầu từ đâu
+    - học khdl thì nên bắt đầu từ đâu
+    - học khoa học dữ liệu thì nên bắt đầu từ đâu
+    - nên bắt đầu từ đâu khi học khmt
+    - nên bắt đầu từ đâu khi học khoa học máy tính
+    - nên bắt đầu từ đâu khi học ktpm
+    - nên bắt đầu từ đâu khi học kỹ thuật phần mềm
+    - nên bắt đầu từ đâu khi học cntt
+    - nên bắt đầu từ đâu khi học công nghệ thông tin
+    - nên bắt đầu từ đâu khi học httt
+    - nên bắt đầu từ đâu khi học hệ thống thông tin
+    - nên bắt đầu từ đâu khi học khdl
+    - nên bắt đầu từ đâu khi học khoa học dữ liệu
+    - lộ trình học khmt như thế nào
+    - lộ trình học khoa học máy tính như thế nào
+    - lộ trình học ktpm như thế nào
+    - lộ trình học kỹ thuật phần mềm như thế nào
+    - lộ trình học cntt như thế nào
+    - lộ trình học công nghệ thông tin như thế nào
+    - lộ trình học httt như thế nào
+    - lộ trình học hệ thống thông tin như thế nào
+    - lộ trình học khdl như thế nào
+    - lộ trình học khoa học dữ liệu như thế nào
+    - học khmt thì nên học những môn nào trước
+    - học khoa học máy tính thì nên học những môn nào trước
+    - học ktpm thì nên học những môn nào trước
+    - học kỹ thuật phần mềm thì nên học những môn nào trước
+    - học cntt thì nên học những môn nào trước
+    - học công nghệ thông tin thì nên học những môn nào trước
+    - học httt thì nên học những môn nào trước
+    - học hệ thống thông tin thì nên học những môn nào trước
+    - học khdl thì nên học những môn nào trước
+    - học khoa học dữ liệu thì nên học những môn nào trước
+    - học khmt thì nên chú tâm vào những kiến thức nào
+    - học khoa học máy tính thì nên chú tâm vào những kiến thức nào
+    - học ktpm thì nên chú tâm vào những kiến thức nào
+    - học kỹ thuật phần mềm thì nên chú tâm vào những kiến thức nào
+    - học cntt thì nên chú tâm vào những kiến thức nào
+    - học công nghệ thông tin thì nên chú tâm vào những kiến thức nào
+    - học httt thì nên chú tâm vào những kiến thức nào
+    - học hệ thống thông tin thì nên chú tâm vào những kiến thức nào
+    - học khdl thì nên chú tâm vào những kiến thức nào
+    - học khoa học dữ liệu thì nên chú tâm vào những kiến thức nào
+
+
+- intent: dungcuhoctap
+  examples: |
+    - học khmt thì cần trang bị laptop cấu hình như thế nào
+    - học khoa học máy tính thì cần trang bị laptop cấu hình như thế nào
+    - học ktpm thì cần trang bị laptop cấu hình như thế nào
+    - học kỹ thuật phần mềm thì cần trang bị laptop cấu hình như thế nào
+    - học cntt thì cần trang bị laptop cấu hình như thế nào
+    - học công nghệ thông tin thì cần trang bị laptop cấu hình như thế nào
+    - học httt thì cần trang bị laptop cấu hình như thế nào
+    - học hệ thống thông tin thì cần trang bị laptop cấu hình như thế nào
+    - học khdl thì cần trang bị laptop cấu hình như thế nào
+    - học khoa học dữ liệu thì cần trang bị laptop cấu hình như thế nào
+    - những phần mềm nào cần dùng khi học khmt
+    - những phần mềm nào cần dùng khi học khoa học máy tính
+    - những phần mềm nào cần dùng khi học ktpm
+    - những phần mềm nào cần dùng khi học kỹ thuật phần mềm
+    - những phần mềm nào cần dùng khi học cntt
+    - những phần mềm nào cần dùng khi học công nghệ thông tin
+    - những phần mềm nào cần dùng khi học httt
+    - những phần mềm nào cần dùng khi học hệ thống thông tin
+    - những phần mềm nào cần dùng khi học khdl
+    - những phần mềm nào cần dùng khi học khoa học dữ liệu
+    - laptop như thế nào thì phù hợp cho ngành khmt
+    - laptop như thế nào thì phù hợp cho ngành khoa học máy tính
+    - laptop như thế nào thì phù hợp cho ngành ktpm
+    - laptop như thế nào thì phù hợp cho ngành kỹ thuật phần mềm
+    - laptop như thế nào thì phù hợp cho ngành cntt
+    - laptop như thế nào thì phù hợp cho ngành công nghệ thông tin
+    - laptop như thế nào thì phù hợp cho ngành httt
+    - laptop như thế nào thì phù hợp cho ngành hệ thống thông tin
+    - laptop như thế nào thì phù hợp cho ngành khdl
+    - laptop như thế nào thì phù hợp cho ngành khoa học dữ liệu
+
+- intent: xuhuong
+  examples: |
+    - xu hướng của ngành khmt hiện nay là gì
+    - xu hướng của ngành khoa học máy tính hiện nay là gì
+    - xu hướng của ngành ktpm hiện nay là gì
+    - xu hướng của ngành kỹ thuật phần mềm hiện nay là gì
+    - xu hướng của ngành cntt hiện nay là gì
+    - xu hướng của ngành công nghệ thông tin hiện nay là gì
+    - xu hướng của ngành httt hiện nay là gì
+    - xu hướng của ngành hệ thống thông tin hiện nay là gì
+    - xu hướng của ngành khdl hiện nay là gì
+    - xu hướng của ngành khoa học dữ liệu hiện nay là gì
+    - xu hướng tương lai của ngành khmt là gì
+    - xu hướng tương lai của ngành khoa học máy tính là gì
+    - xu hướng tương lai của ngành ktpm là gì
+    - xu hướng tương lai của ngành kỹ thuật phần mềm là gì
+    - xu hướng tương lai của ngành cntt là gì
+    - xu hướng tương lai của ngành công nghệ thông tin là gì
+    - xu hướng tương lai của ngành httt là gì
+    - xu hướng tương lai của ngành hệ thống thông tin là gì
+    - xu hướng tương lai của ngành khdl là gì
+    - xu hướng tương lai của ngành khoa học dữ liệu là gì
+    - xu hướng tuyển dụng trong ngành khmt là gì
+    - xu hướng tuyển dụng trong ngành khoa học máy tính là gì
+    - xu hướng tuyển dụng trong ngành ktpm là gì
+    - xu hướng tuyển dụng trong ngành kỹ thuật phần mềm là gì
+    - xu hướng tuyển dụng trong ngành cntt là gì
+    - xu hướng tuyển dụng trong ngành công nghệ thông tin là gì
+    - xu hướng tuyển dụng trong ngành httt là gì
+    - xu hướng tuyển dụng trong ngành hệ thống thông tin là gì
+    - xu hướng tuyển dụng trong ngành khdl là gì
+    - xu hướng tuyển dụng trong ngành khoa học dữ liệu là gì
+    - xu hướng việc làm hiện tại của ngành khmt là gì
+    - xu hướng việc làm hiện tại của ngành khoa học máy tính là gì
+    - xu hướng việc làm hiện tại của ngành ktpm là gì
+    - xu hướng việc làm hiện tại của ngành kỹ thuật phần mềm là gì
+    - xu hướng việc làm hiện tại của ngành cntt là gì
+    - xu hướng việc làm hiện tại của ngành công nghệ thông tin là gì
+    - xu hướng việc làm hiện tại của ngành httt là gì
+    - xu hướng việc làm hiện tại của ngành hệ thống thông tin là gì
+    - xu hướng việc làm hiện tại của ngành khdl là gì
+    - xu hướng việc làm hiện tại của ngành khoa học dữ liệu là gì
+    - xu hướng việc làm tương lai trong ngành khmt là gì
+    - xu hướng việc làm tương lai trong ngành khoa học máy tính là gì
+    - xu hướng việc làm tương lai trong ngành ktpm là gì
+    - xu hướng việc làm tương lai trong ngành kỹ thuật phần mềm là gì
+    - xu hướng việc làm tương lai trong ngành cntt là gì
+    - xu hướng việc làm tương lai trong ngành công nghệ thông tin là gì
+    - xu hướng việc làm tương lai trong ngành httt là gì
+    - xu hướng việc làm tương lai trong ngành hệ thống thông tin là gì
+    - xu hướng việc làm tương lai trong ngành khdl là gì
+    - xu hướng việc làm tương lai trong ngành khoa học dữ liệu là gì
+
+
+- intent: cachhoc
+  examples: |
+    - em sưu tầm tận 10GB tài liệu khmt nhưng vẫn học chưa tốt, tại sao ?
+    - em sưu tầm tận 10GB tài liệu khoa học máy tính nhưng vẫn học chưa tốt, tại sao ?
+    - em sưu tầm tận 10GB tài liệu ktpm nhưng vẫn học chưa tốt, tại sao ?
+    - em sưu tầm tận 10GB tài liệu kỹ thuật phần mềm nhưng vẫn học chưa tốt, tại sao ?
+    - em sưu tầm tận 10GB tài liệu cntt nhưng vẫn học chưa tốt, tại sao ?
+    - em sưu tầm tận 10GB tài liệu công nghệ thông tin nhưng vẫn học chưa tốt, tại sao ?
+    - em sưu tầm tận 10GB tài liệu httt nhưng vẫn học chưa tốt, tại sao ?
+    - em sưu tầm tận 10GB tài liệu hệ thống thông tin nhưng vẫn học chưa tốt, tại sao ?
+    - em sưu tầm tận 10GB tài liệu khdl nhưng vẫn học chưa tốt, tại sao ?
+    - em sưu tầm tận 10GB tài liệu khoa học dữ liệu nhưng vẫn học chưa tốt, tại sao ?
+    - em tải rất nhiều tài liệu khmt, nhưng không đụng tới ?
+    - em tải rất nhiều tài liệu khoa học máy tính, nhưng không đụng tới ?
+    - em tải rất nhiều tài liệu ktpm, nhưng không đụng tới ?
+    - em tải rất nhiều tài liệu kỹ thuật phần mềm, nhưng không đụng tới ?
+    - em tải rất nhiều tài liệu cntt, nhưng không đụng tới ?
+    - em tải rất nhiều tài liệu công nghệ thông tin, nhưng không đụng tới ?
+    - em tải rất nhiều tài liệu httt, nhưng không đụng tới ?
+    - em tải rất nhiều tài liệu hệ thống thông tin, nhưng không đụng tới ?
+    - em tải rất nhiều tài liệu khdl, nhưng không đụng tới ?
+    - em tải rất nhiều tài liệu khoa học dữ liệu, nhưng không đụng tới ?
+    - học thế nào để giỏi khmt ?
+    - học thế nào để giỏi khoa học máy tính ?
+    - học thế nào để giỏi ktpm ?
+    - học thế nào để giỏi kỹ thuật phần mềm ?
+    - học thế nào để giỏi cntt ?
+    - học thế nào để giỏi công nghệ thông tin ?
+    - học thế nào để giỏi httt ?
+    - học thế nào để giỏi hệ thống thông tin ?
+    - học thế nào để giỏi khdl ?
+    - học thế nào để giỏi khoa học dữ liệu ?
+    - học làm sao để master ngôn ngữ ngành khmt ?
+    - học làm sao để master ngôn ngữ ngành khoa học máy tính ?
+    - học làm sao để master ngôn ngữ ngành ktpm ?
+    - học làm sao để master ngôn ngữ ngành kỹ thuật phần mềm ?
+    - học làm sao để master ngôn ngữ ngành cntt ?
+    - học làm sao để master ngôn ngữ ngành công nghệ thông tin ?
+    - học làm sao để master ngôn ngữ ngành httt ?
+    - học làm sao để master ngôn ngữ ngành hệ thống thông tin ?
+    - học làm sao để master ngôn ngữ ngành khdl ?
+    - học làm sao để master ngôn ngữ ngành khoa học dữ liệu ?
+    - cách nâng cao giải thuật nghành khmt ?
+    - cách nâng cao giải thuật nghành khoa học máy tính ?
+    - cách nâng cao giải thuật nghành ktpm ?
+    - cách nâng cao giải thuật nghành kỹ thuật phần mềm ?
+    - cách nâng cao giải thuật nghành cntt ?
+    - cách nâng cao giải thuật nghành công nghệ thông tin ?
+    - cách nâng cao giải thuật nghành httt ?
+    - cách nâng cao giải thuật nghành hệ thống thông tin ?
+    - cách nâng cao giải thuật nghành khdl ?
+    - cách nâng cao giải thuật nghành khoa học dữ liệu ?
+    - cách nâng cao trình độ lập trình khmt ?
+    - cách nâng cao trình độ lập trình khoa học máy tính ?
+    - cách nâng cao trình độ lập trình ktpm ?
+    - cách nâng cao trình độ lập trình kỹ thuật phần mềm ?
+    - cách nâng cao trình độ lập trình cntt ?
+    - cách nâng cao trình độ lập trình công nghệ thông tin ?
+    - cách nâng cao trình độ lập trình httt ?
+    - cách nâng cao trình độ lập trình hệ thống thông tin ?
+    - cách nâng cao trình độ lập trình khdl ?
+    - cách nâng cao trình độ lập trình khoa học dữ liệu ?
+    - cách để không lạc hậu ngành khmt ?
+    - cách để không lạc hậu ngành khoa học máy tính ?
+    - cách để không lạc hậu ngành ktpm ?
+    - cách để không lạc hậu ngành kỹ thuật phần mềm ?
+    - cách để không lạc hậu ngành cntt ?
+    - cách để không lạc hậu ngành công nghệ thông tin ?
+    - cách để không lạc hậu ngành httt ?
+    - cách để không lạc hậu ngành hệ thống thông tin ?
+    - cách để không lạc hậu ngành khdl ?
+    - cách để không lạc hậu ngành khoa học dữ liệu ?
+    - làm sao luôn phát triển ngành khmt ?
+    - làm sao luôn phát triển ngành khoa học máy tính ?
+    - làm sao luôn phát triển ngành ktpm ?
+    - làm sao luôn phát triển ngành kỹ thuật phần mềm ?
+    - làm sao luôn phát triển ngành cntt ?
+    - làm sao luôn phát triển ngành công nghệ thông tin ?
+    - làm sao luôn phát triển ngành httt ?
+    - làm sao luôn phát triển ngành hệ thống thông tin ?
+    - làm sao luôn phát triển ngành khdl ?
+    - làm sao luôn phát triển ngành khoa học dữ liệu ?
+    - cần học thế nào không lỗi thời ngành khmt ?
+    - cần học thế nào không lỗi thời ngành khoa học máy tính ?
+    - cần học thế nào không lỗi thời ngành ktpm ?
+    - cần học thế nào không lỗi thời ngành kỹ thuật phần mềm ?
+    - cần học thế nào không lỗi thời ngành cntt ?
+    - cần học thế nào không lỗi thời ngành công nghệ thông tin ?
+    - cần học thế nào không lỗi thời ngành httt ?
+    - cần học thế nào không lỗi thời ngành hệ thống thông tin ?
+    - cần học thế nào không lỗi thời ngành khdl ?
+    - cần học thế nào không lỗi thời ngành khoa học dữ liệu ?
+    - học như thế để có việc làm ngành khmt ?
+    - học như thế để có việc làm ngành khoa học máy tính ?
+    - học như thế để có việc làm ngành ktpm ?
+    - học như thế để có việc làm ngành kỹ thuật phần mềm ?
+    - học như thế để có việc làm ngành cntt ?
+    - học như thế để có việc làm ngành công nghệ thông tin ?
+    - học như thế để có việc làm ngành httt ?
+    - học như thế để có việc làm ngành hệ thống thông tin ?
+    - học như thế để có việc làm ngành khdl ?
+    - học như thế để có việc làm ngành khoa học dữ liệu ?
+ 
+
+
+- intent: phongvan
+  examples: |
+    - nên chuẩn bị những gì khi đi phỏng vấn đối với chuyên ngành khmt ?
+    - nên chuẩn bị những gì khi đi phỏng vấn đối với chuyên ngành khoa học máy tính ?
+    - nên chuẩn bị những gì khi đi phỏng vấn đối với chuyên ngành ktpm ?
+    - nên chuẩn bị những gì khi đi phỏng vấn đối với chuyên ngành kỹ thuật phần mềm ?
+    - nên chuẩn bị những gì khi đi phỏng vấn đối với chuyên ngành cntt ?
+    - nên chuẩn bị những gì khi đi phỏng vấn đối với chuyên ngành công nghệ thông tin ?
+    - nên chuẩn bị những gì khi đi phỏng vấn đối với chuyên ngành httt ?
+    - nên chuẩn bị những gì khi đi phỏng vấn đối với chuyên ngành hệ thống thông tin ?
+    - nên chuẩn bị những gì khi đi phỏng vấn đối với chuyên ngành khdl ?
+    - nên chuẩn bị những gì khi đi phỏng vấn đối với chuyên ngành khoa học dữ liệu ?
+    - những câu hỏi phỏng vấn ngành khmt ?
+    - những câu hỏi phỏng vấn ngành khoa học máy tính ?
+    - những câu hỏi phỏng vấn ngành ktpm ?
+    - những câu hỏi phỏng vấn ngành kỹ thuật phần mềm ?
+    - những câu hỏi phỏng vấn ngành cntt ?
+    - những câu hỏi phỏng vấn ngành công nghệ thông tin ?
+    - những câu hỏi phỏng vấn ngành httt ?
+    - những câu hỏi phỏng vấn ngành hệ thống thông tin ?
+    - những câu hỏi phỏng vấn ngành khdl ?
+    - những câu hỏi phỏng vấn ngành khoa học dữ liệu ?
+    - viết CV đối với ngành khmt như thế nào ?
+    - viết CV đối với ngành khoa học máy tính như thế nào ?
+    - viết CV đối với ngành ktpm như thế nào ?
+    - viết CV đối với ngành kỹ thuật phần mềm như thế nào ?
+    - viết CV đối với ngành cntt như thế nào ?
+    - viết CV đối với ngành công nghệ thông tin như thế nào ?
+    - viết CV đối với ngành httt như thế nào ?
+    - viết CV đối với ngành hệ thống thông tin như thế nào ?
+    - viết CV đối với ngành khdl như thế nào ?
+    - viết CV đối với ngành khoa học dữ liệu như thế nào ?
+    - cách viết CV đối với ngành khmt ?
+    - cách viết CV đối với ngành khoa học máy tính ?
+    - cách viết CV đối với ngành ktpm ?
+    - cách viết CV đối với ngành kỹ thuật phần mềm ?
+    - cách viết CV đối với ngành cntt ?
+    - cách viết CV đối với ngành công nghệ thông tin ?
+    - cách viết CV đối với ngành httt ?
+    - cách viết CV đối với ngành hệ thống thông tin ?
+    - cách viết CV đối với ngành khdl ?
+    - cách viết CV đối với ngành khoa học dữ liệu ?
+    - nhà tuyển dụng sinh viên ngành khmt quan tâm đến điều gì ?
+    - nhà tuyển dụng sinh viên ngành khoa học máy tính quan tâm đến điều gì ?
+    - nhà tuyển dụng sinh viên ngành ktpm quan tâm đến điều gì ?
+    - nhà tuyển dụng sinh viên ngành kỹ thuật phần mềm quan tâm đến điều gì ?
+    - nhà tuyển dụng sinh viên ngành cntt quan tâm đến điều gì ?
+    - nhà tuyển dụng sinh viên ngành công nghệ thông tin quan tâm đến điều gì ?
+    - nhà tuyển dụng sinh viên ngành httt quan tâm đến điều gì ?
+    - nhà tuyển dụng sinh viên ngành hệ thống thông tin quan tâm đến điều gì ?
+    - nhà tuyển dụng sinh viên ngành khdl quan tâm đến điều gì ?
+    - nhà tuyển dụng sinh viên ngành khoa học dữ liệu quan tâm đến điều gì ?
+    - nhà tuyển dụng sinh viên ngành khmt hay hỏi những câu gì ?
+    - nhà tuyển dụng sinh viên ngành khoa học máy tính hay hỏi những câu gì ?
+    - nhà tuyển dụng sinh viên ngành ktpm hay hỏi những câu gì ?
+    - nhà tuyển dụng sinh viên ngành kỹ thuật phần mềm hay hỏi những câu gì ?
+    - nhà tuyển dụng sinh viên ngành cntt hay hỏi những câu gì ?
+    - nhà tuyển dụng sinh viên ngành công nghệ thông tin hay hỏi những câu gì ?
+    - nhà tuyển dụng sinh viên ngành httt hay hỏi những câu gì ?
+    - nhà tuyển dụng sinh viên ngành hệ thống thông tin hay hỏi những câu gì ?
+    - nhà tuyển dụng sinh viên ngành khdl hay hỏi những câu gì ?
+    - nhà tuyển dụng sinh viên ngành khoa học dữ liệu hay hỏi những câu gì ?
+    - lời khuyên trước khi đi phỏng vấn khmt ?
+    - lời khuyên trước khi đi phỏng vấn khoa học máy tính ?
+    - lời khuyên trước khi đi phỏng vấn ktpm ?
+    - lời khuyên trước khi đi phỏng vấn kỹ thuật phần mềm ?
+    - lời khuyên trước khi đi phỏng vấn cntt ?
+    - lời khuyên trước khi đi phỏng vấn công nghệ thông tin ?
+    - lời khuyên trước khi đi phỏng vấn httt ?
+    - lời khuyên trước khi đi phỏng vấn hệ thống thông tin ?
+    - lời khuyên trước khi đi phỏng vấn khdl ?
+    - lời khuyên trước khi đi phỏng vấn khoa học dữ liệu ?
+    - những lưu ý khi phỏng vấn khmt ?
+    - những lưu ý khi phỏng vấn khoa học máy tính ?
+    - những lưu ý khi phỏng vấn ktpm ?
+    - những lưu ý khi phỏng vấn kỹ thuật phần mềm ?
+    - những lưu ý khi phỏng vấn cntt ?
+    - những lưu ý khi phỏng vấn công nghệ thông tin ?
+    - những lưu ý khi phỏng vấn httt ?
+    - những lưu ý khi phỏng vấn hệ thống thông tin ?
+    - những lưu ý khi phỏng vấn khdl ?
+    - những lưu ý khi phỏng vấn khoa học dữ liệu ?
+
+
+- intent: kienthuc
+  examples: |
+    - ngành khmt đào tạo cho sinh viên những kiến thức gì khi ra trường
+    - ngành khoa học máy tính đào tạo cho sinh viên những kiến thức gì khi ra trường
+    - ngành ktpm đào tạo cho sinh viên những kiến thức gì khi ra trường
+    - ngành kỹ thuật phần mềm đào tạo cho sinh viên những kiến thức gì khi ra trường
+    - ngành cntt đào tạo cho sinh viên những kiến thức gì khi ra trường
+    - ngành công nghệ thông tin đào tạo cho sinh viên những kiến thức gì khi ra trường
+    - ngành httt đào tạo cho sinh viên những kiến thức gì khi ra trường
+    - ngành hệ thống thông tin đào tạo cho sinh viên những kiến thức gì khi ra trường
+    - ngành khdl đào tạo cho sinh viên những kiến thức gì khi ra trường
+    - ngành khoa học dữ liệu đào tạo cho sinh viên những kiến thức gì khi ra trường
+    - những kiến thức học được khi học khmt
+    - những kiến thức học được khi học khoa học máy tính
+    - những kiến thức học được khi học ktpm
+    - những kiến thức học được khi học kỹ thuật phần mềm
+    - những kiến thức học được khi học cntt
+    - những kiến thức học được khi học công nghệ thông tin
+    - những kiến thức học được khi học httt
+    - những kiến thức học được khi học hệ thống thông tin
+    - những kiến thức học được khi học khdl
+    - những kiến thức học được khi học khoa học dữ liệu
+    - ngành khmt có dạy luôn kiến thức của những chuyên ngành khác không
+    - ngành khoa học máy tính có dạy luôn kiến thức của những chuyên ngành khác không
+    - ngành ktpm có dạy luôn kiến thức của những chuyên ngành khác không
+    - ngành kỹ thuật phần mềm có dạy luôn kiến thức của những chuyên ngành khác không
+    - ngành cntt có dạy luôn kiến thức của những chuyên ngành khác không
+    - ngành công nghệ thông tin có dạy luôn kiến thức của những chuyên ngành khác không
+    - ngành httt có dạy luôn kiến thức của những chuyên ngành khác không
+    - ngành hệ thống thông tin có dạy luôn kiến thức của những chuyên ngành khác không
+    - ngành khdl có dạy luôn kiến thức của những chuyên ngành khác không
+    - ngành khoa học dữ liệu có dạy luôn kiến thức của những chuyên ngành khác không
+    - những kiến thức mới có thường được cập nhật khi học khmt không
+    - những kiến thức mới có thường được cập nhật khi học khoa học máy tính không
+    - những kiến thức mới có thường được cập nhật khi học ktpm không
+    - những kiến thức mới có thường được cập nhật khi học kỹ thuật phần mềm không
+    - những kiến thức mới có thường được cập nhật khi học cntt không
+    - những kiến thức mới có thường được cập nhật khi học công nghệ thông tin không
+    - những kiến thức mới có thường được cập nhật khi học httt không
+    - những kiến thức mới có thường được cập nhật khi học hệ thống thông tin không
+    - những kiến thức mới có thường được cập nhật khi học khdl không
+    - những kiến thức mới có thường được cập nhật khi học khoa học dữ liệu không
+    - những kiến thức quan trọng cần nắm khi học khmt
+    - những kiến thức quan trọng cần nắm khi học khoa học máy tính
+    - những kiến thức quan trọng cần nắm khi học ktpm
+    - những kiến thức quan trọng cần nắm khi học kỹ thuật phần mềm
+    - những kiến thức quan trọng cần nắm khi học cntt
+    - những kiến thức quan trọng cần nắm khi học công nghệ thông tin
+    - những kiến thức quan trọng cần nắm khi học httt
+    - những kiến thức quan trọng cần nắm khi học hệ thống thông tin
+    - những kiến thức quan trọng cần nắm khi học khdl
+    - những kiến thức quan trọng cần nắm khi học khoa học dữ liệu
+    - khối lượng kiến thức của ngành khmt có nhiều không
+    - khối lượng kiến thức của ngành khoa học máy tính có nhiều không
+    - khối lượng kiến thức của ngành ktpm có nhiều không
+    - khối lượng kiến thức của ngành kỹ thuật phần mềm có nhiều không
+    - khối lượng kiến thức của ngành cntt có nhiều không
+    - khối lượng kiến thức của ngành công nghệ thông tin có nhiều không
+    - khối lượng kiến thức của ngành httt có nhiều không
+    - khối lượng kiến thức của ngành hệ thống thông tin có nhiều không
+    - khối lượng kiến thức của ngành khdl có nhiều không
+    - khối lượng kiến thức của ngành khoa học dữ liệu có nhiều không
+    - sinh viên học được những kiến thức có ích gì cho công việc khi học khmt
+    - sinh viên học được những kiến thức có ích gì cho công việc khi học khoa học máy tính
+    - sinh viên học được những kiến thức có ích gì cho công việc khi học ktpm
+    - sinh viên học được những kiến thức có ích gì cho công việc khi học kỹ thuật phần mềm
+    - sinh viên học được những kiến thức có ích gì cho công việc khi học cntt
+    - sinh viên học được những kiến thức có ích gì cho công việc khi học công nghệ thông tin
+    - sinh viên học được những kiến thức có ích gì cho công việc khi học httt
+    - sinh viên học được những kiến thức có ích gì cho công việc khi học hệ thống thông tin
+    - sinh viên học được những kiến thức có ích gì cho công việc khi học khdl
+    - sinh viên học được những kiến thức có ích gì cho công việc khi học khoa học dữ liệu
+    - kiến thức có được khi học khmt có đủ để làm việc khi ra trường
+    - kiến thức có được khi học khoa học máy tính có đủ để làm việc khi ra trường
+    - kiến thức có được khi học ktpm có đủ để làm việc khi ra trường
+    - kiến thức có được khi học kỹ thuật phần mềm có đủ để làm việc khi ra trường
+    - kiến thức có được khi học cntt có đủ để làm việc khi ra trường
+    - kiến thức có được khi học công nghệ thông tin có đủ để làm việc khi ra trường
+    - kiến thức có được khi học httt có đủ để làm việc khi ra trường
+    - kiến thức có được khi học hệ thống thông tin có đủ để làm việc khi ra trường
+    - kiến thức có được khi học khdl có đủ để làm việc khi ra trường
+    - kiến thức có được khi học khoa học dữ liệu có đủ để làm việc khi ra trường
+    - ngành khmt dạy cho sinh viên những kiến thức gì
+    - ngành khoa học máy tính dạy cho sinh viên những kiến thức gì
+    - ngành ktpm dạy cho sinh viên những kiến thức gì
+    - ngành kỹ thuật phần mềm dạy cho sinh viên những kiến thức gì
+    - ngành cntt dạy cho sinh viên những kiến thức gì
+    - ngành công nghệ thông tin dạy cho sinh viên những kiến thức gì
+    - ngành httt dạy cho sinh viên những kiến thức gì
+    - ngành hệ thống thông tin dạy cho sinh viên những kiến thức gì
+    - ngành khdl dạy cho sinh viên những kiến thức gì
+    - ngành khoa học dữ liệu dạy cho sinh viên những kiến thức gì
+
+
+- intent: yeucau
+  examples: |
+    - học ngành khmt yêu cầu những gì
+    - học ngành khoa học máy tính yêu cầu những gì
+    - học ngành ktpm yêu cầu những gì
+    - học ngành kỹ thuật phần mềm yêu cầu những gì
+    - học ngành cntt yêu cầu những gì
+    - học ngành công nghệ thông tin yêu cầu những gì
+    - học ngành httt yêu cầu những gì
+    - học ngành hệ thống thông tin yêu cầu những gì
+    - học ngành khdl yêu cầu những gì
+    - học ngành khoa học dữ liệu yêu cầu những gì
+    - ngành khmt yêu cầu sinh viên cần chuẩn bị gì khi học
+    - ngành khoa học máy tính yêu cầu sinh viên cần chuẩn bị gì khi học
+    - ngành ktpm yêu cầu sinh viên cần chuẩn bị gì khi học
+    - ngành kỹ thuật phần mềm yêu cầu sinh viên cần chuẩn bị gì khi học
+    - ngành cntt yêu cầu sinh viên cần chuẩn bị gì khi học
+    - ngành công nghệ thông tin yêu cầu sinh viên cần chuẩn bị gì khi học
+    - ngành httt yêu cầu sinh viên cần chuẩn bị gì khi học
+    - ngành hệ thống thông tin yêu cầu sinh viên cần chuẩn bị gì khi học
+    - ngành khdl yêu cầu sinh viên cần chuẩn bị gì khi học
+    - ngành khoa học dữ liệu yêu cầu sinh viên cần chuẩn bị gì khi học
+    - ngành khmt có yêu cầu cao không
+    - ngành khoa học máy tính có yêu cầu cao không
+    - ngành ktpm có yêu cầu cao không
+    - ngành kỹ thuật phần mềm có yêu cầu cao không
+    - ngành cntt có yêu cầu cao không
+    - ngành công nghệ thông tin có yêu cầu cao không
+    - ngành httt có yêu cầu cao không
+    - ngành hệ thống thông tin có yêu cầu cao không
+    - ngành khdl có yêu cầu cao không
+    - ngành khoa học dữ liệu có yêu cầu cao không
+    - học ngành khmt yêu cầu phải có những tố chất gì
+    - học ngành khoa học máy tính yêu cầu phải có những tố chất gì
+    - học ngành ktpm yêu cầu phải có những tố chất gì
+    - học ngành kỹ thuật phần mềm yêu cầu phải có những tố chất gì
+    - học ngành cntt yêu cầu phải có những tố chất gì
+    - học ngành công nghệ thông tin yêu cầu phải có những tố chất gì
+    - học ngành httt yêu cầu phải có những tố chất gì
+    - học ngành hệ thống thông tin yêu cầu phải có những tố chất gì
+    - học ngành khdl yêu cầu phải có những tố chất gì
+    - học ngành khoa học dữ liệu yêu cầu phải có những tố chất gì
+    - những yêu cầu quan trọng khi học ngành khmt
+    - những yêu cầu quan trọng khi học ngành khoa học máy tính
+    - những yêu cầu quan trọng khi học ngành ktpm
+    - những yêu cầu quan trọng khi học ngành kỹ thuật phần mềm
+    - những yêu cầu quan trọng khi học ngành cntt
+    - những yêu cầu quan trọng khi học ngành công nghệ thông tin
+    - những yêu cầu quan trọng khi học ngành httt
+    - những yêu cầu quan trọng khi học ngành hệ thống thông tin
+    - những yêu cầu quan trọng khi học ngành khdl
+    - những yêu cầu quan trọng khi học ngành khoa học dữ liệu
+    - để học tốt ngành khmt yêu cầu phải học như thế nào
+    - để học tốt ngành khoa học máy tính yêu cầu phải học như thế nào
+    - để học tốt ngành ktpm yêu cầu phải học như thế nào
+    - để học tốt ngành kỹ thuật phần mềm yêu cầu phải học như thế nào
+    - để học tốt ngành cntt yêu cầu phải học như thế nào
+    - để học tốt ngành công nghệ thông tin yêu cầu phải học như thế nào
+    - để học tốt ngành httt yêu cầu phải học như thế nào
+    - để học tốt ngành hệ thống thông tin yêu cầu phải học như thế nào
+    - để học tốt ngành khdl yêu cầu phải học như thế nào
+    - để học tốt ngành khoa học dữ liệu yêu cầu phải học như thế nào
+
+- intent: thuchanh
+  examples: |
+    - học ngành khmt có được thực hành trong quá trình học
+    - học ngành khoa học máy tính có được thực hành trong quá trình học
+    - học ngành ktpm có được thực hành trong quá trình học
+    - học ngành kỹ thuật phần mềm có được thực hành trong quá trình học
+    - học ngành cntt có được thực hành trong quá trình học
+    - học ngành công nghệ thông tin có được thực hành trong quá trình học
+    - học ngành httt có được thực hành trong quá trình học
+    - học ngành hệ thống thông tin có được thực hành trong quá trình học
+    - học ngành khdl có được thực hành trong quá trình học
+    - học ngành khoa học dữ liệu có được thực hành trong quá trình học
+    - ngành khmt có thực hành nhiều không
+    - ngành khoa học máy tính có thực hành nhiều không
+    - ngành ktpm có thực hành nhiều không
+    - ngành kỹ thuật phần mềm có thực hành nhiều không
+    - ngành cntt có thực hành nhiều không
+    - ngành công nghệ thông tin có thực hành nhiều không
+    - ngành httt có thực hành nhiều không
+    - ngành hệ thống thông tin có thực hành nhiều không
+    - ngành khdl có thực hành nhiều không
+    - ngành khoa học dữ liệu có thực hành nhiều không
+    - học ngành khmt được thực hành những gì
+    - học ngành khoa học máy tính được thực hành những gì
+    - học ngành ktpm được thực hành những gì
+    - học ngành kỹ thuật phần mềm được thực hành những gì
+    - học ngành cntt được thực hành những gì
+    - học ngành công nghệ thông tin được thực hành những gì
+    - học ngành httt được thực hành những gì
+    - học ngành hệ thống thông tin được thực hành những gì
+    - học ngành khdl được thực hành những gì
+    - học ngành khoa học dữ liệu được thực hành những gì
+    - học ngành khmt thì thực hành những kiến thức đã học như thế nào
+    - học ngành khoa học máy tính thì thực hành những kiến thức đã học như thế nào
+    - học ngành ktpm thì thực hành những kiến thức đã học như thế nào
+    - học ngành kỹ thuật phần mềm thì thực hành những kiến thức đã học như thế nào
+    - học ngành cntt thì thực hành những kiến thức đã học như thế nào
+    - học ngành công nghệ thông tin thì thực hành những kiến thức đã học như thế nào
+    - học ngành httt thì thực hành những kiến thức đã học như thế nào
+    - học ngành hệ thống thông tin thì thực hành những kiến thức đã học như thế nào
+    - học ngành khdl thì thực hành những kiến thức đã học như thế nào
+    - học ngành khoa học dữ liệu thì thực hành những kiến thức đã học như thế nào
+    - ngành khmt thực hành có khó không
+    - ngành khoa học máy tính thực hành có khó không
+    - ngành ktpm thực hành có khó không
+    - ngành kỹ thuật phần mềm thực hành có khó không
+    - ngành cntt thực hành có khó không
+    - ngành công nghệ thông tin thực hành có khó không
+    - ngành httt thực hành có khó không
+    - ngành hệ thống thông tin thực hành có khó không
+    - ngành khdl thực hành có khó không
+    - ngành khoa học dữ liệu thực hành có khó không
+    - để học thực hành tốt ngành khmt thì cần chú ý những gì
+    - để học thực hành tốt ngành khoa học máy tính thì cần chú ý những gì
+    - để học thực hành tốt ngành ktpm thì cần chú ý những gì
+    - để học thực hành tốt ngành kỹ thuật phần mềm thì cần chú ý những gì
+    - để học thực hành tốt ngành cntt thì cần chú ý những gì
+    - để học thực hành tốt ngành công nghệ thông tin thì cần chú ý những gì
+    - để học thực hành tốt ngành httt thì cần chú ý những gì
+    - để học thực hành tốt ngành hệ thống thông tin thì cần chú ý những gì
+    - để học thực hành tốt ngành khdl thì cần chú ý những gì
+    - để học thực hành tốt ngành khoa học dữ liệu thì cần chú ý những gì
+
+  
+- intent: daotao
+  examples: |
+    - ngành khmt đào tạo những gì
+    - ngành khoa học máy tính đào tạo những gì
+    - ngành ktpm đào tạo những gì
+    - ngành kỹ thuật phần mềm đào tạo những gì
+    - ngành cntt đào tạo những gì
+    - ngành công nghệ thông tin đào tạo những gì
+    - ngành httt đào tạo những gì
+    - ngành hệ thống thông tin đào tạo những gì
+    - ngành khdl đào tạo những gì
+    - ngành khoa học dữ liệu đào tạo những gì
+    - chất lượng đào tạo ngành khmt có tốt không
+    - chất lượng đào tạo ngành khoa học máy tính có tốt không
+    - chất lượng đào tạo ngành ktpm có tốt không
+    - chất lượng đào tạo ngành kỹ thuật phần mềm có tốt không
+    - chất lượng đào tạo ngành cntt có tốt không
+    - chất lượng đào tạo ngành công nghệ thông tin có tốt không
+    - chất lượng đào tạo ngành httt có tốt không
+    - chất lượng đào tạo ngành hệ thống thông tin có tốt không
+    - chất lượng đào tạo ngành khdl có tốt không
+    - chất lượng đào tạo ngành khoa học dữ liệu có tốt không
+    - thời gian đào tạo ngành khmt là bao nhiêu
+    - thời gian đào tạo ngành khoa học máy tính là bao nhiêu
+    - thời gian đào tạo ngành ktpm là bao nhiêu
+    - thời gian đào tạo ngành kỹ thuật phần mềm là bao nhiêu
+    - thời gian đào tạo ngành cntt là bao nhiêu
+    - thời gian đào tạo ngành công nghệ thông tin là bao nhiêu
+    - thời gian đào tạo ngành httt là bao nhiêu
+    - thời gian đào tạo ngành hệ thống thông tin là bao nhiêu
+    - thời gian đào tạo ngành khdl là bao nhiêu
+    - thời gian đào tạo ngành khoa học dữ liệu là bao nhiêu
+    - ngành khmt có đào tạo hệ chất lượng cao không
+    - ngành khoa học máy tính có đào tạo hệ chất lượng cao không
+    - ngành ktpm có đào tạo hệ chất lượng cao không
+    - ngành kỹ thuật phần mềm có đào tạo hệ chất lượng cao không
+    - ngành cntt có đào tạo hệ chất lượng cao không
+    - ngành công nghệ thông tin có đào tạo hệ chất lượng cao không
+    - ngành httt có đào tạo hệ chất lượng cao không
+    - ngành hệ thống thông tin có đào tạo hệ chất lượng cao không
+    - ngành khdl có đào tạo hệ chất lượng cao không
+    - ngành khoa học dữ liệu có đào tạo hệ chất lượng cao không
+    - ngành khmt có đào tạo hệ sau đại học không
+    - ngành khoa học máy tính có đào tạo hệ sau đại học không
+    - ngành ktpm có đào tạo hệ sau đại học không
+    - ngành kỹ thuật phần mềm có đào tạo hệ sau đại học không
+    - ngành cntt có đào tạo hệ sau đại học không
+    - ngành công nghệ thông tin có đào tạo hệ sau đại học không
+    - ngành httt có đào tạo hệ sau đại học không
+    - ngành hệ thống thông tin có đào tạo hệ sau đại học không
+    - ngành khdl có đào tạo hệ sau đại học không
+    - ngành khoa học dữ liệu có đào tạo hệ sau đại học không
+    - học ngành khmt được đào tạo những kỹ năng và kiến thức gì
+    - học ngành khoa học máy tính được đào tạo những kỹ năng và kiến thức gì
+    - học ngành ktpm được đào tạo những kỹ năng và kiến thức gì
+    - học ngành kỹ thuật phần mềm được đào tạo những kỹ năng và kiến thức gì
+    - học ngành cntt được đào tạo những kỹ năng và kiến thức gì
+    - học ngành công nghệ thông tin được đào tạo những kỹ năng và kiến thức gì
+    - học ngành httt được đào tạo những kỹ năng và kiến thức gì
+    - học ngành hệ thống thông tin được đào tạo những kỹ năng và kiến thức gì
+    - học ngành khdl được đào tạo những kỹ năng và kiến thức gì
+    - học ngành khoa học dữ liệu được đào tạo những kỹ năng và kiến thức gì
+
+
+- intent: kynang
+  examples: |
+    - khi học ngành khmt sẽ học được những kỹ năng gì
+    - khi học ngành khoa học máy tính sẽ học được những kỹ năng gì
+    - khi học ngành ktpm sẽ học được những kỹ năng gì
+    - khi học ngành kỹ thuật phần mềm sẽ học được những kỹ năng gì
+    - khi học ngành cntt sẽ học được những kỹ năng gì
+    - khi học ngành công nghệ thông tin sẽ học được những kỹ năng gì
+    - khi học ngành httt sẽ học được những kỹ năng gì
+    - khi học ngành hệ thống thông tin sẽ học được những kỹ năng gì
+    - khi học ngành khdl sẽ học được những kỹ năng gì
+    - khi học ngành khoa học dữ liệu sẽ học được những kỹ năng gì
+    - kỹ năng cần có khi học ngành khmt
+    - kỹ năng cần có khi học ngành khoa học máy tính
+    - kỹ năng cần có khi học ngành ktpm
+    - kỹ năng cần có khi học ngành kỹ thuật phần mềm
+    - kỹ năng cần có khi học ngành cntt
+    - kỹ năng cần có khi học ngành công nghệ thông tin
+    - kỹ năng cần có khi học ngành httt
+    - kỹ năng cần có khi học ngành hệ thống thông tin
+    - kỹ năng cần có khi học ngành khdl
+    - kỹ năng cần có khi học ngành khoa học dữ liệu
+    - khi học ngành khmt kỹ năng nào là quan trọng nhất
+    - khi học ngành khoa học máy tính kỹ năng nào là quan trọng nhất
+    - khi học ngành ktpm kỹ năng nào là quan trọng nhất
+    - khi học ngành kỹ thuật phần mềm kỹ năng nào là quan trọng nhất
+    - khi học ngành cntt kỹ năng nào là quan trọng nhất
+    - khi học ngành công nghệ thông tin kỹ năng nào là quan trọng nhất
+    - khi học ngành httt kỹ năng nào là quan trọng nhất
+    - khi học ngành hệ thống thông tin kỹ năng nào là quan trọng nhất
+    - khi học ngành khdl kỹ năng nào là quan trọng nhất
+    - khi học ngành khoa học dữ liệu kỹ năng nào là quan trọng nhất
+    - học ngành khmt có cần giỏi kỹ năng mềm không
+    - học ngành khoa học máy tính có cần giỏi kỹ năng mềm không
+    - học ngành ktpm có cần giỏi kỹ năng mềm không
+    - học ngành kỹ thuật phần mềm có cần giỏi kỹ năng mềm không
+    - học ngành cntt có cần giỏi kỹ năng mềm không
+    - học ngành công nghệ thông tin có cần giỏi kỹ năng mềm không
+    - học ngành httt có cần giỏi kỹ năng mềm không
+    - học ngành hệ thống thông tin có cần giỏi kỹ năng mềm không
+    - học ngành khdl có cần giỏi kỹ năng mềm không
+    - học ngành khoa học dữ liệu có cần giỏi kỹ năng mềm không
+    - những kỹ năng nào giúp việc học ngành khmt tốt hơn
+    - những kỹ năng nào giúp việc học ngành khoa học máy tính tốt hơn
+    - những kỹ năng nào giúp việc học ngành ktpm tốt hơn
+    - những kỹ năng nào giúp việc học ngành kỹ thuật phần mềm tốt hơn
+    - những kỹ năng nào giúp việc học ngành cntt tốt hơn
+    - những kỹ năng nào giúp việc học ngành công nghệ thông tin tốt hơn
+    - những kỹ năng nào giúp việc học ngành httt tốt hơn
+    - những kỹ năng nào giúp việc học ngành hệ thống thông tin tốt hơn
+    - những kỹ năng nào giúp việc học ngành khdl tốt hơn
+    - những kỹ năng nào giúp việc học ngành khoa học dữ liệu tốt hơn
+    - học ngành khmt có cần rèn luyện kỹ năng mềm không
+    - học ngành khoa học máy tính có cần rèn luyện kỹ năng mềm không
+    - học ngành ktpm có cần rèn luyện kỹ năng mềm không
+    - học ngành kỹ thuật phần mềm có cần rèn luyện kỹ năng mềm không
+    - học ngành cntt có cần rèn luyện kỹ năng mềm không
+    - học ngành công nghệ thông tin có cần rèn luyện kỹ năng mềm không
+    - học ngành httt có cần rèn luyện kỹ năng mềm không
+    - học ngành hệ thống thông tin có cần rèn luyện kỹ năng mềm không
+    - học ngành khdl có cần rèn luyện kỹ năng mềm không
+    - học ngành khoa học dữ liệu có cần rèn luyện kỹ năng mềm không
+
+- intent: doantotnghiep
+  examples: |
+    - nên chọn đồ án tốt nghiệp cho khmt dễ hay khó
+    - nên chọn đồ án tốt nghiệp cho khoa học máy tính dễ hay khó
+    - nên chọn đồ án tốt nghiệp cho ktpm dễ hay khó
+    - nên chọn đồ án tốt nghiệp cho kỹ thuật phần mềm dễ hay khó
+    - nên chọn đồ án tốt nghiệp cho cntt dễ hay khó
+    - nên chọn đồ án tốt nghiệp cho công nghệ thông tin dễ hay khó
+    - nên chọn đồ án tốt nghiệp cho httt dễ hay khó
+    - nên chọn đồ án tốt nghiệp cho hệ thống thông tin dễ hay khó
+    - nên chọn đồ án tốt nghiệp cho khdl dễ hay khó
+    - nên chọn đồ án tốt nghiệp cho khoa học dữ liệu dễ hay khó
+    - khmt có những đề tài nào
+    - khoa học máy tính có những đề tài nào
+    - ktpm có những đề tài nào
+    - kỹ thuật phần mềm có những đề tài nào
+    - cntt có những đề tài nào
+    - công nghệ thông tin có những đề tài nào
+    - httt có những đề tài nào
+    - hệ thống thông tin có những đề tài nào
+    - khdl có những đề tài nào
+    - khoa học dữ liệu có những đề tài nào
+    - đồ án ngành khmt có thể chọn ngành khác không
+    - đồ án ngành khoa học máy tính có thể chọn ngành khác không
+    - đồ án ngành ktpm có thể chọn ngành khác không
+    - đồ án ngành kỹ thuật phần mềm có thể chọn ngành khác không
+    - đồ án ngành cntt có thể chọn ngành khác không
+    - đồ án ngành công nghệ thông tin có thể chọn ngành khác không
+    - đồ án ngành httt có thể chọn ngành khác không
+    - đồ án ngành hệ thống thông tin có thể chọn ngành khác không
+    - đồ án ngành khdl có thể chọn ngành khác không
+    - đồ án ngành khoa học dữ liệu có thể chọn ngành khác không
+    - khmt nên chọn những đề tài tốt nghiệp nào
+    - khoa học máy tính nên chọn những đề tài tốt nghiệp nào
+    - ktpm nên chọn những đề tài tốt nghiệp nào
+    - kỹ thuật phần mềm nên chọn những đề tài tốt nghiệp nào
+    - cntt nên chọn những đề tài tốt nghiệp nào
+    - công nghệ thông tin nên chọn những đề tài tốt nghiệp nào
+    - httt nên chọn những đề tài tốt nghiệp nào
+    - hệ thống thông tin nên chọn những đề tài tốt nghiệp nào
+    - khdl nên chọn những đề tài tốt nghiệp nào
+    - khoa học dữ liệu nên chọn những đề tài tốt nghiệp nào
+    - những đề tài tốt ngiệp nào cho khmt
+    - những đề tài tốt ngiệp nào cho khoa học máy tính
+    - những đề tài tốt ngiệp nào cho ktpm
+    - những đề tài tốt ngiệp nào cho kỹ thuật phần mềm
+    - những đề tài tốt ngiệp nào cho cntt
+    - những đề tài tốt ngiệp nào cho công nghệ thông tin
+    - những đề tài tốt ngiệp nào cho httt
+    - những đề tài tốt ngiệp nào cho hệ thống thông tin
+    - những đề tài tốt ngiệp nào cho khdl
+    - những đề tài tốt ngiệp nào cho khoa học dữ liệu
+    - nên chọn đồ án tốt nghiệp nào cho khmt
+    - nên chọn đồ án tốt nghiệp nào cho khoa học máy tính
+    - nên chọn đồ án tốt nghiệp nào cho ktpm
+    - nên chọn đồ án tốt nghiệp nào cho kỹ thuật phần mềm
+    - nên chọn đồ án tốt nghiệp nào cho cntt
+    - nên chọn đồ án tốt nghiệp nào cho công nghệ thông tin
+    - nên chọn đồ án tốt nghiệp nào cho httt
+    - nên chọn đồ án tốt nghiệp nào cho hệ thống thông tin
+    - nên chọn đồ án tốt nghiệp nào cho khdl
+    - nên chọn đồ án tốt nghiệp nào cho khoa học dữ liệu
+    - khmt có những đề tài đồ án tốt nghiệp nào
+    - khoa học máy tính có những đề tài đồ án tốt nghiệp nào
+    - ktpm có những đề tài đồ án tốt nghiệp nào
+    - kỹ thuật phần mềm có những đề tài đồ án tốt nghiệp nào
+    - cntt có những đề tài đồ án tốt nghiệp nào
+    - công nghệ thông tin có những đề tài đồ án tốt nghiệp nào
+    - httt có những đề tài đồ án tốt nghiệp nào
+    - hệ thống thông tin có những đề tài đồ án tốt nghiệp nào
+    - khdl có những đề tài đồ án tốt nghiệp nào
+    - khoa học dữ liệu có những đề tài đồ án tốt nghiệp nào
+
+- intent: thuctapdoanhnghiep
+  examples: |
+    - những nơi thực tập tốt cho khmt
+    - những nơi thực tập tốt cho khoa học máy tính
+    - những nơi thực tập tốt cho ktpm
+    - những nơi thực tập tốt cho kỹ thuật phần mềm
+    - những nơi thực tập tốt cho cntt
+    - những nơi thực tập tốt cho công nghệ thông tin
+    - những nơi thực tập tốt cho httt
+    - những nơi thực tập tốt cho hệ thống thông tin
+    - những nơi thực tập tốt cho khdl
+    - những nơi thực tập tốt cho khoa học dữ liệu
+    - những công ty chuyên về khmt
+    - những công ty chuyên về khoa học máy tính
+    - những công ty chuyên về ktpm
+    - những công ty chuyên về kỹ thuật phần mềm
+    - những công ty chuyên về cntt
+    - những công ty chuyên về công nghệ thông tin
+    - những công ty chuyên về httt
+    - những công ty chuyên về hệ thống thông tin
+    - những công ty chuyên về khdl
+    - những công ty chuyên về khoa học dữ liệu
+    - những công ty thực tập cho khmt
+    - những công ty thực tập cho khoa học máy tính
+    - những công ty thực tập cho ktpm
+    - những công ty thực tập cho kỹ thuật phần mềm
+    - những công ty thực tập cho cntt
+    - những công ty thực tập cho công nghệ thông tin
+    - những công ty thực tập cho httt
+    - những công ty thực tập cho hệ thống thông tin
+    - những công ty thực tập cho khdl
+    - những công ty thực tập cho khoa học dữ liệu
+    - đề xuất những nơi thực tập cho ngành khmt
+    - đề xuất những nơi thực tập cho ngành khoa học máy tính
+    - đề xuất những nơi thực tập cho ngành ktpm
+    - đề xuất những nơi thực tập cho ngành kỹ thuật phần mềm
+    - đề xuất những nơi thực tập cho ngành cntt
+    - đề xuất những nơi thực tập cho ngành công nghệ thông tin
+    - đề xuất những nơi thực tập cho ngành httt
+    - đề xuất những nơi thực tập cho ngành hệ thống thông tin
+    - đề xuất những nơi thực tập cho ngành khdl
+    - đề xuất những nơi thực tập cho ngành khoa học dữ liệu
+    - khmt có thể đi thực tập ở những đâu
+    - khoa học máy tính có thể đi thực tập ở những đâu
+    - ktpm có thể đi thực tập ở những đâu
+    - kỹ thuật phần mềm có thể đi thực tập ở những đâu
+    - cntt có thể đi thực tập ở những đâu
+    - công nghệ thông tin có thể đi thực tập ở những đâu
+    - httt có thể đi thực tập ở những đâu
+    - hệ thống thông tin có thể đi thực tập ở những đâu
+    - khdl có thể đi thực tập ở những đâu
+    - khoa học dữ liệu có thể đi thực tập ở những đâu
+    - thực tập ở đâu với khmt
+    - thực tập ở đâu với khoa học máy tính
+    - thực tập ở đâu với ktpm
+    - thực tập ở đâu với kỹ thuật phần mềm
+    - thực tập ở đâu với cntt
+    - thực tập ở đâu với công nghệ thông tin
+    - thực tập ở đâu với httt
+    - thực tập ở đâu với hệ thống thông tin
+    - thực tập ở đâu với khdl
+    - thực tập ở đâu với khoa học dữ liệu
+    - nên thực tập ở đâu đối với khmt
+    - nên thực tập ở đâu đối với khoa học máy tính
+    - nên thực tập ở đâu đối với ktpm
+    - nên thực tập ở đâu đối với kỹ thuật phần mềm
+    - nên thực tập ở đâu đối với cntt
+    - nên thực tập ở đâu đối với công nghệ thông tin
+    - nên thực tập ở đâu đối với httt
+    - nên thực tập ở đâu đối với hệ thống thông tin
+    - nên thực tập ở đâu đối với khdl
+    - nên thực tập ở đâu đối với khoa học dữ liệu
+
+- intent: tinchi
+  examples: |
+    - ngành khmt có bao nhiêu tín chỉ ?
+    - ngành khoa học máy tính có bao nhiêu tín chỉ ?
+    - ngành ktpm có bao nhiêu tín chỉ ?
+    - ngành kỹ thuật phần mềm có bao nhiêu tín chỉ ?
+    - ngành cntt có bao nhiêu tín chỉ ?
+    - ngành công nghệ thông tin có bao nhiêu tín chỉ ?
+    - ngành httt có bao nhiêu tín chỉ ?
+    - ngành hệ thống thông tin có bao nhiêu tín chỉ ?
+    - ngành khdl có bao nhiêu tín chỉ ?
+    - ngành khoa học dữ liệu có bao nhiêu tín chỉ ?
+    - mỗi kì, ngành khmt có bao nhiêu tín chỉ tự chọn và bao nhiêu tín chỉ bắt buộc ?
+    - mỗi kì, ngành khoa học máy tính có bao nhiêu tín chỉ tự chọn và bao nhiêu tín chỉ bắt buộc ?
+    - mỗi kì, ngành ktpm có bao nhiêu tín chỉ tự chọn và bao nhiêu tín chỉ bắt buộc ?
+    - mỗi kì, ngành kỹ thuật phần mềm có bao nhiêu tín chỉ tự chọn và bao nhiêu tín chỉ bắt buộc ?
+    - mỗi kì, ngành cntt có bao nhiêu tín chỉ tự chọn và bao nhiêu tín chỉ bắt buộc ?
+    - mỗi kì, ngành công nghệ thông tin có bao nhiêu tín chỉ tự chọn và bao nhiêu tín chỉ bắt buộc ?
+    - mỗi kì, ngành httt có bao nhiêu tín chỉ tự chọn và bao nhiêu tín chỉ bắt buộc ?
+    - mỗi kì, ngành hệ thống thông tin có bao nhiêu tín chỉ tự chọn và bao nhiêu tín chỉ bắt buộc ?
+    - mỗi kì, ngành khdl có bao nhiêu tín chỉ tự chọn và bao nhiêu tín chỉ bắt buộc ?
+    - mỗi kì, ngành khoa học dữ liệu có bao nhiêu tín chỉ tự chọn và bao nhiêu tín chỉ bắt buộc ?
+    - ngành khmt cần học bao nhiêu tín chỉ cho một kì
+    - ngành khoa học máy tính cần học bao nhiêu tín chỉ cho một kì
+    - ngành ktpm cần học bao nhiêu tín chỉ cho một kì
+    - ngành kỹ thuật phần mềm cần học bao nhiêu tín chỉ cho một kì
+    - ngành cntt cần học bao nhiêu tín chỉ cho một kì
+    - ngành công nghệ thông tin cần học bao nhiêu tín chỉ cho một kì
+    - ngành httt cần học bao nhiêu tín chỉ cho một kì
+    - ngành hệ thống thông tin cần học bao nhiêu tín chỉ cho một kì
+    - ngành khdl cần học bao nhiêu tín chỉ cho một kì
+    - ngành khoa học dữ liệu cần học bao nhiêu tín chỉ cho một kì
+    - học khmt thì cần học bao nhiêu tín chỉ tự chọn và bắt buộc cho một kì
+    - học khoa học máy tính thì cần học bao nhiêu tín chỉ tự chọn và bắt buộc cho một kì
+    - học ktpm thì cần học bao nhiêu tín chỉ tự chọn và bắt buộc cho một kì
+    - học kỹ thuật phần mềm thì cần học bao nhiêu tín chỉ tự chọn và bắt buộc cho một kì
+    - học cntt thì cần học bao nhiêu tín chỉ tự chọn và bắt buộc cho một kì
+    - học công nghệ thông tin thì cần học bao nhiêu tín chỉ tự chọn và bắt buộc cho một kì
+    - học httt thì cần học bao nhiêu tín chỉ tự chọn và bắt buộc cho một kì
+    - học hệ thống thông tin thì cần học bao nhiêu tín chỉ tự chọn và bắt buộc cho một kì
+    - học khdl thì cần học bao nhiêu tín chỉ tự chọn và bắt buộc cho một kì
+    - học khoa học dữ liệu thì cần học bao nhiêu tín chỉ tự chọn và bắt buộc cho một kì
+    - học bao nhiêu tín chỉ khi mình theo học khmt
+    - học bao nhiêu tín chỉ khi mình theo học khoa học máy tính
+    - học bao nhiêu tín chỉ khi mình theo học ktpm
+    - học bao nhiêu tín chỉ khi mình theo học kỹ thuật phần mềm
+    - học bao nhiêu tín chỉ khi mình theo học cntt
+    - học bao nhiêu tín chỉ khi mình theo học công nghệ thông tin
+    - học bao nhiêu tín chỉ khi mình theo học httt
+    - học bao nhiêu tín chỉ khi mình theo học hệ thống thông tin
+    - học bao nhiêu tín chỉ khi mình theo học khdl
+    - học bao nhiêu tín chỉ khi mình theo học khoa học dữ liệu
+
+  
