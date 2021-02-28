@@ -11,20 +11,23 @@ from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
 from django.views import generic
 from django.http import HttpResponse
+from . import sua_loi
 # Create your views here.
 
 # Web API
 # path = models.ModelThemDau.objects.get(id=1).model_h5.path
-model = load_model('API/model.h5')
 
 
-def them_daus(text):
+model = load_model('API/models/model_sua_loi.h5')
+
+
+def sua(text):
     i = 0
     while len(text.split(' ')) < 5:
         text += ' 0226'
         i += 1
-    text = them_dau.remove_accent(text)
-    text = them_dau.add_accent(text, model)
+
+    text = sua_loi.correct(text, model)
     while ' 0226' in text:
         text = text.replace(' 0226', '')
     return text
@@ -45,18 +48,19 @@ class Chatbot(APIView):
 
     def post(self, request):
 
-        try:
-            data = request.data
-            text = data['text']
-            text = them_daus(text)
-            response = getResponse(text)
-            if response is None:
-                response = "Không hiểu"
-            else:
-                save_chat(text, response)
-            return Response({'response': response, 'text': text}, status=status.HTTP_200_OK)
-        except:
-            return Response(status=status.HTTP_400_BAD_REQUEST)
+        # try:
+        data = request.data
+        text = data['text']
+        print(text)
+        text = sua(text)
+        # response = getResponse(text)
+        # if response is None:
+        #     response = "Không hiểu"
+        # else:
+        #     save_chat(text, response)
+        return Response({'text': text}, status=status.HTTP_200_OK)
+        # except:
+        #     return Response(status=status.HTTP_400_BAD_REQUEST)
 
 
 # Facebook API
@@ -65,7 +69,7 @@ VERIFY_TOKEN = "rasademo"
 
 
 def post_facebook_message(fbid, recevied_message):
-    recevied_message = them_daus(recevied_message)
+    recevied_message = sua(recevied_message)
     data = json.dumps({"message": "%s" % recevied_message, "sender": "Me"})
     p = requests.post('http://localhost:5005/webhooks/rest/webhook',
                       headers={"Content-Type": "application/json"}, data=data).json()

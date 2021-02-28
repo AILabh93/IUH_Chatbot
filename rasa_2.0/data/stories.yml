@@ -1,437 +1,613 @@
 version: "2.0"
 
 stories:
+    - story: chao tu van
+      steps:
+          - intent: chaohoi
+          - action: action_but
+          - intent: tuvan
+          - action: action_tuvan
 
-- story: chao tu van
-  steps:
-  - intent: chaohoi
-  - action: action_but
-  - intent: tuvan
-  - action: action_tuvan
+    - story: tư vấn - hỏi việc làm - hỏi lương - học dê -tu vấn ngành khác - tạm biệt
+      steps:
+          - intent: chaohoi
+          - action: action_but
+          - intent: tuvan
+          - action: action_tuvan
+          - intent: vieclam
+          - action: action_vieclam
+          - intent: luong
+          - action: action_luong
+          - intent: bye
+          - action: utter_bye
 
-- story: tư vấn - hỏi việc làm - hỏi lương - học dê -tu vấn ngành khác - tạm biệt
-  steps:
-  - intent: chaohoi
-  - action: action_but
-  - intent: tuvan
-  - action: action_tuvan
-  - intent: vieclam
-  - action: action_vieclam
-  - intent: luong
-  - action: action_luong
-  - intent: bye
-  - action: utter_bye
+    - story: tư vấn - hoc dễ - yêu cầu chung -yêu cầu toán - yêu cầu tiếng anh - tư vấn ngành khác - cảm ơn - tạm biệt
+      steps:
+          - intent: chaohoi
+          - action: action_but
+          - intent: tuvan
+          - action: action_tuvan
+          - intent: luong
+          - action: action_luong
+          - intent: bye
+          - action: utter_bye
 
-- story: tư vấn - hoc dễ - yêu cầu chung -yêu cầu toán - yêu cầu tiếng anh - tư vấn ngành khác - cảm ơn - tạm biệt
-  steps:
-  - intent: chaohoi
-  - action: action_but
-  - intent: tuvan
-  - action: action_tuvan
-  - intent: luong
-  - action: action_luong
-  - intent: bye
-  - action: utter_bye
+    - story: tư vấn - hoc dễ - yêu cầu chung -yêu cầu toán - yêu cầu tiếng anh - tư vấn ngành khác - cảm ơn - tạm biệt
+      steps:
+          - intent: chaohoi
+          - action: action_but
+          - intent: tuvan
+          - action: action_tuvan
+          - intent: luong
+          - action: action_luong
+          - intent: thank
+          - action: utter_thank
+          - intent: bye
+          - action: utter_bye
 
-- story: tư vấn - hoc dễ - yêu cầu chung -yêu cầu toán - yêu cầu tiếng anh - tư vấn ngành khác - cảm ơn - tạm biệt
-  steps:
-  - intent: chaohoi
-  - action: action_but
-  - intent: tuvan
-  - action: action_tuvan
-  - intent: luong
-  - action: action_luong
-  - intent: thank
-  - action: utter_thank
-  - intent: bye
-  - action: utter_bye
+    - story: tư vấn - hoc gì - giáo viên - điểm số - học bổng - câu lạc bộ - tư vấn khác - tạm biệt
+      steps:
+          - intent: chaohoi
+          - action: action_but
+          - intent: tuvan
+          - action: action_tuvan
+          - intent: tach_nganh
+          - action: utter_tach_nganh
+          - intent: giangvien
+          - action: action_giangvien
+          - intent: monhoc
+          - action: action_monhoc
+          - intent: hocbong
+          - action: utter_hocbong
+          - intent: caulacbo
+          - action: utter_caulacbo
+          - intent: bye
+          - action: utter_bye
 
+    - story: tư vấn - nganh hot - canh tranh - cơ hội việc làm - cuộc thi - tạm biệt
+      steps:
+          - intent: chaohoi
+          - action: action_but
+          - intent: tuvan
+          - action: action_tuvan
+          - intent: tach_nganh
+          - action: utter_tach_nganh
+          - intent: link_fit
+          - action: utter_link_fit
+          - intent: clb_laptrinh
+          - action: utter_clb_laptrinh
+          - intent: clb_attt
+          - action: utter_clb_attt
+          - intent: bye
+          - action: utter_bye
 
-- story: tư vấn - hoc gì - giáo viên - điểm số - học bổng - câu lạc bộ - tư vấn khác - tạm biệt
-  steps:
-  - intent: chaohoi
-  - action: action_but
-  - intent: tuvan
-  - action: action_tuvan
-  - intent: tach_nganh
-  - action: utter_tach_nganh
-  - intent: giangvien
-  - action: action_giangvien
-  - intent: monhoc
-  - action: action_monhoc
-  - intent: hocbong
-  - action: utter_hocbong
-  - intent: caulacbo
-  - action: utter_caulacbo
-  - intent: bye
-  - action: utter_bye
+    - story: Chào - tư vấn - ngon ngu - tai lieu - giang vien - lap trinh - bye
+      steps:
+          - intent: chaohoi
+          - action: action_but
+          - intent: tuvan
+          - action: action_tuvan
+          - intent: ngonngu
+          - action: action_ngonngu
+          - intent: tailieu
+          - action: action_tailieu
+          - intent: giangvien
+          - action: action_giangvien
+          - intent: laptrinh
+          - action: action_laptrinh
+          - intent: bye
+          - action: utter_bye
 
+    - story: chào - tu van cntt - dinh huong sai - bye
+      steps:
+          - intent: chaohoi
+          - action: action_but
+          - intent: tuvan
+          - action: action_tuvan
+          - intent: dinhhuongsai
+          - action: action_dinhhuongsai
+          - intent: bye
+          - action: utter_bye
 
-- story: tư vấn - nganh hot - canh tranh - cơ hội việc làm - cuộc thi - tạm biệt
-  steps:
-  - intent: chaohoi
-  - action: action_but
-  - intent: tuvan
-  - action: action_tuvan
-  - intent: tach_nganh
-  - action: utter_tach_nganh
-  - intent: link_fit
-  - action: utter_link_fit
-  - intent: clb_laptrinh
-  - action: utter_clb_laptrinh
-  - intent: clb_attt
-  - action: utter_clb_attt
-  - intent: bye
-  - action: utter_bye
+    - story: chào - tu van - canh tranh - luong
+      steps:
+          - intent: chaohoi
+          - action: action_but
+          - intent: tuvan
+          - action: action_tuvan
+          - intent: canhtranh
+          - action: action_canhtranh
+          - intent: bye
+          - action: utter_bye
 
-- story: Chào - tư vấn - ngon ngu - tai lieu - giang vien - lap trinh - bye
-  steps:
-  - intent: chaohoi
-  - action: action_but
-  - intent: tuvan
-  - action: action_tuvan
-  - intent: ngonngu
-  - action: action_ngonngu
-  - intent: tailieu
-  - action: action_tailieu
-  - intent: giangvien
-  - action: action_giangvien
-  - intent: laptrinh
-  - action: action_laptrinh
-  - intent: bye
-  - action: utter_bye
+    - story: tu van - linh vuc - dieu kien toeic - lap trinh - thank
+      steps:
+          - intent: tuvan
+          - action: action_tuvan
+          - intent: linhvuc
+          - action: action_linhvuc
+          - intent: dieukientoeic
+          - action: utter_dieukientoeic
+          - intent: laptrinh
+          - action: action_laptrinh
 
-- story: chào - tu van cntt - dinh huong sai - bye
-  steps:
-  - intent: chaohoi
-  - action: action_but
-  - intent: tuvan
-  - action: action_tuvan
-  - intent: dinhhuongsai
-  - action: action_dinhhuongsai
-  - intent: bye
-  - action: utter_bye
+    - story: tư vấn - hoc gì - giáo viên - điểm số - học bổng - câu lạc bộ - tư vấn khác - tạm biệt
+      steps:
+          - intent: tuvan
+          - action: action_tuvan
+          - intent: linhvuc
+          - action: action_linhvuc
+          - intent: dieukientoeic
+          - action: utter_dieukientoeic
+          - intent: laptrinh
+          - action: action_laptrinh
 
+    - story: tư vấn - hoc gì - giáo viên - điểm số - học bổng - câu lạc bộ - tư vấn khác - tạm biệt
+      steps:
+          - intent: tuvan
+          - action: action_tuvan
+          - intent: link_fit
+          - action: utter_link_fit
+          - intent: sdt_giangvien
+          - action: utter_sdt_giangvien
+          - intent: giangvien
+          - action: action_giangvien
+          - intent: bye
+          - action: utter_bye
 
-- story: chào - tu van - canh tranh - luong 
-  steps:
-  - intent: chaohoi
-  - action: action_but
-  - intent: tuvan
-  - action: action_tuvan
-  - intent: canhtranh
-  - action: action_canhtranh
-  - intent: bye
-  - action: utter_bye
+    - story: chao - tu van - linh vuc - ung dung - viec lam - luong - thank - bye
+      steps:
+          - intent: chaohoi
+          - action: action_but
+          - intent: tuvan
+          - action: action_tuvan
+          - intent: linhvuc
+          - action: action_linhvuc
+          - intent: vieclam
+          - action: action_vieclam
+          - intent: luong
+          - action: action_luong
+          - intent: thank
+          - action: utter_thank
+          - intent: bye
+          - action: utter_bye
 
-- story: tu van - linh vuc - dieu kien toeic - lap trinh - thank
-  steps:
-  - intent: tuvan
-  - action: action_tuvan
-  - intent: linhvuc
-  - action: action_linhvuc
-  - intent: dieukientoeic
-  - action: utter_dieukientoeic
-  - intent: laptrinh
-  - action: action_laptrinh
+    - story: chao - tu van cntt - tach nganh - viec lam - luong - ti le
+      steps:
+          - intent: chaohoi
+          - action: action_but
+          - intent: tuvan_khoacntt
+          - action: utter_tuvan_khoacntt
+          - intent: tach_nganh
+          - action: utter_tach_nganh
+          - intent: vieclam
+          - action: action_vieclam
+          - intent: luong
+          - action: action_luong
+          - intent: tilesvratruong
+          - action: action_tilesvratruong
 
-- story: tư vấn - hoc gì - giáo viên - điểm số - học bổng - câu lạc bộ - tư vấn khác - tạm biệt
-  steps:
-  - intent: tuvan
-  - action: action_tuvan
-  - intent: linhvuc
-  - action: action_linhvuc
-  - intent: dieukientoeic
-  - action: utter_dieukientoeic
-  - intent: laptrinh
-  - action: action_laptrinh
+    - story: chao - tu van - lap trinh - mon hoc - kien thuc ra truong - viec lam -luong - bye
+      steps:
+          - intent: chaohoi
+          - action: action_but
+          - intent: tuvan
+          - action: action_tuvan
+          - intent: laptrinh
+          - action: action_laptrinh
+          - intent: monhoc
+          - action: action_monhoc
+          - intent: kienthuccancokhiratruong
+          - action: action_kienthuccancokhiratruong
+          - intent: vieclam
+          - action: action_vieclam
+          - intent: luong
+          - action: action_luong
+          - intent: bye
+          - action: utter_bye
 
-- story: tư vấn - hoc gì - giáo viên - điểm số - học bổng - câu lạc bộ - tư vấn khác - tạm biệt
-  steps:
-  - intent: tuvan
-  - action: action_tuvan
-  - intent: link_fit
-  - action: utter_link_fit
-  - intent: sdt_giangvien
-  - action: utter_sdt_giangvien
-  - intent: giangvien
-  - action: action_giangvien
-  - intent: bye
-  - action: utter_bye
+    - story: chao - tu van - lap trinh - mon hoc - kien thuc ra truong - viec lam -luong - bye
+      steps:
+          - intent: chaohoi
+          - action: action_but
+          - intent: tuvan
+          - action: action_tuvan
+          - intent: laptrinh
+          - action: action_laptrinh
+          - intent: monhoc
+          - action: action_monhoc
+          - intent: kienthuccancokhiratruong
+          - action: action_kienthuccancokhiratruong
+          - intent: vieclam
+          - action: action_vieclam
+          - intent: luong
+          - action: action_luong
+          - intent: bye
+          - action: utter_bye
 
+    - story: tư vấn - hỏi việc làm - hỏi lương - học dê -tu vấn ngành khác - tạm biệt
+      steps:
+          - intent: tuvan
+          - action: action_tuvan
+          - intent: kienthuccancokhiratruong
+          - action: action_kienthuccancokhiratruong
+          - intent: luong
+          - action: action_luong
+          - intent: bye
+          - action: utter_bye
 
-- story: chao - tu van - linh vuc - ung dung - viec lam - luong - thank - bye
-  steps:
-  - intent: chaohoi
-  - action: action_but
-  - intent: tuvan
-  - action: action_tuvan
-  - intent: linhvuc
-  - action: action_linhvuc
-  - intent: vieclam
-  - action: action_vieclam
-  - intent: luong
-  - action: action_luong
-  - intent: thank
-  - action: utter_thank
-  - intent: bye
-  - action: utter_bye
+    - story: tư vấn - yêu cầu tiếng anh - cảm ơn - tạm biệt
+      steps:
+          - intent: tuvan
+          - action: action_tuvan
+          - intent: dieukientoeic
+          - action: utter_dieukientoeic
+          - intent: tuvankhac
+          - action: action_but
+          - intent: kienthuccancokhiratruong
+          - action: action_kienthuccancokhiratruong
+          - intent: caulacbo
+          - action: utter_caulacbo
+          - intent: thank
+          - action: utter_thank
+          - intent: bye
+          - action: utter_bye
 
-- story: chao - tu van cntt - tach nganh - viec lam - luong - ti le
-  steps:
-  - intent: chaohoi
-  - action: action_but
-  - intent: tuvan_khoacntt
-  - action: utter_tuvan_khoacntt
-  - intent: tach_nganh
-  - action: utter_tach_nganh
-  - intent: vieclam
-  - action: action_vieclam
-  - intent: luong
-  - action: action_luong
-  - intent: tilesvratruong
-  - action: action_tilesvratruong
+    - story: tư vấn - giáo viên - điểm số - học bổng - câu lạc bộ - tư vấn khác - tạm biệt
+      steps:
+          - intent: tuvan
+          - action: action_tuvan
+          - intent: giangvien
+          - action: action_giangvien
+          - intent: hocbong
+          - action: utter_hocbong
+          - intent: caulacbo
+          - action: utter_caulacbo
+          - intent: tuvankhac
+          - action: action_but
+          - intent: dieukientoeic
+          - action: utter_dieukientoeic
+          - intent: luong
+          - action: action_luong
 
-- story: chao - tu van - lap trinh - mon hoc - kien thuc ra truong - viec lam -luong - bye
-  steps:
-  - intent: chaohoi
-  - action: action_but
-  - intent: tuvan
-  - action: action_tuvan
-  - intent: laptrinh
-  - action: action_laptrinh
-  - intent: monhoc
-  - action: action_monhoc
-  - intent: kienthuccancokhiratruong
-  - action: action_kienthuccancokhiratruong
-  - intent: vieclam
-  - action: action_vieclam
-  - intent: luong
-  - action: action_luong
-  - intent: bye
-  - action: utter_bye
+    - story: tư vấn - canh tranh - cơ hội việc làm - tạm biệt
+      steps:
+          - intent: tuvan
+          - action: action_tuvan
+          - intent: canhtranh
+          - action: action_canhtranh
+          - intent: vieclam
+          - action: action_vieclam
+          - intent: bye
+          - action: utter_bye
 
+    - story: Chào - tư vấn - luong - viec lam - dinh huong sai- cam on - tạm biệt
+      steps:
+          - intent: chaohoi
+          - action: action_but
+          - intent: tuvan
+          - action: action_tuvan
+          - intent: luong
+          - action: action_luong
+          - intent: vieclam
+          - action: action_vieclam
+          - intent: dinhhuongsai
+          - action: action_dinhhuongsai
+          - intent: bye
+          - action: utter_bye
 
-- story: chao - tu van - lap trinh - mon hoc - kien thuc ra truong - viec lam -luong - bye
-  steps:
-  - intent: chaohoi
-  - action: action_but
-  - intent: tuvan
-  - action: action_tuvan
-  - intent: laptrinh
-  - action: action_laptrinh
-  - intent: monhoc
-  - action: action_monhoc
-  - intent: kienthuccancokhiratruong
-  - action: action_kienthuccancokhiratruong
-  - intent: vieclam
-  - action: action_vieclam
-  - intent: luong
-  - action: action_luong
-  - intent: bye
-  - action: utter_bye
+    - story: Chào - tư vấn - luong - viec lam - dinh huong sai- cam on - tạm biệt
+      steps:
+          - intent: tuvan
+          - action: action_tuvan
+          - intent: link_fit
+          - action: utter_link_fit
+          - intent: link_fitgiangvien
+          - action: utter_link_fitgiangvien
+          - intent: thank
+          - action: utter_thank
+          - intent: bye
+          - action: utter_bye
 
+    - story: Chào - tư vấn - ung dung - linh vu - tai lieu- cam on - tạm biệt
+      steps:
+          - intent: chaohoi
+          - action: action_but
+          - intent: tuvan
+          - action: action_tuvan
+          - intent: ungdung
+          - action: action_ungdung
+          - intent: linhvuc
+          - action: action_linhvuc
+          - intent: tailieu
+          - action: action_tailieu
+          - intent: thank
+          - action: utter_thank
+          - intent: bye
+          - action: utter_bye
 
-- story: tư vấn - hỏi việc làm - hỏi lương - học dê -tu vấn ngành khác - tạm biệt
-  steps:
-  - intent: tuvan
-  - action: action_tuvan
-  - intent: kienthuccancokhiratruong
-  - action: action_kienthuccancokhiratruong
-  - intent: luong
-  - action: action_luong
-  - intent: bye
-  - action: utter_bye
+    - story: Chào - tư vấn - ung dung - linh vu - tai lieu- cam on - tạm biệt
+      steps:
+          - intent: chaohoi
+          - action: action_but
+          - intent: tuvan
+          - action: action_tuvan
+          - intent: tach_nganh
+          - action: utter_tach_nganh
+          - intent: linhvuc
+          - action: action_linhvuc
+          - intent: dieukientoeic
+          - action: utter_dieukientoeic
+          - intent: thank
+          - action: utter_thank
+          - intent: bye
+          - action: utter_bye
 
+    - story: Chào - tư vấn - ung dung - linh vu - tai lieu- cam on - tạm biệt
+      steps:
+          - intent: chaohoi
+          - action: action_but
+          - intent: tuvan
+          - action: action_tuvan
+          - intent: ngonngu
+          - action: action_ngonngu
+          - intent: monhoc
+          - action: action_monhoc
+          - intent: dieukientoeic
+          - action: utter_dieukientoeic
+          - intent: bye
+          - action: utter_bye
 
-- story: tư vấn - yêu cầu tiếng anh - cảm ơn - tạm biệt
-  steps:
-  - intent: tuvan
-  - action: action_tuvan
-  - intent: dieukientoeic
-  - action: utter_dieukientoeic
-  - intent: tuvankhac
-  - action: action_but
-  - intent: kienthuccancokhiratruong
-  - action: action_kienthuccancokhiratruong
-  - intent: caulacbo
-  - action: utter_caulacbo
-  - intent: thank
-  - action: utter_thank
-  - intent: bye
-  - action: utter_bye
+    - story: Chào - tư vấn - ung dung - linh vu - tai lieu- cam on - tạm biệt
+      steps:
+          - intent: chaohoi
+          - action: action_but
+          - intent: tuvan
+          - action: action_tuvan
+          - intent: tilesvratruong
+          - action: action_tilesvratruong
+          - intent: luong
+          - action: action_luong
+          - intent: linhvuc
+          - action: action_linhvuc
+          - intent: bye
+          - action: utter_bye
 
+    - story: Chào - tư vấn - ung dung - linh vu - tai lieu- cam on - tạm biệt
+      steps:
+          - intent: tuvan
+          - action: action_tuvan
+          - intent: clb_laptrinh
+          - action: utter_clb_laptrinh
+          - intent: tuvan_khoacntt
+          - action: utter_tuvan_khoacntt
+          - intent: clb_attt
+          - action: utter_clb_attt
+          - intent: bye
+          - action: utter_bye
 
-- story: tư vấn - giáo viên - điểm số - học bổng - câu lạc bộ - tư vấn khác - tạm biệt
-  steps:
-  - intent: tuvan
-  - action: action_tuvan
-  - intent: giangvien
-  - action: action_giangvien
-  - intent: hocbong
-  - action: utter_hocbong
-  - intent: caulacbo
-  - action: utter_caulacbo
-  - intent: tuvankhac
-  - action: action_but
-  - intent: dieukientoeic
-  - action: utter_dieukientoeic
-  - intent: luong
-  - action: action_luong
+    - story: Chào - tư vấn - ung dung - linh vu - tai lieu- cam on - tạm biệt
+      steps:
+          - intent: chaohoi
+          - action: action_but
+          - intent: tuvan
+          - action: action_tuvan
+          - intent: khoacntt_hocgi
+          - action: utter_khoacntt_hocgi
+          - intent: caulacbo
+          - action: utter_caulacbo
+          - intent: dinhhuongsai
+          - action: action_dinhhuongsai
+          - intent: tilesvratruong
+          - action: action_tilesvratruong
+          - intent: luong
+          - action: action_luong
+          - intent: bye
+          - action: utter_bye
 
+    - story: Chào - tư vấn - nu - tinh cach - hoc phi - cam on - tạm biệt
+      steps:
+          - intent: chaohoi
+          - action: action_but
+          - intent: tuvan
+          - action: action_tuvan
+          - intent: nu
+          - action: action_nu
+          - intent: tinhcach
+          - action: action_tinhcach
+          - intent: hocphi
+          - action: action_hocphi
+          - intent: thank
+          - action: utter_thank
+          - intent: bye
+          - action: utter_bye
 
-- story: tư vấn - canh tranh - cơ hội việc làm - tạm biệt
-  steps:
-  - intent: tuvan
-  - action: action_tuvan
-  - intent: canhtranh
-  - action: action_canhtranh
-  - intent: vieclam
-  - action: action_vieclam
-  - intent: bye
-  - action: utter_bye
+    - story: Chào - quy che dao tao - hoc phi - tin chi khoa - cam on - tạm biệt
+      steps:
+          - intent: chaohoi
+          - action: action_but
+          - intent: quy_che_dao_tao
+          - action: utter_quy_che_dao_tao
+          - intent: hocphi
+          - action: action_hocphi
+          - intent: tin_chi_khoa
+          - action: utter_tin_chi_khoa
+          - intent: thank
+          - action: utter_thank
+          - intent: bye
+          - action: utter_bye
 
+    - story: Chào - hoc phi - hp_bat_buoc - hp tu chon  - cam on - tạm biệt
+      steps:
+          - intent: chaohoi
+          - action: action_but
+          - intent: hocphi
+          - action: action_hocphi
+          - intent: hp_bat_buoc
+          - action: utter_hp_bat_buoc
+          - intent: hp_tu_chon
+          - action: utter_hp_tu_chon
+          - intent: thank
+          - action: utter_thank
+          - intent: bye
+          - action: utter_bye
 
-- story: Chào - tư vấn - luong - viec lam - dinh huong sai- cam on - tạm biệt
-  steps:
-  - intent: chaohoi
-  - action: action_but
-  - intent: tuvan
-  - action: action_tuvan
-  - intent: luong
-  - action: action_luong
-  - intent: vieclam
-  - action: action_vieclam
-  - intent: dinhhuongsai
-  - action: action_dinhhuongsai
-  - intent: bye
-  - action: utter_bye
+    - story: Chào - quy che tin chi - kn tin chi - time dai hoc - time_cao_dang - cam on - tạm biệt
+      steps:
+          - intent: chaohoi
+          - action: action_but
+          - intent: quy_che_tin_chi
+          - action: utter_quy_che_tin_chi
+          - intent: kn_tin_chi
+          - action: utter_kn_tin_chi
+          - intent: time_dai_hoc
+          - action: utter_time_dai_hoc
+          - intent: time_cao_dang
+          - action: utter_time_cao_dang
+          - intent: thank
+          - action: utter_thank
+          - intent: bye
+          - action: utter_bye
 
-- story: Chào - tư vấn - luong - viec lam - dinh huong sai- cam on - tạm biệt
-  steps:
-  - intent: tuvan
-  - action: action_tuvan
-  - intent: link_fit
-  - action: utter_link_fit
-  - intent: link_fitgiangvien
-  - action: utter_link_fitgiangvien
-  - intent: thank
-  - action: utter_thank
-  - intent: bye
-  - action: utter_bye
+    - story: Chào - quy che tin chi - loi ich tin chi - ho so nhap hoc - danh gia kq hoc tap - cam on - tạm biệt
+      steps:
+          - intent: chaohoi
+          - action: action_but
+          - intent: quy_che_tin_chi
+          - action: utter_quy_che_tin_chi
+          - intent: loi_ich_tin_chi
+          - action: utter_loi_ich_tin_chi
+          - intent: ho_so_nhap_hoc
+          - action: utter_ho_so_nhap_hoc
+          - intent: danh_gia_kq_hoc_tap
+          - action: utter_danh_gia_kq_hoc_tap
+          - intent: thank
+          - action: utter_thank
+          - intent: bye
+          - action: utter_bye
 
-- story: Chào - tư vấn - ung dung - linh vu - tai lieu- cam on - tạm biệt
-  steps:
-  - intent: chaohoi
-  - action: action_but
-  - intent: tuvan
-  - action: action_tuvan
-  - intent: ungdung
-  - action: action_ungdung
-  - intent: linhvuc
-  - action: action_linhvuc
-  - intent: tailieu
-  - action: action_tailieu
-  - intent: thank
-  - action: utter_thank
-  - intent: bye
-  - action: utter_bye
+    - story: Chào - quy che dao tao - kh_dao_tao - time dao tao  - ho so nhap hoc - cam on - tạm biệt
+      steps:
+          - intent: chaohoi
+          - action: action_but
+          - intent: quy_che_dao_tao
+          - action: utter_quy_che_dao_tao
+          - intent: kh_dao_tao
+          - action: utter_kh_dao_tao
+          - intent: time_dao_tao
+          - action: utter_time_dao_tao
+          - intent: ho_so_nhap_hoc
+          - action: utter_ho_so_nhap_hoc
+          - intent: thank
+          - action: utter_thank
+          - intent: bye
+          - action: utter_bye
 
-- story: Chào - tư vấn - ung dung - linh vu - tai lieu- cam on - tạm biệt
-  steps:
-  - intent: chaohoi
-  - action: action_but
-  - intent: tuvan
-  - action: action_tuvan
-  - intent: tach_nganh
-  - action: utter_tach_nganh
-  - intent: linhvuc
-  - action: action_linhvuc
-  - intent: dieukientoeic
-  - action: utter_dieukientoeic
-  - intent: thank
-  - action: utter_thank
-  - intent: bye
-  - action: utter_bye
+    - story: Chào - ho so nhap hoc - hp bat buoc - hp tu chon - cong nhan sv - cam on - tạm biệt
+      steps:
+          - intent: chaohoi
+          - action: action_but
+          - intent: ho_so_nhap_hoc
+          - action: utter_ho_so_nhap_hoc
+          - intent: hp_bat_buoc
+          - action: utter_hp_bat_buoc
+          - intent: hp_tu_chon
+          - action: utter_hp_tu_chon
+          - intent: cong_nhan_sv
+          - action: utter_cong_nhan_sv
+          - intent: thank
+          - action: utter_thank
+          - intent: bye
+          - action: utter_bye
 
-- story: Chào - tư vấn - ung dung - linh vu - tai lieu- cam on - tạm biệt
-  steps:
-  - intent: chaohoi
-  - action: action_but
-  - intent: tuvan
-  - action: action_tuvan
-  - intent: ngonngu
-  - action: action_ngonngu
-  - intent: monhoc
-  - action: action_monhoc
-  - intent: dieukientoeic
-  - action: utter_dieukientoeic
-  - intent: bye
-  - action: utter_bye
+    - story: Chào - time hoc lam - ho so nhap hoc - cd lien thong - cong nhan - cam on - tạm biệt
+      steps:
+          - intent: chaohoi
+          - action: action_but
+          - intent: time_hoc_lam
+          - action: utter_time_hoc_lam
+          - intent: ho_so_nhap_hoc
+          - action: utter_ho_so_nhap_hoc
+          - intent: time_cd_lien_thong
+          - action: utter_time_cd_lien_thong
+          - intent: cong_nhan_sv
+          - action: utter_cong_nhan_sv
+          - intent: thank
+          - action: utter_thank
+          - intent: bye
+          - action: utter_bye
 
+    - story: Chào - time lien thong trung cap - time lien thong cao dang - cd lien thong - ho so nhap hoc - cam on - tạm biệt
+      steps:
+          - intent: chaohoi
+          - action: action_but
+          - intent: time_lien_thong_trung_cap
+          - action: utter_time_lien_thong_trung_cap
+          - intent: time_lien_thong_cao_dang
+          - action: utter_time_lien_thong_cao_dang
+          - intent: time_cd_lien_thong
+          - action: utter_time_cd_lien_thong
+          - intent: ho_so_nhap_hoc
+          - action: utter_ho_so_nhap_hoc
+          - intent: thank
+          - action: utter_thank
+          - intent: bye
+          - action: utter_bye
 
-- story: Chào - tư vấn - ung dung - linh vu - tai lieu- cam on - tạm biệt
-  steps:
-  - intent: chaohoi
-  - action: action_but
-  - intent: tuvan
-  - action: action_tuvan
-  - intent: tilesvratruong
-  - action: action_tilesvratruong
-  - intent: luong
-  - action: action_luong
-  - intent: linhvuc
-  - action: action_linhvuc
-  - intent: bye
-  - action: utter_bye
+    - story: Chào - quy che dao tao - time dao tao - kh dao tao - quy che tin chi - tin chi khoa - loi ich tin chi - time dai hoc - ho so nhap hoc -  hp bat buoc - hp tu chon - danh gia kq hoc tap - cong nhan sv - cam on - tạm biệt
+      steps:
+          - intent: chaohoi
+          - action: action_but
+          - intent: quy_che_dao_tao
+          - action: utter_quy_che_dao_tao
+          - intent: time_dao_tao
+          - action: utter_time_dao_tao
+          - intent: kh_dao_tao
+          - action: utter_kh_dao_tao
+          - intent: quy_che_tin_chi
+          - action: utter_quy_che_tin_chi
+          - intent: tin_chi_khoa
+          - action: utter_tin_chi_khoa
+          - intent: loi_ich_tin_chi
+          - action: utter_loi_ich_tin_chi
+          - intent: time_dai_hoc
+          - action: utter_time_dai_hoc
+          - intent: ho_so_nhap_hoc
+          - action: utter_ho_so_nhap_hoc
+          - intent: hp_bat_buoc
+          - action: utter_hp_bat_buoc
+          - intent: hp_tu_chon
+          - action: utter_hp_tu_chon
+          - intent: danh_gia_kq_hoc_tap
+          - action: utter_danh_gia_kq_hoc_tap
+          - intent: cong_nhan_sv
+          - action: utter_cong_nhan_sv
+          - intent: thank
+          - action: utter_thank
+          - intent: bye
+          - action: utter_bye
 
-- story: Chào - tư vấn - ung dung - linh vu - tai lieu- cam on - tạm biệt
-  steps:
-  - intent: tuvan
-  - action: action_tuvan
-  - intent: clb_laptrinh
-  - action: utter_clb_laptrinh
-  - intent: tuvan_khoacntt
-  - action: utter_tuvan_khoacntt
-  - intent: clb_attt
-  - action: utter_clb_attt
-  - intent: bye
-  - action: utter_bye
-
-
-- story: Chào - tư vấn - ung dung - linh vu - tai lieu- cam on - tạm biệt
-  steps:
-  - intent: chaohoi
-  - action: action_but
-  - intent: tuvan
-  - action: action_tuvan
-  - intent: khoacntt_hocgi
-  - action: utter_khoacntt_hocgi
-  - intent: caulacbo
-  - action: utter_caulacbo
-  - intent: dinhhuongsai
-  - action: action_dinhhuongsai
-  - intent: tilesvratruong
-  - action: action_tilesvratruong
-  - intent: luong
-  - action: action_luong
-  - intent: bye
-  - action: utter_bye
-
-- story: Chào - tư vấn - nu - tinh cach - hoc phi - cam on - tạm biệt
-  steps:
-  - intent: chaohoi
-  - action: action_but
-  - intent: tuvan
-  - action: action_tuvan
-  - intent: nu
-  - action: action_nu
-  - intent: tinhcach
-  - action: action_tinhcach
-  - intent: hocphi
-  - action: action_hocphi
-  - intent: thank
-  - action: utter_thank
-  - intent: bye
-  - action: utter_bye
-
+    - story: Chào - quy che dao tao - time dao tao - time cao dang - time dai hoc - time hoc lam - time cd lien thong - time lien thong trung cap - time lien thong cao dang - cam on - tạm biệt
+      steps:
+          - intent: chaohoi
+          - action: action_but
+          - intent: quy_che_dao_tao
+          - action: utter_quy_che_dao_tao
+          - intent: time_dao_tao
+          - action: utter_time_dao_tao
+          - intent: time_cao_dang
+          - action: utter_time_cao_dang
+          - intent: time_dai_hoc
+          - action: utter_time_dai_hoc
+          - intent: time_hoc_lam
+          - action: utter_time_hoc_lam
+          - intent: time_cd_lien_thong
+          - action: utter_time_cd_lien_thong
+          - intent: time_lien_thong_trung_cap
+          - action: utter_time_lien_thong_trung_cap
+          - intent: time_lien_thong_cao_dang
+          - action: utter_time_lien_thong_cao_dang
+          - intent: thank
+          - action: utter_thank
+          - intent: bye
+          - action: utter_bye

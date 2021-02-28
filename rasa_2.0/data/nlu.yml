@@ -2793,7 +2793,7 @@ nlu:
           - Khoa CNTT có các quy chế đào tạo như thế nào
           - Khoa CNTT có các mô hình đào tạo như thế nào
     - intent: quy_che_tin_chi
-        examples: |
+      examples: |
           - Quy chế đào tạo theo hệ thống tín chỉ là gì
           - Quy chế đào tạo theo hệ thống tín chỉ là như thế nào
           - Quy chế đào tạo theo hệ thống tín chỉ là cái gì
@@ -2886,7 +2886,7 @@ nlu:
           - Mô hình đào tạo theo hệ thống tín chỉ của trường IUH là cái gì
           - Mô hình đào tạo theo hệ thống tín chỉ của trường IUH là thế nào
           - Mô hình đào tạo theo hệ thống tín chỉ của trường IUH là sao
-          - Như thế nào là mô hình đào tạo theo hệ thống tín chỉ của trường IUH 
+          - Như thế nào là mô hình đào tạo theo hệ thống tín chỉ của trường IUH
 
     - intent: danh_gia_kq_hoc_tap
       examples: |
@@ -3608,7 +3608,7 @@ nlu:
           - Sinh viên trúng tuyển vào trường có thể nộp hồ sơ nhập học ở đâu
 
     - intent: hp_bat_buoc
-        examples: |
+      examples: |
           - Học phần bắt buộc là gì?
           - Học phần bắt buộc là cái gì?
           - Học phần bắt buộc là như thế nào?
