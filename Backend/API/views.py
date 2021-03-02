@@ -19,6 +19,7 @@ from . import sua_loi
 
 
 model = load_model('API/models/model_sua_loi.h5')
+model_add = load_model('API/models/model.h5')
 
 
 def sua(text):
@@ -28,6 +29,8 @@ def sua(text):
         i += 1
 
     text = sua_loi.correct(text, model)
+    text = them_dau.remove_accent(text)
+    text = them_dau.accent_sentence(text, model_add)
     while ' 0226' in text:
         text = text.replace(' 0226', '')
     return text
