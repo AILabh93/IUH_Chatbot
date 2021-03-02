@@ -51,12 +51,9 @@ def correct(sentence, model):
             sentence = sentence.replace(i, " ")
     ngrams = list(nltk_ngrams(sentence, n=NGRAM))
     guessed_ngrams = list(guess(ngram, model) for ngram in ngrams)
-    print(f'-----------------{guessed_ngrams}')
     candidates = [Counter() for _ in range(len(guessed_ngrams) + NGRAM - 1)]
-    print(f'---------------{candidates}')
     for nid, ngram in (enumerate(guessed_ngrams)):
         for wid, word in (enumerate(re.split(' +', ngram))):
             candidates[nid + wid].update([word])
-    print(f'---------------{candidates}')
     output = ' '.join(c.most_common(1)[0][0] for c in candidates)
     return output

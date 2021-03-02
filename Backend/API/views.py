@@ -48,19 +48,19 @@ class Chatbot(APIView):
 
     def post(self, request):
 
-        # try:
-        data = request.data
-        text = data['text']
-        print(text)
-        text = sua(text)
-        # response = getResponse(text)
-        # if response is None:
-        #     response = "Không hiểu"
-        # else:
-        #     save_chat(text, response)
-        return Response({'text': text}, status=status.HTTP_200_OK)
-        # except:
-        #     return Response(status=status.HTTP_400_BAD_REQUEST)
+        try:
+            data = request.data
+            text = data['text']
+            print(text)
+            text = sua(text)
+            response = getResponse(text)
+            if response is None:
+                response = "Không hiểu"
+            else:
+                save_chat(text, response)
+            return Response({'text_formated': text, 'response': response}, status=status.HTTP_200_OK)
+        except:
+            return Response(status=status.HTTP_400_BAD_REQUEST)
 
 
 # Facebook API
