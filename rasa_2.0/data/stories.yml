@@ -611,3 +611,132 @@ stories:
           - action: utter_thank
           - intent: bye
           - action: utter_bye
+    # story moi
+
+    - story: chao - diem xet tuyen - tg nhap hoc - thoi gian toi da - thi xac hach - dk toeic
+      steps:
+          - intent: chaohoi
+          - action: action_but
+          - intent: diem_xettuyen
+          - action: utter_diem_xettuyen
+          - intent: tg_nhap_hoc
+          - action: utter_tg_nhap_hoc
+          - intent: dieu_kien_diem_Toeic
+          - action: utter_dieu_kien_diem_Toeic
+
+    - story: chao - hinh thuc lop hoc - lop sv - so luong sv - sap xep sv - bye
+      steps:
+          - intent: chaohoi
+          - action: action_but
+          - intent: hinh_thuc_lop_hoc
+          - action: utter_hinh_thuc_lop_hoc
+          - intent: lopsv
+          - action: utter_lopsv
+          - intent: so_luongsv
+          - action: utter_so_luongsv
+          - intent: sap_xepsv
+          - action: utter_sap_xepsv
+          - intent: bye
+          - action: utter_bye
+    - story: chao - dkhp - dk toi da - hoc phan - rut hp - dkhp mo rong - hoc phi hp mo rong
+      steps:
+          - intent: chaohoi
+          - action: action_but
+          - intent: dang_ky_hp
+          - action: utter_dang_ky_hp
+          - intent: dk_toi_da
+          - action: utter_dk_toi_da
+          - intent: hoc_phan
+          - action: utter_hoc_phan
+          - intent: rut_hp
+          - action: utter_rut_hp
+          - intent: dang_ky_hp_mo_rong
+          - action: utter_dang_ky_hp_mo_rong
+          - intent: hoc_phi_hp_mo_rong
+          - action: utter_hoc_phi_hp_mo_rong
+    - story: chao - thi sat hach - dk toeic - dk diem toeic - thi ta1 -thi ta2
+      steps:
+          - intent: chaohoi
+          - action: action_but
+          - intent: dieu_kien_Toeic
+          - action: utter_dieu_kien_Toeic
+          - intent: dieu_kien_diem_Toeic
+          - action: utter_dieu_kien_diem_Toeic
+          - intent: thi_tieng_anh1_Toeic
+          - action: utter_thi_tieng_anh1_Toeic
+          - intent: thi_tieng_anh2_Toeic
+          - action: utter_thi_tieng_anh2_Toeic
+    - story: chao - hoc phan - dkhp - rut hp - nghi hoc tam thoi - di hoc lai
+      steps:
+          - intent: chaohoi
+          - action: action_but
+          - intent: hoc_phan
+          - action: utter_hoc_phan
+          - intent: dang_ky_hp
+          - action: utter_dang_ky_hp
+          - intent: rut_hp
+          - action: utter_rut_hp
+          - intent: nghi_hoc_tam_thoi
+          - action: utter_nghi_hoc_tam_thoi
+          - intent: di_hoc_lai
+          - action: utter_di_hoc_lai
+
+    - story: chao - diem xt - time nhap hoc - nhiem vu co ban - sap xep sv
+      steps:
+          - intent: chaohoi
+          - action: action_but
+          - intent: diem_xettuyen
+          - action: utter_diem_xettuyen
+          - intent: tg_nhap_hoc
+          - action: utter_tg_nhap_hoc
+          - intent: sap_xepsv
+          - action: utter_sap_xepsv
+    - story: chao - tuvan - tu van khoa cntt - thoi gian toi da - dieu kien toeic
+      steps:
+          - intent: chaohoi
+          - action: action_but
+          - intent: tuvan
+          - action: action_tuvan
+          - intent: tuvan_khoacntt
+          - action: utter_tuvan_khoacntt
+          - intent: dieu_kien_diem_Toeic
+          - action: utter_dieu_kien_diem_Toeic
+    - story: chao - hoc phan - dkhp - rut hp - don xin phep - nghi hoc tam thoi - di hoc lai
+      steps:
+          - intent: chaohoi
+          - action: action_but
+          - intent: hoc_phan
+          - action: utter_hoc_phan
+          - intent: dang_ky_hp
+          - action: utter_dang_ky_hp
+          - intent: rut_hp
+          - action: utter_rut_hp
+          - intent: don_xin_phep
+          - action: utter_don_xin_phep
+          - intent: nghi_hoc_tam_thoi
+          - action: utter_nghi_hoc_tam_thoi
+
+    - story: chao - quy_che_dao_tao - hoc_phan - hp_bat_buoc - hp_tu_chon - dang_ky_hp - rut_hp
+      steps:
+          - intent: chaohoi
+          - action: action_but
+          - intent: quy_che_dao_tao
+          - action: utter_quy_che_dao_tao
+          - intent: hoc_phan
+          - action: utter_hoc_phan
+          - intent: hp_bat_buoc
+          - action: utter_hp_bat_buoc
+          - intent: hp_tu_chon
+          - action: utter_hp_tu_chon
+          - intent: dang_ky_hp
+          - action: utter_dang_ky_hp
+          - intent: rut_hp
+          - action: utter_rut_hp
+    - story: chao - nhiem vu - thoi gian thoi da - thi xac hach - bye
+      steps:
+          - intent: chaohoi
+          - action: action_but
+          - intent: thi_sat_hach
+          - action: utter_thi_sat_hach
+          - intent: bye
+          - action: utter_bye

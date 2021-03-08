@@ -20,6 +20,29 @@ actions:
     - utter_hp_tu_chon
     - utter_time_hoc_lam
     - utter_time_cd_lien_thong
+    
+    - utter_tg_nhap_hoc
+    - utter_hinh_thuc_lop_hoc
+    #- utter_lophp
+    - utter_so_luongsv
+    - utter_lopsv
+    - utter_diem_xettuyen
+    - utter_dk_toi_da
+    - utter_dieu_kien_Toeic
+    - utter_sap_xepsv
+    - utter_dang_ky_hp_mo_rong
+    - utter_hoc_phi_hp_mo_rong
+    - utter_don_xin_phep
+    - utter_dieu_kien_diem_Toeic
+    - utter_thi_tieng_anh1_Toeic
+    - utter_thi_tieng_anh2_Toeic
+    - utter_thi_sat_hach
+    - utter_hoc_phan
+    - utter_dang_ky_hp
+    - utter_rut_hp
+    - utter_nghi_hoc_tam_thoi
+    - utter_di_hoc_lai
+
 
     # utter cũ
     - utter_chaohoi
@@ -86,7 +109,7 @@ actions:
     - utter_cuocthi
 
 intents:
-    # itent mới
+    # intent mới
 
     - quy_che_dao_tao
     - tin_chi_khoa
@@ -106,6 +129,28 @@ intents:
     - hp_tu_chon
     - time_hoc_lam
     - time_cd_lien_thong
+
+    - tg_nhap_hoc
+    - hinh_thuc_lop_hoc
+    - so_luongsv
+    - lopsv
+    - nhiemvu_covan
+    - diem_xettuyen
+    - dk_toi_da
+    - dieu_kien_Toeic
+    - sap_xepsv
+    - dang_ky_hp_mo_rong
+    - hoc_phi_hp_mo_rong
+    - don_xin_phep
+    - dieu_kien_diem_Toeic
+    - thi_tieng_anh1_Toeic
+    - thi_tieng_anh2_Toeic
+    - thi_sat_hach
+    - hoc_phan
+    - dang_ky_hp
+    - rut_hp
+    - nghi_hoc_tam_thoi
+    - di_hoc_lai
 
     # intent cũ
     - chaohoi
@@ -645,6 +690,58 @@ responses:
         - text: "Đào tạo trình độ đại học - vừa làm vừa học thực hiện 1.5 năm."
     utter_time_cd_lien_thong:
         - text: "Đào tạo trình độ cao đẳng - liên thông từ trung cấp thực hiện 1.5 năm."
+    utter_tg_nhap_hoc:
+        - text: "Mọi thủ tục đăng ký nhập học phải được hoàn thành trước ngày khai giảng theo kế hoạch của nhà trường, sinh viên nộp hồ sơ trễ theo quy định xem như tự ý bỏ học. Những trường hợp đặc biệt nếu vì lý do khách quan sẽ được xem sét giải quyết."
+    utter_hinh_thuc_lop_hoc:
+        - text: "Có hai hình thức tổ chức lớp học: lớp học phần và lớp sinh viên"
+    utter_so_luongsv:
+        - text: 
+                "Số lượng sinh viên đăng ký thấp hơn chuẩn tối thiểu thì lớp học sẽ không được tổ chức và sinh viên phải đăng ký chuyển sang học phần khác có lớp. Số lượng sinh viên tối thiểu để xem xét mở lớp học phần trong học kỳ đối với các học phần lý thuyết là: 
+                    - Ít nhất 50 sinh viên cho các học phần cơ bản, cơ sở của các nhóm ngành lớn và 30 sinh viên đăng ký cho các học phần khác; 
+                    - Trong trường hợp các học phần chuyên ngành, trường sẽ xem xét để mở các lớp có sĩ số chưa đủ điều kiện mở lớp; 
+                    - Số lượng sinh viên để xem xét mở lớp học phần trong học kỳ đối với các học phần thí nghiệm, thực hành được xác định bởi đơn vị đào tạo, tối thiểu 20 sinh viên."
+    utter_lopsv:
+        - text: "- Lớp sinh viên là lớp được tổ chức cho sinh viên cùng khóa để duy trì các sinh hoạt chính trị, xã hội của tập thể sinh viên ngoài giờ lên lớp theo lớp học phần như: xét khen thưởng, kỷ luật, bình xét điểm rèn luyện... Lớp sinh viên cũng là cơ sở để hình thành các chi đoàn thanh niên, chi hội sinh viên. Sau 4 năm đối với đại học, sau 3 năm đối với cao đẳng chuyên nghiệp chính quy sau khi tốt nghiệp thì lớp sinh viên tự giải thể. Số sinh viên chưa được tốt nghiệp do tích lũy chưa đủ số tín chỉ sẽ chuyển về khoa chuyên ngành quản lý (gọi là sinh viên vãng lai).
+                 - Mỗi lớp sinh viên có một tên riêng gắn với đơn vị đào tạo, khóa đào tạo và do đơn vị đào tạo quản lý trong suốt quá trình học tập."
+
+    utter_diem_xettuyen: 
+        - text: " Nhà trường xác định điểm xét tuyển dựa vào kỳ thi tuyển sinh."
+    utter_dk_toi_da:
+        - text: "Khối lượng học tập mà mỗi sinh viên phải đăng ký trong mỗi học kỳ chính(trừ kỳ học cuối): tối thiểu là 10 tín chỉ và tối đa là 30 tín chỉ"
+    utter_dieu_kien_Toeic:
+        - text: "Sinh viên năm thứ nhất đạt 250 điểm TOEIC trở lên theo quy chuẩn đánh giá nội bộ  hoặc quy chuẩn của Hoa Kỳ mới được đăng kí các học phần năm hai."
+    utter_sap_xepsv:
+        - text: " Nhà trường xác định điểm xét tuyển dựa vào kỳ thi tuyển sinh. Sinh viên đạt điểm xét tuyển sẽ được trường sắp xếp vào học các chương trình (hoặc ngành đào tạo) đã đăng ký. Trường hợp chuyển ngành học hoặc chuyển giữa các cơ sở trong trường với nhau phải hội tụ đủ 2 điều kiện: điểm đầu vào tương đương với cơ sở chuyển đến hoặc ngành chuyển đến; chỉ được chuyển vào đầu năm học nhưng phải từ năm học thứ hai trở đi."
+    utter_dang_ky_hp_mo_rong:
+        - text: "Sinh viên có nguyện vọng học các học phần mở rộng (học phần không có trong chương trình của ngành đang học) làm đơn đăng ký tạo khoa quản lý sinh viên. Nếu đạt yêu cầu thì được cấp chứng chỉ học phần đó và được bảo lưu kết quả 6 năm kể từ ngày cấp chứng chỉ."
+    utter_hoc_phi_hp_mo_rong:
+        - text: "Học phí của học phần mở rộng thu theo bậc đào tạo của học phần được mở và không có chế độ miễn giảm"
+    utter_don_xin_phep:
+        - text: "Sinh viên xin nghĩ ốm trong quá trình học hoặc trong đợt thi, phải viết đơn xin phép trưởng đơn vị đào tạo trong vòng 1 tuần kể từ ngày ốm, kèm với giấy chứng nhận của cơ quan y tế cấp quận, huyện. Nếu tỷ lệ ngày nghỉ ốm vượt quá 20% thì việc cho thi hay không thi do giảng viên phụ trách học phần quyết định."
+    utter_dieu_kien_diem_Toeic:
+        - text: " Sinh viên năm thứ hai đạt 300 điểm TOEIC trở lên theo quy chuẩn đánh giá nội bộ hoặc quy chuẩn của Hoa Kỳ mới được đăng kí các học phần năm thứ 3."
+    utter_thi_tieng_anh1_Toeic:
+        - text: "Sinh viên đạt từ 200 điểm đến dưới 250 điểm xếp loại lớp tiếng Anh 1."
+    utter_thi_tieng_anh2_Toeic:
+        - text: " Sinh viên đạt từ 250 điểm đến dưới 300 điểm xếp loại lớp tiếng Anh 2."
+    utter_thi_sat_hach:
+        - text: " Sinh viên đạt từ 350 điểm trở lên được miễn học cả 2 môn: tiếng Anh 1 và tiếng Anh 2."
+    utter_hoc_phan:
+        - text: "Học phần là khối lượng kiến thức tương đối trọn vẹn, thuận tiện cho người học tích lũy trong quá trình học tập. Học phần được bố trí giảng dạy trọn vẹn và phân bố đều trong một học kỳ. Kiến thức trong mỗi học phần phải gắn với một mức trình độ theo năm học. Nội dung của một học phần có thể là một lượng kiến thức độc lập, tương đối trọn vẹn hoặc được kết cấu dưới dạng tổ hợp từ nhiều học phần nhỏ hơn. Từng học phần được ký hiệu bằng một mã riêng."
+    utter_dang_ky_hp:
+        - text: "Khi các lớp học phần được mở, sinh viên tự đăng ký học phần học tập qua mạng internet hoặc đăng ký tại Phòng đa phương tiện."
+    utter_rut_hp:
+        - text: " Sinh viên chỉ được rút bớt học phần đã đăng ký trong thời gian Phòng đào tạo chưa khóa lớp học phần và liên hệ tại khoa hoặc viện."
+    utter_nghi_hoc_tam_thoi:
+        - text: " Sinh viên được quyền viết đơn gửi Hiệu trưởng xin nghỉ học tạm thời và bảo lưu kết quả đã học trong các trường hợp sau:
+    - Được động viên vào các lực lượng vũ trang.
+    - Bị ốm hoặc tai nạn phải điều trị thời gian dài, nhưng phải có giấy xác nhận của cơ quan y tế cấp quận, huyện trở lên.
+    - Thai sản.
+    - Được cơ quan cử đi công tác nước ngoài dài ngày.
+    - Vì nhu cầu cá nhân. Trường hợp này, sinh viên phải học ít nhất một học kỳ ở trường, không rơi vào các trường hợp bị buộc thôi học quy định tại Điều 16 của quy chế này và phải đạt điểm trung bình tích lũy không dưới 2,00. Thời gian nghỉ học tạm thời vì nhu cầu cá nhân không vượt quá 6 tháng và phải được tính vào thời gian học chính thức quy định tại Điều 4 của quy chế này."
+    utter_di_hoc_lai:
+        - text: "Sinh viên nghỉ học tạm thời muốn trở lại học tiếp tại trường thì phải viết đơn gửi Hiệu trưởng ít nhất một tháng trước khi bắt đầu học kỳ mới."
+
 
 session_config:
     carry_over_slots_to_new_session: true
