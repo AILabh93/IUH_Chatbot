@@ -112,10 +112,10 @@ class BotView(generic.View):
     # Post function to handle Facebook messages
     def post(self, request, *args, **kwargs):
         incoming_message = json.loads(self.request.body.decode('utf-8'))
-        print(incoming_message)
+        # print(incoming_message)
         for entry in incoming_message['entry']:
             for message in entry['messaging']:
-
+                print(message)
                 if 'message' in message:
                     post_facebook_message(
                         message['sender']['id'], message['message']['text'])
