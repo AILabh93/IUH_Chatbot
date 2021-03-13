@@ -72,11 +72,12 @@ VERIFY_TOKEN = "rasademo"
 
 
 def post_facebook_message(fbid, recevied_message):
+    print(f'===========recevie============\n{recevied_message}')
     recevied_message = sua(recevied_message)
     data = json.dumps({"message": "%s" % recevied_message, "sender": "Me"})
     p = requests.post('http://localhost:5005/webhooks/rest/webhook',
                       headers={"Content-Type": "application/json"}, data=data).json()
-
+    print(f'=======rasa==========\n{p}')
     bot_res = p[0]['text']
 
     if bot_res is None:
@@ -112,10 +113,10 @@ class BotView(generic.View):
     # Post function to handle Facebook messages
     def post(self, request, *args, **kwargs):
         incoming_message = json.loads(self.request.body.decode('utf-8'))
-        # print(incoming_message)
+        print(incoming_message)
         for entry in incoming_message['entry']:
             for message in entry['messaging']:
-                print(message)
+                # print(message)
                 if 'message' in message:
                     post_facebook_message(
                         message['sender']['id'], message['message']['text'])

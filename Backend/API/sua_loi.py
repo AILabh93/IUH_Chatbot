@@ -55,5 +55,10 @@ def correct(sentence, model):
     for nid, ngram in (enumerate(guessed_ngrams)):
         for wid, word in (enumerate(re.split(' +', ngram))):
             candidates[nid + wid].update([word])
-    output = ' '.join(c.most_common(1)[0][0] for c in candidates)
+    output = ''
+    for c in candidates:
+        try:
+            output += c.most_common(1)[0][0]+' '
+        except:
+            pass
     return output
