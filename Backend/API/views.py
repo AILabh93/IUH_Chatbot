@@ -14,9 +14,6 @@ from django.http import HttpResponse
 from . import sua_loi
 # Create your views here.
 
-# Web API
-# path = models.ModelThemDau.objects.get(id=1).model_h5.path
-
 
 model = load_model('API/models/model_sua_loi.h5')
 model_add = load_model('API/models/model.h5')
@@ -109,7 +106,6 @@ class BotView(generic.View):
     def dispatch(self, request, *args, **kwargs):
         return generic.View.dispatch(self, request, *args, **kwargs)
 
-    # Post function to handle Facebook messages
     def post(self, request, *args, **kwargs):
         incoming_message = json.loads(self.request.body.decode('utf-8'))
         for entry in incoming_message['entry']:
@@ -135,48 +131,58 @@ def rasaToFbJson(rasa, idfb):
             "id": idfb
         },
         "message": {
-            # "text": rasa[0]['text']
         }
     }
-    # {"recipient": {"id": fbid}, "message": {"text": bot_res}}
-    # return jsons
     if len(rasa) > 1:
-        buttons = rasa[1]['buttons']
-        jsons["message"]["attachment"] = {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": rasa[0]['text'],
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": buttons[0]['title'],
-                        "payload": buttons[0]['payload']
-                    },
-                    {
-                        "type": "postback",
-                        "title": buttons[1]['title'],
-                        "payload": buttons[1]['payload']
-                    },
-                    {
-                        "type": "postback",
-                        "title": buttons[2]['title'],
-                        "payload": buttons[2]['payload']
-                    },
-                    # {
-                    #     "type": "postback",
-                    #     "title": buttons[3]['title'],
-                    #     "payload": buttons[3]['payload']
-                    # },
-                    # {
-                    #     "type": "postback",
-                    #     "title": buttons[4]['title'],
-                    #     "payload": buttons[4]['payload']
-                    # }
-                ]
+        if 'buttons' in rasa[1]:
+            buttons = rasa[1]['buttons']
+            jsons["message"]["attachment"] = {
+                "type": "template",
+                "payload": {
+                    "template_type": "button",
+                    "text": rasa[0]['text'],
+                    "buttons": [
+                        {
+                            "type": "postback",
+                            "title": buttons[0]['title'],
+                            "payload": buttons[0]['payload']
+                        },
+                        {
+                            "type": "postback",
+                            "title": buttons[1]['title'],
+                            "payload": buttons[1]['payload']
+                        },
+                        {
+                            "type": "postback",
+                            "title": buttons[2]['title'],
+                            "payload": buttons[2]['payload']
+                        },
+                        # {
+                        #     "type": "postback",
+                        #     "title": buttons[3]['title'],
+                        #     "payload": buttons[3]['payload']
+                        # },
+                        # {
+                        #     "type": "postback",
+                        #     "title": buttons[4]['title'],
+                        #     "payload": buttons[4]['payload']
+                        # }
+                    ]
+                }
             }
-        }
+        else:
+            jsons["message"]["attachment"] = {
+                "type": "template",
+                "payload": {
+                    "template_type": "generic",
+                    "elements": [
+                        {
+                            "image_url": rasa[1]['image'],
+                            "subtitle": rasa[0]['text'],
+
+                        }
+                    ]}}
     else:
         jsons["message"]["text"] = rasa[0]['text']
-
+    print(jsons)
     return jsons

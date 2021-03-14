@@ -54,31 +54,31 @@ def createButton():
     temp_button_lst.append({
         "type": "postback",
         "title": "Khoa học máy tính",
-        "payload": "tư vấn khmt"
+        "payload": "tư vấn ngành khoa học máy tính"
     })
 
     temp_button_lst.append({
         "type": "postback",
         "title": "Kĩ thuật phần mềm",
-        "payload": "tư vấn ktpm"
+        "payload": "tư vấn ngành kỹ thuật phần mềm"
     })
 
     temp_button_lst.append({
         "type": "postback",
         "title": "Công nghệ thông tin",
-        "payload": "tư vấn cntt"
+        "payload": "tư vấn ngành công nghệ thông tin"
     })
 
     temp_button_lst.append({
         "type": "postback",
         "title": "Hệ thống thông tin",
-        "payload": "tư vấn httt"
+        "payload": "tư vấn ngành hệ thống thông tin"
     })
 
     temp_button_lst.append({
         "type": "postback",
         "title": "Khoa học dữ liệu",
-        "payload": "tư vấn khdl"
+        "payload": "tư vấn ngành khoa học dữ liệu"
     })
 
     return temp_button_lst
