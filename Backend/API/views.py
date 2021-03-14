@@ -42,7 +42,8 @@ def getResponse(question):
                       headers={"Content-Type": "application/json"}, data=data).json()
     print(p)
     try:
-        return p[0]['text']
+        p[0]['text']
+        return p
     except:
         return None
 
@@ -72,18 +73,17 @@ VERIFY_TOKEN = "rasademo"
 
 
 def post_facebook_message(fbid, recevied_message):
-    print(f'===========recevie============\n{recevied_message}')
     recevied_message = sua(recevied_message)
     data = json.dumps({"message": "%s" % recevied_message, "sender": "Me"})
     p = requests.post('http://localhost:5005/webhooks/rest/webhook',
                       headers={"Content-Type": "application/json"}, data=data).json()
     print(f'=======rasa==========\n{p}')
-    bot_res = p[0]['text']
 
-    if bot_res is None:
-        bot_res = "Không hiểu"
+    if p is None:
+        p = "Không hiểu"
     else:
-        save_chat(recevied_message, bot_res)
+        jsons = rasaToFbJson(p, fbid)
+        # save_chat(recevied_message, bot_res)
 
     user_details_url = "https://graph.facebook.com/v2.6/%s" % fbid
     user_details_params = {
@@ -93,8 +93,7 @@ def post_facebook_message(fbid, recevied_message):
 
     post_message_url = 'https://graph.facebook.com/v2.6/me/messages?access_token=%s' % PAGE_ACCESS_TOKEN
 
-    response_msg = json.dumps(
-        {"recipient": {"id": fbid}, "message": {"text": bot_res}})
+    response_msg = json.dumps(jsons)
     status = requests.post(post_message_url, headers={
                            "Content-Type": "application/json"}, data=response_msg)
 
@@ -113,16 +112,71 @@ class BotView(generic.View):
     # Post function to handle Facebook messages
     def post(self, request, *args, **kwargs):
         incoming_message = json.loads(self.request.body.decode('utf-8'))
-        print(incoming_message)
         for entry in incoming_message['entry']:
             for message in entry['messaging']:
-                # print(message)
+                print(message)
                 if 'message' in message:
                     post_facebook_message(
                         message['sender']['id'], message['message']['text'])
+                if 'postback' in message:
+                    post_facebook_message(
+                        message['sender']['id'], message['postback']['payload'])
         return HttpResponse()
 
 
 def save_chat(user, bot):
     chat = models.Chat(chat_user=user, chat_bot=bot)
     chat.save()
+
+
+def rasaToFbJson(rasa, idfb):
+    jsons = {
+        "recipient": {
+            "id": idfb
+        },
+        "message": {
+            # "text": rasa[0]['text']
+        }
+    }
+    # {"recipient": {"id": fbid}, "message": {"text": bot_res}}
+    # return jsons
+    if len(rasa) > 1:
+        buttons = rasa[1]['buttons']
+        jsons["message"]["attachment"] = {
+            "type": "template",
+            "payload": {
+                "template_type": "button",
+                "text": rasa[0]['text'],
+                "buttons": [
+                    {
+                        "type": "postback",
+                        "title": buttons[0]['title'],
+                        "payload": buttons[0]['payload']
+                    },
+                    {
+                        "type": "postback",
+                        "title": buttons[1]['title'],
+                        "payload": buttons[1]['payload']
+                    },
+                    {
+                        "type": "postback",
+                        "title": buttons[2]['title'],
+                        "payload": buttons[2]['payload']
+                    },
+                    # {
+                    #     "type": "postback",
+                    #     "title": buttons[3]['title'],
+                    #     "payload": buttons[3]['payload']
+                    # },
+                    # {
+                    #     "type": "postback",
+                    #     "title": buttons[4]['title'],
+                    #     "payload": buttons[4]['payload']
+                    # }
+                ]
+            }
+        }
+    else:
+        jsons["message"]["text"] = rasa[0]['text']
+
+    return jsons
