@@ -20,6 +20,9 @@ model_add = load_model('API/models/model.h5')
 
 
 def sua(text):
+    current_text = text
+    current_len = len(text.split())
+
     i = 0
     while len(text.split(' ')) < 5:
         text += ' 0226'
@@ -28,9 +31,10 @@ def sua(text):
     text = sua_loi.correct(text, model)
     text = them_dau.remove_accent(text)
     text = them_dau.accent_sentence(text, model_add)
-    while ' 0226' in text:
-        text = text.replace(' 0226', '')
-    return text
+    try:
+        return ' '.join(text.split()[i] for i in range(current_len))
+    except:
+        return current_text
 
 
 def getResponse(question):
@@ -49,19 +53,19 @@ class Chatbot(APIView):
 
     def post(self, request):
 
-        try:
-            data = request.data
-            text = data['text']
-            print(text)
-            text = sua(text)
-            response = getResponse(text)
-            if response is None:
-                response = "Không hiểu"
-            else:
-                save_chat(text, response)
-            return Response({'text_formated': text, 'response': response}, status=status.HTTP_200_OK)
-        except:
-            return Response(status=status.HTTP_400_BAD_REQUEST)
+        # try:
+        data = request.data
+        text = data['text']
+        text = sua(text)
+        response = getResponse(text)
+        if response is None:
+            response = "Không hiểu"
+        else:
+            response = response[0]['text']
+            # save_chat(text, response)
+        return Response({'text_formated': text, 'response': response}, status=status.HTTP_200_OK)
+        # except:
+        #     return Response(status=status.HTTP_400_BAD_REQUEST)
 
 
 # Facebook API
@@ -71,6 +75,7 @@ VERIFY_TOKEN = "rasademo"
 
 def post_facebook_message(fbid, recevied_message):
     recevied_message = sua(recevied_message)
+    print(f'===========rc=========\n{recevied_message}')
     data = json.dumps({"message": "%s" % recevied_message, "sender": "Me"})
     p = requests.post('http://localhost:5005/webhooks/rest/webhook',
                       headers={"Content-Type": "application/json"}, data=data).json()
@@ -177,6 +182,7 @@ def rasaToFbJson(rasa, idfb):
                     "template_type": "generic",
                     "elements": [
                         {
+                            "title": 'Lương',
                             "image_url": rasa[1]['image'],
                             "subtitle": rasa[0]['text'],
 
