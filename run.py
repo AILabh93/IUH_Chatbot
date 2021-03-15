@@ -9,7 +9,7 @@ def run_rasa():
     os.system('rasa run --endpoints endpoints.yml --credentials credentials.yml & rasa run actions')
 
 def run_server():
-    sleep(30)
+    sleep(60)
     print('loading server')
     os.chdir('../Backend')
     os.system('python3 manage.py runserver')
