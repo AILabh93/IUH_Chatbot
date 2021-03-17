@@ -29,8 +29,8 @@ def sua(text):
         i += 1
 
     text = sua_loi.correct(text, model)
-    text = them_dau.remove_accent(text)
-    text = them_dau.accent_sentence(text, model_add)
+    # text = them_dau.remove_accent(text)
+    # text = them_dau.accent_sentence(text, model_add)
     try:
         return ' '.join(text.split()[i] for i in range(current_len))
     except:
@@ -74,7 +74,7 @@ VERIFY_TOKEN = "rasademo"
 
 
 def post_facebook_message(fbid, recevied_message):
-    recevied_message = sua(recevied_message)
+    # recevied_message = sua(recevied_message)
     print(f'===========rc=========\n{recevied_message}')
     data = json.dumps({"message": "%s" % recevied_message, "sender": "Me"})
     p = requests.post('http://localhost:5005/webhooks/rest/webhook',
