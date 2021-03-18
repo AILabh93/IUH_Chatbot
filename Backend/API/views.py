@@ -16,7 +16,7 @@ from . import sua_loi
 
 
 model = load_model('API/models/model_sua_loi.h5')
-model_add = load_model('API/models/model.h5')
+#model_add = load_model('API/models/model.h5')
 
 
 def sua(text):
