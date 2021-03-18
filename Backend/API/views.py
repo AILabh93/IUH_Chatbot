@@ -53,19 +53,19 @@ class Chatbot(APIView):
 
     def post(self, request):
 
-        # try:
-        data = request.data
-        text = data['text']
-        text = sua(text)
-        response = getResponse(text)
-        if response is None:
-            response = "Không hiểu"
-        else:
-            response = response[0]['text']
-            # save_chat(text, response)
-        return Response({'text_formated': text, 'response': response}, status=status.HTTP_200_OK)
-        # except:
-        #     return Response(status=status.HTTP_400_BAD_REQUEST)
+        try:
+            data = request.data
+            text = data['text']
+            text = sua(text)
+            response = getResponse(text)
+            if response is None:
+                response = "Không hiểu"
+            else:
+                response = response[0]['text']
+                # save_chat(text, response)
+            return Response({'text_formated': text, 'response': response}, status=status.HTTP_200_OK)
+        except:
+            return Response(status=status.HTTP_400_BAD_REQUEST)
 
 
 # Facebook API
@@ -73,13 +73,12 @@ PAGE_ACCESS_TOKEN = "EAAK0AI5bxoQBAESZBmkPE2xWug0qvqcLHyZCkH8DWUO2a7nLA7VdVh8dQe
 VERIFY_TOKEN = "rasademo"
 
 
-def post_facebook_message(fbid, recevied_message):
-    # recevied_message = sua(recevied_message)
-    print(f'===========rc=========\n{recevied_message}')
+def post_facebook_message(fbid, recevied_message, sua_loi=True):
+    if sua_loi:
+        recevied_message = sua(recevied_message)
     data = json.dumps({"message": "%s" % recevied_message, "sender": "Me"})
     p = requests.post('http://localhost:5005/webhooks/rest/webhook',
                       headers={"Content-Type": "application/json"}, data=data).json()
-    print(f'=======rasa==========\n{p}')
 
     if p is None:
         p = "Không hiểu"
@@ -117,8 +116,12 @@ class BotView(generic.View):
             for message in entry['messaging']:
                 print(message)
                 if 'message' in message:
-                    post_facebook_message(
-                        message['sender']['id'], message['message']['text'])
+                    try:
+                        post_facebook_message(
+                            message['sender']['id'], message['message']['text'])
+                    except:
+                        post_facebook_message(
+                            message['sender']['id'], ":D :D", sua_loi=False)
                 if 'postback' in message:
                     post_facebook_message(
                         message['sender']['id'], message['postback']['payload'])
@@ -190,5 +193,4 @@ def rasaToFbJson(rasa, idfb):
                     ]}}
     else:
         jsons["message"]["text"] = rasa[0]['text']
-    print(jsons)
     return jsons
