@@ -76,16 +76,30 @@ VERIFY_TOKEN = "rasademo"
 def post_facebook_message(fbid, recevied_message, sua_loi=True):
     if sua_loi:
         recevied_message = sua(recevied_message)
-    data = json.dumps({"message": "%s" % recevied_message, "sender": "Me"})
-    p = requests.post('http://localhost:5005/webhooks/rest/webhook',
-                      headers={"Content-Type": "application/json"}, data=data).json()
 
-    if p is None:
-        p = "Không hiểu"
-    else:
-        jsons = rasaToFbJson(p, fbid)
-        # save_chat(recevied_message, bot_res)
+        data = json.dumps({"message": "%s" % recevied_message, "sender": "Me"})
+        p = requests.post('http://localhost:5005/webhooks/rest/webhook',
+                          headers={"Content-Type": "application/json"}, data=data).json()
 
+        if p is None:
+            p = "Không hiểu"
+        else:
+            jsons = rasaToFbJson(p, fbid)
+            # save_chat(recevied_message, bot_res)
+        send(fbid, jsons)
+        return
+    json_file = {
+        "recipient": {
+            "id": fbid
+        },
+        "message": {
+            "text": recevied_message
+        }
+    }
+    send(fbid, json_file)
+
+
+def send(fbid, json_file):
     user_details_url = "https://graph.facebook.com/v2.6/%s" % fbid
     user_details_params = {
         'fields': 'first_name,last_name,profile_pic', 'access_token': PAGE_ACCESS_TOKEN}
@@ -94,7 +108,7 @@ def post_facebook_message(fbid, recevied_message, sua_loi=True):
 
     post_message_url = 'https://graph.facebook.com/v2.6/me/messages?access_token=%s' % PAGE_ACCESS_TOKEN
 
-    response_msg = json.dumps(jsons)
+    response_msg = json.dumps(json_file)
     status = requests.post(post_message_url, headers={
                            "Content-Type": "application/json"}, data=response_msg)
 
