@@ -25,7 +25,9 @@ class Profile(APIView):
         return Response(data=se.data, status=status.HTTP_200_OK)
 
     def post(self, request):
+
         data = request.data
+        print(data)
         user = User.objects.create_user(
             username=data['username'],
             email=data['email'],
