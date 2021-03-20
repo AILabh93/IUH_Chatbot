@@ -13,12 +13,12 @@ User = get_user_model()
 class Profile(APIView):
 
     def get(self, request):
-        user = request.data
+        user = request.GET
         auth = authenticate(
             username=user['username'], password=user['password'])
 
         if auth is None:
-            return Response(status=status.HTTP_401_UNAUTHORIZED)
+            return Response(status=status.HTTP_400_BAD_REQUEST)
 
         se = serializers.SerializerUser(
             User.objects.get(username=user['username']))
@@ -27,7 +27,6 @@ class Profile(APIView):
     def post(self, request):
 
         data = request.data
-        print(data)
         user = User.objects.create_user(
             username=data['username'],
             email=data['email'],
