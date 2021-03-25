@@ -362,7 +362,7 @@ stories:
           - intent: tuvan
           - action: action_tuvan
           - intent: nu
-          - action: action_nu
+          - action: utter_nu
           - intent: tinhcach
           - action: action_tinhcach
           - intent: thank

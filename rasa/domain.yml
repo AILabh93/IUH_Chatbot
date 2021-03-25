@@ -70,7 +70,6 @@ actions:
     - action_thoigiandkhpdot2
     - action_thoigianhuyhpdot1
     - action_thoigianhuyhpdot2
-    - action_nu
     - action_chatluonggiaovien
     - action_yeucau_tienganh
     - action_tinhcach
@@ -85,6 +84,7 @@ actions:
     - utter_cnttkhacdientu
     - utter_trituenhantao
     - utter_cuocthi
+    - utter_nu
 
 intents:
     # intent mới
@@ -205,8 +205,6 @@ responses:
         - text: Ở chuyên ngành Công Nghệ Thông Tin bạn sẽ được học các kiến thức chuyên về mạng máy tính và lập tình web cũng như kiến thức về xây dựng quản lý một dự án công nghệ thông tin.
     utter_cntt_ngonngu:
         - text: "Đối với chuyên ngành CNTT bạn chỉ cần nắm cơ bản về một số ngôn ngữ C,Java,Python"
-    utter_cntt_nu:
-        - text: "Ngày nay, tỉ lệ sinh viên nữ của khoa Công nghệ thông tin đang dần được cân bằng. Một lớp học 70 sinh viên thì đã có hơn 20 sinh viên nữ rồi nha. Riêng đối với chuyên ngành Công nghệ thông tin thì tỉ lệ nữ là có khoảng 1/5 sinh viên nữ trong một lớp nhé."
     utter_cntt_phongvan:
         - text: "Để đi phỏng vấn tốt ngành công nghệ thông tin thì bạn cần nên chuẩn bị một CV tốt như CV bằng tiếng anh, ghi cụ thể ngắn gọn các kỹ năng, kinh nghiệm, dự án, đồ án tốt nghiệp mà bạn đã làm đượcc. Đưa ra các mục tiêu nghề nghiệp ngắn ngọn, dễ hiểu mà bạn muốn đạt được. Chuẩn bị các kiến thức liên quan đến vị trí mà bạn muốn ứng tuyển, hiểu rõ về công ty của bạn ứng tuyển và có các kiến thức, kỹ năng như hiểu về máy tính, mạng không dây, an ninh bảo mật...  đặc biệt là tiếng anh(vì đó là một lợi thế)."
     utter_cntt_tailieu:
@@ -257,8 +255,6 @@ responses:
         - text: "Sinh viên học ngành này có nhiều khả năng phân tích,thiết kế,xây dựng, quản trị và kiểm soát các hệ thống thông tin quản lý:kiến thức về lý thuyết thống kê kinh tế..nhằm cung cấp các căn cứ khoa học,đề xuất các phương án tối ưu trong công tác quản lý kinh tế xã hội và quản trị kinh doanh."
     utter_httt_ngonngu:
         - text: "Một số ngôn ngữ cần thiết và cơ bản cho ngành httt như là: python, java, C. Ngoài ra không thể thiếu ngôn ngữ truy vấn dữ liệu SQL, mySQL server…"
-    utter_httt_nu:
-        - text: "Theo như mình được biết, tỉ lệ sinh viên nữ của khoa Công nghệ thông tin đang dần được cân bằng. Một lớp học 70 sinh viên thì đã có hơn 20 sinh viên nữ rồi nha. Riêng đối với chuyên ngành Hệ thống thông tin thì tỉ lệ nữ đông hơn các chuyên ngành khác, là có khoảng 6/7 sinh viên nữ trong một lớp nhé."
     utter_httt_phongvan:
         - text: "Để đi phỏng vấn tốt ngành hệ thống thông tin thì bạn cần nên chuẩn bị một CV tốt như CV bằng tiếng anh, ghi cụ thể ngắn gọn các kỹ năng, kinh nghiệm, dự án, đồ án tốt nghiệp mà bạn đã làm được. Đưa ra các mục tiêu nghề nghiệp ngắn ngọn, dễ hiểu mà bạn muốn đạt được. Chuẩn bị các kiến thức liên quan đến vị trí mà bạn muốn ứng tuyển, hiểu rõ về công ty của bạn ứng tuyển và có các kiến thức, kỹ năng như cơ sở dữ liệu, phân tích thiết kế hệ thống, quản trị hệ thống thông tin, quản trị cơ sở dữ liệu... đặc biệt là tiếng anh(vì đó là một lợi thế)."
     utter_httt_tailieu:
@@ -301,8 +297,8 @@ responses:
         - text: "Tạo ra và quản trị dữ liệu, phân tích dữ liệu và chuyển kết quả phân tích thành giá trị của hành động. Việc phân tích và dùng dữ liệu lại dựa vào ba nguồn tri thức: toán học (thống kê toán học), công nghệ thông tin (máy học) và tri thức của lĩnh vực ứng dụng cụ thể.Sinh viên sẽ được trang bị khối kiến thức nền tảng vững chắc về quản lý, xử lý và phân tích dữ liệu lớn; kiến thức chuyên ngành sâu và rộng về khoa học dữ liệu và hệ thống thông tin; các kiến thức về hội nhập, khởi nghiệp cũng như tham gia các khóa học bồi dưỡng để nắm bắt các xu hướng công nghệ mới."
     utter_khdl_ngongnu:
         - text: "Những ngôn ngữ phổ biến cho ngành khoa học dữ liệu đó là Python, R,SQL,Scala, Julia, SAS. Những ngôn ngữ này giúp bạn có chỗ đứng nhất định trong lĩnh vục khoa học dữ liệu."
-    utter_khdl_nu:
-        - text: "Được biết, tỉ lệ sinh viên nữ của khoa Công nghệ thông tin đang dần được cân bằng. Một lớp học 70 sinh viên thì đã có hơn 20 sinh viên nữ rồi nha. Riêng đối với chuyên ngành Khoa học dữ liệu thì tỉ lệ nữ là có khoảng 2/5 sinh viên nữ trong một lớp nhé."
+    utter_nu:
+        - text: "Như các bạn cũng biết thì nữ các ngành công nghệ điều ít, nhưng nữ ngành công nghệ thông tin thì rất xinh đó nha"
     utter_khdl_phongvan:
         - text: "Để đi phỏng vấn tốt ngành khoa học dữ liệu thì bạn cần nên chuẩn bị một CV tốt như CV bằng tiếng anh, ghi cụ thể ngắn gọn các kỹ năng, kinh nghiệm, dự án, đồ án tốt nghiệp mà bạn đã làm được. Đưa ra các mục tiêu nghề nghiệp ngắn ngọn, dễ hiểu mà bạn muốn đạt được. Chuẩn bị các kiến thức liên quan đến vị trí mà bạn muốn ứng tuyển, hiểu rõ về công ty của bạn ứng tuyển và có các kiến thức, kỹ năng như python, sql, R, SAS, trực quan hóa dữ liệu, tiền xử lý dữ liệu, dữ liệu phi cấu trúc... đặc biệt là tiếng anh(vì đó là một lợi thế)."
     utter_khdl_tailieu:
@@ -345,8 +341,6 @@ responses:
         - text: "Chương trình trang bị cho sinh viên kiến thức nền tảng và chuyên sâu về khoa học máy tính như: cấu trúc máy tính, hệ điều hành, ngôn ngữ lập trình phần mềm và phần cứng, trí tuệ nhân tạo, bảo mật và an toàn máy tính, xử lý dữ liệu khối lượng lớn từ mạng internet và các mạng xã hội, thiết kế và phát triển các ứng dụng cho các thiết bị di động và môi trường web…"
     utter_khmt_ngonngu:
         - text: "Học chuyên ngành Khoa học máy tính ngoài việc biết ngôn ngữ C căn bản thì bạn còn được học các ngôn ngữ Java/C# và đặc biệt sẽ được tiếp súc thường xuyên với ngôn ngữ Python."
-    utter_khmt_nu:
-        - text: "Hiện tại, tỉ lệ sinh viên nữ của khoa Công nghệ thông tin đang dần được cân bằng. Một lớp học 70 sinh viên thì đã có hơn 20 sinh viên nữ rồi nha. Riêng đối với chuyên ngành Khoa học máy tính thì tỉ lệ nữ là có khoảng 1/6 sinh viên nữ trong một lớp nhé."
     utter_khmt_phongvan:
         - text: "Để đi phỏng vấn tốt ngành khoa học máy tính thì bạn cần nên chuẩn bị một CV tốt như CV bằng tiếng anh, ghi cụ thể ngắn gọn các kỹ năng, kinh nghiệm, dự án, đồ án tốt nghiệp mà bạn đã làm được. Đưa ra các mục tiêu nghề nghiệp ngắn ngọn, dễ hiểu mà bạn muốn đạt được. Chuẩn bị các kiến thức liên quan đến vị trí mà bạn muốn ứng tuyển, hiểu rõ về công ty của bạn ứng tuyển và có các kiến thức, kỹ năng như python, sql, thị giác máy tính, xử lý ngôn ngữ tự nhiên, máy học... đặc biệt là tiếng anh(vì đó là một lợi thế)."
     utter_khmt_tailieu:
@@ -393,8 +387,6 @@ responses:
         - text: "Khi học chuyên ngành kỹ thuật phần mền sẽ được học kiến thức về công nghệ phần mềm bao gồm: + Các môn cơ sỏ dữ liệu như: Nhập môn lập trình, cấu trúc dữ liệu và giãi thuật, OOP, cơ sở dữ liệu, kiểm thử thiết kế, bảo trì… + Các môn chuyên ngành: Công nghệ phần mềm, phát triển ứng dụng/phần mềm, kiến trúc và thiết kế phần mềm… Đồng thời tùy theo định hướng, khả năng bản thân để lựa chọn lịch vực riêng (mobie/wep/game…) để học chuyên sâu."
     utter_ktpm_ngonngu:
         - text: "Đầu tiên cần học các ngôn ngữ căn bản như C/C++ sau đó học các ngôn ngữ bậc cao hơn là java, c#... và còn tùy theo lĩnh vực bạn chọn (wep/game/app…) mà lựa chọn các ngôn ngữ thích hợp để học."
-    utter_ktpm_nu:
-        - text: "Tỉ lệ sinh viên nữ của khoa Công nghệ thông tin đang dần được cân bằng. Một lớp học 70 sinh viên thì đã có hơn 20 sinh viên nữ rồi nha. Riêng đối với chuyên ngành Kỹ thuật phần mềm thì tỉ lệ nữ là có khoảng 1/5 sinh viên nữ trong một lớp nhé."
     utter_ktpm_phongvan:
         - text: "Để đi phỏng vấn tốt ngành kỹ thuật phần mềm thì bạn cần nên chuẩn bị một CV tốt như CV bằng tiếng anh, ghi cụ thể ngắn gọn các kỹ năng, kinh nghiệm, dự án, đồ án tốt nghiệp mà bạn đã làm được. Đưa ra các mục tiêu nghề nghiệp ngắn ngọn, dễ hiểu mà bạn muốn đạt được. Chuẩn bị các kiến thức liên quan đến vị trí mà bạn muốn ứng tuyển, hiểu rõ về công ty của bạn ứng tuyển và có các kiến thức, kỹ năng như java, web, javaScript, php, sql, unity, hệ thống nhúng... đặc biệt là tiếng anh(vì đó là một lợi thế)."
     utter_ktpm_tailieu:
