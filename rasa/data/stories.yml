@@ -72,12 +72,6 @@ stories:
           - action: action_tuvan
           - intent: tach_nganh
           - action: utter_tach_nganh
-          - intent: link_fit
-          - action: utter_link_fit
-          - intent: clb_laptrinh
-          - action: utter_clb_laptrinh
-          - intent: clb_attt
-          - action: utter_clb_attt
           - intent: bye
           - action: utter_bye
 
@@ -126,8 +120,6 @@ stories:
           - action: action_tuvan
           - intent: linhvuc
           - action: action_linhvuc
-          - intent: dieukientoeic
-          - action: utter_dieukientoeic
           - intent: laptrinh
           - action: action_laptrinh
 
@@ -137,8 +129,6 @@ stories:
           - action: action_tuvan
           - intent: linhvuc
           - action: action_linhvuc
-          - intent: dieukientoeic
-          - action: utter_dieukientoeic
           - intent: laptrinh
           - action: action_laptrinh
 
@@ -146,10 +136,6 @@ stories:
       steps:
           - intent: tuvan
           - action: action_tuvan
-          - intent: link_fit
-          - action: utter_link_fit
-          - intent: sdt_giangvien
-          - action: utter_sdt_giangvien
           - intent: giangvien
           - action: action_giangvien
           - intent: bye
@@ -176,16 +162,12 @@ stories:
       steps:
           - intent: chaohoi
           - action: action_but
-          - intent: tuvan_khoacntt
-          - action: utter_tuvan_khoacntt
           - intent: tach_nganh
           - action: utter_tach_nganh
           - intent: vieclam
           - action: action_vieclam
           - intent: luong
           - action: action_luong
-          - intent: tilesvratruong
-          - action: action_tilesvratruong
 
     - story: chao - tu van - lap trinh - mon hoc - kien thuc ra truong - viec lam -luong - bye
       steps:
@@ -197,8 +179,6 @@ stories:
           - action: action_laptrinh
           - intent: monhoc
           - action: action_monhoc
-          - intent: kienthuccancokhiratruong
-          - action: action_kienthuccancokhiratruong
           - intent: vieclam
           - action: action_vieclam
           - intent: luong
@@ -216,8 +196,6 @@ stories:
           - action: action_laptrinh
           - intent: monhoc
           - action: action_monhoc
-          - intent: kienthuccancokhiratruong
-          - action: action_kienthuccancokhiratruong
           - intent: vieclam
           - action: action_vieclam
           - intent: luong
@@ -229,8 +207,6 @@ stories:
       steps:
           - intent: tuvan
           - action: action_tuvan
-          - intent: kienthuccancokhiratruong
-          - action: action_kienthuccancokhiratruong
           - intent: luong
           - action: action_luong
           - intent: bye
@@ -240,12 +216,8 @@ stories:
       steps:
           - intent: tuvan
           - action: action_tuvan
-          - intent: dieukientoeic
-          - action: utter_dieukientoeic
           - intent: tuvankhac
           - action: action_but
-          - intent: kienthuccancokhiratruong
-          - action: action_kienthuccancokhiratruong
           - intent: caulacbo
           - action: utter_caulacbo
           - intent: thank
@@ -265,8 +237,6 @@ stories:
           - action: utter_caulacbo
           - intent: tuvankhac
           - action: action_but
-          - intent: dieukientoeic
-          - action: utter_dieukientoeic
           - intent: luong
           - action: action_luong
 
@@ -300,10 +270,6 @@ stories:
       steps:
           - intent: tuvan
           - action: action_tuvan
-          - intent: link_fit
-          - action: utter_link_fit
-          - intent: link_fitgiangvien
-          - action: utter_link_fitgiangvien
           - intent: thank
           - action: utter_thank
           - intent: bye
@@ -336,8 +302,6 @@ stories:
           - action: utter_tach_nganh
           - intent: linhvuc
           - action: action_linhvuc
-          - intent: dieukientoeic
-          - action: utter_dieukientoeic
           - intent: thank
           - action: utter_thank
           - intent: bye
@@ -353,8 +317,6 @@ stories:
           - action: action_ngonngu
           - intent: monhoc
           - action: action_monhoc
-          - intent: dieukientoeic
-          - action: utter_dieukientoeic
           - intent: bye
           - action: utter_bye
 
@@ -364,8 +326,6 @@ stories:
           - action: action_but
           - intent: tuvan
           - action: action_tuvan
-          - intent: tilesvratruong
-          - action: action_tilesvratruong
           - intent: luong
           - action: action_luong
           - intent: linhvuc
@@ -377,12 +337,6 @@ stories:
       steps:
           - intent: tuvan
           - action: action_tuvan
-          - intent: clb_laptrinh
-          - action: utter_clb_laptrinh
-          - intent: tuvan_khoacntt
-          - action: utter_tuvan_khoacntt
-          - intent: clb_attt
-          - action: utter_clb_attt
           - intent: bye
           - action: utter_bye
 
@@ -392,14 +346,10 @@ stories:
           - action: action_but
           - intent: tuvan
           - action: action_tuvan
-          - intent: khoacntt_hocgi
-          - action: utter_khoacntt_hocgi
           - intent: caulacbo
           - action: utter_caulacbo
           - intent: dinhhuongsai
           - action: action_dinhhuongsai
-          - intent: tilesvratruong
-          - action: action_tilesvratruong
           - intent: luong
           - action: action_luong
           - intent: bye
@@ -415,8 +365,6 @@ stories:
           - action: action_nu
           - intent: tinhcach
           - action: action_tinhcach
-          - intent: hocphi
-          - action: action_hocphi
           - intent: thank
           - action: utter_thank
           - intent: bye
@@ -428,8 +376,6 @@ stories:
           - action: action_but
           - intent: quy_che_dao_tao
           - action: utter_quy_che_dao_tao
-          - intent: hocphi
-          - action: action_hocphi
           - intent: tin_chi_khoa
           - action: utter_tin_chi_khoa
           - intent: thank
@@ -441,8 +387,6 @@ stories:
       steps:
           - intent: chaohoi
           - action: action_but
-          - intent: hocphi
-          - action: action_hocphi
           - intent: hp_bat_buoc
           - action: utter_hp_bat_buoc
           - intent: hp_tu_chon
@@ -695,8 +639,6 @@ stories:
           - action: action_but
           - intent: tuvan
           - action: action_tuvan
-          - intent: tuvan_khoacntt
-          - action: utter_tuvan_khoacntt
           - intent: dieu_kien_diem_Toeic
           - action: utter_dieu_kien_diem_Toeic
     - story: chao - hoc phan - dkhp - rut hp - don xin phep - nghi hoc tam thoi - di hoc lai
@@ -847,12 +789,8 @@ stories:
           - action: action_tuvan
           - intent: laptrinh
           - action: action_laptrinh
-          - intent: kienthuccancokhiratruong
-          - action: action_kienthuccancokhiratruong
           - intent: luong
           - action: action_luong
-          - intent: dieukientoeic
-          - action: utter_dieukientoeic
           - intent: thank
           - action: utter_thank
     - story: tu van - lap trinh -  điểm số - học bổng - yeu cau tieng anh  - thank
@@ -861,12 +799,8 @@ stories:
           - action: action_tuvan
           - intent: laptrinh
           - action: action_laptrinh
-          - intent: diemso
-          - action: action_diemso
           - intent: hocbong
           - action: utter_hocbong
-          - intent: dieukientoeic
-          - action: utter_dieukientoeic
           - intent: thank
           - action: utter_thank
     - story: Chào - tư vấn - lap trinh - hoc phi - thank - tạm biệt
@@ -875,8 +809,6 @@ stories:
           - action: action_but
           - intent: laptrinh
           - action: action_laptrinh
-          - intent: hocphi
-          - action: action_hocphi
           - intent: thank
           - action: utter_thank
           - intent: bye
@@ -887,10 +819,6 @@ stories:
           - action: action_but
           - intent: laptrinh
           - action: action_laptrinh
-          - intent: tinchi
-          - action: action_tinchi
-          - intent: hocphi
-          - action: action_hocphi
           - intent: thank
           - action: utter_thank
     - story: tu van - lap trinh - kien thuc ra truong - thuc tap doanh nghiep - yeu cau tieng anh  - thank
@@ -899,12 +827,8 @@ stories:
           - action: action_tuvan
           - intent: laptrinh
           - action: action_laptrinh
-          - intent: kienthuccancokhiratruong
-          - action: action_kienthuccancokhiratruong
           - intent: luong
           - action: action_luong
-          - intent: dieukientoeic
-          - action: utter_dieukientoeic
           - intent: thank
           - action: utter_thank
     - story: tu van - lap trinh - yeu cau - dao tao - kien thuc
@@ -913,22 +837,14 @@ stories:
           - action: action_tuvan
           - intent: laptrinh
           - action: action_laptrinh
-          - intent: yeucau
-          - action: action_yeucau
-          - intent: kienthuc
-          - action: action_kienthuc
     - story: tu van - lap trinh - yeu cau - cuoc thi - ky nang
       steps:
           - intent: tuvan
           - action: action_tuvan
           - intent: laptrinh
           - action: action_laptrinh
-          - intent: yeucau
-          - action: action_yeucau
           - intent: cuocthi
           - action: utter_cuocthi
-          - intent: kynang
-          - action: action_kynang
     - story: tu van - lap trinh - cach hoc - kien thuc  - thuc hanh - thank
       steps:
           - intent: tuvan
@@ -937,8 +853,6 @@ stories:
           - action: action_laptrinh
           - intent: cachhoc
           - action: action_cachhoc
-          - intent: thuchanh
-          - action: action_thuchanh
           - intent: thank
           - action: utter_thank
     - story: tu van - lap trinh - lo trinh hoc  - mon hoc -  ngonngu - kien thuc can co khi ra truong - thank
@@ -947,14 +861,10 @@ stories:
           - action: action_tuvan
           - intent: laptrinh
           - action: action_laptrinh
-          - intent: lotrinhhoc
-          - action: action_lotrinhhoc
           - intent: monhoc
           - action: action_monhoc
           - intent: ngonngu
           - action: action_ngonngu
-          - intent: kienthuccancokhiratruong
-          - action: action_kienthuccancokhiratruong
           - intent: thank
           - action: utter_thank
     - story: tu van - lap trinh - xu huong - viec lam - phong van - thank
@@ -971,16 +881,13 @@ stories:
           - action: action_phongvan
           - intent: thank
           - action: utter_thank
+
     - story: tu van - lap trinh - lo trinh hoc - bai tap lon - do an tot nghiep - thank
       steps:
           - intent: tuvan
           - action: action_tuvan
           - intent: laptrinh
           - action: action_laptrinh
-          - intent: lotrinhhoc
-          - action: action_lotrinhhoc
-          - intent: baitaplon
-          - action: action_baitaplon
           - intent: doantotnghiep
           - action: action_doantotnghiep
           - intent: thank

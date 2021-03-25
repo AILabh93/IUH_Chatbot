@@ -11,6 +11,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
 from django.views import generic
 from django.http import HttpResponse
+from rest_framework.permissions import AllowAny
 from . import sua_loi
 # Create your views here.
 
@@ -50,6 +51,7 @@ def getResponse(question):
 
 
 class Chatbot(APIView):
+    permission_classes = [AllowAny]
 
     def post(self, request):
 
@@ -114,6 +116,8 @@ def send(fbid, json_file):
 
 
 class BotView(generic.View):
+    permission_classes = [AllowAny]
+
     def get(self, request, *args, **kwargs):
         if self.request.GET['hub.verify_token'] == VERIFY_TOKEN:
             return HttpResponse(self.request.GET['hub.challenge'])

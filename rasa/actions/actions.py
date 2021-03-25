@@ -199,17 +199,6 @@ class action_monhoc(Action):
         return []
 
 
-class action_kienthuccancokhiratruong(Action):
-    def name(self):
-        return "action_kienthuccancokhiratruong"
-
-    def run(self, dispatcher, tracker, domain):
-        mon_hoc = predict_monhoc(tracker.latest_message['text'])
-
-        dispatcher.utter_message(template='utter_khmt_'+mon_hoc)
-        return []
-
-
 class action_giangvien(Action):
     def name(self):
         return "action_giangvien"
@@ -246,28 +235,6 @@ class action_laptrinh(Action):
 # code
 
 
-class action_nu(Action):
-    def name(self):
-        return "action_nu"
-
-    def run(self, dispatcher, tracker, domain):
-        mon_hoc = predict_monhoc(tracker.latest_message['text'])
-
-        dispatcher.utter_message(template='utter_'+mon_hoc+'_nu')
-        return []
-
-
-class action_diemso(Action):
-    def name(self):
-        return "action_diemso"
-
-    def run(self, dispatcher, tracker, domain):
-        mon_hoc = predict_monhoc(tracker.latest_message['text'])
-
-        dispatcher.utter_message(template='utter_'+mon_hoc+'_diemso')
-        return []
-
-
 class action_chatluonggiaovien(Action):
     def name(self):
         return "action_chatluonggiaovien"
@@ -277,17 +244,6 @@ class action_chatluonggiaovien(Action):
 
         dispatcher.utter_message(
             template='utter_'+mon_hoc+'_chatluonggiaovien')
-        return []
-
-
-class action_baitaplon(Action):
-    def name(self):
-        return "action_baitaplon"
-
-    def run(self, dispatcher, tracker, domain):
-        mon_hoc = predict_monhoc(tracker.latest_message['text'])
-
-        dispatcher.utter_message(template='utter_'+mon_hoc+'_baitaplon')
         return []
 
 
@@ -324,17 +280,6 @@ class action_thuctap(Action):
         return []
 
 
-class action_hocphi(Action):
-    def name(self):
-        return "action_hocphi"
-
-    def run(self, dispatcher, tracker, domain):
-        mon_hoc = predict_monhoc(tracker.latest_message['text'])
-
-        dispatcher.utter_message(template='utter_'+mon_hoc+'_hocphi')
-        return []
-
-
 class action_chatluongcao(Action):
     def name(self):
         return "action_chatluongcao"
@@ -343,28 +288,6 @@ class action_chatluongcao(Action):
         mon_hoc = predict_monhoc(tracker.latest_message['text'])
 
         dispatcher.utter_message(template='utter_'+mon_hoc+'_chatluongcao')
-        return []
-
-
-class action_lotrinhhoc(Action):
-    def name(self):
-        return "action_lotrinhhoc"
-
-    def run(self, dispatcher, tracker, domain):
-        mon_hoc = predict_monhoc(tracker.latest_message['text'])
-
-        dispatcher.utter_message(template='utter_'+mon_hoc+'_lotrinhhoc')
-        return []
-
-
-class action_dungcuhoctap(Action):
-    def name(self):
-        return "action_dungcuhoctap"
-
-    def run(self, dispatcher, tracker, domain):
-        mon_hoc = predict_monhoc(tracker.latest_message['text'])
-
-        dispatcher.utter_message(template='utter_'+mon_hoc+'_dungcuhoctap')
         return []
 
 
@@ -401,17 +324,6 @@ class action_phongvan(Action):
         return []
 
 
-class action_kienthuc(Action):
-    def name(self):
-        return "action_kienthuc"
-
-    def run(self, dispatcher, tracker, domain):
-        mon_hoc = predict_monhoc(tracker.latest_message['text'])
-
-        dispatcher.utter_message(template='utter_'+mon_hoc+'_kienthuc')
-        return []
-
-
 class action_yeucau(Action):
     def name(self):
         return "action_yeucau"
@@ -420,17 +332,6 @@ class action_yeucau(Action):
         mon_hoc = predict_monhoc(tracker.latest_message['text'])
 
         dispatcher.utter_message(template='utter_'+mon_hoc+'_yeucau')
-        return []
-
-
-class action_thuchanh(Action):
-    def name(self):
-        return "action_thuchanh"
-
-    def run(self, dispatcher, tracker, domain):
-        mon_hoc = predict_monhoc(tracker.latest_message['text'])
-
-        dispatcher.utter_message(template='utter_'+mon_hoc+'_thuchanh')
         return []
 
 
@@ -445,17 +346,6 @@ class action_daotao(Action):
         return []
 
 
-class action_kynang(Action):
-    def name(self):
-        return "action_kynang"
-
-    def run(self, dispatcher, tracker, domain):
-        mon_hoc = predict_monhoc(tracker.latest_message['text'])
-
-        dispatcher.utter_message(template='utter_'+mon_hoc+'_kynang')
-        return []
-
-
 class action_doantotnghiep(Action):
     def name(self):
         return "action_doantotnghiep"
@@ -463,16 +353,6 @@ class action_doantotnghiep(Action):
     def run(self, dispatcher, tracker, domain):
         mon_hoc = predict_monhoc(tracker.latest_message['text'])
         dispatcher.utter_message(template='utter_'+mon_hoc+'_doantotnghiep')
-        return []
-
-
-class action_tinchi(Action):
-    def name(self):
-        return "action_tinchi"
-
-    def run(self, dispatcher, tracker, domain):
-        mon_hoc = predict_monhoc(tracker.latest_message['text'])
-        dispatcher.utter_message(template='utter_'+mon_hoc+'_tinchi')
         return []
 
 
