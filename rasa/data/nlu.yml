@@ -17,7 +17,6 @@ nlu:
           - admin ơi
           - ad ơi
           - em có vài câu hỏi
-
     - intent: bye
       examples: |
           - tạm biệt
@@ -37,7 +36,6 @@ nlu:
           - oke
           - dạ em cảm ơn ạ
           - dạ vâng
-
     - intent: cnttkhacdientu
       examples: |
           - học công nghệ thông tin khác với học điện tử như thế nào
@@ -49,7 +47,6 @@ nlu:
           - giữa điện tử với công nghệ thông tin thì cái nào khó hơn
           - công nghệ thông tin và điện từ  thì cái nào lương cao hơn
           - có phải công nghệ thông tin dễ kiếm việc hơn điện tử phải không
-
     - intent: cuocthi
       examples: |
           - nghe nói năm nào khoa cũng có tổ chức các cuộc thi phải không
@@ -73,7 +70,6 @@ nlu:
           - học bổng lãnh theo kì hay năm
           - điểm rèn luyện là bào nhiêu để được xét học bổng
           - sinh viên cntt lãnh học bổng nhiều không
-
     - intent: caulacbo
       examples: |
           - khoa công nghệ thông tin có những câu lạc bộ học thuật nào ạ
@@ -104,20 +100,18 @@ nlu:
           - muốn như anh hiếu pc thì tham gia vào câu lạc bộ nào
           - trước khi vào câu lạc vộ antt thì cần biết gì không
           - mình không biết gì về antt vậy có thể vào không
-
     - intent: daitra
       examples: |
-          - hệ đại trà có khác gì với hệ chất lượng cao không 
-          - giữa chất lượng cao và đại trà có khác nhau không 
-          - hệ  đại trà có tốt hơn hệ chất lượng cao không  
-          - ưu điểm nhược điểm của hệ đại trà là gì 
-          - nên học hệ chất lượng cao hay đại trà 
-          - hệ đại trà có khó kiếm việc làm hơn chất lượng cao không  
-          - hệ đại trà học phí ra sao  
-          - điểm xét tuyển đại trà có thấp hơn chất lượng cao không  
-          - điểm thi thuyển đại trà có thấp hơn chất lượng cao không 
+          - hệ đại trà có khác gì với hệ chất lượng cao không
+          - giữa chất lượng cao và đại trà có khác nhau không
+          - hệ  đại trà có tốt hơn hệ chất lượng cao không
+          - ưu điểm nhược điểm của hệ đại trà là gì
+          - nên học hệ chất lượng cao hay đại trà
+          - hệ đại trà có khó kiếm việc làm hơn chất lượng cao không
+          - hệ đại trà học phí ra sao
+          - điểm xét tuyển đại trà có thấp hơn chất lượng cao không
+          - điểm thi thuyển đại trà có thấp hơn chất lượng cao không
           - tổ hợp môn thi thuyển ngành đại trà có khác chất lượng nhau không
-
     - intent: trituenhantao
       examples: |
           - em muốn học về lĩnh vực trí tuệ nhân tạo nên bắt đầu từ đâu
@@ -136,7 +130,6 @@ nlu:
           - lĩnh vực trí tuệ nhân tạo có khó lắm không
           - lĩnh vực trí tuệ nhân tạo sử dụng ngôn ngữ gì để lập trình
           - trí tuệ nhân tạo áp dụng vào được những đâu
-
     - intent: thoigiandkhpdot1
       examples: |
           - ad ơi, cho em hỏi thời gian đăng ký học phần đợt 1 là khi nào ạ
@@ -149,7 +142,6 @@ nlu:
           - hết đợt dkhp đợt 1 chưa ạ
           - bao lâu mới hết đăng ký học phần đợt 1
           - bao lâu mới hết dkhp đợt 1
-
     - intent: thoigiandkhpdot2
       examples: |
           - ad ơi, cho em hỏi thời gian đăng ký học phần đợt 2 là khi nào ạ
@@ -164,7 +156,6 @@ nlu:
           - hết đợt dkhp đợt 2 chưa ạ
           - bao lâu mới hết đăng ký học phần đợt 2
           - bao lâu mới hết dkhp đợt 2
-
     - intent: thoigianhuyhpdot1
       examples: |
           - ad ơi, cho em hỏi thời gian hủy học phần đợt 1 là khi nào ạ
@@ -179,7 +170,6 @@ nlu:
           - hết đợt hủy hp đợt 1 chưa ạ
           - bao lâu mới hết hủy học phần đợt 1
           - bao lâu mới hết hủy hp đợt 1
-
     - intent: thoigianhuyhpdot2
       examples: |
           - ad ơi, cho em hỏi thời gian hủy học phần đợt 2 là khi nào ạ
@@ -194,29 +184,26 @@ nlu:
           - hết đợt hủy hp đợt 2 chưa ạ
           - bao lâu mới hết hủy học phần đợt 2
           - bao lâu mới hết hủy hp đợt 2
-
     - intent: tach_nganh
       examples: |
           - em chưa chọn được chuyên ngành tư vấn cho em
-          - em muốn hỏi về các chuyên ngành để phục vụ cho việc chọn chuyên ngành 
+          - em muốn hỏi về các chuyên ngành để phục vụ cho việc chọn chuyên ngành
           - sắp tới có chia chuyên ngành , em muốn hỏi về các chuyên nghành của khoa mình
           - em sắp chia chuyên ngành rồi mà không biết phải chọn ngành gì tư vấn giúp em với
           - sắp chia chuyên ngành rồi mà hoang mang quá
           - chia chuyên ngành như thế nào vậy
           - để vào ngành mình muốn thì có cần điều kiện gì không
-
     - intent: insult
       examples: |
           - bot ngu
           - bot ngáo
-          - bot khùng 
+          - bot khùng
           - bot điên
           - m có bị điên không
           - m có bị khùng không
           - ngáo à bot
           - bot ngu như bò
           - bot m là đồ điên
-
     - intent: tuvankhac
       examples: |
           - còn ngành nào khác không
@@ -224,7 +211,6 @@ nlu:
           - còn ngành nào nữa không
           - ngoài ngành này ra thì còn ngành nào nữa không
           - còn ngành nào hay hơn không
-
     - intent: dinhhuongsai
       examples: |
           - nếu em chọn sai ngành khoa học máy tính thì có nên tiếp tục hay không
@@ -237,7 +223,6 @@ nlu:
           - lỡ mình chọn ngành khoa học máy tính xong nhưng sau đó thấy không hợp thì phải làm sao
           - mình có thể đổi ngành khác khi chọn học ngành khoa học dữ liệu mà không thấy phù hợp được không
           - dấu hiệu chứng tỏ mình học sai ngành khi học ngành hệ thống thông tin
-
     - intent: ungdung
       examples: |
           - học kỹ thuật phần mềm có thể lập trình app hay web hay không
@@ -251,7 +236,6 @@ nlu:
           - có phải ngành công nghệ thông tin hiện tại ứng dụng nhiều trong app phải không
           - cho mình hỏi về ứng dụng của ngành khoa học dữ liệu
           - có thể kể cho mình vài ứng dụng sử dụng khoa học máy tính không
-
     - intent: linhvuc
       examples: |
           - muốn làm về lĩnh vực mạng máy tính nên bắt đầu như thế nào khi học công nghệ thông tin
@@ -264,7 +248,6 @@ nlu:
           - lĩnh vực nào thì phù hợp với sinh viên khoa học máy tính
           - học kỹ thuật phần mềm thì nên làm trong lĩnh vực nào
           - có phải học khoa học máy tính thì làm được nhiều lĩnh vực không
-
     - intent: giangvien
       examples: |
           - giảng viên của khoa học máy tính gồm bao nhiêu người
@@ -275,7 +258,6 @@ nlu:
           - giảng viên công nghệ thông tin thường làm nghiệp vụ gì những gì
           - giảng viên có học vị gì cao nhất trong ngành khoa học máy tính
           - giảng viên ngành hệ thống thông tin như  thế nào
-
     - intent: canhtranh
       examples: |
           - ngành khoa học máy tính có sự cạnh tranh cao không
@@ -288,7 +270,6 @@ nlu:
           - có phải cạnh tranh trong ngành công nghệ thông tin cao lắm phải không
           - người nào cạnh tranh không nổi trong ngành hệ thống thông tin dễ dẫn đến nghỉ học phải không
           - cho hỏi về cạnh tranh trong ngành khoa học dữ liệu
-
     - intent: tailieu
       examples: |
           - học khoa học dữ liệu thì cần tìm tài liệu nào
@@ -301,7 +282,6 @@ nlu:
           - cho mình xin tên tài liệu ngành công nghệ thông tin đi
           - kiếm tài liệu ngành hệ thống thông tin ở đâu vậy
           - tài liệu ngành công nghệ thông tin thì mua ở đâu thì phù hợp
-
     - intent: tuvan
       examples: |
           - tư vấn về khoa học máy tính đi
@@ -319,7 +299,6 @@ nlu:
           - tư vấn cho mình nào đang hot đi
           - ngành nào đang được nhiều người chọn vậy
           - cho xin ít thông tin về  các chuyên ngành
-
     - intent: monhoc
       examples: |
           - kỹ thuật phần mềm học cái gì
@@ -332,22 +311,11 @@ nlu:
           - học hệ thống thông tin  có nhiều môn khó không
           - môn học nào khó nhất trong ngành khoa học dữ liệu
           - những môn học nào là nền tảng trong ngành khoa học máy tính
-
     - intent: luong
       examples: |
-          - lương của ngành kỹ thuật phần mềm khi ra trường là bao nhiêu
-          - lương của ngành công nghệ thông tin
+          - mức lương của ngành kỹ thuật phần mềm khi ra trường là bao nhiêu
+          - mức lương của ngành công nghệ thông tin
           - học khoa học dữ liệu lương là bao nhiêu
-          - lương cơ bản của ngành hệ thống thông tin
-          - nghe nói ra trường lương kỹ thuật phần mềm cao lắm phải không
-          - mức lương phù hợp cho người học khoa học máy tính
-          - cho hỏi lương ngành khoa học dữ  liệu cao không
-          - lương bao nhiêu thì phù hợp khi học ngành hệ thống thông tin
-          - có phải lương cao trong ngành khoa học dữ liệ cao lắm phải không
-          - mức lương cơ bản khi vừa tốt nghiệp công nghệ thông tin
-
-    - intent: vieclam
-      examples: |
           - cơ hội việc làm như thế nào của khoa học dữ liệu
           - công nghệ thông tin ra trường việc làm có ổn định không
           - việc làm như thế nào khi học xong hệ thống thông tin
@@ -358,7 +326,6 @@ nlu:
           - nghe nói học công nghệ thông tin là có việc làm ngay phải không
           - có phải dể kiếm việc làm trong ngành hệ thống thông tin phải không
           - công việc sau khi tốt nghiệp ngành khoa học máy tính
-
     - intent: ngonngu
       examples: |
           - học khoa học máy tính thì cần biết ngôn ngữ nào
@@ -371,7 +338,6 @@ nlu:
           - cần học ngôn ngữ gì khi học kỹ thuật phần mềm
           - ngôn ngữ nào thì phù hợp cho ngành hệ thống thông tin
           - code ngôn ngữ gì trong công nghệ thông tin
-
     - intent: laptrinh
       examples: |
           - học kỹ thuật phần mềm làm thế nào nâng cao trình độ lập trình
@@ -384,7 +350,6 @@ nlu:
           - lập trình có phải quan trọng trong ngành khoa học máy tính
           - mình yếu lập trình thì học hệ thống thông tin có hợp không
           - học ngành nào khi tư duy lập trình mình không được giỏi
-
     - intent: nu
       examples: |
           - ngành hệ thống thông tin có nhiều nữ học không
@@ -399,7 +364,6 @@ nlu:
           - có phải nữ  ngành công nghệ thông tin xin lắm phải không
           - ngành này có nhiều nữ học không
           - học công nghệ thông tin chắc ít lắm gái lắm phải không
-
     - intent: chatluonggiaovien
       examples: |
           - chất lượng giáo viên ngành khoa học máy tính này có cao không
@@ -409,20 +373,6 @@ nlu:
           - nghe nói ngành hệ thống thông tin thầy cô đang làm việc tại các công ty nước ngoài hả
           - ngành khoa học dữ liệu chất lượng giảng viên rất tốt phải không
           - giảng viên ngành khoa học máy tính có trình độ như thế nào
-
-    - intent: yeucau_tienganh
-      examples: |
-          - trong ngành khoa học dữ liệu yêu cầu về tiếng anh có cao không
-          - đối với sinh viên theo ngành kỹ thuật phần mềm thì trình độ tiếng anh cần đạt đến mức độ như thế nào
-          - học ngành công nghệ thông tin có cần giỏi tiếng anh hay không
-          - tiếng anh đối với ngành hệ thống thông tin là rất cần thiết phải không
-          - ngành khoa học máy tính tiếng anh quan trọng lắm phải không
-          - tiếng anh căn bản học ngành khoa học dữ liệu có ổn không
-          - ngành kỹ thuật phần mềm tiếng anh cản bản có khó không
-          - có phải tiến anh là thứ cần thiết trong ngành khoa học máy tính không
-          - tiếng anh có phải quan trọng trong ngành hệ thống thông tin
-          - nghe nói không giỏi tiếng anh thì khó xin việc trong công nghệ thông tin phải không
-
     - intent: tinhcach
       examples: |
           - tính cách của dân khoa học máy tính thường như thế nào ?
@@ -433,7 +383,6 @@ nlu:
           - có phải người trầm tính là học giỏi công nghệ hay không
           - tính cách năng động nên chọn chuyên ngành nào?
           - tính cách hơi vụng về có học được ngành công nghệ thông tin không
-
     - intent: thuctap
       examples: |
           - mình nên đi thực tập năm mấy
@@ -443,11 +392,10 @@ nlu:
           - mình có thể đi thực tập ở những công ty nào
           - muốn đi thực tập cần chuẩn bị những gì
           - tư vấn cho mình về việc thực tập doanh nghiệp đi
-          - thực tập sớm có lợi ích gì 
+          - thực tập sớm có lợi ích gì
           - thực tập có giúp được gì sau này hay không
           - nên chọn những công ty nào để đăng ký thực tập
           - cho hỏi thời gian thực tập trong bao lâu
-
     - intent: chatluongcao
       examples: |
           - chất lượng cao khác gì với đại trà
@@ -460,7 +408,6 @@ nlu:
           - chất lượng cao có phải phù hợp với những người có điều kiện
           - học chất lượng cao thì có thể cạnh tranh việc làm với hệ đại trà hay không
           - bằng cấp của hệ chất lượng cao có bằng với hệ đại trà hay không
-
     - intent: xuhuong
       examples: |
           - xu hướng của ngành công nghệ thông tin hiện nay là gì
@@ -470,7 +417,6 @@ nlu:
           - chuyên ngành này có thực sự hot
           - tình hình nhân lực của ngành này như thế nào
           - con đường nghề nghiệp khi theo ngành công nghệ thông tin
-
     - intent: cachhoc
       examples: |
           - em sưu tầm tận 10GB tài liệu nhưng vẫn học chưa tốt, tại sao ?
@@ -484,7 +430,6 @@ nlu:
           - học như thế để có việc làm ngành công nghệ thông tin ?
           - làm thế nào để bắt kịp xu thế ngành công nghệ thông tin hiện nay
           - làm thế nào để nắm bắt công nghệ mới một cách nhanh chóng
-
     - intent: phongvan
       examples: |
           - nên chuẩn bị những gì khi đi phỏng vấn ?
@@ -493,7 +438,6 @@ nlu:
           - nhà tuyển dụng sinh viên ngành công nghệ thông tin quan tâm đến điều gì ?
           - lời khuyên trước khi đi phỏng vấn ?
           - những lưu ý khi phỏng vấn ?
-
     - intent: daotao
       examples: |
           - ngành này sẽ được đào tạo những gì
@@ -507,7 +451,6 @@ nlu:
           - học ngành này biết được những kiến thức gì
           - chất lượng đào tạo của giảng viên có tốt không
           - lượng kiến thức mà giảng viên cung cấp có đầy đủ hay không
-
     - intent: doantotnghiep
       examples: |
           - đồ án tốt nghiệp nên làm khi nào
@@ -517,12 +460,11 @@ nlu:
           - làm đồ án thì có người hướng dẫn hay không
           - làm đồ án có được tự chọn đề tài hay không
           - đề tài đồ án có bị áp cứng hay không
-
     - intent: quy_che_dao_tao
       examples: |
           - Quy chế đào tạo là gì
           - Không biết quy chế đào tạo của trường mình là gì
-          - Quy chế của trường Đại học Công nghiệp năm học 2020 
+          - Quy chế của trường Đại học Công nghiệp năm học 2020
           - Cách thức đào tạo là gì
           - Hình thức đào tạo là gì
           - Mô hình đào tạo là gì
@@ -540,7 +482,7 @@ nlu:
           - Mô hình đạo tạo của IUH là gì
           - Khoa CNTT có các cách thức đào tạo như thế nào
           - Tín chỉ có phải quy chế đào tạo của trường hay không
-          - Tín chỉ là quy chế đào tạo của trường DHCN phải không 
+          - Tín chỉ là quy chế đào tạo của trường DHCN phải không
           - Thầy cô có thể cho em hỏi là trường mình có quy chế đào tạo như thế nào ạ
           - Làm thế nào để biết quy chế đào tạo của trường hiện nay là gì
           - Quy định của trường mình về quy chế đào tạo là như thế nào vậy ạ
@@ -578,24 +520,14 @@ nlu:
           - Để tìm hiểu quy chế của trường thì thời gian qua em có đọc những quy định về quy chế đào tạo của trường, em muốn đính chính lại là quy chế đào tạo của trường mình là gì vậy ạ
           - Có thế giải thích về quy định quy chế đào tạo tín chỉ của nhà trường cho em hiểu được không ạ
           - Quy định về quy chế đào tạo của nhà trường cho sinh viên có phải là tín chỉ không ạ
-          - Cách thức đào tạo của IUH là gì
-          - Mô hình đạo tạo của IUH là gì
           - Trường có quy chế đào tạo như thế nào
-          - Quy chế đào tạo của trường là gì
-          - Trường đào tạo theo quy chế nào
-          - Quy chế mà trường đào tạo là gì
-          - Trường có cách thức đào tạo như thế nào
           - Cách thức đào tạo của trường là gì
           - Trường đào tạo theo cách thức nào
           - Cách thức mà trường đào tạo là gì
           - Trường có hình thức đào tạo như thế nào
           - Hình thức đào tạo của trường là gì
           - Trường đào tạo theo hình thức nào
-          - Hình thức mà trường đào tạo là gì
           - Trường có mô hình đào tạo như thế nào
-          - Mô hình đào tạo của trường là gì
-          - Trường đào tạo theo mô hình nào
-          - Mô hình mà trường đào tạo là gì
           - Tín chỉ có phải là quy chế đào tạo của trường
           - Tín chỉ có phải là cách thức đào tạo của trường
           - Tín chỉ có phải là hình thức đào tạo của trường
@@ -613,13 +545,9 @@ nlu:
           - Trường IUH đào tạo theo cách thức nào
           - Cách thức mà trường IUH đào tạo là gì
           - Trường IUH có hình thức đào tạo như thế nào
-          - Hình thức đào tạo của trường IUH là gì
           - Trường IUH đào tạo theo hình thức nào
           - Hình thức mà trường IUH đào tạo là gì
           - Trường IUH có mô hình đào tạo như thế nào
-          - Mô hình đào tạo của trường IUH là gì
-          - Trường IUH đào tạo theo mô hình nào
-          - Mô hình mà trường IUH đào tạo là gì
           - Tín chỉ là quy chế đào tạo của trường phải không
           - Tín chỉ là cách thức đào tạo của trường phải không
           - Tín chỉ là hình thức đào tạo của trường phải không
@@ -656,118 +584,6 @@ nlu:
           - Cho mình hỏi hình thức đào tạo của khoa CNTT là gì
           - Cho mình hỏi cách thức đào tạo của khoa CNTT là gì
           - Cho minh hỏi mô hình đào tạo của khoa CNTT là gì
-
-    - intent: tin_chi_khoa
-      examples: |
-          - Khoa CNTT có các cách thức đào tạo như thế nào
-          - Quy chế đào tạo của khoa CNTT như thế nào
-          - Hình thức đào tạo của khoa CNTT như thế nào
-          - Cách thức đào tạo của khoa CNTT như thế nào
-          - Mô hình đạo tạo của khoa CNTT như thế nào
-          - Quy chế đào tạo của khoa CNTT là gì
-          - Hình thức đào tạo của khoa CNTT là gì
-          - Cách thức đào tạo của khoa CNTT là gì
-          - Mô hình đạo tạo của khoa CNTT là gì
-          - Khoa CNTT có các hình thức đào tạo như thế nào
-          - Khoa CNTT có các quy chế đào tạo như thế nào
-          - Khoa CNTT có các mô hình đào tạo như thế nào
-
-    - intent: quy_che_tin_chi
-      examples: |
-          - Quy chế đào tạo theo hệ thống tín chỉ là gì
-          - Quy chế đào tạo theo hệ thống tín chỉ là như thế nào
-          - Quy chế đào tạo theo hệ thống tín chỉ là cái gì
-          - Quy chế đào tạo theo hệ thống tín chỉ là thế nào
-          - Quy chế đào tạo theo hệ thống tín chỉ là sao
-          - Như thế nào là quy chế đào tạo theo hệ thống tín chỉ
-          - Cái gì là quy chế đào tạo theo hệ thống tín chỉ
-          - Hình thức đào tạo theo hệ thống tín chỉ là gì
-          - Hình thức đào tạo theo hệ thống tín chỉ là như thế nào
-          - Hình thức đào tạo theo hệ thống tín chỉ là cái gì
-          - Hình thức đào tạo theo hệ thống tín chỉ là thế nào
-          - Hình thức đào tạo theo hệ thống tín chỉ là sao
-          - Như thế nào là hình thức đào tạo theo hệ thống tín chỉ
-          - Cái gì là hình thức đào tạo theo hệ thống tín chỉ
-          - Cách thức đào tạo theo hệ thống tín chỉ là gì
-          - Cách thức đào tạo theo hệ thống tín chỉ là như thế nào
-          - Cách thức đào tạo theo hệ thống tín chỉ là cái gì
-          - Cách thức đào tạo theo hệ thống tín chỉ là thế nào
-          - Cách thức đào tạo theo hệ thống tín chỉ là sao
-          - Như thế nào là cách thức đào tạo theo hệ thống tín chỉ
-          - Cái gì là cách thức đào tạo theo hệ thống tín chỉ
-          - Mô hình đào tạo theo hệ thống tín chỉ là gì
-          - Mô hình đào tạo theo hệ thống tín chỉ là như thế nào
-          - Mô hình đào tạo theo hệ thống tín chỉ là cái gì
-          - Mô hình đào tạo theo hệ thống tín chỉ là thế nào
-          - Mô hình đào tạo theo hệ thống tín chỉ là sao
-          - Như thế nào là mô hình đào tạo theo hệ thống tín chỉ
-          - Cái gì là mô hình đào tạo theo hệ thống tín chỉ
-          - Quy chế đào tạo theo hệ thống tín chỉ của trường là gì
-          - Quy chế đào tạo theo hệ thống tín chỉ của trường là như thế nào
-          - Quy chế đào tạo theo hệ thống tín chỉ của trường là cái gì
-          - Quy chế đào tạo theo hệ thống tín chỉ của trường là thế nào
-          - Quy chế đào tạo theo hệ thống tín chỉ của trường là sao
-          - Như thế nào là quy chế đào tạo theo hệ thống tín chỉ của trường
-          - Cái gì là quy chế đào tạo theo hệ thống tín chỉ của trường
-          - Tín chỉ của trường là gì
-          - Tín chỉ của trường là như thế nào
-          - Tín chỉ của trường là cái gì
-          - Tín chỉ của trường là thế nào
-          - Tín chỉ của trường là sao
-          - Như thế nào là tín chỉ của trường
-          - Cái gì là tín chỉ của trường
-          - Hình thức đào tạo theo hệ thống tín chỉ của trường là gì
-          - Hình thức đào tạo theo hệ thống tín chỉ của trường là như thế nào
-          - Hình thức đào tạo theo hệ thống tín chỉ của trường là cái gì
-          - Hình thức đào tạo theo hệ thống tín chỉ của trường là thế nào
-          - Hình thức đào tạo theo hệ thống tín chỉ của trường là sao
-          - Như thế nào là hình thức đào tạo theo hệ thống tín chỉ của trường
-          - Cái gì là hình thức đào tạo theo hệ thống tín chỉ của trường
-          - Cách thức đào tạo theo hệ thống tín chỉ của trường là gì
-          - Cách thức đào tạo theo hệ thống tín chỉ của trường là như thế nào
-          - Cách thức đào tạo theo hệ thống tín chỉ của trường là cái gì
-          - Cách thức đào tạo theo hệ thống tín chỉ của trường là thế nào
-          - Cách thức đào tạo theo hệ thống tín chỉ của trường là sao
-          - Như thế nào là cách thức đào tạo theo hệ thống tín chỉ của trường
-          - Cái gì là cách thức đào tạo theo hệ thống tín chỉ của trường
-          - Mô hình đào tạo theo hệ thống tín chỉ của trường là gì
-          - Mô hình đào tạo theo hệ thống tín chỉ của trường là như thế nào
-          - Mô hình đào tạo theo hệ thống tín chỉ của trường là cái gì
-          - Mô hình đào tạo theo hệ thống tín chỉ của trường là thế nào
-          - Mô hình đào tạo theo hệ thống tín chỉ của trường là sao
-          - Như thế nào là mô hình đào tạo theo hệ thống tín chỉ của trường
-          - Cái gì là mô hình đào tạo theo hệ thống tín chỉ của trường
-          - Quy chế đào tạo theo hệ thống tín chỉ của trường IUH là gì
-          - Quy chế đào tạo theo hệ thống tín chỉ của trường IUH là như thế nào
-          - Quy chế đào tạo theo hệ thống tín chỉ của trường IUH là cái gì
-          - Quy chế đào tạo theo hệ thống tín chỉ của trường IUH là thế nào
-          - Quy chế đào tạo theo hệ thống tín chỉ của trường IUH là sao
-          - Như thế nào là quy chế đào tạo theo hệ thống tín chỉ của trường IUH 
-          - Tín chỉ của trường IUH là gì
-          - Tín chỉ của trường IUH là như thế nào
-          - Tín chỉ của trường IUH là cái gì
-          - Tín chỉ của trường IUH là thế nào
-          - Tín chỉ của trường IUH là sao
-          - Như thế nào là tín chỉ của trường IUH 
-          - Hình thức đào tạo theo hệ thống tín chỉ của trường IUH là gì
-          - Hình thức đào tạo theo hệ thống tín chỉ của trường IUH là như thế nào
-          - Hình thức đào tạo theo hệ thống tín chỉ của trường IUH là cái gì
-          - Hình thức đào tạo theo hệ thống tín chỉ của trường IUH là thế nào
-          - Hình thức đào tạo theo hệ thống tín chỉ của trường IUH là sao
-          - Như thế nào là hình thức đào tạo theo hệ thống tín chỉ của trường IUH 
-          - Cách thức đào tạo theo hệ thống tín chỉ của trường IUH là gì
-          - Cách thức đào tạo theo hệ thống tín chỉ của trường IUH là như thế nào
-          - Cách thức đào tạo theo hệ thống tín chỉ của trường IUH là cái gì
-          - Cách thức đào tạo theo hệ thống tín chỉ của trường IUH là thế nào
-          - Cách thức đào tạo theo hệ thống tín chỉ của trường IUH là sao
-          - Như thế nào là cách thức đào tạo theo hệ thống tín chỉ của trường IUH 
-          - Mô hình đào tạo theo hệ thống tín chỉ của trường IUH là gì
-          - Mô hình đào tạo theo hệ thống tín chỉ của trường IUH là như thế nào
-          - Mô hình đào tạo theo hệ thống tín chỉ của trường IUH là cái gì
-          - Mô hình đào tạo theo hệ thống tín chỉ của trường IUH là thế nào
-          - Mô hình đào tạo theo hệ thống tín chỉ của trường IUH là sao
-          - Như thế nào là mô hình đào tạo theo hệ thống tín chỉ của trường IUH
-
     - intent: danh_gia_kq_hoc_tap
       examples: |
           - Các tiêu chí đánh giá kết quả học tập là gì?
@@ -779,7 +595,7 @@ nlu:
           - Đánh giá kết quả học tập như thế nào?
           - Đánh giá kết quả học tập theo tiêu chí gì?
           - Kêt quả học tập đánh giá dựa trên tiêu chí nào?
-          - Kết quả học tập được đánh giá như thế nào? 
+          - Kết quả học tập được đánh giá như thế nào?
           - Kết quả học tập được đánh giá theo 3 tiêu chí nào?
           - Kết quả học tập sẽ được đánh giá sao?
           - Làm sao để đánh giá kết quả học tập?
@@ -797,7 +613,7 @@ nlu:
           - Những tiêu chí nào quyết định kết quả học tập?
           - Những tiêu chí gì ảnh hưởng kết quả học tập?
           - Những tiêu chí gì quyết định kết quả học tập của sinh viên?
-          - Kết quả học tập của sinh viên bị những yếu tố nào ảnh hưởng? 
+          - Kết quả học tập của sinh viên bị những yếu tố nào ảnh hưởng?
           - Những yếu tố làm ảnh hưởng đến kết quả học tập là gì?
           - Những yếu tố làm ảnh hưởng đến kết quả học tập gồm những gì?
           - 3 tiêu chí đánh giá kết quả học tập là gì?
@@ -829,7 +645,7 @@ nlu:
           - Như thế nào gọi là tín chỉ?
           - Tín chỉ là cái gì?
           - Khái niệm của tín chỉ là gì?
-          - Tín chỉ được định nghĩa như thế nào? 
+          - Tín chỉ được định nghĩa như thế nào?
           - Định nghĩa của tín chỉ là như thế nào?
           - Định nghĩa của tín chỉ là gì?
           - Tín chỉ quan trọng như thế nào?
@@ -852,7 +668,7 @@ nlu:
           - Để đánh giá khối lượng học tập của sinh viên thì dùng gì?
           - Để đánh giá khối lượng học tập của sinh viên, nhà trường dùng đơn vị nào?
           - Để đánh giá khối lượng học tập của sinh viên, nhà trường dùng cái gì để thực hiện?
-          - Tín chỉ được định nghĩa như thế nào trong quy chế đào tạo tín chỉ? 
+          - Tín chỉ được định nghĩa như thế nào trong quy chế đào tạo tín chỉ?
           - Tín chỉ được xem là gì?
           - Khái niệm về tín chỉ trong đào tạo tín chỉ là gì?
           - Khái niệm về tín chỉ trong đào tạo tín chỉ là như thế nào?
@@ -873,7 +689,6 @@ nlu:
           - Vì sao sinh viên phải thường xuyên quan tâm đến số lượng tín chỉ tích lũy được?
           - Số lượng tín chỉ quyết định điều gì?
           - Số lượng tín chỉ nói lên điều gì?
-
     - intent: time_dai_hoc
       examples: |
           - Đào tạo đại học chính quy thực hiện trong bao lâu
@@ -920,7 +735,7 @@ nlu:
           - Thời gian đại học chính quy thực hiện mấy năm
           - Thời gian đại học chính quy có thời gian như thế nào
           - Thời gian đại học chính quy có thời gian thực hiện bao lâu
-          - Thời gian cần hoàn thành đào tạo đại học chính quy là 
+          - Thời gian cần hoàn thành đào tạo đại học chính quy là
           - Thời gian cần thực hiện đào tạo đại học chính quy là
           - Thời gian thực hiện đào tạo đại học chính quy là
           - Thời gian cần có của đào tạo đại học chính quy là
@@ -953,7 +768,7 @@ nlu:
           - Sinh viên có tinh viên có thời gian đại học chính quy thực hiện mấy năm
           - Sinh viên có thời gian đại học chính quy có thời gian như thế nào
           - Sinh viên có thời gian đại học chính quy có thời gian thực hiện bao lâu
-          - Sinh viên có thời gian cần hoàn thành đào tạo đại học chính quy là 
+          - Sinh viên có thời gian cần hoàn thành đào tạo đại học chính quy là
           - Sinh viên có thời gian cần thực hiện đào tạo đại học chính quy là
           - Sinh viên có thời gian thực hiện đào tạo đại học chính quy là
           - Sinh viên có thời gian cần có của đào tạo đại học chính quy là
@@ -973,7 +788,7 @@ nlu:
           - Phòng đào tạo IUH có thông báo về số nam đào tạo đại học chính quy là gì
           - Phòng đào tạo đã quy định sinh viên có số năm hoàn thành đại học chính quy là
           - Số năm hoàn thành đào tạo đại học chính quy là
-          - Số năm phòng đào tạo đã quy định để hoàn thành đào tạo đại học chính quy là 
+          - Số năm phòng đào tạo đã quy định để hoàn thành đào tạo đại học chính quy là
           - Thời gian cần thiết mà sinh viên hoàn thành đại học là bao lâu
           - Thời gian phòng đào tạo đã quy định cho sinh viên để hoàn thành đại học chính quy
     - intent: time_cao_dang
@@ -1022,7 +837,7 @@ nlu:
           - Thời gian cao đẳng thực hiện mấy năm
           - Thời gian cao đẳng có thời gian như thế nào
           - Thời gian cao đẳng có thời gian thực hiện bao lâu
-          - Thời gian cần hoàn thành trình độ cao đẳng là 
+          - Thời gian cần hoàn thành trình độ cao đẳng là
           - Thời gian cần thực hiện trình độ cao đẳng là
           - Thời gian thực hiện trình độ cao đẳng là
           - Thời gian cần có của trình độ cao đẳng là
@@ -1055,7 +870,7 @@ nlu:
           - Sinh viên có tinh viên có thời gian trình độ cao đẳng thực hiện mấy năm
           - Sinh viên có thời gian trình độ cao đẳng có thời gian như thế nào
           - Sinh viên có thời gian trình độ cao đẳng có thời gian thực hiện bao lâu
-          - Sinh viên có thời gian cần hoàn thành trình độ cao đẳng là 
+          - Sinh viên có thời gian cần hoàn thành trình độ cao đẳng là
           - Sinh viên có thời gian cần thực hiện trình độ cao đẳng là
           - Sinh viên có thời gian thực hiện trình độ cao đẳng là
           - Sinh viên có thời gian cần có của trình độ cao đẳng là
@@ -1075,7 +890,7 @@ nlu:
           - Phòng đào tạo IUH có thông báo về số năm trình độ cao đẳng là gì
           - Phòng đào tạo đã quy định sinh viên có số năm hoàn thành cao đẳng là
           - Số năm hoàn thành trình độ cao đẳng là
-          - Số năm phòng đào tạo đã quy định để hoàn thành trình độ cao đẳng là 
+          - Số năm phòng đào tạo đã quy định để hoàn thành trình độ cao đẳng là
           - Thời gian cần thiết mà sinh viên hoàn thành cao đẳng là bao lâu
           - Thời gian phòng đào tạo đã quy định cho sinh viên để hoàn thành trình độ cao đẳng
     - intent: loi_ich_tin_chi
@@ -1214,7 +1029,7 @@ nlu:
           - Thế nào là thời gian kế hoạch của một khóa đào tạo của IUH
           - Tại sao gọi là thời gian kế hoạch của một khóa đào tạo của IUH
           - Như thế nào là thời gian kế hoạch của một khóa đào tạo của IUH
-          - Định nghĩa về thời gian kế hoạch của một khóa đào tạo 
+          - Định nghĩa về thời gian kế hoạch của một khóa đào tạo
           - Nêu định nghĩa về thời gian kế hoạch của một khóa đào tạo
           - ĐỊnh nghĩa về thời gian kế hoạch của một khóa đào tạo của IUH
           - Tại sao nói thời gian kế hoạch của một khóa đào tạo quan trọng
@@ -1232,13 +1047,13 @@ nlu:
           - Bạn có biết thời gian kế hoạch của một khóa đào tạo của khoa CNTT là như thế nào
           - Bạn có biết định nghĩa về thời gian kế hoạch của một khóa đào tạo của khoa CNTT
           - Thời gian kế hoạch của một khóa đào tạo của ngành Khoa học máy tính trong trường IUH là gì
-          - ĐỊnh nghĩa thời gian kế hoạch của một khóa đào tạo của ngành Khoa học máy tính trong trường IUH 
+          - ĐỊnh nghĩa thời gian kế hoạch của một khóa đào tạo của ngành Khoa học máy tính trong trường IUH
           - Thông tin về thời gian kế hoạch của một khóa đào tạo của trường IUH
           - Thông tin về thời gian kế hoạch của một khóa đào tạo của khoa CNTT
           - Thông tin về thời gian kế hoạch của một khóa đào tạo của ngành Khoa học máy tính
-          - Trường IUH giải thích thời gian kế hoạch của một khóa đào tạo cho sinh viên 
-          - Khoa CNTT giải thích thời gian kế hoạch của một khóa đào tạo cho sinh viên 
-          - Ngành khoa học máy tính giải thích về giải thích thời gian kế hoạch của một khóa đào tạo cho sinh viên 
+          - Trường IUH giải thích thời gian kế hoạch của một khóa đào tạo cho sinh viên
+          - Khoa CNTT giải thích thời gian kế hoạch của một khóa đào tạo cho sinh viên
+          - Ngành khoa học máy tính giải thích về giải thích thời gian kế hoạch của một khóa đào tạo cho sinh viên
           - Điều sinh viên cần biết về thời gian kế hoạch của một khóa đào tạo
           - Điều sinh viên cần biết về thời gian kế hoạch của một khóa đào tạo của trường IUH
           - Điều sinh viên cần biết về thời gian kế hoạch của một khóa đào tạo của khoa CNTT
@@ -1315,7 +1130,7 @@ nlu:
           - Thế nào là thời gian tối đa và tối thiểu của một khóa đào tạo của IUH
           - Tại sao gọi là thời gian tối đa và tối thiểu của một khóa đào tạo của IUH
           - Như thế nào là thời gian tối đa và tối thiểu của một khóa đào tạo của IUH
-          - Định nghĩa về thời gian tối đa và tối thiểu của một khóa đào tạo 
+          - Định nghĩa về thời gian tối đa và tối thiểu của một khóa đào tạo
           - Nêu định nghĩa về thời gian tối đa và tối thiểu của một khóa đào tạo
           - ĐỊnh nghĩa về thời gian tối đa và tối thiểu của một khóa đào tạo của IUH
           - Thời gian tối đa và tối thiểu của một khóa đào tạo là gì
@@ -1333,13 +1148,13 @@ nlu:
           - Bạn có biết thời gian tối đa và tối thiểu của một khóa đào tạo của khoa CNTT là như thế nào
           - Bạn có biết định nghĩa về thời gian tối đa và tối thiểu của một khóa đào tạo của khoa CNTT
           - Thời gian tối đa và tối thiểu của một khóa đào tạo của ngành Khoa học máy tính trong trường IUH là gì
-          - ĐỊnh nghĩa thời gian tối đa và tối thiểu của một khóa đào tạo của ngành Khoa học máy tính trong trường IUH 
+          - ĐỊnh nghĩa thời gian tối đa và tối thiểu của một khóa đào tạo của ngành Khoa học máy tính trong trường IUH
           - Thông tin về thời gian tối đa và tối thiểu của một khóa đào tạo của trường IUH
           - Thông tin về thời gian tối đa và tối thiểu của một khóa đào tạo của khoa CNTT
           - Thông tin về thời gian tối đa và tối thiểu của một khóa đào tạo của ngành Khoa học máy tính
-          - Trường IUH giải thích thời gian tối đa và tối thiểu của một khóa đào tạo cho sinh viên 
-          - Khoa CNTT giải thích thời gian tối đa và tối thiểu của một khóa đào tạo cho sinh viên 
-          - Ngành khoa học máy tính giải thích về giải thích thời gian tối đa và tối thiểu của một khóa đào tạo cho sinh viên 
+          - Trường IUH giải thích thời gian tối đa và tối thiểu của một khóa đào tạo cho sinh viên
+          - Khoa CNTT giải thích thời gian tối đa và tối thiểu của một khóa đào tạo cho sinh viên
+          - Ngành khoa học máy tính giải thích về giải thích thời gian tối đa và tối thiểu của một khóa đào tạo cho sinh viên
           - Điều sinh viên cần biết về thời gian tối đa và tối thiểu của một khóa đào tạo
           - Điều sinh viên cần biết về thời gian tối đa và tối thiểu của một khóa đào tạo của trường IUH
           - Điều sinh viên cần biết về thời gian tối đa và tối thiểu của một khóa đào tạo của khoa CNTT
@@ -1384,7 +1199,6 @@ nlu:
           - Sinh viên cần quan tâm đến thời gian tối đa và tối thiểu của một khóa đào tạo vì lý do gì
           - ĐỊnh nghĩa thời gian tối đa và tối thiểu của một khóa đào tạo cần thiết cho sinh viên bởi vì lý do gì
           - Khái niệm thời gian tối đa và tối thiểu của một khóa đào tạo cần thiết cho sinh viên bởi vì lý do gì
-
     - intent: ho_so_nhap_hoc
       examples: |
           - Sinh viên trúng tuyển nộp hồ sơ ở đâu
@@ -1487,7 +1301,6 @@ nlu:
           - Sinh viên trúng tuyển vào trường nộp hồ sơ nhập học ở đâu
           - Sinh viên trúng tuyển vào trường có thể nộp hồ sơ ở đâu
           - Sinh viên trúng tuyển vào trường có thể nộp hồ sơ nhập học ở đâu
-
     - intent: hp_bat_buoc
       examples: |
           - Học phần bắt buộc là gì?
@@ -1692,7 +1505,6 @@ nlu:
           - GIới hạn số năm để đào tạo trình độ đại học - liên thông từ trung cấp là bao nhiêu năm
           - GIới hạn số năm để đào tạo trình độ đại học - liên thông từ trung cấp của khoa CNTT là bao nhiêu năm
           - GIới hạn số năm để đào tạo trình độ đại học - liên thông từ trung cấp của IUH là bao nhiêu năm
-
     - intent: time_lien_thong_cao_dang
       examples: |
           - Đào tạo trình độ đại học - liên thông từ cao đẳng thực hiện trong bao lâu
@@ -1795,7 +1607,6 @@ nlu:
           - GIới hạn số năm để đào tạo trình độ đại học - liên thông từ cao đẳng là bao nhiêu năm
           - GIới hạn số năm để đào tạo trình độ đại học - liên thông từ cao đẳng của khoa CNTT là bao nhiêu năm
           - GIới hạn số năm để đào tạo trình độ đại học - liên thông từ cao đẳng của IUH là bao nhiêu năm
-
     - intent: cong_nhan_sv
       examples: |
           - Khi nào được công nhận là sinh viên
@@ -1876,7 +1687,6 @@ nlu:
           - Mình không biết làm gì để tôi được công nhận là sinh viên
           - Mình không biết làm gì để tôi được công nhận là sinh viên của trường
           - Mình không biết làm gì để tôi được công nhận là sinh viên của trường DHCN
-
     - intent: hp_tu_chon
       examples: |
           - Học phần tự chọn là gì?
@@ -1979,7 +1789,6 @@ nlu:
           - Tôi có thể không học học phần tự chọn?
           - Tôi có thể không học học phần tự chọn được không?
           - Có thể giải thích cho mình như thế nào là học phần tự chọn không?
-
     - intent: time_hoc_lam
       examples: |
           - Đào tạo trình độ đại học - vừa làm vừa học thực hiện trong bao lâu
@@ -2082,7 +1891,6 @@ nlu:
           - GIới hạn số năm để đào tạo trình độ đại học - vừa làm vừa học là bao nhiêu năm
           - GIới hạn số năm để đào tạo trình độ đại học - vừa làm vừa học của khoa CNTT là bao nhiêu năm
           - GIới hạn số năm để đào tạo trình độ đại học - vừa làm vừa học của IUH là bao nhiêu năm
-
     - intent: time_cd_lien_thong
       examples: |
           - Đào tạo trình độ cao đẳng - liên thông từ trung cấp thực hiện trong bao lâu
@@ -2521,13 +2329,13 @@ nlu:
           - Mình không biết nhà trường xác định điểm xét tuyển của sinh viên thì căn cứ vào đâu
     - intent: thoi_gian_toida
       examples: |
-          - Thời gian tối đa mà mỗi đối tượng sinh viên được gia hạn để hoàn thành chương trình học là 
+          - Thời gian tối đa mà mỗi đối tượng sinh viên được gia hạn để hoàn thành chương trình học là
           - Thời gian tối đa mà mỗi đối tượng sinh viên được gia hạn để hoàn thành chương trình học là bao nhiêu
           - Thời gian tối đa mà mỗi đối tượng sinh viên được gia hạn để hoàn thành chương trình học khoảng bao nhiêu
-          - Thời gian tối đa mà mỗi đối tượng sinh viên trường IUH được gia hạn để hoàn thành chương trình học là 
+          - Thời gian tối đa mà mỗi đối tượng sinh viên trường IUH được gia hạn để hoàn thành chương trình học là
           - Thời gian tối đa mà mỗi đối tượng sinh viên khoa CNTT được gia hạn để hoàn thành chương trình học là bao nhiêu
           - Thời gian tối đa mà mỗi đối tượng sinh viên  trường IUH được gia hạn để hoàn thành chương trình học khoảng bao nhiêu
-          - Thời gian tối đa mà mỗi đối tượng sinh viên khoa CNTT được gia hạn để hoàn thành chương trình học là 
+          - Thời gian tối đa mà mỗi đối tượng sinh viên khoa CNTT được gia hạn để hoàn thành chương trình học là
           - Thời gian tối đa mà mỗi đối tượng sinh viên trường IUH được gia hạn để hoàn thành chương trình học là bao nhiêu
           - Thời gian tối đa mà mỗi đối tượng sinh viên khoa CNTT được gia hạn để hoàn thành chương trình học khoảng bao nhiêu
           - Các đối tượng sinh viên trường IUH được hưởng thời gian hạn thêm thời gian tối đa là
@@ -2564,10 +2372,10 @@ nlu:
           - Theo điều 9 của quy chế đào tạo tín chỉ của trường IUH đã đưa ra quyết định gì về thời gian gia hạn của sinh viên
           - Theo điều 9 của quy chế đào tạo tín chỉ của trường IUH đã ban hành chính sách gì về thời gian gia hạn của sinh viên
           - Theo điều 9 của quy chế đào tạo tín chỉ của trường IUH đã đưa ra nội dung  gì về thời gian gia hạn của sinh viên
-          - Cho mình hỏi, thời gian tối đa mà mỗi đối tượng sinh viên được gia hạn để hoàn thành chương trình học là 
+          - Cho mình hỏi, thời gian tối đa mà mỗi đối tượng sinh viên được gia hạn để hoàn thành chương trình học là
           - Cho mình hỏi, thời gian tối đa mà mỗi đối tượng sinh viên được gia hạn để hoàn thành chương trình học là bao nhiêu
           - Cho mình hỏi, thời gian tối đa mà mỗi đối tượng sinh viên được gia hạn để hoàn thành chương trình học khoảng bao nhiêu
-          - Cho mình hỏi, thời gian tối đa mà mỗi đối tượng sinh viên trường IUH được gia hạn để hoàn thành chương trình học là 
+          - Cho mình hỏi, thời gian tối đa mà mỗi đối tượng sinh viên trường IUH được gia hạn để hoàn thành chương trình học là
           - Cho mình hỏi, thời gian tối đa mà mỗi đối tượng sinh viên khoa CNTT được gia hạn để hoàn thành chương trình học là bao nhiêu
           - Cho mình hỏi, thời gian tối đa mà mỗi đối tượng sinh viên  trường IUH được gia hạn để hoàn thành chương trình học khoảng bao nhiêu
           - Cho mình hỏi, thời gian tối đa mà mỗi đối tượng sinh viên khoa CNTT được gia hạn để hoàn thành chương trình học là
@@ -2609,9 +2417,9 @@ nlu:
           - Mỗi học kỳ học chính sinh viên của IUH được đăng ký số tín chỉ tối thiểu và tối đa là bao nhiêu tín chỉ
           - Mỗi học kỳ học chính sinh viên khoa CNTT được đăng ký số tín chỉ tối thiểu và tối đa là
           - Mỗi học kỳ học chính sinh viên Khoa CNTT được đăng ký số tín chỉ tối thiểu và tối đa là bao nhiêu tín chỉ
-          - Trừ kỳ học cuối ra thì những kỳ học chính số tín chỉ tối thiểu và tối đa sinh viên có thể đăng ký là 
+          - Trừ kỳ học cuối ra thì những kỳ học chính số tín chỉ tối thiểu và tối đa sinh viên có thể đăng ký là
           - Trừ kỳ học cuối ra thì những kỳ học chính số tín chỉ tối thiểu và tối đa sinh viên có thể đăng ký là bao nhiêu tín chỉ
-          - Trường IUH trừ kỳ học cuối ra thì những kỳ học chính số tín chỉ tối thiểu và tối đa sinh viên có thể đăng ký là 
+          - Trường IUH trừ kỳ học cuối ra thì những kỳ học chính số tín chỉ tối thiểu và tối đa sinh viên có thể đăng ký là
           - Trường IUH trừ kỳ học cuối ra thì những kỳ học chính số tín chỉ tối thiểu và tối đa sinh viên có thể đăng ký là bao nhiêu tín chỉ
           - Có phải mỗi kỳ học chính sinh viên có thể đăng ký số tín chỉ tối thiểu là 10 và tối đa là 30 không
           - Có phải mỗi kỳ học chính sinh viên của trường IUH có thể đăng ký số tín chỉ tối thiểu là 10 và tối đa là 30 không
@@ -2626,7 +2434,7 @@ nlu:
     - intent: dieu_kien_Toeic
       examples: |
           - Điều kiện điểm Toeic để sinh viên được phép đăng ký học phần năm hai là
-          - Điều kiện điểm Toeic để sinh viên được phép đăng ký học phần năm hai là bao nhiêu 
+          - Điều kiện điểm Toeic để sinh viên được phép đăng ký học phần năm hai là bao nhiêu
           - Đối với sinh viên năm nhất thì điểm Toeic bao nhiêu mới được phép đăng ký học phần năm hai
           - Đối với sinh viên năm nhất điểm Toeic sinh viên cần đạt được là bao nhiêu để được đăng ký học phần năm hai
           - Khi đăng ký học phần sinh viên năm nhất phải bao nhiêu Toeic mới được đăng ký học phần là gì
@@ -2644,7 +2452,7 @@ nlu:
           - Điều kiện tiên quyết về diểm tiếng Anh khi sinh viên năm nhất dăng ký học phần năm hai là gì
           - Điều kiện tiên quyết về diểm tiếng Anh khi sinh viên năm nhất dăng ký học phần năm hai là như thế nào
           - Điều kiện điểm Toeic để sinh viên của khoa CNTT được phép đăng ký học phần năm hai là
-          - Điều kiện điểm Toeic để sinh viên của khoa CNTT được phép đăng ký học phần năm hai là bao nhiêu 
+          - Điều kiện điểm Toeic để sinh viên của khoa CNTT được phép đăng ký học phần năm hai là bao nhiêu
           - Đối với sinh viên năm nhất của khoa CNTT thì điểm Toeic bao nhiêu mới được phép đăng ký học phần năm hai
           - Đối với sinh viên năm nhất của khoa CNTT điểm Toeic sinh viên cần đạt được là bao nhiêu để được đăng ký học phần năm hai
           - Khi đăng ký học phần sinh viên năm nhất của khoa CNTT phải bao nhiêu Toeic mới được đăng ký học phần là gì
@@ -2661,7 +2469,7 @@ nlu:
           - Sinh viên khoa CNTT, điều kiện ràng buộc điểm tiếng anh khi sinh viên năm nhất đăng ký học phần năm hai là như thé nào
           - Sinh viên khoa CNTT, điều kiện tiên quyết về diểm tiếng Anh khi sinh viên năm nhất dăng ký học phần năm hai là gì
           - Cho mình hỏi, điều kiện điểm Toeic để sinh viên được phép đăng ký học phần năm hai là
-          - Cho mình hỏi, điều kiện điểm Toeic để sinh viên được phép đăng ký học phần năm hai là bao nhiêu 
+          - Cho mình hỏi, điều kiện điểm Toeic để sinh viên được phép đăng ký học phần năm hai là bao nhiêu
           - Cho mình hỏi, đối với sinh viên năm nhất thì điểm Toeic bao nhiêu mới được phép đăng ký học phần năm hai
           - Cho mình hỏi, đối với sinh viên năm nhất điểm Toeic sinh viên cần đạt được là bao nhiêu để được đăng ký học phần năm hai
           - Cho mình hỏi, khi đăng ký học phần sinh viên năm nhất phải bao nhiêu Toeic mới được đăng ký học phần là gì
@@ -2693,12 +2501,12 @@ nlu:
           - Điều kiện để nhà trường sắp xếp sinh viên vào học như thế nào
           - Nhà trường sắp xếp sinh viên vào học các chương trình dựa vào đâu
           - Nhà trường sắp xếp sinh viên vào học các chương trình căn cứ vào đâu
-          - Nhà trường căn cứ vào đâu để sắp xếp sinh viên vào học các chương trình 
-          - Nhà trường dựa vào đâu để sắp xếp sinh viên vào học các chương trình 
+          - Nhà trường căn cứ vào đâu để sắp xếp sinh viên vào học các chương trình
+          - Nhà trường dựa vào đâu để sắp xếp sinh viên vào học các chương trình
           - Để sắp xếp sinh viên vào học các chương trình thì nhà trường dựa vào đâu
           - Để sắp xếp sinh viên vào học các chương trình thì nhà trường căn cứ vào đâu vào đâu
           - Nhà trường sắp xếp sinh viên vào học các chương trình như thế nào
-          - Cách thức nhà trường sắp xếp sinh viên vào học các chương trình 
+          - Cách thức nhà trường sắp xếp sinh viên vào học các chương trình
           - Cách thức nhà trường sắp xếp sinh viên vào học các chương trình như thế nào
           - Không biết nhà trường sắp xếp sinh viên vào học các chương trình như thế nào
           - Cho mình hỏi nhà trường sắp xếp sinh viên vào học dựa vào đâu
@@ -2717,12 +2525,12 @@ nlu:
           - Cho mình hỏi điều kiện để nhà trường sắp xếp sinh viên vào học như thế nào
           - Cho mình hỏi nhà trường sắp xếp sinh viên vào học các chương trình dựa vào đâu
           - Cho mình hỏi nhà trường sắp xếp sinh viên vào học các chương trình căn cứ vào đâu
-          - Cho mình hỏi nhà trường căn cứ vào đâu để sắp xếp sinh viên vào học các chương trình 
-          - Cho mình hỏi nhà trường dựa vào đâu để sắp xếp sinh viên vào học các chương trình 
+          - Cho mình hỏi nhà trường căn cứ vào đâu để sắp xếp sinh viên vào học các chương trình
+          - Cho mình hỏi nhà trường dựa vào đâu để sắp xếp sinh viên vào học các chương trình
           - Cho mình hỏi để sắp xếp sinh viên vào học các chương trình thì nhà trường dựa vào đâu
           - Cho mình hỏi để sắp xếp sinh viên vào học các chương trình thì nhà trường căn cứ vào đâu vào đâu
           - Cho mình hỏi nhà trường sắp xếp sinh viên vào học các chương trình như thế nào
-          - Cho mình hỏi cách thức nhà trường sắp xếp sinh viên vào học các chương trình 
+          - Cho mình hỏi cách thức nhà trường sắp xếp sinh viên vào học các chương trình
           - Cho mình hỏi cách thức nhà trường sắp xếp sinh viên vào học các chương trình như thế nào
           - Cho mình hỏi không biết nhà trường sắp xếp sinh viên vào học các chương trình như thế nào
           - Mình không biết nhà trường sắp xếp sinh viên vào học dựa vào đâu
@@ -2831,7 +2639,6 @@ nlu:
           - Mình không biết học phần mở rộng có học phí là bao nhiêu
           - Mình không biết học phí của học phần mở rộng của nhà trường như thế nào
           - Mình không biết học phí của học phần mở rộng của nhà trường là bao nhiêu
-
     - intent: don_xin_phep
       examples: |
           - Có cần viết đơn xin phép nghỉ ốm hay không
@@ -2884,11 +2691,10 @@ nlu:
           - Mình không biết quy định của khoa CNTT về việc nghĩ ốm như thế nào
           - Mình không biết nhà trường có quy định như thế nào về việc nghỉ ốm
           - Mình không biết khoa CNTT có quy định như thế nào về việc nghỉ ốm
-
     - intent: dieu_kien_diem_Toeic
       examples: |
           - Điều kiện điểm Toeic để sinh viên được phép đăng ký học phần năm 3 là
-          - Điều kiện điểm Toeic để sinh viên được phép đăng ký học phần năm 3 là bao nhiêu 
+          - Điều kiện điểm Toeic để sinh viên được phép đăng ký học phần năm 3 là bao nhiêu
           - Đối với sinh viên năm hai thì điểm Toeic bao nhiêu mới được phép đăng ký học phần năm 3
           - Đối với sinh viên năm hai điểm Toeic sinh viên cần đạt được là bao nhiêu để được đăng ký học phần năm 3
           - Khi đăng ký học phần sinh viên năm hai phải bao nhiêu Toeic mới được đăng ký học phần là gì
@@ -2906,7 +2712,7 @@ nlu:
           - Điều kiện tiên quyết về diểm tiếng Anh khi sinh viên năm hai dăng ký học phần năm 3 là gì
           - Điều kiện tiên quyết về diểm tiếng Anh khi sinh viên năm hai đăng ký học phần năm 3  là như thế nào
           - Điều kiện điểm Toeic để sinh viên của khoa CNTT được phép đăng ký học phần năm 3 là
-          - Điều kiện điểm Toeic để sinh viên của khoa CNTT được phép đăng ký học phần năm 3 là bao nhiêu 
+          - Điều kiện điểm Toeic để sinh viên của khoa CNTT được phép đăng ký học phần năm 3 là bao nhiêu
           - Đối với sinh viên năm hai của khoa CNTT thì điểm Toeic bao nhiêu mới được phép đăng ký học phần năm 3
           - Đối với sinh viên năm hai của khoa CNTT điểm Toeic sinh viên cần đạt được là bao nhiêu để được đăng ký học phần năm 3
           - Khi đăng ký học phần sinh viên năm hai của khoa CNTT phải bao nhiêu Toeic mới được đăng ký học phần là gì
@@ -2923,7 +2729,7 @@ nlu:
           - Sinh viên khoa CNTT, điều kiện ràng buộc điểm tiếng anh khi sinh viên năm hai đăng ký học phần năm 3 là như thé nào
           - Sinh viên khoa CNTT, điều kiện tiên quyết về diểm tiếng Anh khi sinh viên năm hai dăng ký học phần năm 3 là gì
           - Cho mình hỏi, điều kiện điểm Toeic để sinh viên được phép đăng ký học phần năm 3 là
-          - Cho mình hỏi, điều kiện điểm Toeic để sinh viên được phép đăng ký học phần năm 3 là bao nhiêu 
+          - Cho mình hỏi, điều kiện điểm Toeic để sinh viên được phép đăng ký học phần năm 3 là bao nhiêu
           - Cho mình hỏi, đối với sinh viên năm hai thì điểm Toeic bao nhiêu mới được phép đăng ký học phần năm 3
           - Cho mình hỏi, đối với sinh viên năm hai điểm Toeic sinh viên cần đạt được là bao nhiêu để được đăng ký học phần năm 3
           - Cho mình hỏi, khi đăng ký học phần sinh viên năm hai phải bao nhiêu Toeic mới được đăng ký học phần là gì
@@ -2937,7 +2743,6 @@ nlu:
           - Cho mình hỏi, khi đăng ký môn học của năm 3 điểm Toeic cần đạt tối thiểu là bao nhiêu
           - Cho mình hỏi, trong quá trình đăng ký môn học của năm 3 thì điều kiện gì của tiếng Anh là ràng buộc
           - Cho mình hỏi, điều kiện ràng buộc điểm tiếng anh khi sinh viên năm nhất đăng ký học phần năm 3 là
-
     - intent: thi_tieng_anh1_Toeic
       examples: |
           - Nhà trường tổ chức thi sát hạch đầu năm TOEIC sinh viên học lớp tiếng Anh 1 khi nào
@@ -2970,27 +2775,26 @@ nlu:
           - Mình không biết là sinh phải phải học tiếng Anh 1 với kết quả sát hạch đầu vào là
           - Mình không biết là  sinh viên khoa CNTT phải học lớp tiếng Anh 1 với số điểm như thế nào
           - Sinh viên học lớp tiếng Anh 1 khi điểm đầu vào TOEIC là bao nhiêu điểm
-          - Sinh viên học lớp tiếng Anh 1 khi điểm đầu vào TOEIC là 
+          - Sinh viên học lớp tiếng Anh 1 khi điểm đầu vào TOEIC là
           - Sinh viên phải học lớp tiếng Anh 1 với điểm TOEIC khi thi sát hạch đầu vào là
           - Sinh viên phải học lớp tiếng Anh 1 với điểm TOEIC khi thi sát hạch đầu vào là bao nhiêu
           - Sinh viên phải học lớp tiếng Anh 1 với điểm TOEIC khi thi sát hạch đầu vào là như thế nào
           - Sinh viên khoa CNTT học lớp tiếng Anh 1 khi điểm đầu vào TOEIC là bao nhiêu điểm
-          - Sinh viên khoa CNTT học lớp tiếng Anh 1 khi điểm đầu vào TOEIC là 
+          - Sinh viên khoa CNTT học lớp tiếng Anh 1 khi điểm đầu vào TOEIC là
           - Sinh viên khoa CNTT phải học lớp tiếng Anh 1 với điểm TOEIC khi thi sát hạch đầu vào là
           - Sinh viên khoa CNTT phải học lớp tiếng Anh 1 với điểm TOEIC khi thi sát hạch đầu vào là bao nhiêu
           - Sinh viên khoa CNTT phải học lớp tiếng Anh 1 với điểm TOEIC khi thi sát hạch đầu vào là như thế nào
           - Sinh viên trường IUH học lớp tiếng Anh 1 khi điểm đầu vào TOEIC là bao nhiêu điểm
-          - Sinh viên trường IUH học lớp tiếng Anh 1 khi điểm đầu vào TOEIC là 
+          - Sinh viên trường IUH học lớp tiếng Anh 1 khi điểm đầu vào TOEIC là
           - Sinh viên trường IUH phải học lớp tiếng Anh 1 với điểm TOEIC khi thi sát hạch đầu vào là
           - Sinh viên trường IUH phải học lớp tiếng Anh 1 với điểm TOEIC khi thi sát hạch đầu vào là bao nhiêu
           - Sinh viên trường IUH phải học lớp tiếng Anh 1 với điểm TOEIC khi thi sát hạch đầu vào là như thế nào
           - Mình không biết là sinh viên học lớp tiếng Anh 1 khi điểm đầu vào TOEIC là bao nhiêu điểm
-          - Mình không biết là sinh viên học lớp tiếng Anh 1 khi điểm đầu vào TOEIC là 
+          - Mình không biết là sinh viên học lớp tiếng Anh 1 khi điểm đầu vào TOEIC là
           - Mình không biết là sinh viên phải học lớp tiếng Anh 1 với điểm TOEIC khi thi sát hạch đầu vào là
           - Mình không biết là sinh viên phải học lớp tiếng Anh 1 với điểm TOEIC khi thi sát hạch đầu vào là bao nhiêu
           - Mình không biết là sinh viên phải học lớp tiếng Anh 1 với điểm TOEIC khi thi sát hạch đầu vào là như thế nào
           - Mình không biết là sinh viên khoa CNTT học lớp tiếng Anh 1 khi điểm đầu vào TOEIC là bao nhiêu điểm
-
     - intent: thi_tieng_anh2_Toeic
       examples: |
           - Nhà trường tổ chức thi sát hạch đầu năm TOEIC sinh viên học lớp tiếng Anh 2 khi nào
@@ -3023,27 +2827,26 @@ nlu:
           - Mình không biết là sinh phải phải học tiếng Anh 2 với kết quả sát hạch đầu vào là
           - Mình không biết là  sinh viên khoa CNTT phải học lớp tiếng Anh 2 với số điểm như thế nào
           - Sinh viên học lớp tiếng Anh 2 khi điểm đầu vào TOEIC là bao nhiêu điểm
-          - Sinh viên học lớp tiếng Anh 2 khi điểm đầu vào TOEIC là 
+          - Sinh viên học lớp tiếng Anh 2 khi điểm đầu vào TOEIC là
           - Sinh viên phải học lớp tiếng Anh 2 với điểm TOEIC khi thi sát hạch đầu vào là
           - Sinh viên phải học lớp tiếng Anh 2 với điểm TOEIC khi thi sát hạch đầu vào là bao nhiêu
           - Sinh viên phải học lớp tiếng Anh 2 với điểm TOEIC khi thi sát hạch đầu vào là như thế nào
           - Sinh viên khoa CNTT học lớp tiếng Anh 2 khi điểm đầu vào TOEIC là bao nhiêu điểm
-          - Sinh viên khoa CNTT học lớp tiếng Anh 2 khi điểm đầu vào TOEIC là 
+          - Sinh viên khoa CNTT học lớp tiếng Anh 2 khi điểm đầu vào TOEIC là
           - Sinh viên khoa CNTT phải học lớp tiếng Anh 2 với điểm TOEIC khi thi sát hạch đầu vào là
           - Sinh viên khoa CNTT phải học lớp tiếng Anh 2 với điểm TOEIC khi thi sát hạch đầu vào là bao nhiêu
           - Sinh viên khoa CNTT phải học lớp tiếng Anh 2 với điểm TOEIC khi thi sát hạch đầu vào là như thế nào
           - Sinh viên trường IUH học lớp tiếng Anh 2 khi điểm đầu vào TOEIC là bao nhiêu điểm
-          - Sinh viên trường IUH học lớp tiếng Anh 2 khi điểm đầu vào TOEIC là 
+          - Sinh viên trường IUH học lớp tiếng Anh 2 khi điểm đầu vào TOEIC là
           - Sinh viên trường IUH phải học lớp tiếng Anh 2 với điểm TOEIC khi thi sát hạch đầu vào là
           - Sinh viên trường IUH phải học lớp tiếng Anh 2 với điểm TOEIC khi thi sát hạch đầu vào là bao nhiêu
           - Sinh viên trường IUH phải học lớp tiếng Anh 2 với điểm TOEIC khi thi sát hạch đầu vào là như thế nào
           - Mình không biết là sinh viên học lớp tiếng Anh 2 khi điểm đầu vào TOEIC là bao nhiêu điểm
-          - Mình không biết là sinh viên học lớp tiếng Anh 2 khi điểm đầu vào TOEIC là 
+          - Mình không biết là sinh viên học lớp tiếng Anh 2 khi điểm đầu vào TOEIC là
           - Mình không biết là sinh viên phải học lớp tiếng Anh 2 với điểm TOEIC khi thi sát hạch đầu vào là
           - Mình không biết là sinh viên phải học lớp tiếng Anh 2 với điểm TOEIC khi thi sát hạch đầu vào là bao nhiêu
           - Mình không biết là sinh viên phải học lớp tiếng Anh 2 với điểm TOEIC khi thi sát hạch đầu vào là như thế nào
           - Mình không biết là sinh viên khoa CNTT học lớp tiếng Anh 2 khi điểm đầu vào TOEIC là bao nhiêu điểm
-
     - intent: thi_sat_hach
       examples: |
           - Nhà trường tổ chức thi sát hạch đầu năm TOEIC sinh viên được miễn học lớp tiếng Anh 1 và tiếng Anh 2 khi nào
@@ -3076,27 +2879,26 @@ nlu:
           - Mình không biết là sinh viên được miễn học lớp tiếng Anh 1 và tiếng Anh 2 với kết quả sát hạch đầu vào là
           - Mình không biết là  sinh viên khoa CNTT được miễn học lớp tiếng Anh 1 và tiếng Anh 2 với số điểm như thế nào
           - Sinh viên được miễn học lớp tiếng Anh 1 và tiếng Anh 2 khi điểm đầu vào TOEIC là bao nhiêu điểm
-          - Sinh viên được miễn học lớp tiếng Anh 1 và tiếng Anh 2 khi điểm đầu vào TOEIC là 
+          - Sinh viên được miễn học lớp tiếng Anh 1 và tiếng Anh 2 khi điểm đầu vào TOEIC là
           - Sinh viên được miễn học lớp tiếng Anh 1 và tiếng Anh 2 với điểm TOEIC khi thi sát hạch đầu vào là
           - Sinh viên được miễn học lớp tiếng Anh 1 và tiếng Anh 2 với điểm TOEIC khi thi sát hạch đầu vào là bao nhiêu
           - Sinh viên được miễn học lớp tiếng Anh 1 và tiếng Anh 2 với điểm TOEIC khi thi sát hạch đầu vào là như thế nào
           - Sinh viên khoa CNTT được miễn học lớp tiếng Anh 1 và tiếng Anh 2 khi điểm đầu vào TOEIC là bao nhiêu điểm
-          - Sinh viên khoa CNTT được miễn học lớp tiếng Anh 1 và tiếng Anh 21 khi điểm đầu vào TOEIC là 
+          - Sinh viên khoa CNTT được miễn học lớp tiếng Anh 1 và tiếng Anh 21 khi điểm đầu vào TOEIC là
           - Sinh viên khoa CNTT được miễn học lớp tiếng Anh 1 và tiếng Anh 2 với điểm TOEIC khi thi sát hạch đầu vào là
           - Sinh viên khoa CNTT được miễn học lớp tiếng Anh 1 và tiếng Anh 2 với điểm TOEIC khi thi sát hạch đầu vào là bao nhiêu
           - Sinh viên khoa CNTT được miễn học lớp tiếng Anh 1 và tiếng Anh 2 với điểm TOEIC khi thi sát hạch đầu vào là như thế nào
           - Sinh viên trường IUH được miễn học lớp tiếng Anh 1 và tiếng Anh 2 khi điểm đầu vào TOEIC là bao nhiêu điểm
-          - Sinh viên trường IUH được miễn học lớp tiếng Anh 1 và tiếng Anh 2 khi điểm đầu vào TOEIC là 
+          - Sinh viên trường IUH được miễn học lớp tiếng Anh 1 và tiếng Anh 2 khi điểm đầu vào TOEIC là
           - Sinh viên trường IUH được miễn học lớp tiếng Anh 1 và tiếng Anh 2 với điểm TOEIC khi thi sát hạch đầu vào là
           - Sinh viên trường IUH được miễn học lớp tiếng Anh 1 và tiếng Anh 2 với điểm TOEIC khi thi sát hạch đầu vào là bao nhiêu
           - Sinh viên trường IUH được miễn học lớp tiếng Anh 1 và tiếng Anh 2 với điểm TOEIC khi thi sát hạch đầu vào là như thế nào
           - Mình không biết là sinh viên được miễn học lớp tiếng Anh 1 và tiếng Anh 2 khi điểm đầu vào TOEIC là bao nhiêu điểm
-          - Mình không biết là sinh viên được miễn học lớp tiếng Anh 1 và tiếng Anh 2 khi điểm đầu vào TOEIC là 
+          - Mình không biết là sinh viên được miễn học lớp tiếng Anh 1 và tiếng Anh 2 khi điểm đầu vào TOEIC là
           - Mình không biết là sinh viên được miễn học lớp tiếng Anh 1 và tiếng Anh 2 với điểm TOEIC khi thi sát hạch đầu vào là
           - Mình không biết là sinh viên được miễn học lớp tiếng Anh 1 và tiếng Anh 2 với điểm TOEIC khi thi sát hạch đầu vào là bao nhiêu
           - Mình không biết là sinh viên được miễn học lớp tiếng Anh 1 và tiếng Anh 2 với điểm TOEIC khi thi sát hạch đầu vào là như thế nào
           - Mình không biết là sinh viên khoa CNTT được miễn học lớp tiếng Anh 1 và tiếng Anh 2 khi điểm đầu vào TOEIC là bao nhiêu điểm
-
     - intent: hoc_phan
       examples: |
           - Học phần là gì?
@@ -3149,7 +2951,6 @@ nlu:
           - Em không biết là ở trường đại học công nghiệp, học phần có ý nghĩa như thế nào?
           - Em không biết là ở trường đại học công nghiệp, chia ra từng học phần có tác dụng gì?
           - Em không biết là ở trường đại học công nghiệp, chia ra từng học phần có tác dụng như thế nào?
-
     - intent: dang_ky_hp
       examples: |
           - Khi sinh viên đăng ký học phần thì đăng ký ở đâu
@@ -3202,7 +3003,6 @@ nlu:
           - Cho mình hỏi, khi có thông báo đăng ký học phần, sinh viên phải làm sao để có thể đăng ký
           - Cho mình hỏi, khi sinh viên trường IUH đăng ký học phần thì đăng ký ở đâu
           - Cho mình hỏi, khi sinh viên trường IUH đăng ký học phần thì đăng ký như thế nào
-
     - intent: rut_hp
       examples: |
           - Nếu sinh viên muốn rút bớt học phần thì làm như thế nào
@@ -3255,7 +3055,6 @@ nlu:
           - Mình không biết, khi đã đăng ký xong học phần thì muốn hủy bớt học mà đang còn thời gian cho phép thì làm sao
           - Mình không biết, nếu còn trong thời gian chưa khóa học phần thì làm sao để hủy môn học
           - Mình không biết, nếu còn trong thời gian chưa khóa học phần thì muốn hủy học phần thì làm sao
-
     - intent: nghi_hoc_tam_thoi
       examples: |
           - Các trường hợp nghỉ học tạm thời
@@ -3308,7 +3107,6 @@ nlu:
           - Cho mình hỏi để được nghỉ học tạm thời thì sinh viên cần những điều kiện gì
           - Cho mình hỏi để được nghỉ học tạm thời thì mình cần những điều kiện gì
           - Cho mình hỏi để được nghỉ học tạm thời thì phải làm những gì
-
     - intent: di_hoc_lai
       examples: |
           - Sinh viên nghỉ học tạm thời muốn đi học lại thì phải làm thế nào
@@ -3339,3 +3137,124 @@ nlu:
           - Có thể giải thích cho em các quy định của nhà trường về quy định nghỉ học tạm thời không ạ
           - Em không biết muốn quay trở lại học ở trường khi đang trong quá trình nghỉ học tạm thời thì phải xin phép giáo viên nào trong trường ạ
           - Cho mình hỏi em đang trong thời gian nghỉ học tạm thời vì lí do cá nhân và chưa hết thời gian nghỉ, em muốn quay lại lớp học thì phải thực hiện những thủ tục gì ạ
+    - intent: tin_chi_khoa
+      examples: |
+          - Khoa CNTT có các cách thức đào tạo như thế nào
+          - Quy chế đào tạo của khoa CNTT như thế nào
+          - Hình thức đào tạo của khoa CNTT như thế nào
+          - Cách thức đào tạo của khoa CNTT như thế nào
+          - Mô hình đạo tạo của khoa CNTT như thế nào
+          - Quy chế đào tạo của khoa CNTT là gì
+          - Hình thức đào tạo của khoa CNTT là gì
+          - Cách thức đào tạo của khoa CNTT là gì
+          - Mô hình đạo tạo của khoa CNTT là gì
+          - Khoa CNTT có các hình thức đào tạo như thế nào
+          - Khoa CNTT có các quy chế đào tạo như thế nào
+          - Khoa CNTT có các mô hình đào tạo như thế nào
+    - intent: quy_che_tin_chi
+      examples: |
+          - Quy chế đào tạo theo hệ thống tín chỉ là gì
+          - Quy chế đào tạo theo hệ thống tín chỉ là như thế nào
+          - Quy chế đào tạo theo hệ thống tín chỉ là cái gì
+          - Quy chế đào tạo theo hệ thống tín chỉ là thế nào
+          - Quy chế đào tạo theo hệ thống tín chỉ là sao
+          - Như thế nào là quy chế đào tạo theo hệ thống tín chỉ
+          - Cái gì là quy chế đào tạo theo hệ thống tín chỉ
+          - Hình thức đào tạo theo hệ thống tín chỉ là gì
+          - Hình thức đào tạo theo hệ thống tín chỉ là như thế nào
+          - Hình thức đào tạo theo hệ thống tín chỉ là cái gì
+          - Hình thức đào tạo theo hệ thống tín chỉ là thế nào
+          - Hình thức đào tạo theo hệ thống tín chỉ là sao
+          - Như thế nào là hình thức đào tạo theo hệ thống tín chỉ
+          - Cái gì là hình thức đào tạo theo hệ thống tín chỉ
+          - Cách thức đào tạo theo hệ thống tín chỉ là gì
+          - Cách thức đào tạo theo hệ thống tín chỉ là như thế nào
+          - Cách thức đào tạo theo hệ thống tín chỉ là cái gì
+          - Cách thức đào tạo theo hệ thống tín chỉ là thế nào
+          - Cách thức đào tạo theo hệ thống tín chỉ là sao
+          - Như thế nào là cách thức đào tạo theo hệ thống tín chỉ
+          - Cái gì là cách thức đào tạo theo hệ thống tín chỉ
+          - Mô hình đào tạo theo hệ thống tín chỉ là gì
+          - Mô hình đào tạo theo hệ thống tín chỉ là như thế nào
+          - Mô hình đào tạo theo hệ thống tín chỉ là cái gì
+          - Mô hình đào tạo theo hệ thống tín chỉ là thế nào
+          - Mô hình đào tạo theo hệ thống tín chỉ là sao
+          - Như thế nào là mô hình đào tạo theo hệ thống tín chỉ
+          - Cái gì là mô hình đào tạo theo hệ thống tín chỉ
+          - Quy chế đào tạo theo hệ thống tín chỉ của trường là gì
+          - Quy chế đào tạo theo hệ thống tín chỉ của trường là như thế nào
+          - Quy chế đào tạo theo hệ thống tín chỉ của trường là cái gì
+          - Quy chế đào tạo theo hệ thống tín chỉ của trường là thế nào
+          - Quy chế đào tạo theo hệ thống tín chỉ của trường là sao
+          - Như thế nào là quy chế đào tạo theo hệ thống tín chỉ của trường
+          - Cái gì là quy chế đào tạo theo hệ thống tín chỉ của trường
+          - Tín chỉ của trường là gì
+          - Tín chỉ của trường là như thế nào
+          - Tín chỉ của trường là cái gì
+          - Tín chỉ của trường là thế nào
+          - Tín chỉ của trường là sao
+          - Như thế nào là tín chỉ của trường
+          - Cái gì là tín chỉ của trường
+          - Hình thức đào tạo theo hệ thống tín chỉ của trường là gì
+          - Hình thức đào tạo theo hệ thống tín chỉ của trường là như thế nào
+          - Hình thức đào tạo theo hệ thống tín chỉ của trường là cái gì
+          - Hình thức đào tạo theo hệ thống tín chỉ của trường là thế nào
+          - Hình thức đào tạo theo hệ thống tín chỉ của trường là sao
+          - Như thế nào là hình thức đào tạo theo hệ thống tín chỉ của trường
+          - Cái gì là hình thức đào tạo theo hệ thống tín chỉ của trường
+          - Cách thức đào tạo theo hệ thống tín chỉ của trường là gì
+          - Cách thức đào tạo theo hệ thống tín chỉ của trường là như thế nào
+          - Cách thức đào tạo theo hệ thống tín chỉ của trường là cái gì
+          - Cách thức đào tạo theo hệ thống tín chỉ của trường là thế nào
+          - Cách thức đào tạo theo hệ thống tín chỉ của trường là sao
+          - Như thế nào là cách thức đào tạo theo hệ thống tín chỉ của trường
+          - Cái gì là cách thức đào tạo theo hệ thống tín chỉ của trường
+          - Mô hình đào tạo theo hệ thống tín chỉ của trường là gì
+          - Mô hình đào tạo theo hệ thống tín chỉ của trường là như thế nào
+          - Mô hình đào tạo theo hệ thống tín chỉ của trường là cái gì
+          - Mô hình đào tạo theo hệ thống tín chỉ của trường là thế nào
+          - Mô hình đào tạo theo hệ thống tín chỉ của trường là sao
+          - Như thế nào là mô hình đào tạo theo hệ thống tín chỉ của trường
+          - Cái gì là mô hình đào tạo theo hệ thống tín chỉ của trường
+          - Quy chế đào tạo theo hệ thống tín chỉ của trường IUH là gì
+          - Quy chế đào tạo theo hệ thống tín chỉ của trường IUH là như thế nào
+          - Quy chế đào tạo theo hệ thống tín chỉ của trường IUH là cái gì
+          - Quy chế đào tạo theo hệ thống tín chỉ của trường IUH là thế nào
+          - Quy chế đào tạo theo hệ thống tín chỉ của trường IUH là sao
+          - Như thế nào là quy chế đào tạo theo hệ thống tín chỉ của trường IUH
+          - Tín chỉ của trường IUH là gì
+          - Tín chỉ của trường IUH là như thế nào
+          - Tín chỉ của trường IUH là cái gì
+          - Tín chỉ của trường IUH là thế nào
+          - Tín chỉ của trường IUH là sao
+          - Như thế nào là tín chỉ của trường IUH
+          - Hình thức đào tạo theo hệ thống tín chỉ của trường IUH là gì
+          - Hình thức đào tạo theo hệ thống tín chỉ của trường IUH là như thế nào
+          - Hình thức đào tạo theo hệ thống tín chỉ của trường IUH là cái gì
+          - Hình thức đào tạo theo hệ thống tín chỉ của trường IUH là thế nào
+          - Hình thức đào tạo theo hệ thống tín chỉ của trường IUH là sao
+          - Như thế nào là hình thức đào tạo theo hệ thống tín chỉ của trường IUH
+          - Cách thức đào tạo theo hệ thống tín chỉ của trường IUH là gì
+          - Cách thức đào tạo theo hệ thống tín chỉ của trường IUH là như thế nào
+          - Cách thức đào tạo theo hệ thống tín chỉ của trường IUH là cái gì
+          - Cách thức đào tạo theo hệ thống tín chỉ của trường IUH là thế nào
+          - Cách thức đào tạo theo hệ thống tín chỉ của trường IUH là sao
+          - Như thế nào là cách thức đào tạo theo hệ thống tín chỉ của trường IUH
+          - Mô hình đào tạo theo hệ thống tín chỉ của trường IUH là gì
+          - Mô hình đào tạo theo hệ thống tín chỉ của trường IUH là như thế nào
+          - Mô hình đào tạo theo hệ thống tín chỉ của trường IUH là cái gì
+          - Mô hình đào tạo theo hệ thống tín chỉ của trường IUH là thế nào
+          - Mô hình đào tạo theo hệ thống tín chỉ của trường IUH là sao
+          - Như thế nào là mô hình đào tạo theo hệ thống tín chỉ của trường IUH
+    - intent: vieclam
+      examples: |
+          - cơ hội việc làm như thế nào của khoa học dữ liệu
+          - công nghệ thông tin ra trường việc làm có ổn định không
+          - việc làm như thế nào khi học xong hệ thống thông tin
+          - công việc thường có của ngành công nghệ thông tin
+          - học hệ thống thông tin ra trường có dễ kiếm việc làm không
+          - học khoa học máy tính ra dễ kiếm việc làm không
+          - dễ kiếm việc khi học ngành kỹ thuật phần mềm không
+          - nghe nói học công nghệ thông tin là có việc làm ngay phải không
+          - có phải dể kiếm việc làm trong ngành hệ thống thông tin phải không
+          - công việc sau khi tốt nghiệp ngành khoa học máy tính
