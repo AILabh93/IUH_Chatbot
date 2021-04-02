@@ -20,11 +20,9 @@ class Profile(APIView):
 
     def get(self, request):
         user = request.GET
-        print(user)
         auth = authenticate(
             username=user['username'], password=user['password'])
 
-        print(auth)
         if auth is None:
             return Response(status=status.HTTP_400_BAD_REQUEST)
 
