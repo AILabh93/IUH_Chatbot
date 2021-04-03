@@ -5,8 +5,8 @@ from rest_framework import status
 from rest_framework.response import Response
 from . import serializers
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
-from rest_framework.permissions import AllowAny
-from rest_framework.decorators import api_view
+from rest_framework.permissions import AllowAny, IsAdminUser
+from rest_framework.decorators import api_view, permission_classes
 
 # Create your views here.
 
@@ -59,12 +59,20 @@ def updateUser(request):
     serializer.save()
     return Response(serializer.data, status=status.HTTP_200_OK)
 
+
 # check login
-
-
 @api_view(['GET', ])
 def chech_login(request):
     serializer = serializers.SerializerUser(request.user)
     if serializer is not None:
         return Response(data=serializer.data, status=status.HTTP_200_OK)
     return Response(status=status.HTTP_400_BAD_REQUEST)
+
+
+# get all user using token of admin
+# if it is not admin then function will response http 403
+@api_view(['GET', ])
+@permission_classes((IsAdminUser, ))
+def getAllUser(request):
+    user = serializers.SerializerUser(instance=User.objects.all(), many=True)
+    return Response(data=user.data, status=status.HTTP_200_OK)
