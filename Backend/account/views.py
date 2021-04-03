@@ -71,6 +71,7 @@ def chech_login(request):
 
 # get all user using token of admin
 # if it is not admin then function will response http 403
+# if not send token return http 401
 @api_view(['GET', ])
 @permission_classes((IsAdminUser, ))
 def getAllUser(request):
