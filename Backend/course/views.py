@@ -30,3 +30,7 @@ class ViewCourse(APIView):
         serializers.Serial_Course().update(
             models.Course.objects.get(pk=request.data['id']), request.data)
         return Response(status=status.HTTP_200_OK)
+
+    def delete(self, request):
+        models.Course.objects.filter(pk=request.data['id']).delete()
+        return Response(status=status.HTTP_200_OK)
