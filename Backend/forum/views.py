@@ -49,18 +49,32 @@ class Comment(APIView):
         return Response(data=serial.data, status=status.HTTP_200_OK)
 
     def delete(self, request):
-        models.Comment.objects.filter(pk=request.data['id']).delete()
-        return Response(status=status.HTTP_200_OK)
+        try:
+            models.Comment.objects.filter(pk=request.data['id']).delete()
+            return Response(status=status.HTTP_200_OK)
+        except:
+            return Response(status=status.HTTP_400_BAD_REQUEST)
 
 
 class Reply(APIView):
     permission_classes = [AllowAny]
 
     def post(self, request):
-        comment = models.Comment.objects.get(pk=request.data['id_cmt'])
+        try:
+            comment = models.Comment.objects.get(pk=request.data['id_cmt'])
+            return Response(status=status.HTTP_400_BAD_REQUEST)
+        except:
+            pass
         reply = models.Reply.objects.create(
             comment=comment, user=request.user, content=request.data['content'])
         return Response(status=status.HTTP_200_OK)
+
+    def delete(self, request):
+        try:
+            models.Reply.objects.filter(pk=request.data['id']).delete()
+            return Response(status=status.HTTP_200_OK)
+        except:
+            return Response(status=status.HTTP_400_BAD_REQUEST)
 
 
 @api_view(['GET', ])
