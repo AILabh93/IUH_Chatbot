@@ -85,22 +85,22 @@ WSGI_APPLICATION = 'Backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'djongo',
-        'NAME': 'API_Chatbot',
-        # 'CLIENT': {
-        #    'host': 'mongodb+srv://ailab:ailabh93@cluster0.e1s3a.mongodb.net/test?authSource=admin&replicaSet=atlas-tx0c2e-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true',
-        # }
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'djongo',
+#         'NAME': 'API_Chatbot',
+#         # 'CLIENT': {
+#         #    'host': 'mongodb+srv://ailab:ailabh93@cluster0.e1s3a.mongodb.net/test?authSource=admin&replicaSet=atlas-tx0c2e-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true',
+#         # }
+#     }
+# }
 
 
 # Password validation

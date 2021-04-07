@@ -42,7 +42,10 @@ class Comment(APIView):
     permission_classes = [AllowAny]
 
     def post(self, request):
-        post = models.Post.objects.get(pk=request.data['id_post'])
+        try:
+            post = models.Post.objects.get(pk=request.data['id_post'])
+        except:
+            return Response(status=status.HTTP_400_BAD_REQUEST)
         comment = models.Comment.objects.create(
             post=post, user=request.user, content=request.data['content'])
         serial = serializers.Serial_Comment(comment)
@@ -62,9 +65,8 @@ class Reply(APIView):
     def post(self, request):
         try:
             comment = models.Comment.objects.get(pk=request.data['id_cmt'])
-            return Response(status=status.HTTP_400_BAD_REQUEST)
         except:
-            pass
+            return Response(status=status.HTTP_400_BAD_REQUEST)
         reply = models.Reply.objects.create(
             comment=comment, user=request.user, content=request.data['content'])
         return Response(status=status.HTTP_200_OK)
