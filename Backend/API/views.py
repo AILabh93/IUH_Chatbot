@@ -14,6 +14,8 @@ from rest_framework.permissions import AllowAny
 from . import sualoi
 import os
 import tensorflow as tf
+from rest_framework.decorators import api_view, permission_classes
+from . import serializers
 # Create your views here.
 ENC_EMB_DIM = 256
 DEC_EMB_DIM = 256
@@ -61,7 +63,7 @@ class Chatbot(APIView):
                 response = "Không hiểu"
             else:
                 response = response[0]['text']
-                # save_chat(text, response)
+                save_chat(text, response)
             return Response({'text_formated': text, 'response': response}, status=status.HTTP_200_OK)
         except:
             return Response(status=status.HTTP_400_BAD_REQUEST)
@@ -84,7 +86,7 @@ def post_facebook_message(fbid, recevied_message, sua_loi=True):
             p = "Không hiểu"
         else:
             jsons = rasaToFbJson(p, fbid)
-            # save_chat(recevied_message, bot_res)
+            save_chat(recevied_message, p)
         send(fbid, jsons)
         return
     json_file = {
@@ -146,6 +148,13 @@ class BotView(generic.View):
 def save_chat(user, bot):
     chat = models.Chat(chat_user=user, chat_bot=bot)
     chat.save()
+
+
+@api_view(['GET'])
+@permission_classes([AllowAny])
+def getChat(request):
+    chat = serializers.SerialChat(models.Chat.objects.all(), many=True)
+    return Response(data=chat.data, status=status.HTTP_200_OK)
 
 
 def rasaToFbJson(rasa, idfb):
