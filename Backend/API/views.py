@@ -2,7 +2,6 @@ from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework import status
 from rest_framework.response import Response
-from . import them_dau
 from . import models
 from tensorflow.keras.models import load_model
 import json
@@ -12,37 +11,35 @@ from django.utils.decorators import method_decorator
 from django.views import generic
 from django.http import HttpResponse
 from rest_framework.permissions import AllowAny
-from . import sua_loi
+from . import sualoi
+import os
+import tensorflow as tf
 # Create your views here.
+ENC_EMB_DIM = 256
+DEC_EMB_DIM = 256
+ENC_HID_DIM = 512
+DEC_HID_DIM = 512
+BATCH_SIZE = 64
 
+vocab_size = sualoi.vocab_size
 
-model = load_model('API/models/model_sua_loi.h5')
-#model_add = load_model('API/models/model.h5')
-
-
-def sua(text):
-    current_text = text
-    current_len = len(text.split())
-
-    i = 0
-    while len(text.split(' ')) < 5:
-        text += ' 0226'
-        i += 1
-
-    text = sua_loi.correct(text, model)
-    # text = them_dau.remove_accent(text)
-    # text = them_dau.accent_sentence(text, model_add)
-    try:
-        return ' '.join(text.split()[i] for i in range(current_len))
-    except:
-        return current_text
+encoder = sualoi.Encoder(vocab_size, ENC_EMB_DIM, ENC_HID_DIM, BATCH_SIZE)
+decoder = sualoi.Decoder(vocab_size, DEC_EMB_DIM, DEC_HID_DIM, BATCH_SIZE)
+optimizer = tf.keras.optimizers.Adam(sualoi.CustomSchedule(256), beta_1=0.9, beta_2=0.98,
+                                     epsilon=1e-9)
+checkpoint_dir = 'API/checkpoint'
+checkpoint_prefix = os.path.join(checkpoint_dir, "ckpt")
+checkpoint = tf.train.Checkpoint(optimizer=optimizer,
+                                 encoder=encoder,
+                                 decoder=decoder)
+checkpoint.restore(tf.train.latest_checkpoint(checkpoint_dir))
+model = load_model('API/checkpoint/model.h5')
 
 
 def getResponse(question):
     data = json.dumps({"message": "%s" % question, "sender": "Me"})
     p = requests.post('http://localhost:5005/webhooks/rest/webhook',
                       headers={"Content-Type": "application/json"}, data=data).json()
-    print(p)
     try:
         p[0]['text']
         return p
@@ -58,7 +55,7 @@ class Chatbot(APIView):
         try:
             data = request.data
             text = data['text']
-            text = sua(text)
+            text = sualoi.change_error(text, encoder, decoder, model)
             response = getResponse(text)
             if response is None:
                 response = "Không hiểu"
@@ -77,7 +74,7 @@ VERIFY_TOKEN = "rasademo"
 
 def post_facebook_message(fbid, recevied_message, sua_loi=True):
     if sua_loi:
-        recevied_message = sua(recevied_message)
+        recevied_message = sualoi.change_error(recevied_message)
 
         data = json.dumps({"message": "%s" % recevied_message, "sender": "Me"})
         p = requests.post('http://localhost:5005/webhooks/rest/webhook',
