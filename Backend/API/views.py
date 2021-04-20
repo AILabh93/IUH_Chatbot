@@ -76,7 +76,8 @@ VERIFY_TOKEN = "rasademo"
 
 def post_facebook_message(fbid, recevied_message, sua_loi=True):
     if sua_loi:
-        recevied_message = sualoi.change_error(recevied_message)
+        recevied_message = sualoi.change_error(
+            recevied_message, encoder, decoder, model)
 
         data = json.dumps({"message": "%s" % recevied_message, "sender": "Me"})
         p = requests.post('http://localhost:5005/webhooks/rest/webhook',
