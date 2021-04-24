@@ -39,15 +39,18 @@ class Profile(APIView):
     def post(self, request):
 
         data = request.data
-        user = User.objects.create_user(
-            username=data['username'],
-            email=data['email'],
-            password=data['password'],
-            avatar=data['avatar'],
-            full_name=data['full_name']
-        )
-        user.save()
-        return Response(status=status.HTTP_201_CREATED)
+        try:
+            user = User.objects.create_user(
+                username=data['username'],
+                email=data['email'],
+                password=data['password'],
+                avatar=data['avatar'],
+                full_name=data['full_name']
+            )
+            user.save()
+            return Response(status=status.HTTP_201_CREATED)
+        except:
+            return Response(data={'error': 'tài khoản đã tồn tại'}, status=status.HTTP_400_BAD_REQUEST)
 
 
 # update user
