@@ -23,7 +23,6 @@ nlu:
           - chào tạm biệt
           - tạm biệt em nhé
           - tạm biệt bạn nhé
-
     - intent: thank
       examples: |
           - cảm ơn
@@ -55,7 +54,6 @@ nlu:
           - các cuộc thi đó có thực tế hay không
           - trong khoa tổ chức các cuộc thi nó có thú vị hay không
           - khoa có thường tổ chức các cuộc thi hay không
-
     - intent: hocbong
       examples: |
           - học bổng theo từng học kì được xét như thế nào
