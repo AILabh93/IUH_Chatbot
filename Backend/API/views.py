@@ -1,13 +1,9 @@
-from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework import status
 from rest_framework.response import Response
 from . import models
-from tensorflow.keras.models import load_model
 import json
 import requests
-from django.views.decorators.csrf import csrf_exempt
-from django.utils.decorators import method_decorator
 from django.views import generic
 from django.http import HttpResponse
 from rest_framework.permissions import AllowAny
@@ -15,27 +11,39 @@ from . import sualoi
 import os
 import tensorflow as tf
 from rest_framework.decorators import api_view, permission_classes
+from django.utils.decorators import method_decorator
+from django.views.decorators.csrf import csrf_exempt
 from . import serializers
+import pickle
 # Create your views here.
-ENC_EMB_DIM = 256
-DEC_EMB_DIM = 256
-ENC_HID_DIM = 512
-DEC_HID_DIM = 512
-BATCH_SIZE = 64
+with open('API/models/token1.pkl', 'rb') as f:
+    tokenizer_ipt, tokenizer_opt = pickle.load(f)
 
-vocab_size = sualoi.vocab_size
+num_layers = 4
+d_model = 256
+dff = 512
+num_heads = 8
+ipt_vocab_size = tokenizer_ipt.vocab_size+2
+opt_vocab_size = tokenizer_opt.vocab_size+2
+dropout_rate = 0.2
 
-encoder = sualoi.Encoder(vocab_size, ENC_EMB_DIM, ENC_HID_DIM, BATCH_SIZE)
-decoder = sualoi.Decoder(vocab_size, DEC_EMB_DIM, DEC_HID_DIM, BATCH_SIZE)
-optimizer = tf.keras.optimizers.Adam(sualoi.CustomSchedule(256), beta_1=0.9, beta_2=0.98,
+transformer = sualoi.Transformer(num_layers=num_layers, d_model=d_model, num_heads=num_heads, dff=dff,
+                                 input_vocab_size=ipt_vocab_size, target_vocab_size=opt_vocab_size,
+                                 pe_input=ipt_vocab_size,
+                                 pe_target=opt_vocab_size,
+                                 rate=dropout_rate)
+learning_rate = sualoi.CustomSchedule(d_model)
+optimizer = tf.keras.optimizers.Adam(learning_rate, beta_1=0.9, beta_2=0.98,
                                      epsilon=1e-9)
-checkpoint_dir = 'API/checkpoint'
-checkpoint_prefix = os.path.join(checkpoint_dir, "ckpt")
-checkpoint = tf.train.Checkpoint(optimizer=optimizer,
-                                 encoder=encoder,
-                                 decoder=decoder)
-checkpoint.restore(tf.train.latest_checkpoint(checkpoint_dir))
-model = load_model('API/checkpoint/model.h5')
+checkpoint_path = "API/models"
+
+ckpt = tf.train.Checkpoint(transformer=transformer,
+                           optimizer=optimizer)
+
+ckpt_manager = tf.train.CheckpointManager(ckpt, checkpoint_path, max_to_keep=5)
+if ckpt_manager.latest_checkpoint:
+    ckpt.restore(ckpt_manager.latest_checkpoint)
+    print('Latest checkpoint restored!!')
 
 
 def getResponse(question):
@@ -57,7 +65,8 @@ class Chatbot(APIView):
         try:
             data = request.data
             text = data['text']
-            text = sualoi.change_error(text, encoder, decoder, model)
+            text = sualoi.predict(text, tokenizer_ipt,
+                                  tokenizer_opt, transformer)
             response = getResponse(text)
             if response is None:
                 response = "Không hiểu"
@@ -76,8 +85,8 @@ VERIFY_TOKEN = "rasademo"
 
 def post_facebook_message(fbid, recevied_message, sua_loi=True):
     if sua_loi:
-        recevied_message = sualoi.change_error(
-            recevied_message, encoder, decoder, model)
+        recevied_message = sualoi.predict(recevied_message, tokenizer_ipt,
+                                          tokenizer_opt, transformer)
 
         data = json.dumps({"message": "%s" % recevied_message, "sender": "Me"})
         p = requests.post('http://localhost:5005/webhooks/rest/webhook',
