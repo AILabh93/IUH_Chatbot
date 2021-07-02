@@ -13,44 +13,44 @@ from rest_framework.decorators import api_view, permission_classes
 User = get_user_model()
 
 
-# class tao (post) va dang nhap(get)
-class Profile(APIView):
+@api_view(['POST'])
+@permission_classes([AllowAny, ])
+def logIn(request):
+    user = request.GET
+    auth = authenticate(
+        username=user['username'], password=user['password'])
 
-    permission_classes = [AllowAny]
+    if auth is None:
+        return Response(status=status.HTTP_400_BAD_REQUEST)
 
-    def get(self, request):
-        user = request.GET
-        auth = authenticate(
-            username=user['username'], password=user['password'])
+    se = serializers.SerializerUser(
+        User.objects.get(username=user['username']))
+    token = TokenObtainPairSerializer().get_token(user=auth)
+    data = {
+        'refresh_token': str(token),
+        'access_token': str(token.access_token),
+        'user': se.data
+    }
+    return Response(data=data, status=status.HTTP_200_OK)
 
-        if auth is None:
-            return Response(status=status.HTTP_400_BAD_REQUEST)
 
-        se = serializers.SerializerUser(
-            User.objects.get(username=user['username']))
-        token = TokenObtainPairSerializer().get_token(user=auth)
-        data = {
-            'refresh_token': str(token),
-            'access_token': str(token.access_token),
-            'user': se.data
-        }
-        return Response(data=data, status=status.HTTP_200_OK)
+@api_view(['POST'])
+@permission_classes([AllowAny, ])
+def createUser(request):
 
-    def post(self, request):
-
-        data = request.data
-        try:
-            user = User.objects.create_user(
-                username=data['username'],
-                email=data['email'],
-                password=data['password'],
-                avatar=data['avatar'],
-                full_name=data['full_name']
-            )
-            user.save()
-            return Response(status=status.HTTP_201_CREATED)
-        except:
-            return Response(data={'error': 'tài khoản đã tồn tại'}, status=status.HTTP_400_BAD_REQUEST)
+    data = request.data
+    try:
+        user = User.objects.create_user(
+            username=data['username'],
+            email=data['email'],
+            password=data['password'],
+            avatar=data['avatar'],
+            full_name=data['full_name']
+        )
+        user.save()
+        return Response(status=status.HTTP_201_CREATED)
+    except:
+        return Response(data={'error': 'tài khoản đã tồn tại'}, status=status.HTTP_400_BAD_REQUEST)
 
 
 # update user

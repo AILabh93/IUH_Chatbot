@@ -22,7 +22,7 @@ class CustomUser(AbstractUser):
 
     full_name = models.CharField(_('full name'), max_length=255, blank=False)
     email = models.EmailField(_('email address'), unique=True)
-    avatar = models.URLField(blank=True)
+    avatar = models.ImageField(blank=False, upload_to='avatars')
 
     def __str__(self):
         return self.username
