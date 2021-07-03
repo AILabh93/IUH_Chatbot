@@ -16,7 +16,7 @@ User = get_user_model()
 @api_view(['POST'])
 @permission_classes([AllowAny, ])
 def logIn(request):
-    user = request.GET
+    user = request.data
     auth = authenticate(
         username=user['username'], password=user['password'])
 
