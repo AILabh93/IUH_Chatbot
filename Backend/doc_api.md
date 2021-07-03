@@ -12,6 +12,9 @@
     - get all user: get
         + sent access token of admin
         + account/get-all/
+    - get user id: post
+        + userID
+        + account/get-user-id/
 
 # Chatbot
 

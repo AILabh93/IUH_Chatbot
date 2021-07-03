@@ -80,3 +80,15 @@ def chech_login(request):
 def getAllUser(request):
     user = serializers.SerializerUser(instance=User.objects.all(), many=True)
     return Response(data=user.data, status=status.HTTP_200_OK)
+
+
+@api_view(['POST'])
+@permission_classes((AllowAny,))
+def getUserByID(request):
+    userID = request.data['userID']
+    try:
+        user = serializers.SerializerUser(
+            instance=User.objects.get(pk=userID))
+        return Response(data=user.data, status=status.HTTP_200_OK)
+    except:
+        return Response(status=status.HTTP_404_NOT_FOUND)
