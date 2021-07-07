@@ -12,10 +12,6 @@ from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import FormAction
 from rasa_sdk.events import UserUtteranceReverted
 from bs4 import BeautifulSoup
-import requests
-import lxml
-import bs4
-import gc
 from fasttext import load_model
 
 model = load_model('actions/model_chuyen_nganh.bin')

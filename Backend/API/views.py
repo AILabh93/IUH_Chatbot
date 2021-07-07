@@ -32,13 +32,9 @@ transformer = sualoi.Transformer(num_layers=num_layers, d_model=d_model, num_hea
                                  pe_input=ipt_vocab_size,
                                  pe_target=opt_vocab_size,
                                  rate=dropout_rate)
-learning_rate = sualoi.CustomSchedule(d_model)
-optimizer = tf.keras.optimizers.Adam(learning_rate, beta_1=0.9, beta_2=0.98,
-                                     epsilon=1e-9)
 checkpoint_path = "API/models"
 
-ckpt = tf.train.Checkpoint(transformer=transformer,
-                           optimizer=optimizer)
+ckpt = tf.train.Checkpoint(transformer=transformer,)
 
 ckpt_manager = tf.train.CheckpointManager(ckpt, checkpoint_path, max_to_keep=5)
 if ckpt_manager.latest_checkpoint:
@@ -61,21 +57,17 @@ class Chatbot(APIView):
     permission_classes = [AllowAny]
 
     def post(self, request):
-
-        try:
-            data = request.data
-            text = data['text']
-            text = sualoi.predict(text, tokenizer_ipt,
-                                  tokenizer_opt, transformer)
-            response = getResponse(text)
-            if response is None:
-                response = "Không hiểu"
-            else:
-                response = response[0]['text']
-                save_chat(text, response)
-            return Response({'text_formated': text, 'response': response}, status=status.HTTP_200_OK)
-        except:
-            return Response(status=status.HTTP_400_BAD_REQUEST)
+        data = request.data
+        text = data['text']
+        text = sualoi.predict(text, tokenizer_ipt,
+                              tokenizer_opt, transformer)
+        response = getResponse(text)
+        if response is None:
+            response = "Xin lỗi mình chưa hiều ý bạn"
+        else:
+            response = response[0]['text']
+            save_chat(text, response)
+        return Response({'text_formated': text, 'response': response}, status=status.HTTP_200_OK)
 
 
 # Facebook API
@@ -91,9 +83,8 @@ def post_facebook_message(fbid, recevied_message, sua_loi=True):
         data = json.dumps({"message": "%s" % recevied_message, "sender": "Me"})
         p = requests.post('http://localhost:5005/webhooks/rest/webhook',
                           headers={"Content-Type": "application/json"}, data=data).json()
-
         if p is None:
-            p = "Không hiểu"
+            p = "Xin lỗi mình chưa hiều ý bạn"
         else:
             jsons = rasaToFbJson(p, fbid)
             save_chat(recevied_message, p)

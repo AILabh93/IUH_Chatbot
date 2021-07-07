@@ -287,28 +287,27 @@ responses:
         - text: "Về đào tạo: Khoa CNTT hiện đang bậc Tiến sĩ và Thạc sĩ ngành Khoa học máy tính; đào tạo bậc đại học 05 ngành, gồm Khoa học máy tính, Công nghệ thông tin, Hệ thống thông tin, Khoa học dữ liệu và Kỹ thuật phần mềm. Kết quả tuyển sinh hàng năm luôn đạt chỉ tiêu và chất lượng đang dần được cải thiện.Thông tin hoạt động và các thành tựu nổi bật
           Khoa đang tập trung nâng cao chất lượng đào tạo, các chương trình đào tạo đang được xây dựng theo chuẩn quốc tế. Phấn đấu đến năm 2021 khoa có hai ngành đạt chuẩn kiểm định ABET."
     utter_hoi_thongTinKhoaChung_chucNangNhiemVu:
-        - text: "Chức năng - Nhiệm vụ
-      Khoa CNTT là đơn vị trực thuộc trường, có các chức năng và nhiệm vụ sau:
+        - text: "Chức năng - Nhiệm vụ\n
+      Khoa CNTT là đơn vị trực thuộc trường, có các chức năng và nhiệm vụ sau:\n
 
        + Tổ chức đào tạo ngành máy tính và công nghệ thông tin các bậc từ Cao đẳng đến Sau đại học.
        + Tổ chức đào tạo chứng chỉ tin học cho toàn trường.
        + Thực hiện nhiệm vụ nghiên cứu khoa học và chuyển giao công nghệ
        + Thực hiện quan hệ, hợp tác với các đơn vị trong và ngoài nước trong đào tạo,  nghiên cứu, và chuyển giao công nghệ."
     utter_hoi_thongTinKhoaChung_doiNgu:
-        - text: "Đội ngũ:
+        - text: "Đội ngũ:\n
         Tính đến tháng 1/2021, khoa CNTT có 62 viên chức, bao gồm 58 giảng viên và 04 nhân viên. Phần lớn đội ngũ giảng viên được đào tạo và trải nghiệm ở các trường đại học có uy tín trong và ngoài nước, hiện tại trong khóa có 2 Phó giáo sư-Tiến sĩ, 16 Tiến sĩ, 40Thạc sĩ."
     utter_hoi_thongTinKhoaChung_suMenh:
         - text: "Sứ mệnh: Cung cấp cho xã hội nguồn nhân lực có trình độ chuyên môn và kỹ năng trong lĩnh vực máy tính và công nghệ thông tin đáp ứng được yêu cầu cho sự phát triển kinh tế - xã hội của ngành Công Thương và của đất nước một cách hiệu quả trong bối cảnh hội nhập quốc tế."
     utter_hoi_thongTinKhoaChung_tongQuat:
         - text: "Khoa Công nghệ thông tin (CNTT) được hình thành từ năm 1996, Trải qua chặng đường dài không ngừng nỗ lực hoàn thiện và phát triển, Khoa CNTT đang từng bước khẳng định uy tín của mình với phương châm “Đào tạo sinh viên vững lý thuyết, giỏi thực hành và làm chủ công nghệ mới”."
     utter_hoi_thongTinKhoaChung_truongKhoa:
-        - text: "TS. Nguyễn Chí Hiếu (2005-2011) PGS.TS. Huỳnh Trung Hiếu "
+        - text: "TS. Nguyễn Chí Hiếu (2005-2011)\n PGS.TS. Huỳnh Trung Hiếu "
     utter_hoi_thongTinKhoaChung_lienHe:
-        - text: "Thông tin liên hệ của đơn vị:
-
-                Văn phòng: Lầu 1, nhà H.
-                Điện thoại:  083.8940390-233
-                Email: Daotao.fit@iuh.edu.vn
+        - text: "Thông tin liên hệ của đơn vị:\n
+                Văn phòng: Lầu 1, nhà H.\n
+                Điện thoại:  083.8940390-233\n
+                Email: Daotao.fit@iuh.edu.vn\n
                 Website: fit.iuh.edu.vn"
 session_config:
     session_expiration_time: 60
