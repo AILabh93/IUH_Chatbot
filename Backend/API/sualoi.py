@@ -1,7 +1,7 @@
 import tensorflow as tf
-import tensorflow_datasets
 import numpy as np
 from unidecode import unidecode
+import string
 
 
 def get_angles(pos, i, d_model):
@@ -317,7 +317,15 @@ def create_masks(inp, tar):
     return enc_padding_mask, combined_mask, dec_padding_mask
 
 
+def preprocess(text):
+    pun = string.punctuation
+    text = ''.join([i for i in text if i not in pun])
+    text = text.lower()
+    return text
+
+
 def predict(text, tokenize_ipt, tokenize_opt, transformer, maxlen=100,):
+    text = preprocess(text)
     text = unidecode(text)
     encode = [tokenize_ipt.vocab_size] + \
         tokenize_ipt.encode(text)+[tokenize_ipt.vocab_size+1]
