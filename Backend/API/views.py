@@ -70,7 +70,7 @@ class Chatbot(APIView):
         else:
             response = response[0]['text']
         save_chat(questionC, response)
-        return Response({'question_formated': questionC, 'response': response}, status=status.HTTP_200_OK)
+        return Response({'text_formated': questionC, 'response': response}, status=status.HTTP_200_OK)
 
 
 # Facebook API
