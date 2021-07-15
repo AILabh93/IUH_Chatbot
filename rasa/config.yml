@@ -22,7 +22,7 @@ policies:
       max_history: 12
       epochs: 50
     - name: MappingPolicy
-    - name: RulePolicy
-      nlu_threshold: 0.6
+    - name: FallbackPolicy
+      nlu_threshold: 0.5
       core_threshold: 0.1
-      fallback_action_name: action_unknown
+      allback_action_name: action_unknown

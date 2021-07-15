@@ -39,18 +39,20 @@ ckpt = tf.train.Checkpoint(transformer=transformer,)
 ckpt_manager = tf.train.CheckpointManager(ckpt, checkpoint_path, max_to_keep=5)
 if ckpt_manager.latest_checkpoint:
     ckpt.restore(ckpt_manager.latest_checkpoint)
-    print('Latest checkpoint restored!!')
 
 
-def getResponse(question):
+def getResponse(question, state_change=True):
+    """
+        state_change: trang thai co sua loi hay khong
+    """
+    if state_change:
+        question = sualoi.predict(
+            question, tokenizer_ipt, tokenizer_opt, transformer, maxlen=150)
     data = json.dumps({"message": "%s" % question, "sender": "Me"})
     p = requests.post('http://localhost:5005/webhooks/rest/webhook',
                       headers={"Content-Type": "application/json"}, data=data).json()
-    try:
-        p[0]['text']
-        return p
-    except:
-        return None
+
+    return p, question
 
 
 class Chatbot(APIView):
@@ -58,16 +60,17 @@ class Chatbot(APIView):
 
     def post(self, request):
         data = request.data
-        text = data['text']
-        text = sualoi.predict(text, tokenizer_ipt,
-                              tokenizer_opt, transformer)
-        response = getResponse(text)
-        if response is None:
-            response = "Xin lỗi mình chưa hiều ý bạn"
+        question = data['text']
+        response, questionC = getResponse(question, state_change=False)
+        if len(response) == 0:
+            response, questionC = getResponse(
+                question, state_change=True)
+        if len(response) == 0:
+            response = 'Mình chưa hiểu ý bạn. Bạn hãy nói rõ hơn được không'
         else:
             response = response[0]['text']
-            save_chat(text, response)
-        return Response({'text_formated': text, 'response': response}, status=status.HTTP_200_OK)
+        save_chat(questionC, response)
+        return Response({'question_formated': questionC, 'response': response}, status=status.HTTP_200_OK)
 
 
 # Facebook API
