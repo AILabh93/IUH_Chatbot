@@ -11,7 +11,6 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import FormAction
 from rasa_sdk.events import UserUtteranceReverted
-from bs4 import BeautifulSoup
 from fasttext import load_model
 
 model = load_model('actions/model_chuyen_nganh.bin')
@@ -226,7 +225,7 @@ class action_monhoc(Action):
             mon_hoc = pre_monhoc
         else:
             pre_monhoc = mon_hoc
-        dispatcher.utter_message(template='utter_khmt_'+mon_hoc)
+        dispatcher.utter_message(template='utter_'+mon_hoc+'_monhoc')
         return []
 
 
