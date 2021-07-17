@@ -13,6 +13,30 @@ nlu:
           - cho em hỏi
           - admin ơi
           - em có vài câu hỏi
+          - xin chào
+          - mình có vài câu hỏi
+          - có ai giúp mình không
+          - bạn ơi
+          - anh ơi
+          - chị ơi
+          - có ai ở đây không
+          - cho em hỏi
+          - admin ơi
+          - em có vài câu hỏi
+          - xin chao
+          - xin cháo
+          - chào bạn
+          - chào
+          - chào m
+          - hello bot
+          - xin chao bot
+          - xin chào bot
+          - chào bot
+          - chao bot
+          - xin chào bạn bot
+          - xin chao ban bot
+          - hi hello
+          - hi hi
     - intent: bye
       examples: |
           - tạm biệt

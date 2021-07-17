@@ -1,13 +1,172 @@
 version: "2.0"
 
 rules:
+    - rule: Response `utter_bye` whenever the user sends a message with intent `bye`
+      steps:
+          - intent: bye
+          - action: utter_bye
 
-# - rule: Say goodbye anytime the user says goodbye
-#   steps:
-#   - intent: goodbye
-#   - action: utter_goodbye
+    - rule: Response `utter_chaohoi` whenever the user sends a message with intent `chaohoi`
+      steps:
+          - intent: chaohoi
+          - action: utter_chaohoi
 
-# - rule: Say 'I am a bot' anytime the user challenges
-#   steps:
-#   - intent: bot_challenge
-#   - action: utter_iamabot
+    - rule: Response `utter_thank` whenever the user sends a message with intent `thank`
+      steps:
+          - intent: thank
+          - action: utter_thank
+
+    - rule: Response `utter_cuocthi` whenever the user sends a message with intent `cuocthi`
+      steps:
+          - intent: cuocthi
+          - action: utter_cuocthi
+
+    - rule: Response `utter_hocbong` whenever the user sends a message with intent `hocbong`
+      steps:
+          - intent: hocbong
+          - action: utter_hocbong
+
+    - rule: Response `utter_tach_nganh` whenever the user sends a message with intent `tach_nganh`
+      steps:
+          - intent: tach_nganh
+          - action: utter_tach_nganh
+
+    - rule: Response `action_dinhhuongsai` whenever the user sends a message with intent `dinhhuongsai`
+      steps:
+          - intent: dinhhuongsai
+          - action: action_dinhhuongsai
+
+    - rule: Response `action_ungdung` whenever the user sends a message with intent `ungdung`
+      steps:
+          - intent: ungdung
+          - action: action_ungdung
+
+    - rule: Response `action_linhvuc` whenever the user sends a message with intent `linhvuc`
+      steps:
+          - intent: linhvuc
+          - action: action_linhvuc
+
+    - rule: Response `action_giangvien` whenever the user sends a message with intent `giangvien`
+      steps:
+          - intent: giangvien
+          - action: action_giangvien
+
+    - rule: Response `action_canhtranh` whenever the user sends a message with intent `canhtranh`
+      steps:
+          - intent: canhtranh
+          - action: action_canhtranh
+
+    - rule: Response `action_tailieu` whenever the user sends a message with intent `tailieu`
+      steps:
+          - intent: tailieu
+          - action: action_tailieu
+
+    - rule: Response `action_tuvan` whenever the user sends a message with intent `tuvan`
+      steps:
+          - intent: tuvan
+          - action: action_tuvan
+
+    - rule: Response `action_monhoc` whenever the user sends a message with intent `monhoc`
+      steps:
+          - intent: monhoc
+          - action: action_monhoc
+
+    - rule: Response `action_luong` whenever the user sends a message with intent `luong`
+      steps:
+          - intent: luong
+          - action: action_luong
+
+    - rule: Response `action_vieclam` whenever the user sends a message with intent `vieclam`
+      steps:
+          - intent: vieclam
+          - action: action_vieclam
+
+    - rule: Response `action_ngonngu` whenever the user sends a message with intent `ngonngu`
+      steps:
+          - intent: ngonngu
+          - action: action_ngonngu
+
+    - rule: Response `utter_nu` whenever the user sends a message with intent `nu`
+      steps:
+          - intent: nu
+          - action: utter_nu
+
+    - rule: Response `action_chatluonggiaovien` whenever the user sends a message with intent `chatluonggiaovien`
+      steps:
+          - intent: chatluonggiaovien
+          - action: action_chatluonggiaovien
+
+    - rule: Response `action_tinhcach` whenever the user sends a message with intent `tinhcach`
+      steps:
+          - intent: tinhcach
+          - action: action_tinhcach
+
+    - rule: Response `action_thuctap` whenever the user sends a message with intent `thuctap`
+      steps:
+          - intent: thuctap
+          - action: action_thuctap
+
+    - rule: Response `action_xuhuong` whenever the user sends a message with intent `xuhuong`
+      steps:
+          - intent: xuhuong
+          - action: action_xuhuong
+
+    - rule: Response `action_lamgikhiratruong` whenever the user sends a message with intent `lamgikhiratruong`
+      steps:
+          - intent: lamgikhiratruong
+          - action: action_lamgikhiratruong
+
+    - rule: Response `action_khokhan` whenever the user sends a message with intent `khokhan`
+      steps:
+          - intent: khokhan
+          - action: action_khokhan
+
+    - rule: Response `action_daotao` whenever the user sends a message with intent `daotao`
+      steps:
+          - intent: daotao
+          - action: action_daotao
+
+    - rule: Response `utter_tienganh` whenever the user sends a message with intent `tienganh`
+      steps:
+          - intent: tienganh
+          - action: utter_tienganh
+
+    - rule: Response `utter_hoi_thongTinKhoaChung_tamNhin` whenever the user sends a message with intent `hoi_thongTinKhoaChung_tamNhin`
+      steps:
+          - intent: hoi_thongTinKhoaChung_tamNhin
+          - action: utter_hoi_thongTinKhoaChung_tamNhin
+
+    - rule: Response `utter_hoi_thongTinKhoaChung_daoTao` whenever the user sends a message with intent `hoi_thongTinKhoaChung_daoTao`
+      steps:
+          - intent: hoi_thongTinKhoaChung_daoTao
+          - action: utter_hoi_thongTinKhoaChung_daoTao
+
+    - rule: Response `utter_hoi_thongTinKhoaChung_chucNangNhiemVu` whenever the user sends a message with intent `hoi_thongTinKhoaChung_chucNangNhiemVu`
+      steps:
+          - intent: hoi_thongTinKhoaChung_chucNangNhiemVu
+          - action: utter_hoi_thongTinKhoaChung_chucNangNhiemVu
+
+    - rule: Response `utter_hoi_thongTinKhoaChung_doiNgu` whenever the user sends a message with intent `hoi_thongTinKhoaChung_doiNgu`
+      steps:
+          - intent: hoi_thongTinKhoaChung_doiNgu
+          - action: utter_hoi_thongTinKhoaChung_doiNgu
+
+    - rule: Response `utter_hoi_thongTinKhoaChung_suMenh` whenever the user sends a message with intent `hoi_thongTinKhoaChung_suMenh`
+      steps:
+          - intent: hoi_thongTinKhoaChung_suMenh
+          - action: utter_hoi_thongTinKhoaChung_suMenh
+
+    - rule: Response `utter_hoi_thongTinKhoaChung_tongQuat` whenever the user sends a message with intent `hoi_thongTinKhoaChung_tongQuat`
+      steps:
+          - intent: hoi_thongTinKhoaChung_tongQuat
+          - action: utter_hoi_thongTinKhoaChung_tongQuat
+
+    - rule: Response `utter_hoi_thongTinKhoaChung_truongKhoa` whenever the user sends a message with intent `hoi_thongTinKhoaChung_truongKhoa`
+      steps:
+          - intent: hoi_thongTinKhoaChung_truongKhoa
+          - action: utter_hoi_thongTinKhoaChung_truongKhoa
+
+    - rule: Response `utter_hoi_thongTinKhoaChung_lienHe` whenever the user sends a message with intent `hoi_thongTinKhoaChung_lienHe`
+      steps:
+          - intent: hoi_thongTinKhoaChung_lienHe
+          - action: utter_hoi_thongTinKhoaChung_lienHe
