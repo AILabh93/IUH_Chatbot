@@ -23,8 +23,8 @@ num_layers = 4
 d_model = 256
 dff = 512
 num_heads = 8
-ipt_vocab_size = tokenizer_ipt.vocab_size+2
-opt_vocab_size = tokenizer_opt.vocab_size+2
+ipt_vocab_size = tokenizer_ipt.vocab_size + 2
+opt_vocab_size = tokenizer_opt.vocab_size + 2
 dropout_rate = 0.2
 
 transformer = sualoi.Transformer(num_layers=num_layers, d_model=d_model, num_heads=num_heads, dff=dff,
@@ -61,14 +61,26 @@ class Chatbot(APIView):
     def post(self, request):
         data = request.data
         question = data['text']
-        response, questionC = getResponse(question, state_change=False)
-        if len(response) == 0:
-            response, questionC = getResponse(
-                question, state_change=True)
-        if len(response) == 0:
-            response = 'Mình chưa hiểu ý bạn. Bạn hãy nói rõ hơn được không'
-        else:
+        state_chat = data['state_chat']
+
+        # neu ma user chat binh thuong
+        if 1 == int(state_chat):
+            response, questionC = getResponse(question, state_change=False)
+            if len(response) == 0:
+                response, questionC = getResponse(
+                    question, state_change=True)
+                return Response({'text_formated': questionC, 'response': ''}, status=status.HTTP_200_OK)
             response = response[0]['text']
+            return Response({'text_formated': questionC, 'response': response}, status=status.HTTP_200_OK)
+
+        #  neu user click nut oke
+        if 2 == int(state_chat):
+            response, questionC = getResponse(question, state_change=False)
+
+            if len(response) == 0:
+                response = 'Mình vẫn chưa hiểu ý bạn. Bạn hãy nói rõ hơn được không :)'
+            else:
+                response = response[0]['text']
         save_chat(questionC, response)
         return Response({'text_formated': questionC, 'response': response}, status=status.HTTP_200_OK)
 
