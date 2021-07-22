@@ -8,7 +8,6 @@ from django.views import generic
 from django.http import HttpResponse
 from rest_framework.permissions import AllowAny
 from . import sualoi
-import os
 import tensorflow as tf
 from rest_framework.decorators import api_view, permission_classes
 from django.utils.decorators import method_decorator
@@ -115,6 +114,8 @@ def post_facebook_message(fbid, recevied_message, sua_loi=True):
     }
     send(fbid, json_file)
 
+
+# facebook
 
 def send(fbid, json_file):
     user_details_url = "https://graph.facebook.com/v2.6/%s" % fbid
