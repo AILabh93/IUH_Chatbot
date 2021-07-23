@@ -28,6 +28,7 @@ actions:
     - action_lamgikhiratruong
     - action_khokhan
     - action_daotao
+    - action_truongbomon
     - utter_nu
     - utter_tienganh
     - utter_hoi_thongTinKhoaChung_tamNhin
@@ -38,6 +39,26 @@ actions:
     - utter_hoi_thongTinKhoaChung_tongQuat
     - utter_hoi_thongTinKhoaChung_truongKhoa
     - utter_hoi_thongTinKhoaChung_lienHe
+    - utter_hoi_thongTinKhoaChung_soluongchuyennganh
+    - utter_hoi_thongtinTruong_nophoso
+    - utter_hoi_thongtinTruong_danhgiaketquahoctap
+    - utter_hoi_thongtinTruong_tinchi
+    - utter_hoi_thongtinTruong_dknhaphoc
+    - utter_hoi_thongtinTruong_hpbatbuoc
+    - utter_hoi_thongtinTruong_daihoc
+    - utter_hoi_thongtinTruong_caodang
+    - utter_hoi_thongtinTruong_xettuyen
+    - utter_hoi_thongtinTruong_hocphan
+    - utter_hoi_thongtinTruong_dkhocphan
+    - utter_hoi_thongtinTruong_nghihoctamthoi
+    - utter_hoi_thongtinTruong_canhcao
+    - utter_hoi_thongtinTruong_thoihoc
+    - utter_hoi_thongtinTruong_danhgiadiemrenluyen
+    - utter_hoi_thongtinTruong_chuyentruong
+    - utter_hoi_thongtinTruong_phongcongtacsv
+    - utter_hoi_thongtinTruong_svduocuutien
+    - utter_hoi_thongtinTruong_mucdiemrenluyen
+    - utter_hoi_thongtinTruong_hocphi
     - utter_respond_insult
     
 intents:
@@ -69,6 +90,7 @@ intents:
     - khokhan
     - daotao
     - tienganh
+    - truongbomon
     - hoi_thongTinKhoaChung_tamNhin
     - hoi_thongTinKhoaChung_daoTao
     - hoi_thongTinKhoaChung_chucNangNhiemVu
@@ -77,6 +99,26 @@ intents:
     - hoi_thongTinKhoaChung_tongQuat
     - hoi_thongTinKhoaChung_truongKhoa
     - hoi_thongTinKhoaChung_lienHe
+    - hoi_thongTinKhoaChung_soluongchuyennganh
+    - hoi_thongtinTruong_nophoso
+    - hoi_thongtinTruong_danhgiaketquahoctap
+    - hoi_thongtinTruong_tinchi
+    - hoi_thongtinTruong_dknhaphoc
+    - hoi_thongtinTruong_hpbatbuoc
+    - hoi_thongtinTruong_daihoc
+    - hoi_thongtinTruong_caodang
+    - hoi_thongtinTruong_xettuyen
+    - hoi_thongtinTruong_hocphan
+    - hoi_thongtinTruong_dkhocphan
+    - hoi_thongtinTruong_nghihoctamthoi
+    - hoi_thongtinTruong_canhcao
+    - hoi_thongtinTruong_thoihoc
+    - hoi_thongtinTruong_danhgiadiemrenluyen
+    - hoi_thongtinTruong_chuyentruong
+    - hoi_thongtinTruong_phongcongtacsv
+    - hoi_thongtinTruong_svduocuutien
+    - hoi_thongtinTruong_mucdiemrenluyen
+    - hoi_thongtinTruong_hocphi
     - insult:
         triggers: utter_respond_insult
 
@@ -281,6 +323,16 @@ responses:
         - text: "Ngành khoa học máy tính dạy cho bạn các kiến thức về AI,ML"
     utter_ktpm_daotao:
         - text: "Ngành kỹ thuật phần mềm dạy cả về app mobile và web"
+    utter_cntt_truongbomon:
+        - text: "Trưởng bộ môn công nghệ thông tin là TS.Tạ Duy Công Chiến"
+    utter_httt_truongbomon:
+        - text: "Trưởng bộ môn hệ thống thông tin là TS.Ngô Hữu Dũng"
+    utter_khdl_truongbomon:
+        - text: "Trưởng bộ môn khoa học dữ liệu là ThS.Nguyễn Hữu Tình"
+    utter_khmt_truongbomon:
+        - text: "Trưởng bộ môn khoa học máy tính là TS.Ngô Hữu Dũng"
+    utter_ktpm_truongbomon:
+        - text: "Trưởng bộ môn kỹ thuật phần mềm là TS.Phạm Quảng Tri"
     utter_hoi_thongTinKhoaChung_tamNhin:
         - text: "Tầm nhìn: Trở thành đơn vị uy tín hàng đầu về đào tạo và nghiên cứu về máy tính và công nghệ thông tin, hội nhập với khu vực và thế giới"
     utter_hoi_thongTinKhoaChung_daoTao:
@@ -289,7 +341,6 @@ responses:
     utter_hoi_thongTinKhoaChung_chucNangNhiemVu:
         - text: "Chức năng - Nhiệm vụ\n
       Khoa CNTT là đơn vị trực thuộc trường, có các chức năng và nhiệm vụ sau:\n
-
        + Tổ chức đào tạo ngành máy tính và công nghệ thông tin các bậc từ Cao đẳng đến Sau đại học.
        + Tổ chức đào tạo chứng chỉ tin học cho toàn trường.
        + Thực hiện nhiệm vụ nghiên cứu khoa học và chuyển giao công nghệ
@@ -309,6 +360,71 @@ responses:
                 Điện thoại:  083.8940390-233\n
                 Email: Daotao.fit@iuh.edu.vn\n
                 Website: fit.iuh.edu.vn"
+    utter_hoi_thongTinKhoaChung_soluongchuyennganh:
+        - text: "Hiện tại khoa có 5 chuyên ngành. Đó là:\n
+                - Khoa học máy tính(CS)\n
+                - Kỹ thuật phần mềm(SE)\n
+                - Công nghệ thông tin(IT)\n
+                - Hệ thống thông tin(IS)\n
+                - Khoa học dữ liệu(DS)"
+    utter_hoi_thongtinTruong_nophoso:
+        - text: "Sinh viên trúng tuyển nộp hồ sơ nhập học về phòng công tác chính trị và công tác sinh viên."
+    utter_hoi_thongtinTruong_danhgiaketquahoctap:
+        - text: "3 tiêu chí đánh giá kết quả học tập là điểm trung bình chung học kỳ, khối lượng kiến thức tích lũy, điểm trung bình chung tích lũy"
+    utter_hoi_thongtinTruong_tinchi:
+        - text: "Tín chỉ là đơn vị dùng để đo khối lượng kiến thức trong chương trình đào tạo, đồng thời là đơn vị dùng để đánh giá khối lượng học tập của sinh viên dựa trên số lượng tín chỉ đã tích lũy được"
+    utter_hoi_thongtinTruong_dknhaphoc:
+        - text: "Mọi thủ tục đăng ký nhập học phải được hoàn thành trước ngày khai giảng theo kế hoạch của nhà trường, sinh viên nộp hồ sơ trễ theo quy định xem như tự ý bỏ học. Những trường hợp đặc biệt nếu vì lý do khách quan sẽ được xem sét giải quyết"
+    utter_hoi_thongtinTruong_hpbatbuoc:
+            - text: "Học phần bắt buộc là học phần chứa đựng những nội dung kiến thức chính yếu của mỗi chương trình và bắt buộc sinh viên phải tích lũy để đảm bảo mặt bằng trình độ đào tạo chung của mọi sinh viên ở một cấp hoặc một hệ đào tạo"
+    utter_hoi_thongtinTruong_daihoc:
+        - text: "Đào tạo đại học chính quy thực hiện 4 năm"
+    utter_hoi_thongtinTruong_caodang:
+        - text: "Đào tạo trình độ cao đẳng thực hiện 2.5 năm"
+    utter_hoi_thongtinTruong_xettuyen:
+        - text: "Nhà trường xác định điểm xét tuyển dựa vào kỳ thi tuyển sinh."
+    utter_hoi_thongtinTruong_hocphan:
+        - text: "Học phần là khối lượng kiến thức tương đối trọn vẹn, thuận tiện cho người học tích lũy trong quá trình học tập. Học phần được bố trí giảng dạy trọn vẹn và phân bố đều trong một học kỳ"
+    utter_hoi_thongtinTruong_dkhocphan:
+        - text: "Khi các lớp học phần được mở, sinh viên tự đăng ký học phần học tập qua mạng internet hoặc đăng ký tại phòng đa phương tiện"
+    utter_hoi_thongtinTruong_nghihoctamthoi:
+        - text: "Sinh viên được quyền viết đơn gửi Hiệu trưởng xin nghỉ học tạm thời và bảo lưu kết quả đã học trong các trường hợp sau:\n
+                - Được động viên vào các lực lượng vũ trang.\n
+                - Bị ốm hoặc tai nạn phải điều trị thời gian dài, nhưng phải có giấy xác nhận của cơ quan y tế cấp quận, huyện trở lên.\n
+                - Thai sản.\n
+                - Được cơ quan cử đi công tác nước ngoài dài ngày.\n
+                - Vì nhu cầu cá nhân. Trường hợp này, sinh viên phải học ít nhất một học kỳ ở trường, không rơi vào các trường hợp bị buộc thôi học quy định tại Điều 16 của quy chế này và phải đạt điểm trung bình tích lũy không dưới 2,00. Thời gian nghỉ học tạm thời vì nhu cầu cá nhân không vượt quá 6 tháng và phải được tính vào thời gian học chính thức quy định tại Điều 4 của quy chế này."
+    utter_hoi_thongtinTruong_canhcao:
+        - text: "Sau học kỳ 2 mỗi năm học, sinh viên bị cảnh cáo kết quả học tập nếu ĐTBC học kỳ 1 và học kỳ 2 đạt dưới 0,8 đối với năm học đầu; đạt dưới 1,0 đối với các học kỳ tiếp theo hoặc trong hai học kỳ liên tiếp đạt dưới 1,1."
+    utter_hoi_thongtinTruong_thoihoc:
+        - text: "Sau mỗi năm học, sinh viên bị buộc thôi học nếu rơi vào các trường hợp sau:\n
+                - Tự ý bỏ học hai học kỳ liên tiếp.\n
+                - Có điểm trung bình chung tích lũy dưới 1,2 đối với sinh viên năm thứ nhất; dưới 1,4 đối với sinh viên năm thứ hai; dưới 1,6 đối với sinh viên năm thứ ba; dưới 1,8 đối với sinh viên năm cuối khóa.\n
+                - Vượt quá thời gian được phép học tại trường như quy định tại điều 4 của Quy Chế này.\n
+                - Bị kỷ luật vì lí do đi thi hộ hoặc nhờ người thi hộ trong các kỳ thi."
+    utter_hoi_thongtinTruong_danhgiadiemrenluyen:
+        - text: "Quy định đánh giá kết quả rèn luyện đối với sinh viên hệ đại học chính quy Trường Đại học Công nghiệp Thành phố Hồ Chí Minh bao gồm: Đánh giá kết quả rèn luyện và khung điểm, phân loại và quy trình đánh giá, tổ chức đánh giá và sử dụng kết quả."
+    utter_hoi_thongtinTruong_chuyentruong:
+        - text: "Sinh viên được xét chuyển trường nếu có các điều kiện sau đây:\n
+                - Trong thời gian học tập, nếu gia đình chuyển nơi cư trú hoặc sinh viên có hoàn cảnh khó khăn, cần thiết phải chuyển trường gần nơi cư trú của gia đình để thuận lợi trong học tập.\n
+                - Xin chuyển trường đến trường có cùng ngành hoặc thuộc cùng nhóm ngành với ngành đào tạo mà sinh viên đang học.\n
+                - Được sự đồng ý của hiệu trưởng trường xin chuyển đi và trường xin chuyển đến.\n
+                - Không thuộc một trong các trường hợp không được phép chuyển trường quy định tại khoản 2 điều này."
+    utter_hoi_thongtinTruong_phongcongtacsv:
+        - text: "Phòng công tác sinh viên là đầu mối tập hợp các ý kiến phản hồi từ sinh viên và các đơn vị liên quan, quản lý kết quả rèn luyện của sinh viên trên phần mềm và cập nhật những quy định mới của bộ Giáo dục và Đào tạo trong quá trình triển khai thực hiện báo cáo Hiệu trưởng Nhà trường."
+    utter_hoi_thongtinTruong_svduocuutien:
+        - text: "Sinh viên khuyến tật, tàn tật, mồ côi, cả cha lẫn mẹ hoặc cha hoặc mẹ, hoàn cảnh gia đình đặc biệt khó khăn có xác nhận của địa phương theo quy định đối với những hoạt động rèn luyện không có khả năng tham gia hoặc đáp ứng yêu cầu chung thì được ưu tiên, động viên, khuyến khích, cộng điểm khi đánh giá kết quả rèn luyện qua sự nỗ lực và tiến bộ của sinh viên tùy thuộc vào đối tượng và hoàn cảnh cụ thể"
+    utter_hoi_thongtinTruong_mucdiemrenluyen:
+        - text: "Phân loại kết quả rèn luyện:\n
+                - Từ 90 đến 100 điểm: Loại xuất sắc.\n
+                - Từ 80 đến 90 điểm: Loại tốt.\n
+                - Từ 65 đến 80 điểm: Loại khá.\n
+                - Từ 50 đến 65 điểm: Loại trung bình.\n
+                - Từ 35 đến 50 điểm: Loại yếu.\n
+                - Dưới 35 điểm: Loại kém.\n"
+    utter_hoi_thongtinTruong_hocphi:
+        - text: "Học phí tín chỉ được xác định căn cứ theo chi phí của các hoặc động giảng dạy học tập, cơ sở vật chất tính cho một tín chỉ. Học phí thu theo học kỳ được xác định theo số tín chỉ mà sinh viên đã đăng ký học trong học kỳ đó. Mức học phí do Hiệu trưởng quy định cho từng bậc học và từng hệ đào tạo theo từng năm học (có quy định riêng)."
+
 session_config:
     session_expiration_time: 60
     carry_over_slots_to_new_session: true
