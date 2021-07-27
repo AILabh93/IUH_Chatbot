@@ -47,6 +47,7 @@ class action_luong(Action):
             mon_hoc = pred_monhoc
         else:
             pred_monhoc = mon_hoc
+        print(pred_monhoc, mon_hoc)
         dispatcher.utter_message(template='utter_' + mon_hoc + '_luong')
         return []
 
