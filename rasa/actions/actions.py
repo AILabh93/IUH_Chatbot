@@ -11,16 +11,29 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import FormAction
 from rasa_sdk.events import UserUtteranceReverted
-from fasttext import load_model
+from tensorflow.keras.models import load_model
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+import pickle
+import numpy as np
 
-model = load_model('actions/model_chuyen_nganh.bin')
+model = load_model('actions/model.h5')
+with open('actions/labels.pkl', 'rb') as f:
+    labels = pickle.load(f)
 
-pre_monhoc = 'khmt'
+with open('../Backend/API/models/token1.pkl', 'rb') as f:
+    _, tokenizer = pickle.load(f)
+
+pred_monhoc = 'khmt'
 
 
 def predict_monhoc(text):
-    label = model.predict(text)
-    return label[0][0][-4:]
+    text = text.lower()
+    ids = [tokenizer.vocab_size] + \
+        tokenizer.encode(text)+[tokenizer.vocab_size+1]
+    ids = pad_sequences([ids], maxlen=92, padding='post')
+    predict = model.predict(ids)[0]
+    label = labels.classes_[np.argmax(predict)]
+    return label[-4:]
 
 
 class action_luong(Action):
@@ -29,24 +42,12 @@ class action_luong(Action):
 
     def run(self, dispatcher, tracker, domain):
         mon_hoc = predict_monhoc(tracker.latest_message['text'])
-        global pre_monhoc
+        global pred_monhoc
         if mon_hoc == 'khac':
-            mon_hoc = pre_monhoc
+            mon_hoc = pred_monhoc
         else:
-            pre_monhoc = mon_hoc
-        dispatcher.utter_message(template='utter_'+mon_hoc+'_luong')
-        if mon_hoc == 'khdl':
-            dispatcher.utter_message(image=str(
-                'https://nordiccoder.com/app/uploads/2020/01/Screenshot-at-Jan-10-14-56-18.png'))
-        elif mon_hoc == 'cntt':
-            dispatcher.utter_message(
-                image=str('https://btec.fpt.edu.vn/wp-content/uploads/2019/07/2-1.jpg'))
-        elif mon_hoc == 'ktpm':
-            dispatcher.utter_message(image=str(
-                'https://easyuni.com/media/uploads/2019/06/21/software-engineer-salary-worldwide-201920190226.png'))
-        elif mon_hoc == 'khmt':
-            dispatcher.utter_message(image=str(
-                'https://media.bitdegree.org/storage/media/images/2020/01/computer-science-salary-entry-300x259.png'))
+            pred_monhoc = mon_hoc
+        dispatcher.utter_message(template='utter_' + mon_hoc + '_luong')
         return []
 
 
@@ -115,12 +116,12 @@ class action_tuvan(Action):
 
     def run(self, dispatcher, tracker, domain):
         mon_hoc = predict_monhoc(tracker.latest_message['text'])
-        global pre_monhoc
+        global pred_monhoc
         if mon_hoc == 'khac':
-            mon_hoc = pre_monhoc
+            mon_hoc = pred_monhoc
         else:
-            pre_monhoc = mon_hoc
-        dispatcher.utter_message(template='utter_tuvan_'+mon_hoc)
+            pred_monhoc = mon_hoc
+        dispatcher.utter_message(template='utter_tuvan_' + mon_hoc)
         return []
 
 
@@ -129,13 +130,13 @@ class action_vieclam(Action):
         return "action_vieclam"
 
     def run(self, dispatcher, tracker, domain):
-        global pre_monhoc
+        global pred_monhoc
         mon_hoc = predict_monhoc(tracker.latest_message['text'])
         if mon_hoc == 'khac':
-            mon_hoc = pre_monhoc
+            mon_hoc = pred_monhoc
         else:
-            pre_monhoc = mon_hoc
-        dispatcher.utter_message(template='utter_'+mon_hoc+'_vieclam')
+            pred_monhoc = mon_hoc
+        dispatcher.utter_message(template='utter_' + mon_hoc + '_vieclam')
         return []
 
 
@@ -144,13 +145,13 @@ class action_canhtranh(Action):
         return "action_canhtranh"
 
     def run(self, dispatcher, tracker, domain):
-        global pre_monhoc
+        global pred_monhoc
         mon_hoc = predict_monhoc(tracker.latest_message['text'])
         if mon_hoc == 'khac':
-            mon_hoc = pre_monhoc
+            mon_hoc = pred_monhoc
         else:
-            pre_monhoc = mon_hoc
-        dispatcher.utter_message(template='utter_'+mon_hoc+'_canhtranh')
+            pred_monhoc = mon_hoc
+        dispatcher.utter_message(template='utter_' + mon_hoc + '_canhtranh')
         return []
 
 
@@ -159,13 +160,13 @@ class action_tailieu(Action):
         return "action_tailieu"
 
     def run(self, dispatcher, tracker, domain):
-        global pre_monhoc
+        global pred_monhoc
         mon_hoc = predict_monhoc(tracker.latest_message['text'])
         if mon_hoc == 'khac':
-            mon_hoc = pre_monhoc
+            mon_hoc = pred_monhoc
         else:
-            pre_monhoc = mon_hoc
-        dispatcher.utter_message(template='utter_'+mon_hoc+'_tailieu')
+            pred_monhoc = mon_hoc
+        dispatcher.utter_message(template='utter_' + mon_hoc + '_tailieu')
         return []
 
 
@@ -174,13 +175,13 @@ class action_dinhhuongsai(Action):
         return "action_dinhhuongsai"
 
     def run(self, dispatcher, tracker, domain):
-        global pre_monhoc
+        global pred_monhoc
         mon_hoc = predict_monhoc(tracker.latest_message['text'])
         if mon_hoc == 'khac':
-            mon_hoc = pre_monhoc
+            mon_hoc = pred_monhoc
         else:
-            pre_monhoc = mon_hoc
-        dispatcher.utter_message(template='utter_'+mon_hoc+'_dinhhuongsai')
+            pred_monhoc = mon_hoc
+        dispatcher.utter_message(template='utter_' + mon_hoc + '_dinhhuongsai')
         return []
 
 
@@ -189,13 +190,13 @@ class action_ungdung(Action):
         return "action_ungdung"
 
     def run(self, dispatcher, tracker, domain):
-        global pre_monhoc
+        global pred_monhoc
         mon_hoc = predict_monhoc(tracker.latest_message['text'])
         if mon_hoc == 'khac':
-            mon_hoc = pre_monhoc
+            mon_hoc = pred_monhoc
         else:
-            pre_monhoc = mon_hoc
-        dispatcher.utter_message(template='utter_'+mon_hoc+'_ungdung')
+            pred_monhoc = mon_hoc
+        dispatcher.utter_message(template='utter_' + mon_hoc + '_ungdung')
         return []
 
 
@@ -204,13 +205,13 @@ class action_linhvuc(Action):
         return "action_linhvuc"
 
     def run(self, dispatcher, tracker, domain):
-        global pre_monhoc
+        global pred_monhoc
         mon_hoc = predict_monhoc(tracker.latest_message['text'])
         if mon_hoc == 'khac':
-            mon_hoc = pre_monhoc
+            mon_hoc = pred_monhoc
         else:
-            pre_monhoc = mon_hoc
-        dispatcher.utter_message(template='utter_'+mon_hoc+'_linhvuc')
+            pred_monhoc = mon_hoc
+        dispatcher.utter_message(template='utter_' + mon_hoc + '_linhvuc')
         return []
 
 
@@ -219,13 +220,13 @@ class action_monhoc(Action):
         return "action_monhoc"
 
     def run(self, dispatcher, tracker, domain):
-        global pre_monhoc
+        global pred_monhoc
         mon_hoc = predict_monhoc(tracker.latest_message['text'])
         if mon_hoc == 'khac':
-            mon_hoc = pre_monhoc
+            mon_hoc = pred_monhoc
         else:
-            pre_monhoc = mon_hoc
-        dispatcher.utter_message(template='utter_'+mon_hoc+'_monhoc')
+            pred_monhoc = mon_hoc
+        dispatcher.utter_message(template='utter_' + mon_hoc + '_monhoc')
         return []
 
 
@@ -234,13 +235,13 @@ class action_giangvien(Action):
         return "action_giangvien"
 
     def run(self, dispatcher, tracker, domain):
-        global pre_monhoc
+        global pred_monhoc
         mon_hoc = predict_monhoc(tracker.latest_message['text'])
         if mon_hoc == 'khac':
-            mon_hoc = pre_monhoc
+            mon_hoc = pred_monhoc
         else:
-            pre_monhoc = mon_hoc
-        dispatcher.utter_message(template='utter_'+mon_hoc+'_giangvien')
+            pred_monhoc = mon_hoc
+        dispatcher.utter_message(template='utter_' + mon_hoc + '_giangvien')
         return []
 
 
@@ -249,13 +250,13 @@ class action_ngonngu(Action):
         return "action_ngonngu"
 
     def run(self, dispatcher, tracker, domain):
-        global pre_monhoc
+        global pred_monhoc
         mon_hoc = predict_monhoc(tracker.latest_message['text'])
         if mon_hoc == 'khac':
-            mon_hoc = pre_monhoc
+            mon_hoc = pred_monhoc
         else:
-            pre_monhoc = mon_hoc
-        dispatcher.utter_message(template='utter_'+mon_hoc+'_ngonngu')
+            pred_monhoc = mon_hoc
+        dispatcher.utter_message(template='utter_' + mon_hoc + '_ngonngu')
         return []
 
 
@@ -264,14 +265,14 @@ class action_chatluonggiaovien(Action):
         return "action_chatluonggiaovien"
 
     def run(self, dispatcher, tracker, domain):
-        global pre_monhoc
+        global pred_monhoc
         mon_hoc = predict_monhoc(tracker.latest_message['text'])
         if mon_hoc == 'khac':
-            mon_hoc = pre_monhoc
+            mon_hoc = pred_monhoc
         else:
-            pre_monhoc = mon_hoc
+            pred_monhoc = mon_hoc
         dispatcher.utter_message(
-            template='utter_'+mon_hoc+'_chatluonggiaovien')
+            template='utter_' + mon_hoc + '_chatluonggiaovien')
         return []
 
 
@@ -280,13 +281,13 @@ class action_tinhcach(Action):
         return "action_tinhcach"
 
     def run(self, dispatcher, tracker, domain):
-        global pre_monhoc
+        global pred_monhoc
         mon_hoc = predict_monhoc(tracker.latest_message['text'])
         if mon_hoc == 'khac':
-            mon_hoc = pre_monhoc
+            mon_hoc = pred_monhoc
         else:
-            pre_monhoc = mon_hoc
-        dispatcher.utter_message(template='utter_'+mon_hoc+'_tinhcach')
+            pred_monhoc = mon_hoc
+        dispatcher.utter_message(template='utter_' + mon_hoc + '_tinhcach')
         return []
 
 
@@ -295,13 +296,13 @@ class action_thuctap(Action):
         return "action_thuctap"
 
     def run(self, dispatcher, tracker, domain):
-        global pre_monhoc
+        global pred_monhoc
         mon_hoc = predict_monhoc(tracker.latest_message['text'])
         if mon_hoc == 'khac':
-            mon_hoc = pre_monhoc
+            mon_hoc = pred_monhoc
         else:
-            pre_monhoc = mon_hoc
-        dispatcher.utter_message(template='utter_'+mon_hoc+'_thuctap')
+            pred_monhoc = mon_hoc
+        dispatcher.utter_message(template='utter_' + mon_hoc + '_thuctap')
         return []
 
 
@@ -310,13 +311,13 @@ class action_xuhuong(Action):
         return "action_xuhuong"
 
     def run(self, dispatcher, tracker, domain):
-        global pre_monhoc
+        global pred_monhoc
         mon_hoc = predict_monhoc(tracker.latest_message['text'])
         if mon_hoc == 'khac':
-            mon_hoc = pre_monhoc
+            mon_hoc = pred_monhoc
         else:
-            pre_monhoc = mon_hoc
-        dispatcher.utter_message(template='utter_'+mon_hoc+'_xuhuong')
+            pred_monhoc = mon_hoc
+        dispatcher.utter_message(template='utter_' + mon_hoc + '_xuhuong')
         return []
 
 
@@ -325,13 +326,13 @@ class action_daotao(Action):
         return "action_daotao"
 
     def run(self, dispatcher, tracker, domain):
-        global pre_monhoc
+        global pred_monhoc
         mon_hoc = predict_monhoc(tracker.latest_message['text'])
         if mon_hoc == 'khac':
-            mon_hoc = pre_monhoc
+            mon_hoc = pred_monhoc
         else:
-            pre_monhoc = mon_hoc
-        dispatcher.utter_message(template='utter_'+mon_hoc+'_daotao')
+            pred_monhoc = mon_hoc
+        dispatcher.utter_message(template='utter_' + mon_hoc + '_daotao')
         return []
 
 
@@ -340,13 +341,14 @@ class action_lamgikhiratruong(Action):
         return "action_lamgikhiratruong"
 
     def run(self, dispatcher, tracker, domain):
-        global pre_monhoc
+        global pred_monhoc
         mon_hoc = predict_monhoc(tracker.latest_message['text'])
         if mon_hoc == 'khac':
-            mon_hoc = pre_monhoc
+            mon_hoc = pred_monhoc
         else:
-            pre_monhoc = mon_hoc
-        dispatcher.utter_message(template='utter_'+mon_hoc+'_lamgikhiratruong')
+            pred_monhoc = mon_hoc
+        dispatcher.utter_message(
+            template='utter_' + mon_hoc + '_lamgikhiratruong')
         return []
 
 
@@ -355,11 +357,11 @@ class action_khokhan(Action):
         return "action_khokhan"
 
     def run(self, dispatcher, tracker, domain):
-        global pre_monhoc
+        global pred_monhoc
         mon_hoc = predict_monhoc(tracker.latest_message['text'])
         if mon_hoc == 'khac':
-            mon_hoc = pre_monhoc
+            mon_hoc = pred_monhoc
         else:
-            pre_monhoc = mon_hoc
-        dispatcher.utter_message(template='utter_'+mon_hoc+'_khokhan')
+            pred_monhoc = mon_hoc
+        dispatcher.utter_message(template='utter_' + mon_hoc + '_khokhan')
         return []
