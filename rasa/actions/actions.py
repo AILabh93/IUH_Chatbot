@@ -20,8 +20,8 @@ model = load_model('actions/model.h5')
 with open('actions/labels.pkl', 'rb') as f:
     labels = pickle.load(f)
 
-with open('actions/token1.pkl', 'rb') as f:
-    _, tokenizer = pickle.load(f)
+with open('actions/token.pkl', 'rb') as f:
+    tokenizer = pickle.load(f)
 
 pred_monhoc = 'khmt'
 
