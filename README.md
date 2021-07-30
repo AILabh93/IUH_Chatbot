@@ -4,7 +4,7 @@
 
 -   Facebook: rasa run -m models --enable-api --cors "\*" & rasa run actions
 
-\*\*\* Refresh localhost 5005
+\*\*\* Refresh localhost 5005: 
 fuser -k 5005/tcp \*\*\*\*
 
 ## Download models
