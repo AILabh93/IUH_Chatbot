@@ -92,24 +92,22 @@ VERIFY_TOKEN = "rasademo"
 def post_facebook_message(fbid, recevied_message, sua_loi=True):
     if sua_loi:
         recevied_message = sualoi.predict(recevied_message, tokenizer_ipt,
-                                          tokenizer_opt, transformer)
+                                          tokenizer_opt, transformer, maxlen=150)
 
         data = json.dumps({"message": "%s" % recevied_message, "sender": "Me"})
         p = requests.post('http://localhost:5005/webhooks/rest/webhook',
                           headers={"Content-Type": "application/json"}, data=data).json()
-        if p is None:
-            p = "Xin lỗi mình chưa hiều ý bạn"
+        if len(p) == 0:
+            response = 'Mình vẫn chưa hiểu ý bạn. Bạn hãy nói rõ hơn được không :)'
         else:
-            jsons = rasaToFbJson(p, fbid)
+            response = p[0]['text']
             save_chat(recevied_message, p)
-        send(fbid, jsons)
-        return
     json_file = {
         "recipient": {
             "id": fbid
         },
         "message": {
-            "text": recevied_message
+            "text": response
         }
     }
     send(fbid, json_file)
@@ -172,66 +170,3 @@ def save_chat(user, bot):
 def getChat(request):
     chat = serializers.SerialChat(models.Chat.objects.all(), many=True)
     return Response(data=chat.data, status=status.HTTP_200_OK)
-
-
-def rasaToFbJson(rasa, idfb):
-    jsons = {
-        "recipient": {
-            "id": idfb
-        },
-        "message": {
-        }
-    }
-    if len(rasa) > 1:
-        if 'buttons' in rasa[1]:
-            buttons = rasa[1]['buttons']
-            jsons["message"]["attachment"] = {
-                "type": "template",
-                "payload": {
-                    "template_type": "button",
-                    "text": rasa[0]['text'],
-                    "buttons": [
-                        {
-                            "type": "postback",
-                            "title": buttons[0]['title'],
-                            "payload": buttons[0]['payload']
-                        },
-                        {
-                            "type": "postback",
-                            "title": buttons[1]['title'],
-                            "payload": buttons[1]['payload']
-                        },
-                        {
-                            "type": "postback",
-                            "title": buttons[2]['title'],
-                            "payload": buttons[2]['payload']
-                        },
-                        # {
-                        #     "type": "postback",
-                        #     "title": buttons[3]['title'],
-                        #     "payload": buttons[3]['payload']
-                        # },
-                        # {
-                        #     "type": "postback",
-                        #     "title": buttons[4]['title'],
-                        #     "payload": buttons[4]['payload']
-                        # }
-                    ]
-                }
-            }
-        else:
-            jsons["message"]["attachment"] = {
-                "type": "template",
-                "payload": {
-                    "template_type": "generic",
-                    "elements": [
-                        {
-                            "title": 'Lương',
-                            "image_url": rasa[1]['image'],
-                            "subtitle": rasa[0]['text'],
-
-                        }
-                    ]}}
-    else:
-        jsons["message"]["text"] = rasa[0]['text']
-    return jsons
