@@ -25,4 +25,4 @@ policies:
     - name: FallbackPolicy
       nlu_threshold: 0.5
       core_threshold: 0.1
-      allback_action_name: action_unknown
+      fallback_action_name: action_unknown
