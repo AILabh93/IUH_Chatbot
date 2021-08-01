@@ -103,6 +103,7 @@ class action_unknown(Action):
         return "action_unknown"
 
     def run(self, dispatcher, tracker, domain):
+        print('unknown running....................')
         dispatcher.utter_message(text='Xin lỗi mình chưa hiểu ý bạn')
         but = createButton()
         dispatcher.utter_message(

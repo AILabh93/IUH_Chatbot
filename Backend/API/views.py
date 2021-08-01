@@ -66,8 +66,7 @@ class Chatbot(APIView):
         if 1 == int(state_chat):
             response, questionC = getResponse(question, state_change=False)
             if len(response) == 0:
-                response, questionC = getResponse(
-                    question, state_change=True)
+                response, questionC = getResponse(question, state_change=True)
                 return Response({'text_formated': questionC, 'response': ''}, status=status.HTTP_200_OK)
             response = response[0]['text']
             return Response({'text_formated': questionC, 'response': response}, status=status.HTTP_200_OK)
