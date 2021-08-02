@@ -5,8 +5,10 @@ from django.utils.translation import gettext as _
 
 
 class Course(models.Model):
-    title = models.CharField(max_length=200, blank=False)
     id_video = models.CharField(
-        _("id video on youtube"), max_length=200, unique=True)
+        _("id video on youtube"), max_length=200, unique=True, primary_key=True)
+    title = models.CharField(max_length=200, blank=False)
     description = models.TextField(_("description"))
-    src = models.TextField(blank=True)
+    total_videos = models.IntegerField()
+    authen = models.TextField()
+    view = models.IntegerField()
