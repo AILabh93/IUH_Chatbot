@@ -11,6 +11,6 @@ class Course(models.Model):
     description = models.TextField(_("description"))
     total_videos = models.PositiveSmallIntegerField()
     authen = models.CharField(max_length=200, blank=False)
-    view = models.PositiveSmallIntegerField()
+    view = models.PositiveIntegerField()
     image = models.URLField(
         max_length=1000, default='https://iuhchatbot.xyz/course')

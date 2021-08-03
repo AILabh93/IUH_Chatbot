@@ -7,3 +7,5 @@ djangorestframework-simplejwt==4.7.1
 django-cors-headers==3.7.0
 gdown==3.13.0
 underthesea==1.2.0
+tensorflow-datasets==4.4.0
+unidecode
