@@ -29,7 +29,7 @@ pred_monhoc = 'khmt'
 def predict_monhoc(text):
     text = text.lower()
     ids = [tokenizer.vocab_size] + \
-        tokenizer.encode(text)+[tokenizer.vocab_size+1]
+        tokenizer.encode(text) + [tokenizer.vocab_size + 1]
     ids = pad_sequences([ids], maxlen=92, padding='post')
     predict = model.predict(ids)[0]
     label = labels.classes_[np.argmax(predict)]

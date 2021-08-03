@@ -7,7 +7,6 @@ from . import serializers
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework.permissions import AllowAny, IsAdminUser
 from rest_framework.decorators import api_view, permission_classes
-
 # Create your views here.
 
 User = get_user_model()

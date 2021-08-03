@@ -14,6 +14,8 @@ from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import csrf_exempt
 from . import serializers
 import pickle
+
+
 # Create your views here.
 with open('API/models/token1.pkl', 'rb') as f:
     tokenizer_ipt, tokenizer_opt = pickle.load(f)

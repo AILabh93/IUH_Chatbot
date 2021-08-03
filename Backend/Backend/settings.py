@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 from datetime import timedelta
 from corsheaders.defaults import default_headers
 import os
+import mongoengine
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -96,10 +97,10 @@ WSGI_APPLICATION = 'Backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': 'API_Chatbot',
-        # 'CLIENT': {
-        #    'host': 'mongodb+srv://ailab:ailabh93@cluster0.e1s3a.mongodb.net/test?authSource=admin&replicaSet=atlas-tx0c2e-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true',
-        # }
+        'NAME': 'Chatbot',
+        'CLIENT': {
+            'host': 'mongodb+srv://ailab:ailabh93@chatbot.e1s3a.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+        }
     }
 }
 
@@ -148,8 +149,8 @@ STATICFILES_DIRS = [
 ]
 
 
-MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 CORS_ORIGIN_ALLOW_ALL = True
 REST_FRAMEWORK = {

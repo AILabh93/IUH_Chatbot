@@ -2,7 +2,12 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.contrib.auth.validators import UnicodeUsernameValidator
 from django.utils.translation import gettext_lazy as _
+
+
 # Create your models here.
+
+import os
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 class CustomUser(AbstractUser):
@@ -22,7 +27,8 @@ class CustomUser(AbstractUser):
 
     full_name = models.CharField(_('full name'), max_length=255, blank=False)
     email = models.EmailField(_('email address'), unique=True)
-    avatar = models.ImageField(blank=False, upload_to='avatars')
+    avatar = models.ImageField(blank=True,
+                               upload_to='avatars')
 
     def __str__(self):
         return self.username
