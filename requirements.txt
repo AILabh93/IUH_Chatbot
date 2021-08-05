@@ -9,3 +9,4 @@ gdown==3.13.0
 underthesea==1.2.0
 tensorflow-datasets==4.4.0
 unidecode
+djongo

@@ -25,7 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'vk2gbdo$!j9umj2&gy^diyelvbckpa(d9+@2*&u)d9l_1g8xbv'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'account',
     'course',
     'forum',
+
 ]
 
 AUTH_USER_MODEL = 'account.CustomUser'
@@ -98,7 +99,7 @@ DATABASES = {
         'ENGINE': 'djongo',
         'NAME': 'Chatbot',
         'CLIENT': {
-            'host': 'mongodb+srv://ailab:ailabh93@chatbot.e1s3a.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+            'host': 'mongodb+srv://ailab:ailabh93@cluster0.e1s3a.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
         }
     }
 }

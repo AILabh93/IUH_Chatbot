@@ -14,3 +14,6 @@ class Course(models.Model):
     view = models.PositiveIntegerField()
     image = models.URLField(
         max_length=1000, default='https://iuhchatbot.xyz/course')
+
+    def __str__(self):
+        return self.title
