@@ -13,7 +13,8 @@ User = get_user_model()
 class CustomUserAdmin(UserAdmin):
     fieldsets = (
         (None, {'fields': ('username', 'password')}),
-        (_('Personal info'), {'fields': ('full_name', 'email', 'avatar')}),
+        (_('Personal info'), {
+         'fields': ('full_name', 'email', 'avatar')}),
         (_('Permissions'), {
             'fields': ('is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions'),
         }),
@@ -22,11 +23,11 @@ class CustomUserAdmin(UserAdmin):
     add_fieldsets = (
         (None, {
             'classes': ('wide',),
-            'fields': ('username', 'password1', 'password2'),
+            'fields': ('username', 'password1', 'password2', 'email', 'full_name', 'avatar'),
         }),
     )
-    list_display = ('username', 'email', 'full_name', 'is_staff')
+    list_display = ('username',
+                    'full_name', 'is_staff', 'user_photo')
     list_filter = ('is_staff', 'is_superuser', 'is_active', 'groups')
     search_fields = ('username', 'full_name', 'email')
     ordering = ('username',)
-    # filter_horizontal = ('groups', 'user_permissions',)

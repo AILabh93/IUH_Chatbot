@@ -1,24 +1,26 @@
 from rest_framework import serializers
 from . import models
+from django.contrib.auth import get_user_model
 
 
-class Serial_Reply(serializers.ModelSerializer):
-
-    class Meta:
-        model = models.Reply
-        fields = '__all__'
+User = get_user_model()
 
 
 class Serial_Comment(serializers.ModelSerializer):
-    reply = Serial_Reply(many=True, read_only=True)
-
     class Meta:
         model = models.Comment
         fields = '__all__'
 
 
+class Serial_User(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ['username']
+
+
 class Serial_Post(serializers.ModelSerializer):
     comment = Serial_Comment(many=True, read_only=True)
+    user = Serial_User()
 
     class Meta:
         model = models.Post

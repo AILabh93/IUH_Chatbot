@@ -19,11 +19,3 @@ class Comment(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     content = models.TextField()
     date = models.DateTimeField(default=timezone.now)
-
-
-class Reply(models.Model):
-    comment = models.ForeignKey(
-        Comment, on_delete=models.CASCADE, related_name='reply', null=True)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    content = models.TextField()
-    date = models.DateTimeField(default=timezone.now)

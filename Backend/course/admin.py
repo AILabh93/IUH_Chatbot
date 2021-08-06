@@ -5,7 +5,8 @@ from . import models
 
 
 class CourseAdmin(admin.ModelAdmin):
-    # exclude = ('slug', )
+    list_per_page = 20
+    search_fields = ['title', 'description']
     list_display = ('title', 'authen', 'total_videos', 'view',)
 
 
