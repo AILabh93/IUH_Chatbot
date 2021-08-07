@@ -6,7 +6,7 @@ from . import models
 
 class CourseAdmin(admin.ModelAdmin):
     list_per_page = 20
-    search_fields = ['title', 'description']
+    search_fields = ['title', 'description', 'id_video']
     list_display = ('title', 'authen', 'total_videos', 'view',)
 
 

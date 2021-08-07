@@ -6,16 +6,19 @@ from django.contrib.auth import get_user_model
 User = get_user_model()
 
 
+class Serial_User(serializers.ModelSerializer):
+
+    class Meta:
+        model = User
+        fields = ['username', 'avatar']
+
+
 class Serial_Comment(serializers.ModelSerializer):
+    user = Serial_User()
+
     class Meta:
         model = models.Comment
         fields = '__all__'
-
-
-class Serial_User(serializers.ModelSerializer):
-    class Meta:
-        model = User
-        fields = ['username']
 
 
 class Serial_Post(serializers.ModelSerializer):
