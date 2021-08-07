@@ -18,6 +18,9 @@ from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
 
+admin.site.site_header = 'AILab H9.3 Admin'
+admin.site.index_title = 'AILab manage'
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('API.urls')),

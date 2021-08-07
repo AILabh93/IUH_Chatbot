@@ -33,6 +33,8 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    # 'adminlte3',
+    # 'adminlte3_theme',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -68,7 +70,9 @@ ROOT_URLCONF = 'Backend.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates')
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -98,9 +102,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         'NAME': 'Chatbot',
-        'CLIENT': {
-            'host': 'mongodb+srv://ailab:ailabh93@cluster0.e1s3a.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
-        }
+        # 'CLIENT': {
+        #     'host': 'mongodb+srv://ailab:ailabh93@cluster0.e1s3a.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+        # }
     }
 }
 
@@ -177,3 +181,14 @@ SIMPLE_JWT = {
     'AUTH_TOKEN_CLASSES': ('rest_framework_simplejwt.tokens.AccessToken',),
     'TOKEN_TYPE_CLAIM': 'token_type',
 }
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+# DEFAULT_FROM_EMAIL = 'ailabh903@gmail.com'  # here provide your gmail email id
+# SERVER_EMAIL = 'ailabh903@gmail.com'  # here provide your gmail email id
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'  # here provide your gmail email id
+EMAIL_HOST_USER = 'ailabh903@gmail.com'
+EMAIL_HOST_PASSWORD = 'ailabh93@123'  # gmail password
+EMAIL_PORT = 587
