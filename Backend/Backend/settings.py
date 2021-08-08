@@ -102,9 +102,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         'NAME': 'Chatbot',
-        # 'CLIENT': {
-        #     'host': 'mongodb+srv://ailab:ailabh93@cluster0.e1s3a.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
-        # }
+        'CLIENT': {
+            'host': 'mongodb+srv://ailab:ailabh93@cluster0.e1s3a.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+        }
     }
 }
 
