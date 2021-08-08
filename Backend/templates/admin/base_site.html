@@ -1,0 +1,24 @@
+{% extends "admin/base.html" %}
+
+{% load static %}
+
+{% block title %}{{ title }} | {{ site_title|default:_('Django site admin') }}
+{% endblock %}
+
+{% block branding %}
+<link rel="stylesheet" href="{% static 'css/base_admin_custom.css' %}">
+<h1 id="site-name">
+    <a href="{% url 'admin:index' %}">
+    <style>
+        #logolab{
+            border-radius:50%;
+        }
+    </style>
+        <img src="{% static 'img/logo.jpg' %}" width="80px" id="logolab" />
+        {{ site_header }}
+
+    </a>
+</h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}

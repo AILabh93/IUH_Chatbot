@@ -1,0 +1,153 @@
+{% load i18n static %}
+<!DOCTYPE html>
+{% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
+<html lang="{{ LANGUAGE_CODE|default:"en-us" }}" {% if LANGUAGE_BIDI %}dir="rtl" {% endif %}>
+
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% static "admin/css/base.css" %}{% endblock %}">
+    {% block extrastyle %}{% endblock %}
+    {% if LANGUAGE_BIDI %}
+    <link rel="stylesheet" type="text/css"
+        href="{% block stylesheet_rtl %}{% static "admin/css/rtl.css" %}{% endblock %}">{% endif %}
+    {% block extrahead %}{% endblock %}
+    {% block responsive %}
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static "admin/css/responsive.css" %}">
+    {% if LANGUAGE_BIDI %}
+    <link rel="stylesheet" type="text/css" href="{% static "admin/css/responsive_rtl.css" %}">{% endif %}
+    {% endblock %}
+    {% block blockbots %}
+    <link rel="stylesheet" href="{% static 'css/base_admin_custom.css' %}">
+    <meta name="robots" content="NONE,NOARCHIVE">{% endblock %}
+</head>
+{% load i18n %}
+
+<body class="{% if is_popup %}popup {% endif %}{% block bodyclass %}{% endblock %}"
+    data-admin-utc-offset="{% now "Z" %}">
+
+    <!-- Container -->
+    <div id="container">
+
+        {% if not is_popup %}
+        <!-- Header -->
+        <div id="header">
+            <div id="branding">
+                {% block branding %}{% endblock %}
+            </div>
+            {% block usertools %}
+            {% if has_permission %}
+            {% comment %} <div id="user-tools">
+                {% block welcome-msg %}
+                {% trans 'Welcome,' %}
+                <strong>{% firstof user.get_short_name user.get_username %}</strong>.
+                {% endblock %}
+                {% block userlinks %}
+                {% if site_url %}
+                <a href="{{ site_url }}">{% trans 'View site' %}</a> /
+                {% endif %}
+                {% if user.is_active and user.is_staff %}
+                {% url 'django-admindocs-docroot' as docsroot %}
+                {% if docsroot %}
+                <a href="{{ docsroot }}">{% trans 'Documentation' %}</a> /
+                {% endif %}
+                {% endif %}
+                {% if user.has_usable_password %}
+                <a href="{% url 'admin:password_change' %}">{% trans 'Change password' %}</a> /
+                {% endif %}
+                <a href="{% url 'admin:logout' %}">{% trans 'Log out' %}</a>
+
+                {% endblock %}
+
+            </div> {% endcomment %}
+            {% endif %}
+            {% endblock %}
+            {% block nav-global %}{% endblock %}
+            {% if user.is_authenticated %}
+
+            <span style="display: flex; justify-content: center; align-items: center;" id = "user">
+                <div style="display: flex; justify-content: center; align-items: center;">
+                    <img src="/media/{{ user.avatar }}" alt="image use"
+                        style="width: 50px; height: 50px; border-radius: 50%;" />
+                    <span style="padding: 10px; font-size: 1.1rem; text-transform: uppercase;">{{ user.username }}</span>
+                    
+                </div>
+                <div id="mySidebar" class="sidebar">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                    <div class="item__menu">
+                        {% if user.has_usable_password %}
+                        
+                        <img src="{% static 'img/key.png' %}" alt="" width = "30">
+                        <a href="{% url 'admin:password_change' %}">{% trans 'Change password' %}</a>
+                        {% endif %}
+                    </div>
+                    <div class="item__menu">
+                        <img src="{% static 'img/exit.png' %}" alt="" width="30">
+                        <a href="{% url 'admin:logout' %}">{% trans 'Log out' %}</a>
+
+                    </div>
+                </div>
+                <div id="main">
+                    <button class="openbtn" onclick="openNav()">☰</button>  
+                </div>
+                <script>
+                    function openNav() {
+                    document.getElementById("mySidebar").style.width = "250px";
+                    document.getElementById("main").style.marginRight = "250px";
+                    }
+
+                    function closeNav() {
+                    document.getElementById("mySidebar").style.width = "0";
+                    document.getElementById("main").style.marginRight= "0";
+                    }
+                    
+                </script>
+            </span>
+            {% endif %}
+
+
+        </div>
+        <!-- END Header -->
+        {% block breadcrumbs %}
+        <div class="breadcrumbs">
+            <a href="{% url 'admin:index' %}">{% trans 'Home' %}</a>
+            {% if title %} &rsaquo; {{ title }}{% endif %}
+        </div>
+        {% endblock %}
+        {% endif %}
+
+        {% block messages %}
+        {% if messages %}
+        <ul class="messagelist">{% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message|capfirst }}</li>
+                {% endfor %}</ul>
+        {% endif %}
+        {% endblock messages %}
+
+        <!-- Content -->
+        <div id="content" class="{% block coltype %}colM{% endblock %}">
+            {% block pretitle %}{% endblock %}
+            {% block content_title %}{% if title %}<h1>{{ title }}</h1>{% endif %}{% endblock %}
+            {% block content %}
+            {% block object-tools %}{% endblock %}
+            {{ content }}
+            {% endblock %}
+            {% block sidebar %}{% endblock %}
+            <br class="clear">
+        </div>
+        <!-- END Content -->
+
+        {% block footer %}<div id="footer">
+            <div class="social">
+                <a class="social__item" target="_blank" href="https://www.facebook.com/page.ailab"><img src="https://image.flaticon.com/icons/png/128/2111/2111398.png" alt=""></a>
+                <a class="social__item" target="_blank" href="https://github.com/AILabh93"><img src="https://image.flaticon.com/icons/png/128/2111/2111432.png" alt="" style="background-color:white; border-radius:50%"></a>
+            </div>
+            <p>Sản phẩm thuộc về AILAB H9.3</p>
+        
+        </div>{% endblock %}
+    </div>
+    <!-- END Container -->
+
+</body>
+
+</html>
